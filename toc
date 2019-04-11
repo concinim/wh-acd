@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="wh-acd" audience="service" href="/docs/services/wh-acd/getting-started.html" path="services/wh-acd"}
-Annotator for Clinical Data (build test 1)
+Annotator for Clinical Data
 
     {: .navgroup id="learn"}
     getting-started.md
