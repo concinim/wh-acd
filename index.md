@@ -20,9 +20,7 @@ lastupdated: "2019-04-12"
 # About
 {: #about}
 
-The IBM Watson Annotator for Clinical Data (ACD) allows you to create domain specific medical NLP.  ACD provides turn key annotators along with highly customizable annotators that you can tune specifically for your needs.  ACD normalizes concepts into many common medical ontologies including UMLS, SNOMED, RXNORM, LOINC, and ICD *** OTHERS WE NEED TO ADD ***
-
-The ACD annotators can pass feature information from annotator to the next.  
+The IBM Watson Annotator for Clinical Data (ACD) allows you to create domain specific medical NLP.  ACD provides turn key annotators along with highly customizable annotators that you can tune specifically for your application needs.  
 
 
 {: shortdesc}
@@ -42,9 +40,9 @@ HISTORY OF PRESENT ILLNESS:
 The patient is having digestive problems.  Previous testing has ruled out crohns disease, but further testing is needed to determine the cause of these issues.
 ```
 
-If you choose to use the section, negation, and concept detection annotators in your ACD call, then the resulting concepts will contain section information as well as negation polarity.  Maybe for your use case, family history doesn't matter.  If you consider these annotations noise, tou can specify filters in your ACD configuration that will remove all family history annotations.
+If you choose to use the section, negation, and concept detection annotators in your ACD call, then the resulting concepts will contain section information as well as negation polarity.  Maybe for your use case, family history doesn't matter.  If you do not need these annotations for your application, you can specify filters in your ACD configuration that will remove all family history annotations.
 
-```
+<pre><code>  
 {
             "cui": "C0018799",
             "preferredName": "Heart Diseases",
@@ -65,45 +63,114 @@ If you choose to use the section, negation, and concept detection annotators in 
             "icd9Code": "429.89,V47.2",
             "loincId": "LA10523-1"
 }
-```
+</pre></code>  
 
-Similarly, if you are not interested in negated concepts...
+Similarly, if you are not interested in negated concepts, you can filter them at the application level based on the value of the **negated** flag or you can configure ACD to not return negated concepts.
 
-*** Need to get an example that works
+<pre><code>  
+{
+            "cui": "C0010346",
+            "preferredName": "Crohn Disease",
+            "semanticType": "dsyn",
+            "source": "umls",
+            "sourceVersion": "2018AA",
+            "type": "umls.DiseaseOrSyndrome",
+            "begin": 165,
+            "end": 179,
+            "coveredText": "crohns disease",
+            <b>"negated": true</b>,
+            "loincId": "LA10554-6",
+            "icd10Code": "K50.90",
+            "sectionNormalizedName": "History of present illness",
+            "nciCode": "C2965",
+            "snomedConceptId": "34000006",
+            "meshId": "M0005335",
+            "vocabs": "MTH,NCI_NICHD,LNC,CSP,MSH,CST,HPO,OMIM,COSTAR,AIR,MTHMST,NCI_NCI-GLOSS,CHV,MEDLINEPLUS,NCI,LCH_NW,AOD,NDFRT,SNOMEDCT_US,DXP",
+            "sectionSurfaceForm": "HISTORY OF PRESENT ILLNESS"
+  }
+  </pre></code>
 
-### Concepts
-{: #concepts}
+### Medical codes
+{: #medicalcodes}
 
-Description of concepts and expanded concepts
+ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
+
+| Medical Codes  |  NCI |  ICD 9/10 | LOINC  | MeSH  | RxNorm | SNOMED CT | CPT (configurable) | CCS | HCC | UMLS CUI
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|   **Turn Key Annotators ** |
+| Allergy  |   |   |   |   | *  |   |  |   |   |   |
+| Cancer  |   | *  |   |   |   | *  |   |  * | *  |  * |
+| Ejection Fraction |   |   |   |   |   |   |   |   |   |   |
+| Lab Value  |   |   |  * |   |   |   |   |   |   |   |
+| Living Assistance  |   |   |   |   |   |   |   |   |   |   |
+| Medication  |   |   |   |   |  * |   |   |   |   |   |
+| Named Entities  |   |   |   |   |   |   |   |   |   |   |
+| Procedure  |   |   |   |   |   |   | *  |   |   |  * |
+| Symptom Disease  |   | *  |   |   |   | *  |   | *  | *  | *  |
+|   **Flexible Concept Annotators**  |
+| Attribute  | *  | *  | *  | *  | *  | *  | *  | *  | *  | *  |
+| Concept (UMLS 2018AA+)  | *  | *  | *  | *  | *  | *  |  * |   |   | *  |
+| Concept Value  |   |   |   |   |   |   |   |   |   |  * |
+| Relation  |   |   |   |   |   |   |   |   |   |   |
+| **Contextual Annotators** |
+| Disambiguation |   |   |   |   |   |   |   |   |   |   |
+| Hypothetical |   |   |   |   |   |   |   |   |   |   |
+| Negation|   |   |   |   |   |   |   |   |   |   |
+| Section |   |   |   |   |   |   |   |   |   |   |
 
 
 ### Attributes
 {: #attribues}
 
-Description of attributes
+Attributes are customizable higher order concepts generally composed of multiple pieces of information found in a document.
+
+For more information, see [Attributes](docs/servics/wh-acd?topic=attributes)
+
+### Concepts
+{: #concepts}
+
+The concept annotator finds Unified Medical Language System (UMLS) concepts in unstructured text.
+
+For more information, see [Concepts](docs/servics/wh-acd?topic=concepts)
+
+### Concept Value
+{: #conceptValue}
+
+The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.
+
+For more information, see [Concept Value](docs/servics/wh-acd?topic=conceptValues)
+
 
 ### Negation
 {: #negation}
 
-Description of negation
+Identifies spans of text with an implied negative meaning.  For example: _there are no signs of ulceration in the stomach lining_
 
-### Section
-{: #section}
-
-Description of section
+For more information, see [Negation](docs/servics/wh-acd?topic=negation)
 
 ### Hypothetical
 {: #hypothetical}
 
-Description of hypothetical
+Identifies spans of text are the object of a hypothetical statement.
 
-### ACI annotators
-{: #aci}
+For more information, see [Hypothetical](docs/servics/wh-acd?topic=negation)
 
-Probably don't want to call this ACI - Just a placeholder at this point
+### Turn Key Annotators
+{: #turnKeyAnnotators}
 
-### Disambiguation
+Allergy
+Cancer
+Ejection Fraction
+Lab Values
+Living Assistance
+Medications
+Named Entities
+Procedures
+Sections
+Smoking
+Symptoms & Diseases
+
+### Concept Disambiguation
 {: #disambiguation}
 
 Description of Disambiguation
-

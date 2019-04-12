@@ -23,15 +23,12 @@ subcollection: writing
 # Getting started tutorial
 {: #getting-started}
 
-<!-- The title of your H1 should be Getting started tutorial. Don't include your offering name in the H1. Do include it as a search keyword, though. See the example keywords above. -->
-
-The IBM Watson Annotator for Clinical Data (ACD) service is a medical domain NLP service for use in detecting entities and medical concepts from unstructured data. This getting started tutorial will help you get started quickly analyzing unstructured text. Multiple annotators can be employed to analyze unstructured data from a single request.
+This short tutorial introduces the IBM Watson Annotator for Clinical Data (ACD) with example requests and links to additional resources.
 
 {: shortdesc}
 
 ## Before you begin
 {: #prereqs}
-_There should be a one sentence intro to the prereqs. If you don't have prereqs, remove this section_ For example: "You need an [{{site.data.keyword.Bluemix}} account](https://cloud.ibm.com/registration/), an instance of the _ServiceName_ service, and the following commands to check if you are properly set up."
 
 * Create an instance of the service:
   1. Go to the [IBM Watson Annotator for Clinical Data](https://dev.console.test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
