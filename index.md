@@ -91,14 +91,14 @@ ACD normalizes medical concepts into many common medical codes.  The following t
 
 Attributes are customizable higher order concepts generally composed of multiple pieces of information found in a document.
 
-For more information, see [Attributes](wh-acd?topic=whc-acd-attributes#attributes)
+For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection)
 
 ### Concepts
 {: #concepts}
 
 The concept annotator finds Unified Medical Language System (UMLS) concepts in unstructured text.
 
-For more information, see [Concepts](wh-acd?topic=wh-acd-concepts#concepts)
+For more information, see [Concepts](wh-acd?topic=wh-acd-concept_detection#concept_detection)
 
 ### Concept Value
 {: #conceptValue}
@@ -132,17 +132,17 @@ For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical#hypoth
 ### Turn Key Annotators
 {: #turnKeyAnnotators}
 
-Allergy(wh-acd?topic=wh-acd-allergy#allergy)
-Cancer(wh-acd?topic=wh-acd-cancer#cancer)
-Ejection Fraction(wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction)
-Lab Values(wh-acd?topic=wh-acd-lab_values#lab_values)
-Living Assistance(wh-acd?topic=wh-acd-living_assistance#living_assistance)
-Medications(wh-acd?topic=wh-acd-medications#medications)
-Named Entities(wh-acd?topic=wh-acd-named_entities#named_entities)
-Procedures(wh-acd?topic=wh-acd-procedures#procedures)
-Sections(wh-acd?topic=wh-acd-sections#sections)
-Smoking(wh-acd?topic=wh-acd-smoking#smoking)
-Symptoms & Diseases(wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
+[Allergy](wh-acd?topic=wh-acd-allergy#allergy)
+[Cancer](wh-acd?topic=wh-acd-cancer#cancer)
+[Ejection Fraction](wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction)
+[Lab Values](wh-acd?topic=wh-acd-lab_values#lab_values)
+[Living Assistance](wh-acd?topic=wh-acd-living_assistance#living_assistance)
+[Medications](wh-acd?topic=wh-acd-medications#medications)
+[Named Entities](wh-acd?topic=wh-acd-named_entities#named_entities)
+[Procedures](wh-acd?topic=wh-acd-procedures#procedures)
+[Sections](wh-acd?topic=wh-acd-sections#sections)
+[Smoking](wh-acd?topic=wh-acd-smoking#smoking)
+[Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
 ### Concept Disambiguation
 {: #disambiguation}
