@@ -25,7 +25,7 @@ The IBM Watson Annotator for Clinical Data (ACD) allows you to create domain spe
 
 {: shortdesc}
 
-## Features
+### Features
 {: #features}
 
 Every annotator in ACD has the ability to add additional information to an annotation.  These pieces of information are called _features_.  Features from each annotator are aggregated internally to give you easy to use annotations that contain all relevant information about a text span.  ACD allows you to filter annotations that may not be important for your use case from the API response.  An example of this is a disease that is detected in the _family history_ section of a medical record.  Since that disease does not apply directly to the patient, it may be something you choose to ignore in your application.  For more details on features, see [Features](wh-acd?topic=wh-acd-features#features).
