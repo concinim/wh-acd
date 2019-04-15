@@ -118,7 +118,7 @@ For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#nega
 
 ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into a larger ACD flow.
 
-For more information, see [NLU](wh-acd?whtopic=wh-acd-nlu_annotator#nlu_annotator)
+For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator)
 
 ### Hypothetical
 {: #hypothetical}
