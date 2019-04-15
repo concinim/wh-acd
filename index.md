@@ -95,7 +95,7 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-REMOVE ME!!! DEBUG VERSION: 1.3
+**REMOVE ME!!! DEBUG VERSION: 1.4**
 
 <table>
   <tr>
@@ -125,6 +125,7 @@ REMOVE ME!!! DEBUG VERSION: 1.3
   <tr><td>Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
   <tr><td>Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
 
+  <tr><th></th></tr>
   <tr>
     <th colspan="11"><b>Configurable Concept Annotators</b></th>
   </tr>
@@ -133,6 +134,7 @@ REMOVE ME!!! DEBUG VERSION: 1.3
   <tr><td>Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
   <tr><td>Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
 
+  <tr><th></th></tr>
   <tr>
     <th colspan="11"><b>Cotextual Annotators</b></th>
   </tr>
