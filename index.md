@@ -95,57 +95,51 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-TEST OF AN HTML TABLE
-
 <table>
   <tr>
-    <td><b>Medical Codes</b></td>
-    <td>NCI</td>
-    <td>ICD 9/10</td>
-    <td>LOINC</td>
-    <td>MeSH</td>
-    <td>RxNorm</td>
-    <td>SNOMED CT</td>
-    <td>CPT</td>
-    <td>CCS</td>
-    <td>HCC</td>
-    <td>UMLS CUI</td>
+    <th><b>Medical Codes</b></th>
+    <th>NCI</th>
+    <th>ICD 9/10</th>
+    <th>LOINC</th>
+    <th>MeSH</th>
+    <th>RxNorm</th>
+    <th>SNOMED CT</th>
+    <th>CPT</th>
+    <th>CCS</th>
+    <th>HCC</th>
+    <th>UMLS CUI</th>
   </tr>
+
   <tr>
-    <td colspan="11"><b>Turn Key Annotators</b></td>
+    <th colspan="11"><b>Turn Key Annotators</b></th>
   </tr>
   <tr><td>Allergy</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td>Cancer</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
   <tr><td>Ejection Fraction</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td>Lab Value</td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td>Living Assistance</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td>Medication</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td>Named Entities</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td>Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
+  <tr><td>Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
 
+  <tr>
+    <th colspan="11"><b>Configurable Concept Annotators</b></th>
+  </tr>
+  <tr><td>Attribute</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
+  <tr><td>Concept (UMLS 2018AA+)</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
+  <tr><td>Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
+  <tr><td>Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
+
+  <tr>
+    <th colspan="11"><b>Cotextual Annotators</b></th>
+  </tr>
+  <tr><td>Disambiguation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
+  <tr><td>Hypothetical</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
+  <tr><td>Negation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
+  <tr><td>Section</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
 
 </table>
-
-|Medical Codes  |  NCI |  ICD 9/10 | LOINC  | MeSH  | RxNorm | SNOMED CT | CPT | CCS | HCC | UMLS CUI
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-|   <td colspan=10>**Turn Key Annotators** |
-| Allergy  |   |   |   |   | *  |   |  |   |   |   |
-| Cancer  |   | *  |   |   |   | *  |   |  * | *  |  * |
-| Ejection Fraction |   |   |   |   |   |   |   |   |   |   |
-| Lab Value  |   |   |  * |   |   |   |   |   |   |   |
-| Living Assistance  |   |   |   |   |   |   |   |   |   |   |
-| Medication  |   |   |   |   |  * |   |   |   |   |   |
-| Named Entities  |   |   |   |   |   |   |   |   |   |   |
-| Procedure  |   |   |   |   |   |   | *  |   |   |  * |
-| Symptom Disease  |   | *  |   |   |   | *  |   | *  | *  | *  |
-|   <td colspan=10>**Flexible Concept Annotators**  |
-| Attribute  | *  | *  | *  | *  | *  | *  | *  | *  | *  | *  |
-| Concept (UMLS 2018AA+)  | *  | *  | *  | *  | *  | *  |  * |   |   | *  |
-| Concept Value  |   |   |   |   |   |   |   |   |   |  * |
-| Relation  |   |   |   |   |   |   |   |   |   |   |
-| <td colspan=10>**Contextual Annotators** |
-| Disambiguation |   |   |   |   |   |   |   |   |   |   |
-| Hypothetical |   |   |   |   |   |   |   |   |   |   |
-| Negation|   |   |   |   |   |   |   |   |   |   |
-| Section |   |   |   |   |   |   |   |   |   |   ||
-
 
 ### Attributes
 {: #attribues}
