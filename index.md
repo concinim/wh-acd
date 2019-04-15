@@ -95,21 +95,21 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-
+**REMOVE ME!!! DEBUG VERSION: 1.4**
 
 <table>
   <tr>
-    <th width="1%">Medical Codes</th>
-    <th width="1%">NCI</th>
-    <th width="1%">ICD 9/10</th>
-    <th width="1%">LOINC</th>
-    <th width="1%">MeSH</th>
-    <th width="1%">RxNorm</th>
-    <th width="1%">SNOMED CT</th>
-    <th width="1%">CPT</th>
-    <th width="1%">CCS</th>
-    <th width="1%">HCC</th>
-    <th width="1%">UMLS CUI</th>
+    <th style="width:100%; min-width:0 !important">Medical Codes</th>
+    <th style="width:1%; min-width:0 !important">NCI</th>
+    <th style="width:1%; min-width:0 !important">ICD 9/10</th>
+    <th style="width:1%; min-width:0 !important">LOINC</th>
+    <th style="width:1%; min-width:0 !important">MeSH</th>
+    <th style="width:1%; min-width:0 !important">RxNorm</th>
+    <th style="width:1%; min-width:0 !important">SNOMED CT</th>
+    <th style="width:1%; min-width:0 !important">CPT</th>
+    <th style="width:1%; min-width:0 !important">CCS</th>
+    <th style="width:1%; min-width:0 !important">HCC</th>
+    <th style="width:1%; min-width:0 !important">UMLS CUI</th>
   </tr>
 
   <tr>
@@ -125,6 +125,7 @@ ACD normalizes medical concepts into many common medical codes.  The following t
   <tr><td>Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
   <tr><td>Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
 
+  <tr><th></th></tr>
   <tr>
     <th colspan="11"><b>Configurable Concept Annotators</b></th>
   </tr>
@@ -133,6 +134,7 @@ ACD normalizes medical concepts into many common medical codes.  The following t
   <tr><td>Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
   <tr><td>Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
 
+  <tr><th></th></tr>
   <tr>
     <th colspan="11"><b>Cotextual Annotators</b></th>
   </tr>
