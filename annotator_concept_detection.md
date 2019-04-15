@@ -1,7 +1,33 @@
-<h3 id="concept_detection">Concepts</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Concept Detection
+{: #concept_detection}
 
 The concept detection service detects Unified Medical Language System (UMLS) concepts from unstructured data.
 As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is retuned with the concept detected.
+{:shortdesc}
 
 Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
 

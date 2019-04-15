@@ -1,4 +1,29 @@
-<h3 id="filtering">Filters</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Filters
+{: #filters}
 
 Filters can be applied in one of two ways, either immediately after an annotator in the flow or at the very end of all flows. Conditions may exist that require annotation filtering before the next annotator runs in the flow. In this case you would define your filter with the specific annotator within the flow element. However, if you do not have unique conditions or you do not know which annotator to add a filter definition in the flow, you can just add your filters to run at the end of all the flows. To do so you define a global configuration as an element of the AnnotatorFlow. (Note: Because of the nature of the Hypothetical and Negation annotators, more consideration may be needed to determine desired filter usage. See Hypothetical and Negation Annotator Filtering below for more information.) Below is an example of several annotators defined in the flow with a global filter to run at the end of all flow elements.
 

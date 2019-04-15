@@ -1,7 +1,32 @@
-<h3 id="nlu_annotator">NLU Annotator (Experimental) </h3>
+---
 
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# NLU Annotator (Experimental)
+{: #nlu}
 
 The Natural Language Understanding (NLU) annotator enables the ACD service to interact with the <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>. The NLU service extracts features from the unstructured text based on the NLU configuration. The ACD service will supply the unstructured text to the NLU service, capture the response, and extract the relevant response features so that they can be easily used by other annotators in the ACD flow.
+{:shortdesc}
 
 The NLU service uses advanced NLP to analyze text and extract features from content such as **concepts**, **entities**, **keywords**, **categories**, **sentiment**, **emotion**, **relations**, and **semantic roles**. Depending upon the model selected in the NLU configuration, pronouns related to the trained entities may also be resolved to the relevant entities.
 

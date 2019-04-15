@@ -25,10 +25,8 @@ subcollection: wh-acd
 # Attribute Detection
 {: #attribute_detection}
 
-<h3 id="attribute_detection">Attributes</h3>
-
 The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identify pieces of information pertinent to the domain and are used to create the attribute values by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator,  can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level <q>concept</q> in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
-
+{:shortdesc}
 
 Similar to the <a data-scroll="" href="#concept_detection">Concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT. Attribute detection can detect three additional medical codes, i.e., ccsCode, hccCode, cptCode, in addition to the medical codes available from the concept detection annotator. As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept.
 

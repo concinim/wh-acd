@@ -1,7 +1,32 @@
-<h3 id="relation">Relation (Experimental)</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Relation
+{: #relation}
 
 The relation annotator is intended to be used in conjunction with the concept_detection annotator to identify relations within unstructured data associated with concepts retrieved from the concept_detection annotator. The relations are detected via identifying triggering concepts within a sentence indicating a possible relationship. Thus, the concept_detection annotator must run prior to the relation annotator within an annotator flow to function properly.
-
+{:shortdesc}
 
 The Domain Expert Tool (DET) allows customization of the relation annotator with a target ontology and a set of relation names. The ACD will use the deployed cartridge from the DET tool to annotate an unstructured text. The following snippet illustrates a typical annotator flow for a relation annotator along with its configuration.
 

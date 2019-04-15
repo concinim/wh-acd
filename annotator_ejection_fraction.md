@@ -1,6 +1,32 @@
-<h3 id="ejection_fraction">Ejection Fraction</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Ejection Fraction
+{: #ejection_fraction}
 
 The purpose of the Ejection Fraction annotator is to annotate ejection fraction test results. Ejection fraction is a measurement of the percentage of blood leaving your heart each time it contracts. The Ejection Fraction annotation is generally used as input into calculations or models that predict various heart related scenarios.
+{:shortdesc}
 
 During each heartbeat pumping cycle, the heart contracts and relaxes. When your heart contracts, it ejects blood from the two pumping chambers (ventricles). When your heart relaxes, the ventricles refill with blood. No matter how forceful the contraction, it never is able to pump all of the blood out of a ventricle. The term <q>ejection fraction</q> refers to the percentage of blood that's pumped out of a filled ventricle with each heartbeat.
 

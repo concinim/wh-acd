@@ -1,6 +1,32 @@
-<h3 id="negation">Negation</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Negation
+{: #negation}
 
 Identifies the spans of text that are the object of a negation and also identifies the text that triggered the negation. When this annotator is run it updates annotations that currently exist in the unstructured container with a negated flag either <q>negated=true</q> or <q>negated=false</q> based on span of the annotation in the container and the span of the identified NegatedSpans. You should run this annotator after all annotators that you would like to be processed for negation.
+{:shortdesc}
 
 Note: Due to the nature of how the Negation annotator works, see Hypothetical and Negation Annotator Filtering section below for information on how best to use filtering functionality with this annotator.
 

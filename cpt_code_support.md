@@ -1,6 +1,32 @@
-<h3 id="cptCodeSupport">Current Procedural Terminology (CPT) Code Support</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Current Procedural Terminology (CPT) Code Support
+{: #cpt_codes}
 
 Support for reporting Current Procedural Terminology (CPT) codes is available in both the Concepts and Procedures annotators, however CPT codes are not provided without additional configuration due to additional license requirements by the American Medical Association (AMA). After obtaining a license to use CPT codes, the codes can be added to the Concepts and/or Procedures annotators.
+{:shortdesc}
 
 CPT codes are considered to be a non-level 0 data set in the Unified Medical Language System (UMLS), meaning that the codes are included in their tooling, but licensed separately. Download the UMLS MetamorphoSys tool from the following location. Choose <q>Full Release</q>: http://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
 

@@ -1,6 +1,32 @@
-<h3 id="profiles">Profiles</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Profiles
+{: #profiles}
 
 Profiles within ACD house annotator configurations associated with one or more annotators. Profiles can then be referenced within an ACD request where ACD will look up the annotator configurations defined within the referenced profile and inject annotator configurations within the profile into the corresponding annotators defined within the ACD request flow.
+{:shortdesc}
 
 ##### 1. View list of available profiles within ACD (id & descriptions)
 

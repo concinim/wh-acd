@@ -1,6 +1,32 @@
-<h3 id="lab_value">Lab Values</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Lab Values
+{: #lab_values}
 
 The purpose of the Lab Value annotator is to annotate the value associated with lab measurements and tests. The annotator uses lab measurements and test defined in the Logical Observation Identifiers Names and Codes (LOINC) database. This database is a universal standard for identifying medical laboratory observations. The user can provide their surface forms for lab measurements and tests by using the labTypess whitelist described in the Customization section. Only the value of the measurement or test is covered by the annotation's span. To determine what test or measurement is associated with the value use the labTypeNormalizedName and labTypeSurfaceForm features in the annotation. The Lab Value annotator is written to only handle single values or fractional values composed of two single values.
+{:shortdesc}
 
 Examples:
 

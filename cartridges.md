@@ -1,6 +1,32 @@
-<h3 id="cartridges">Cartridges</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Cartridges
+{: #cartridges}
 
 Cartridges are containers used for the customization of ACD. Within a cartridge are domain-specific artifacts chosen by the consumer detailing ACD configuration information. Artifacts created by the consumer are restricted to be less then 2MB.  Cartridges are built using the [Domain Expert Tool (DET)](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). Following the creation of a cartridge, the consumer will customize ACD by deploying a snapshot of the cartridge to ACD. The deployment of the cartridge snapshot will create <q>profile</q> and <q>flow</q> objects within the ACD service. These objects can then be referenced as part of the request when invoking ACD.
+{:shortdesc}
 
 ##### Cartridge deployment scenario:
 

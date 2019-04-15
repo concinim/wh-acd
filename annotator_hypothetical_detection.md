@@ -1,6 +1,32 @@
-<h3 id="hypothetical">Hypothetical</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Hypothetical
+{: #hypothetical}
 
 Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement <q>The doctor discussed the benefits of having an MRI performed.</q> It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement, therefore, the user of the hypothetical annotator could choose to process annotations within that span differently. Another example could be <q>the patient's father had diabetes.</q> This isn't stating the patient has diabetes, just that his father did have it. This is an example of a family history hypothetical span.
+{:shortdesc}
 
 In simple terms, the hypothetical annotator makes use of words or word phrases called <q>triggers.</q> When a trigger is found in text being analyzed, the phrase is tagged as being a potential hypothetical span. In the two examples above, the trigger terms are <q>discussed</q> and <q>father,</q> respectively. Internal to the hypothetical annotator are two dictionaries of these trigger words: hypothetical triggers and family history triggers. Examples from the hypothetical triggers dictionary include <q>suspected,</q> <q>talked about,</q> and <q>scheduled for.</q> Likewise, the internal family history triggers dictionary contains familial terms such as <q>sister,</q> <q>mother,</q> <q>brother,</q> etc. Using custom dictionaries (whitelists), either of these dictionaries may be augmented to include alternate spellings, additional terms, and regional colloquialisms as necessary. See the section on Whitelists for more information.
 

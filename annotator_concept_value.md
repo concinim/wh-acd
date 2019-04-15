@@ -1,6 +1,32 @@
-<h3 id="concept_value">Concept Value</h3>
+---
+
+copyright:
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Concept Value
+{: #concept_value}
 
 The concept_value annotator is intended to be used in conjunction with the concept_detection annotator to identify values within unstructured data associated with concepts retrieved from the concept_detection annotator. Values can be either scalar, a range, boolean, or textual. Concept Values are detected via identifying lexical triggers in unstructured data indicating a mathematical relationship (e.g >, >=, <, <=, etc.) between a previously detected concept and value. For that reason they are particularly useful for criteria matching use cases since they can be used to build a set of constraints or rules that must be met in order for something to be eligible. The concept_value annotator however is intended to be used generically and not just in criteria matching solutions.
+{:shortdesc}
 
 <h4>Dependencies</h4>
 
