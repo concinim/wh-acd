@@ -1,3 +1,30 @@
+---
+
+copyright:
+  years: 2019
+lastupdated: "2019-04-15"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Cancer
+{: #features}
+
 <h3 id="features">Features</h3>
 
 Features are additional pieces of information about an annotation.  In ACD, features are used to convey a broad range of information about an annotation including negation status, hypothetical status, the section in which the annotation was found, medical codes associated with a concept, etc.
@@ -16,12 +43,12 @@ HISTORY OF PRESENT ILLNESS:
 The patient is having digestive problems.  Previous testing has ruled out crohns disease, but further testing is needed to determine the cause of these issues.
 ```
 
-For this example, our [cartridge](wh-acd?topic=cartridges) defines a [flow](wh-acd?topic=flows) that uses the following annotators:
-[section](wh-acd?topic=sections), [concept detection](wh-acd?topic=concept_detection), and [negation](wh-acd?topic=negation).
+For this example, our [cartridge](wh-acd?topic=wh-acd-cartridges#cartridges) defines a [flow](wh-acd?topic=wh-acd-flows#flows) that uses the following annotators:
+[section](wh-acd?topic=sections), [concept detection](wh-acd?topic=wh-acd-concept_detection#concept_detection), and [negation](wh-acd?topic=wh-acd-negation#negation).
 
 Because the section annotator and negation annotator are part of the flow, section and negation attributes will be included in the concept annotations as appropriate.
 
-The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can either choose to have ACD filter this from the API response using a [Filter](wh-acd?topic=filtering) or you can choose to disregard it in your application.
+The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can either choose to have ACD filter this from the API response using a [Filter](wh-acd?topic=wh-acd-filtering#filtering) or you can choose to disregard it in your application.
 
 <pre><code>{
             "cui": "C0018799",
