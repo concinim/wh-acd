@@ -10,7 +10,6 @@ Annotator for Clinical Data
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-
     {: topicgroup}
     Annotators
         annotators.md
