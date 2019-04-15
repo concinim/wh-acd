@@ -16,12 +16,12 @@ HISTORY OF PRESENT ILLNESS:
 The patient is having digestive problems.  Previous testing has ruled out crohns disease, but further testing is needed to determine the cause of these issues.
 ```
 
-For this example, our [cartridge](docs/servics/wh-acd?topic=cartridges) defines a [flow](docs/servics/wh-acd?topic=flows) that uses the following annotators:
-[section](docs/servics/wh-acd?topic=sections), [concept detection](docs/servics/wh-acd?topic=concept_detection), and [negation](docs/servics/wh-acd?topic=negation).
+For this example, our [cartridge](wh-acd?topic=cartridges) defines a [flow](wh-acd?topic=flows) that uses the following annotators:
+[section](wh-acd?topic=sections), [concept detection](wh-acd?topic=concept_detection), and [negation](wh-acd?topic=negation).
 
 Because the section annotator and negation annotator are part of the flow, section and negation attributes will be included in the concept annotations as appropriate.
 
-The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can either choose to have ACD filter this from the API response using a [Filter](docs/servics/wh-acd?topic=filtering) or you can choose to disregard it in your application.
+The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can either choose to have ACD filter this from the API response using a [Filter](wh-acd?topic=filtering) or you can choose to disregard it in your application.
 
 <pre><code>{
             "cui": "C0018799",
