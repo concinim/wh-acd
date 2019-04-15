@@ -12,7 +12,6 @@ Annotator for Clinical Data
     {: .navgroup id="howto"}
     {: topicgroup}
     Annotators
-        annotators.md
         annotator_allergy.md
         annotator_attribute_detection.md
         annotator_cancer.md
@@ -33,6 +32,8 @@ Annotator for Clinical Data
         annotator_smoking.md
         annotator_spell_check.md
         annotator_symptom_disease.md
+
+    umls.md
 
     {: topicgroup}
     Customization
