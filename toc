@@ -10,10 +10,10 @@ Annotator for Clinical Data
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    annotators.md
 
     {: topicgroup}
     Annotators
+        annotators.md
         annotator_allergy.md
         annotator_attribute_detection.md
     {: .navgroup-end}
