@@ -29,7 +29,7 @@ subcollection: wh-acd
 
 The <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> is provided as a means of defining and evaluating customizations for ACD. Once defined, customizations are exported from DET in the form of a cartridge (zip file). The cartridge can then be deployed to ACD via the /deploy API on a per-tenant basis. Consumers can then apply these customizations when analyzing text by including the corresponding flow ID for a cartridge as a path parameter on the /analyze/{flow_id} request.
 
-See the DET <a href="http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for details on the ACD configurations supported by the tool.
+See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for details on the ACD configurations supported by the tool.
 
 
 ## Annotation Customization

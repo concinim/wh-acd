@@ -46,12 +46,12 @@ Note: Due to the nature of how the Negation annotator works, see Hypothetical an
 <tr>
 <td>fully_covered</td>
 <td>true/false</td>
-<td>When true _(default)_, an annotation must be fully covered by a negated span to be marked negated. If false, the annotation will be considered negated if any part of it overlaps with a negated span.</td>
+<td>When true <i>(default)</i>, an annotation must be fully covered by a negated span to be marked negated. If false, the annotation will be considered negated if any part of it overlaps with a negated span.</td>
 </tr>
 <tr>
 <td>remove_negated</td>
 <td>true/false</td>
-<td>When false _(defaut)_, an annotation will be kept although they are detected to be negated. If true, the negated annotation will be removed</td>
+<td>When false <i>(default)</i>, an annotation will be kept although they are detected to be negated. If true, the negated annotation will be removed</td>
 </tr>
 </table>
 

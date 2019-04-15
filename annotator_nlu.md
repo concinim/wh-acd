@@ -30,7 +30,7 @@ The Natural Language Understanding (NLU) annotator enables the ACD service to in
 
 The NLU service uses advanced NLP to analyze text and extract features from content such as **concepts**, **entities**, **keywords**, **categories**, **sentiment**, **emotion**, **relations**, and **semantic roles**. Depending upon the model selected in the NLU configuration, pronouns related to the trained entities may also be resolved to the relevant entities.
 
-At this moment, the ACD service provides a custom drug model out of the box. You may also apply a custom entity-relationship model developed using <a> Watson Knowledge Studio </a> to identify industry/domain specific entities and relations in unstructured text with Watson NLU. The full documentation of the NLU service is available at <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson</a>.
+At this moment, the ACD service provides a custom drug model out of the box. You may also apply a custom entity-relationship model developed using <a href="https://console.bluemix.net/catalog/services/watson-knowledge-studio">Watson Knowledge Studio </a> to identify industry/domain specific entities and relations in unstructured text with Watson NLU. The full documentation of the NLU service is available at <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>.
 
 
 

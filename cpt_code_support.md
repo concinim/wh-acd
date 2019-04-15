@@ -45,9 +45,9 @@ Once you have downloaded the latest UMLS MetamorphoSys release, use the followin
 11. Select the Done menu-item from the window, then choose <q>Begin Subset</q>. If prompted to save your configuration, you may save a configuration file on your system if desired. The subsetting process will take a long time to complete. Depending on hardware configuration, this process can take a few hours.
 12. When the installation and extraction process is complete, acknowledge the MetamorphoSys Subset Log dialog, close the MetamorphoSys install window, and find the MRCONSO.RRF file containing CPT codes data in the /META folder of your destination folder.
 
-After creating the MRCONSO.RRF data file, use the Watson Health [Domain Expert Tool](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to generate a valid CPT codes properties file. The CPT codes properties file is then added to a Cartridge which can then be used with ACD.
+After creating the MRCONSO.RRF data file, use the Watson Health [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to generate a valid CPT codes properties file. The CPT codes properties file is then added to a Cartridge which can then be used with ACD.
 
-1.  Open Watson Health [Domain Expert Tool](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). In the Cartridge Catalog, click <q>New</q> to create a new Cartridge.
+1.  Open Watson Health [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). In the Cartridge Catalog, click <q>New</q> to create a new Cartridge.
 2.  On the New Cartridge dialog, enter values for <q>Name,</q> <q>Author,</q> <q>Email,</q> and <q>Description.</q> Since CPT codes require additional licensing from the AMA, choose the <q>Private</q> option for the <q>Public or Private</q> combo box. Provide a comma-delimited list of authorized users for the Cartridge in the <q>Authorized Users</q> field. Then select the <q>Create</q> button.
 3.  After the new Cartridge has been created, ensure it is selected and choose the <q>Edit</q> button. This brings you to the Cartridge Editor view.
 4.  Click the <q>Create</q> button and choose <q>New CPT Code Mapping</q> from the options available.
@@ -71,7 +71,7 @@ C0002691=27590,1014580
 ```
 Note: A CUI can map to multiple CPT Codes, simply comma-delimit them as in the example provided above.
 
-You are now ready to use your CPT Code Mapping file. Following is a sample request using the CPT Code Mapping file just created. Note the use of the _profile_ element. Using the [Domain Expert Tool](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/), navigate to the Deploy Cartridge Panel for the cartridge you created in step 2 above. The value to use for the profile can be found in the ACD Profile field on that panel.
+You are now ready to use your CPT Code Mapping file. Following is a sample request using the CPT Code Mapping file just created. Note the use of the _profile_ element. Using the [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/), navigate to the Deploy Cartridge Panel for the cartridge you created in step 2 above. The value to use for the profile can be found in the ACD Profile field on that panel.
 
 ```javascript
 {

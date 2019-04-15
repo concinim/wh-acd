@@ -50,12 +50,12 @@ Note: Due to the nature of how the Hypothetical annotator works, see Hypothetica
 <tr>
 <td>remove_hypothetical</td>
 <td>true/false</td>
-<td>When true, any medical concepts deemed hypothetical from the surrounding context will be truncated from the response. When false _(default)_, medical concepts deemed hypothetical will not be truncated from the response.</td>
+<td>When true, any medical concepts deemed hypothetical from the surrounding context will be truncated from the response. When false <i>(default)</i>, medical concepts deemed hypothetical will not be truncated from the response.</td>
 </tr>
 <tr>
 <td>include_family_history</td>
 <td>true/false</td>
-<td>When true, the family history annotations will be included as part of hypothetical spans in the response. When false _(default)_, family history annotations will not be included in the response. For example, <q>his father has diabetes</q> will be annotated and included in the hypothetical span in the response when true.</td>
+<td>When true, the family history annotations will be included as part of hypothetical spans in the response. When false <i>(default)</i>, family history annotations will not be included in the response. For example, <q>his father has diabetes</q> will be annotated and included in the hypothetical span in the response when true.</td>
 </tr>
 </table>
 

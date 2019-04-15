@@ -25,12 +25,12 @@ subcollection: wh-acd
 # Cartridges
 {: #cartridges}
 
-Cartridges are containers used for the customization of ACD. Within a cartridge are domain-specific artifacts chosen by the consumer detailing ACD configuration information. Artifacts created by the consumer are restricted to be less then 2MB.  Cartridges are built using the [Domain Expert Tool (DET)](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). Following the creation of a cartridge, the consumer will customize ACD by deploying a snapshot of the cartridge to ACD. The deployment of the cartridge snapshot will create <q>profile</q> and <q>flow</q> objects within the ACD service. These objects can then be referenced as part of the request when invoking ACD.
+Cartridges are containers used for the customization of ACD. Within a cartridge are domain-specific artifacts chosen by the consumer detailing ACD configuration information. Artifacts created by the consumer are restricted to be less then 2MB.  Cartridges are built using the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). Following the creation of a cartridge, the consumer will customize ACD by deploying a snapshot of the cartridge to ACD. The deployment of the cartridge snapshot will create <q>profile</q> and <q>flow</q> objects within the ACD service. These objects can then be referenced as part of the request when invoking ACD.
 {:shortdesc}
 
 ##### Cartridge deployment scenario:
 
-1.  The consumer uses the [Domain Expert Tool (DET)](http://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
+1.  The consumer uses the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
 2.  Next, using DET, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge to their computer.
 3.  Lastly, the consumer deploys the cartridge snapshot (a zip file) to ACD using _POST /v1/deploy_ API. In the following curl example, the consumer's cartridge file is `./my_cartridges/name_of_cartridge_file.zip`, and `update=false` means do not update the resource if it already exists with the ACD service.
 
