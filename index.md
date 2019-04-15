@@ -95,7 +95,7 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-
+REMOVE ME!!! DEBUG VERSION: 1.0
 
 <table>
   <tr>
