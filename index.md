@@ -28,74 +28,15 @@ The IBM Watson Annotator for Clinical Data (ACD) allows you to create domain spe
 ## Features
 {: #features}
 
-ACD allows you to customize the annotators you need for your use case and package them into a single API call.  Features from each annotator are aggregated internally to give you easy to use annotations.  For example, given the following text:
+Every annotator in ACD has the ability to add additional information to an annotation.  These pieces of information are called _features_.  Features from each annotator are aggregated internally to give you easy to use annotations that contain all relevant information about a text span.  ACD allows you to filter annotations that may not be important for your use case from the API response.  An example of this is a disease that is detected in the _family history_ section of a medical record.  Since that disease does not apply directly to the patient, it may be something you choose to ignore in your application.  For more details on features, see [Features](docs/servics/wh-acd?topic=features).
 
-```
-FAMILY HISTORY:
-
-The patient's father died of heart disease.
-
-HISTORY OF PRESENT ILLNESS:
-
-The patient is having digestive problems.  Previous testing has ruled out crohns disease, but further testing is needed to determine the cause of these issues.
-```
-
-If you choose to use the section, negation, and concept detection annotators in your ACD call, then the resulting concepts will contain section information as well as negation polarity.  Maybe for your use case, family history doesn't matter.  If you do not need these annotations for your application, you can specify filters in your ACD configuration that will remove all family history annotations.
-
-<pre><code>  
-{
-            "cui": "C0018799",
-            "preferredName": "Heart Diseases",
-            "semanticType": "dsyn",
-            "source": "umls",
-            "sourceVersion": "2018AA",
-            "type": "umls.DiseaseOrSyndrome",
-            "begin": 46,
-            "end": 59,
-            "coveredText": "heart disease",
-            "icd10Code": "I51.9",
-            "sectionNormalizedName": "Family History",
-            "nciCode": "C3079",
-            "snomedConceptId": "56265001",
-            "meshId": "M0009951",
-            "vocabs": "MTH,LNC,NCI_NICHD,CCS_10,CSP,MSH,CST,COSTAR,CHV,CCS,MEDLINEPLUS,NCI,LCH_NW,AOD,NDFRT,SNOMEDCT_US",
-            "sectionSurfaceForm": "FAMILY HISTORY",
-            "icd9Code": "429.89,V47.2",
-            "loincId": "LA10523-1"
-}
-</pre></code>  
-
-Similarly, if you are not interested in negated concepts, you can filter them at the application level based on the value of the **negated** flag or you can configure ACD to not return negated concepts.
-
-<pre><code>  
-{
-            "cui": "C0010346",
-            "preferredName": "Crohn Disease",
-            "semanticType": "dsyn",
-            "source": "umls",
-            "sourceVersion": "2018AA",
-            "type": "umls.DiseaseOrSyndrome",
-            "begin": 165,
-            "end": 179,
-            "coveredText": "crohns disease",
-            <b>"negated": true</b>,
-            "loincId": "LA10554-6",
-            "icd10Code": "K50.90",
-            "sectionNormalizedName": "History of present illness",
-            "nciCode": "C2965",
-            "snomedConceptId": "34000006",
-            "meshId": "M0005335",
-            "vocabs": "MTH,NCI_NICHD,LNC,CSP,MSH,CST,HPO,OMIM,COSTAR,AIR,MTHMST,NCI_NCI-GLOSS,CHV,MEDLINEPLUS,NCI,LCH_NW,AOD,NDFRT,SNOMEDCT_US,DXP",
-            "sectionSurfaceForm": "HISTORY OF PRESENT ILLNESS"
-  }
-  </pre></code>
 
 ### Medical codes
 {: #medicalcodes}
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-**REMOVE ME!!! DEBUG VERSION: 1.4**
+**REMOVE ME!!! DEBUG VERSION: 1.5**
 
 <table>
   <tr>
@@ -173,6 +114,13 @@ For more information, see [Concept Value](docs/servics/wh-acd?topic=conceptValue
 Identifies spans of text with an implied negative meaning.  For example: _there are no signs of ulceration in the stomach lining_
 
 For more information, see [Negation](docs/servics/wh-acd?topic=negation)
+
+### NLU
+{: #nlu}
+
+ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into a larger ACD flow.
+
+For more information, see [NLU](docs/servics/wh-acd?topic=nlu)
 
 ### Hypothetical
 {: #hypothetical}
