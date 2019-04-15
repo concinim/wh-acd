@@ -9,8 +9,46 @@ Annotator for Clinical Data
     index.md
     {: .navgroup-end}
 
+    {: .navgroup id="how-to"}
+
+    {: topicgroup}
+    Annotators
+      annotators.md
+      annotator_allergy.md
+      annotator_attribute_detection.md
+      annotator_cancer.md
+      annotator_concept_detection.md
+      annotator_concept_disambiguation.md
+      annotator_concept_value.md
+      annotator_ejection_fraction.md
+      annotator_hypothetical_detection.md
+      annotator_lab_values.md
+      annotator_living_assistance.md
+      annotator_medication.md
+      annotator_named_entities.md
+      annotator_negation_detection.md
+      annotator_nlu.md
+      annotator_procedure.md
+      annotator_relation.md
+      annotator_sections.md
+      annotator_smoking.md
+      annotator_spell_check.md
+      annotator_symptom_disease.md
+
+    {: topicgroup}
+    Customization
+        customization.md
+        filters.md
+        whitelists.md
+
+    cpt_code_support.md
+    profiles.md
+    flows.md
+    cartridges.md
+    user_data.md
+
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     {: .navgroup-end}
-
