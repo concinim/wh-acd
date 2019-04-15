@@ -11,8 +11,8 @@ Annotator for Clinical Data
 
     {: topicgroup}
     Annotators
-      annotators.md
-      annotator_allergy.md
+        annotators.md
+        annotator_allergy.md
 
     {: .navgroup-end}
 
