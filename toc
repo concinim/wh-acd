@@ -46,6 +46,7 @@ Annotator for Clinical Data
     flows.md
     cartridges.md
     user_data.md
+    features.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

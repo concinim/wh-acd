@@ -22,10 +22,8 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Cancer
+# Annotation Features
 {: #features}
-
-<h3 id="features">Features</h3>
 
 Features are additional pieces of information about an annotation.  In ACD, features are used to convey a broad range of information about an annotation including negation status, hypothetical status, the section in which the annotation was found, medical codes associated with a concept, etc.
 
