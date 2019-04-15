@@ -1,3 +1,30 @@
+---
+
+copyright:
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Annotators
+{: #annotators}
+
 <h3 id="customize-acd">Customization</h3>
 
 The <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> is provided as a means of defining and evaluating customizations for ACD. Once defined, customizations are exported from DET in the form of a cartridge (zip file). The cartridge can then be deployed to ACD via the /deploy API on a per-tenant basis. Consumers can then apply these customizations when analyzing text by including the corresponding flow ID for a cartridge as a path parameter on the /analyze/{flow_id} request.
