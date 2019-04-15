@@ -7,23 +7,10 @@ Annotator for Clinical Data
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    annotators.md
-
-    {: topicgroup}
-    Annotators
-        annotators.md
-        annotator_allergy.md
-
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     annotators.md
-
-    {: topicgroup}
-    Annotators
-      annotators.md
-      annotator_allergy.md
-
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
