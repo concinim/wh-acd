@@ -29,6 +29,6 @@ The Unified Medical Language System (UMLS) provides broad medical concept covera
 
 The Concept Disambiguation annotator ranks the contextual validity of a UMLS [concept](wh-acd?topic=wh-acd-concept_detection#concept_detection) based on sentence and document level information.
 
-If your use case requires you to handle a broad range of medical topics and concept level precision is important, adding disambiguation to your ACD flow can help.  Conversely, if you work with a relatively small set of concepts or you only use complex derived  [attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection), disambiguation may not be necessary.
+If your use case requires you to handle a broad range of medical topics and concept level precision is important, adding disambiguation to your ACD flow can help.  Conversely, if you work with a relatively small set of concepts or you only use complex derived  [attributes](wh-acd?topic=wh-acd-attribute_detection#attribute_detection), disambiguation may not be necessary.
 
 The disambiguation annotator can be configured to remove annotations it determines are invalid or to tag them as invalid but leave them in the API response.
