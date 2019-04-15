@@ -30,7 +30,7 @@ An annotator flow within ACD defines a set of one or more annotators, and option
 
 #### Provided Annotator Flows
 
-ACD provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="#profiles">Profiles</a> section for more details on the profiles.
+ACD provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
 
 Predefined flows can not be updated or deleted.
 

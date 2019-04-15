@@ -90,12 +90,12 @@ The following table lists parameters of the concept_detection service.
   <tr>
     <td>longest_span</td>
     <td>true/false</td>
-    <td>When true _(default)_, only the concept with the longest text span will be returned if there are multiple concepts overlapping the same span of text.</td>
+    <td>When true <i>(default)</i>, only the concept with the longest text span will be returned if there are multiple concepts overlapping the same span of text.</td>
   </tr>
   <tr>
     <td>expanded</td>
     <td>true/false</td>
-    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if "broken collarbone" is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like "broke my collarbone".  This option is _false_ by default.</td>
+    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if "broken collarbone" is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like "broke my collarbone".  This option is <i>false</i> by default.</td>
   </tr>
   <tr>
     <td>libraries</td>

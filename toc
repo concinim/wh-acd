@@ -50,4 +50,5 @@ Annotator for Clinical Data
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
+    [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/
     {: .navgroup-end}

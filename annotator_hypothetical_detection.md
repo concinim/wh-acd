@@ -23,7 +23,7 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # Hypothetical
-{: #hypothetical}
+{: #hypothetical_detection}
 
 Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement <q>The doctor discussed the benefits of having an MRI performed.</q> It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement, therefore, the user of the hypothetical annotator could choose to process annotations within that span differently. Another example could be <q>the patient's father had diabetes.</q> This isn't stating the patient has diabetes, just that his father did have it. This is an example of a family history hypothetical span.
 {:shortdesc}

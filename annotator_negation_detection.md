@@ -23,7 +23,7 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # Negation
-{: #negation}
+{: #negation_detection}
 
 Identifies the spans of text that are the object of a negation and also identifies the text that triggered the negation. When this annotator is run it updates annotations that currently exist in the unstructured container with a negated flag either <q>negated=true</q> or <q>negated=false</q> based on span of the annotation in the container and the span of the identified NegatedSpans. You should run this annotator after all annotators that you would like to be processed for negation.
 {:shortdesc}

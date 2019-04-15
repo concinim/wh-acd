@@ -23,7 +23,7 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # NLU Annotator (Experimental)
-{: #nlu}
+{: #nlu_annotator}
 
 The Natural Language Understanding (NLU) annotator enables the ACD service to interact with the <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>. The NLU service extracts features from the unstructured text based on the NLU configuration. The ACD service will supply the unstructured text to the NLU service, capture the response, and extract the relevant response features so that they can be easily used by other annotators in the ACD flow.
 {:shortdesc}

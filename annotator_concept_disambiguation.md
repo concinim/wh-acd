@@ -25,7 +25,7 @@ subcollection: wh-acd
 # Concept Disambiguation
 {: #concept_disambiguation}
 
-Determines the contextual validity of previously detected medical concepts (such as those identified by <a data-scroll="" href="#concept_detection">Concepts</a> based on the immediate sentence and document-level context. Disambiguation can act on any annotation with a cui field, given that cui field's values are known to disambiguation by being defined either in UMLS or else in a concept override as defined in the Json configuration section below.
+Determines the contextual validity of previously detected medical concepts (such as those identified by <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">Concepts</a> based on the immediate sentence and document-level context. Disambiguation can act on any annotation with a cui field, given that cui field's values are known to disambiguation by being defined either in UMLS or else in a concept override as defined in the Json configuration section below.
 {:shortdesc}
 
 For example, consider the text _<q>Rain-on-snow and thaw-freeze events leading to ice formation on the ground may increase both in frequency and spatial extent.</q>_ Based on UMLS surface forms, concept_detection returns two different concepts over the word "ice": C0020746 (frozen water), and C0025611 (methamphetamine). It is disambiguation's job to use contextual clues to decide that in this context the frozen water concept is valid, and the methamphetamine concept is invalid.
@@ -40,7 +40,7 @@ Disambiguation operates in three steps.
 **Step 1 - Scoring**: Disambiguation scores and optionally filters concepts according to how well a textual representation of the concept--a word or short phrase--fits in context. Concepts are scored by two models:
 
 * **topic** model: This model is not aware of syntax and simply decides whether the concept representation makes sense topically inside a large window of surrounding text (about a paragraph or two).
-* **semtype** model: This model is syntax aware and decides whether the concept's semantic type fits within the same window used by the sentence model. This model currently knows only about UMLS semantic types, linked to in the <a data-scroll=""  href="#concept_detection">Concepts</a> section.
+* **semtype** model: This model is syntax aware and decides whether the concept's semantic type fits within the same window used by the sentence model. This model currently knows only about UMLS semantic types, linked to in the <a data-scroll=""  href="wh-acd?topic=wh-acd-concept_detection#concept_detection">Concepts</a> section.
 
 **Step 2 - Preliminary judgment**: After scoring, the service makes an overall judgment about the validity of a concept, concluding either VALID, INVALID, or NO_DECISION based on a set of internal heuristics combining and thresholding model scores.
 
