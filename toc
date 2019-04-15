@@ -9,7 +9,7 @@ Annotator for Clinical Data
     index.md
     {: .navgroup-end}
 
-    {: .navgroup id="how-to"}
+    {: .navgroup id="howto"}
 
     {: topicgroup}
     Annotators
