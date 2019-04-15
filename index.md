@@ -95,21 +95,21 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-REMOVE ME!!! DEBUG VERSION: 1.0
+REMOVE ME!!! DEBUG VERSION: 1.1
 
 <table>
   <tr>
-    <th width="1%">Medical Codes</th>
-    <th width="1%">NCI</th>
-    <th width="1%">ICD 9/10</th>
-    <th width="1%">LOINC</th>
-    <th width="1%">MeSH</th>
-    <th width="1%">RxNorm</th>
-    <th width="1%">SNOMED CT</th>
-    <th width="1%">CPT</th>
-    <th width="1%">CCS</th>
-    <th width="1%">HCC</th>
-    <th width="1%">UMLS CUI</th>
+    <th width="1%" min-width="0">Medical Codes</th>
+    <th width="1%" min-width="0">NCI</th>
+    <th width="1%" min-width="0">ICD 9/10</th>
+    <th width="1%" min-width="0">LOINC</th>
+    <th width="1%" min-width="0">MeSH</th>
+    <th width="1%" min-width="0">RxNorm</th>
+    <th width="1%" min-width="0">SNOMED CT</th>
+    <th width="1%" min-width="0">CPT</th>
+    <th width="1%" min-width="0">CCS</th>
+    <th width="1%" min-width="0">HCC</th>
+    <th width="1%" min-width="0">UMLS CUI</th>
   </tr>
 
   <tr>
