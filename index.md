@@ -95,23 +95,25 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
+
+
 <table>
   <tr>
-    <th><b>Medical Codes</b></th>
-    <th>NCI</th>
-    <th>ICD 9/10</th>
-    <th>LOINC</th>
-    <th>MeSH</th>
-    <th>RxNorm</th>
-    <th>SNOMED CT</th>
-    <th>CPT</th>
-    <th>CCS</th>
-    <th>HCC</th>
-    <th>UMLS CUI</th>
+    <th width="1%">Medical Codes</th>
+    <th width="1%">NCI</th>
+    <th width="1%">ICD 9/10</th>
+    <th width="1%">LOINC</th>
+    <th width="1%">MeSH</th>
+    <th width="1%">RxNorm</th>
+    <th width="1%">SNOMED CT</th>
+    <th width="1%">CPT</th>
+    <th width="1%">CCS</th>
+    <th width="1%">HCC</th>
+    <th width="1%">UMLS CUI</th>
   </tr>
 
   <tr>
-    <th colspan="11"><b>Turn Key Annotators</b></th>
+    <th colspan="11" width="1%"><b>Turn Key Annotators</b></th>
   </tr>
   <tr><td>Allergy</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td>Cancer</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
