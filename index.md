@@ -36,8 +36,6 @@ Every annotator in ACD has the ability to add additional information to an annot
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-**REMOVE ME!!! DEBUG VERSION: 1.5**
-
 <table>
   <tr>
     <th style="width:100%; min-width:0 !important">Medical Codes</th>
@@ -113,21 +111,21 @@ For more information, see [Concept Value](wh-acd?topic=wh-acd-concept_value#conc
 
 Identifies spans of text with an implied negative meaning.  For example: _there are no signs of ulceration in the stomach lining_
 
-For more information, see [Negation](wh-acd?topic=wh-acd-negation#negation)
+For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection)
 
 ### NLU
 {: #nlu}
 
 ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into a larger ACD flow.
 
-For more information, see [NLU](wh-acd?whtopic=wh-acd-nlu#nlu)
+For more information, see [NLU](wh-acd?whtopic=wh-acd-nlu_annotator#nlu_annotator)
 
 ### Hypothetical
 {: #hypothetical}
 
 Identifies spans of text are the object of a hypothetical statement.
 
-For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical#hypothetical)
+For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detection#hypothetical_detection)
 
 ### Turn Key Annotators
 {: #turnKeyAnnotators}
@@ -147,4 +145,6 @@ For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical#hypoth
 ### Concept Disambiguation
 {: #disambiguation}
 
-Description of Disambiguation
+Determines the validity of UMLS concepts detected in a document.
+
+For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation)
