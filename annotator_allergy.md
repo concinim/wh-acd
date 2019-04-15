@@ -1,33 +1,29 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2019-04-10"
+  years: 2011, 2019
+lastupdated: "2019-04-12"
+
+subcollection: wh-acd
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:deprecated: .deprecated}
-{:generic: .ph data-hd-programlang='generic'}
-{:curl: .ph data-hd-programlang='curl'}
-{:go: .ph data-hd-programlang='go'}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
-{:node: .ph data-hd-programlang='node'}
 {:python: .ph data-hd-programlang='python'}
-{:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
-{:middle: .ph data-hd-position='middle'}
-{:right: .ph data-hd-position='right'}
-{:here: .ph data-hd-vposition='here'}
 
 # Allergies
-{: #annotator_allergies}
+{: #allergies}
 
 <h3 id="allergy">Allergies</h3>
 

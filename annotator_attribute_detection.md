@@ -1,3 +1,30 @@
+---
+
+copyright:
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: wh-acd
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# Attribute Detection
+{: #attribute_detection}
+
 <h3 id="attribute_detection">Attributes</h3>
 
 The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identify pieces of information pertinent to the domain and are used to create the attribute values by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator,  can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level <q>concept</q> in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.

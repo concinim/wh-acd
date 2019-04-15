@@ -11,6 +11,11 @@ Annotator for Clinical Data
 
     {: .navgroup id="howto"}
     annotators.md
+
+    {: topicgroup}
+    Annotators
+        annotator_allergy.md
+        annotator_attribute_detection.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
