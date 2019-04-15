@@ -130,17 +130,19 @@ For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detect
 ### Turn Key Annotators
 {: #turnKeyAnnotators}
 
-[Allergy](wh-acd?topic=wh-acd-allergy#allergy)
-[Cancer](wh-acd?topic=wh-acd-cancer#cancer)
-[Ejection Fraction](wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction)
-[Lab Values](wh-acd?topic=wh-acd-lab_values#lab_values)
-[Living Assistance](wh-acd?topic=wh-acd-living_assistance#living_assistance)
-[Medications](wh-acd?topic=wh-acd-medications#medications)
-[Named Entities](wh-acd?topic=wh-acd-named_entities#named_entities)
-[Procedures](wh-acd?topic=wh-acd-procedures#procedures)
-[Sections](wh-acd?topic=wh-acd-sections#sections)
-[Smoking](wh-acd?topic=wh-acd-smoking#smoking)
-[Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
+Prebuilt annotators targeted at specific medical domains.
+
+* [Allergy](wh-acd?topic=wh-acd-allergies#allergies)
+* [Cancer](wh-acd?topic=wh-acd-cancer#cancer)
+* [Ejection Fraction](wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction)
+* [Lab Values](wh-acd?topic=wh-acd-lab_values#lab_values)
+* [Living Assistance](wh-acd?topic=wh-acd-living_assistance#living_assistance)
+* [Medications](wh-acd?topic=wh-acd-medications#medications)
+* [Named Entities](wh-acd?topic=wh-acd-named_entities#named_entities)
+* [Procedures](wh-acd?topic=wh-acd-procedure#procedure)
+* [Sections](wh-acd?topic=wh-acd-sections#sections)
+* [Smoking](wh-acd?topic=wh-acd-smoking#smoking)
+* [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
 ### Concept Disambiguation
 {: #disambiguation}
