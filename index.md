@@ -95,21 +95,21 @@ Similarly, if you are not interested in negated concepts, you can filter them at
 
 ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
 
-REMOVE ME!!! DEBUG VERSION: 1.1
+REMOVE ME!!! DEBUG VERSION: 1.2
 
 <table>
   <tr>
-    <th width="1%" min-width="0">Medical Codes</th>
-    <th width="1%" min-width="0">NCI</th>
-    <th width="1%" min-width="0">ICD 9/10</th>
-    <th width="1%" min-width="0">LOINC</th>
-    <th width="1%" min-width="0">MeSH</th>
-    <th width="1%" min-width="0">RxNorm</th>
-    <th width="1%" min-width="0">SNOMED CT</th>
-    <th width="1%" min-width="0">CPT</th>
-    <th width="1%" min-width="0">CCS</th>
-    <th width="1%" min-width="0">HCC</th>
-    <th width="1%" min-width="0">UMLS CUI</th>
+    <th style="width:1% min-width:0 !important">Medical Codes</th>
+    <th style="width:1% min-width:0 !important">NCI</th>
+    <th style="width:1% min-width:0 !important">ICD 9/10</th>
+    <th style="width:1% min-width:0 !important">LOINC</th>
+    <th style="width:1% min-width:0 !important">MeSH</th>
+    <th style="width:1% min-width:0 !important">RxNorm</th>
+    <th style="width:1% min-width:0 !important">SNOMED CT</th>
+    <th style="width:1% min-width:0 !important">CPT</th>
+    <th style="width:1% min-width:0 !important">CCS</th>
+    <th style="width:1% min-width:0 !important">HCC</th>
+    <th style="width:1% min-width:0 !important">UMLS CUI</th>
   </tr>
 
   <tr>
