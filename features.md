@@ -27,7 +27,7 @@ subcollection: wh-acd
 
 Features are additional pieces of information about an annotation.  In ACD, features are used to convey a broad range of information about an annotation including negation status, hypothetical status, the section in which the annotation was found, medical codes associated with a concept, etc.
 
-Let's look at a simple example to understand how features can be used to help hone in on the concepts that are most relevant to you.
+Let's look at a simple example to understand how features can be used to help hone in on the concepts that are most important for your application.
 
 Given the following text, we want to identify the disease attributes that are directly associated with the patient.
 
@@ -42,11 +42,11 @@ The patient is having digestive problems.  Previous testing has ruled out crohns
 ```
 
 For this example, our [cartridge](wh-acd?topic=wh-acd-cartridges#cartridges) defines a [flow](wh-acd?topic=wh-acd-flows#flows) that uses the following annotators:
-[section](wh-acd?topic=sections), [concept detection](wh-acd?topic=wh-acd-concept_detection#concept_detection), and [negation](wh-acd?topic=wh-acd-negation#negation).
+[section](wh-acd?topic=wh-acd-sections#sections), [concept detection](wh-acd?topic=wh-acd-concept_detection#concept_detection), and [negation](wh-acd?topic=wh-acd-negation_detection#negation_detection).
 
 Because the section annotator and negation annotator are part of the flow, section and negation attributes will be included in the concept annotations as appropriate.
 
-The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can either choose to have ACD filter this from the API response using a [Filter](wh-acd?topic=wh-acd-filtering#filtering) or you can choose to disregard it in your application.
+The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this sample use case, we do not want to consider this concept because it appears in the family history section of the document.  Notice that section information is included in the annotation.  You can have ACD filter this annotation from the API response using a [Filter](wh-acd?topic=wh-acd-filters#filters).
 
 <pre><code>{
             "cui": "C0018799",
@@ -69,7 +69,7 @@ The first disease we find is _Heart Disease (UMLS CUI C0018799)_.  For this samp
             "loincId": "LA10523-1"
 }</pre></code>  
 
-In the next, section of the document, there are two concepts present that describe a medical condition - _digestive problems_ and _crohns disease_.  In this example, the language around crohns disease in the document indicates that is not the likely cause of the patient's problems.  The resulting annotation indicates that the concept for crohns disease is negated.  As before, you can have this concept filtered by ACD or handle the presence of a negated feature in your application.
+In the next section of the document, there are two concepts present that describe a medical condition - _digestive problems_ and _crohns disease_.  In this example, the language in the document around crohns disease indicates that the patient does not have crohns disease.  The resulting annotation indicates that the concept for crohns disease is negated.  As before, you can configure ACD to filter negated concepts from the API response if you do not want to process them.
 
 <pre><code>{
             "cui": "C0010346",
