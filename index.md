@@ -45,35 +45,42 @@ The resulting concept over ulceration will contain standard medical codes along 
     "vocabs": "MTH,NCI_CDISC,NCI_FDA,NCI,OMIM,SNOMEDCT_US,NCI_NCI-GLOSS"
 }```
 
-To learn about all of the ways you can customize ACD, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your specific needs.
+To learn about all of the ways you can customize ACD, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your application.
 
 
 {: shortdesc}
 
->>> TODO:  GIVE THE SECTION BELOW SOME NARRATIVE STRUCTURE <<<
+## Customizable concept annotators
 
-
+These annotators can be tailored to your needs using the Domain Expert Tool.
 ### Attributes
 {: #attribues}
 
-Attributes are customizable higher order concepts generally composed of multiple pieces of information found in a document.
+Attributes are higher order concepts generally composed of multiple pieces of information found in a document.  An example of this might be understanding if a patient is overweight or not.  Given some example text, we would like to know if the patient is overweight or not.
+
+```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
+
+Using configurable [concept values](wh-acd?topic=wh-acd-concept_value#concept_value), we know the patient's height and weight.  ACD can run inference rules to distill this text down to a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
 For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection)
 
 ### Concepts
 {: #concepts}
 
-The concept annotator finds Unified Medical Language System (UMLS) concepts in unstructured text.
+The concept annotator finds UMLS or custom concepts in unstructured text.
 
 For more information, see [Concepts](wh-acd?topic=wh-acd-concept_detection#concept_detection)
 
 ### Concept Value
 {: #conceptValue}
 
-The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.
+The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.  In our attribute example above, the combination of `height` with `6 feet` is an example of how concept values work.
 
 For more information, see [Concept Value](wh-acd?topic=wh-acd-concept_value#concept_value)
 
+## Contextual Annotators
+
+Contextual annotators use the surrounding context of the document to provide a deeper understanding of concepts.
 
 ### Negation
 {: #negation}
@@ -82,13 +89,6 @@ Identifies spans of text with an implied negative meaning.  For example: _there 
 
 For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection)
 
-### NLU
-{: #nlu}
-
-ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into a larger ACD flow.
-
-For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator)
-
 ### Hypothetical
 {: #hypothetical}
 
@@ -96,10 +96,18 @@ Identifies spans of text are the object of a hypothetical statement.
 
 For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detection#hypothetical_detection)
 
+### Concept Disambiguation
+{: #disambiguation}
+
+Determines the validity of UMLS concepts detected in a document.
+
+For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation)
+
+
 ### Turn Key Annotators
 {: #turnKeyAnnotators}
 
-Prebuilt annotators targeted at specific medical domains.
+ACD provides a set of prebuilt annotators targeted at specific medical domains.
 
 * [Allergy](wh-acd?topic=wh-acd-allergies#allergies)
 * [Cancer](wh-acd?topic=wh-acd-cancer#cancer)
@@ -113,9 +121,9 @@ Prebuilt annotators targeted at specific medical domains.
 * [Smoking](wh-acd?topic=wh-acd-smoking#smoking)
 * [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
-### Concept Disambiguation
-{: #disambiguation}
+### Integration with Natural Language Understanding
+{: #nlu}
 
-Determines the validity of UMLS concepts detected in a document.
+ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your ACD API call.
 
-For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation)
+For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator)
