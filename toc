@@ -58,9 +58,10 @@ Annotator for Clinical Data
     release-notes.md
     troubleshooting.md
     faqs.md
+    
     {: .topicgroup}
-       Developer community
-           [StackOverflow](http://stackoverflow.com/questions/tagged/wh-acd)
-           [IBM Developer Answers](https://developer.ibm.com/answers/topics/wh-acd/)
-           [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    Developer community
+        [StackOverflow](http://stackoverflow.com/questions/tagged/wh-acd)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/wh-acd/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
