@@ -20,69 +20,38 @@ lastupdated: "2019-04-12"
 # About
 {: #about}
 
-The IBM Watson Annotator for Clinical Data (ACD) allows you to create domain specific medical NLP.  ACD provides turn key annotators along with highly customizable annotators that you can tune specifically for your application needs.  
+The IBM Watson Annotator for Clinical Data (ACD) is built to find medical concepts, medical codes, and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
+
+To illustrate the basic function of ACD, let's look at this with a simple example.  Imagine that we have the following small snippet of text:
+
+```There were no signs of ulceration```
+
+The resulting concept over ulceration will contain standard medical codes along with contextual information about the concept - in this example, the concept is negated.
+
+```
+{
+    "cui": "C3887532",
+    "preferredName": "Ulceration",
+    "semanticType": "patf",
+    "source": "umls",
+    "sourceVersion": "2018AA",
+    "type": "umls.PathologicFunction",
+    "begin": 23,
+    "end": 33,
+    "coveredText": "ulceration",
+    "negated": true,
+    "nciCode": "C25757",
+    "snomedConceptId": "263913002",
+    "vocabs": "MTH,NCI_CDISC,NCI_FDA,NCI,OMIM,SNOMEDCT_US,NCI_NCI-GLOSS"
+}```
+
+To learn about all of the ways you can customize ACD, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your specific needs.
 
 
 {: shortdesc}
 
-### Features
-{: #features}
+>>> TODO:  GIVE THE SECTION BELOW SOME NARRATIVE STRUCTURE <<<
 
-Every annotator in ACD has the ability to add additional information to an annotation.  These pieces of information are called _features_.  Features from each annotator are aggregated internally to give you easy to use annotations that contain all relevant information about a text span.  ACD allows you to filter annotations that may not be important for your use case from the API response.  An example of this is a disease that is detected in the _family history_ section of a medical record.  Since that disease does not apply directly to the patient, it may be something you choose to ignore in your application.  For more details on features, see [Features](wh-acd?topic=wh-acd-features#features).
-
-
-### Medical codes
-{: #medicalcodes}
-
-ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
-
-<table>
-  <tr>
-    <th style="width:100%; min-width:0 !important">Medical Codes</th>
-    <th style="width:1%; min-width:0 !important">NCI</th>
-    <th style="width:1%; min-width:0 !important">ICD 9/10</th>
-    <th style="width:1%; min-width:0 !important">LOINC</th>
-    <th style="width:1%; min-width:0 !important">MeSH</th>
-    <th style="width:1%; min-width:0 !important">RxNorm</th>
-    <th style="width:1%; min-width:0 !important">SNOMED CT</th>
-    <th style="width:1%; min-width:0 !important">CPT</th>
-    <th style="width:1%; min-width:0 !important">CCS</th>
-    <th style="width:1%; min-width:0 !important">HCC</th>
-    <th style="width:1%; min-width:0 !important">UMLS CUI</th>
-  </tr>
-
-  <tr>
-    <th colspan="11" width="1%"><b>Turn Key Annotators</b></th>
-  </tr>
-  <tr><td>Allergy</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Cancer</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
-  <tr><td>Ejection Fraction</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Lab Value</td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Living Assistance</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Medication</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Named Entities</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td>Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
-  <tr><td>Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
-
-  <tr><th></th></tr>
-  <tr>
-    <th colspan="11"><b>Configurable Concept Annotators</b></th>
-  </tr>
-  <tr><td>Attribute</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
-  <tr><td>Concept (UMLS 2018AA+)</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
-  <tr><td>Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
-  <tr><td>Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
-
-  <tr><th></th></tr>
-  <tr>
-    <th colspan="11"><b>Cotextual Annotators</b></th>
-  </tr>
-  <tr><td>Disambiguation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
-  <tr><td>Hypothetical</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
-  <tr><td>Negation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
-  <tr><td>Section</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
-
-</table>
 
 ### Attributes
 {: #attribues}
