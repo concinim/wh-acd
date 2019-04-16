@@ -58,7 +58,8 @@ Annotator for Clinical Data
     release-notes.md
     troubleshooting.md
     faqs.md
-    
+    known_limitations.md
+
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/wh-acd)
