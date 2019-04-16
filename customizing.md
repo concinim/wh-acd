@@ -22,10 +22,10 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Customization
-{: #customization}
+# Customizing
+{: #Customizing}
 
-# Cartridges
+## Cartridges
 {: #cartridges}
 
 Cartridges are containers used for the customization of ACD. Within a cartridge are domain-specific artifacts chosen by the consumer detailing ACD configuration information. Artifacts created by the consumer are restricted to be less then 2MB.  Cartridges are built using the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/). Following the creation of a cartridge, the consumer will customize ACD by deploying a snapshot of the cartridge to ACD. The deployment of the cartridge snapshot will create <q>profile</q> and <q>flow</q> objects within the ACD service. These objects can then be referenced as part of the request when invoking ACD.
