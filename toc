@@ -10,6 +10,12 @@ Annotator for Clinical Data
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    customizing.md
+    deploy_cartridge.md
+    analyze_text.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
     {: topicgroup}
     Annotators
         annotator_allergy.md
@@ -33,23 +39,7 @@ Annotator for Clinical Data
         annotator_spell_check.md
         annotator_symptom_disease.md
 
-    umls.md
-
-    {: topicgroup}
-    Customization
-        customization.md
-        filters.md
-        whitelists.md
-
-    cpt_code_support.md
-    profiles.md
-    flows.md
-    cartridges.md
-    user_data.md
-    features.md
-    {: .navgroup-end}
-
-    {: .navgroup id="reference"}
+    medical_codes.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/)
     {: .navgroup-end}
@@ -59,10 +49,4 @@ Annotator for Clinical Data
     troubleshooting.md
     faqs.md
     known_limitations.md
-
-    {: .topicgroup}
-    Developer community
-        [StackOverflow](http://stackoverflow.com/questions/tagged/wh-acd)
-        [IBM Developer Answers](https://developer.ibm.com/answers/topics/wh-acd/)
-        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
