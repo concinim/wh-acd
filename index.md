@@ -85,14 +85,14 @@ Contextual annotators use the surrounding context of the document to provide a d
 ### Negation
 {: #negation}
 
-Identifies spans of text with an implied negative meaning.  For example: _there are no signs of ulceration in the stomach lining_
+Identifies spans of text with an implied negative meaning.  For example: _There are no signs of ulceration in the stomach lining._
 
 For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection)
 
 ### Hypothetical
 {: #hypothetical}
 
-Identifies spans of text are the object of a hypothetical statement.
+Identifies spans of text are the object of a hypothetical statement.  For example: _We discussed the pros and cons of chemotherapy._
 
 For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detection#hypothetical_detection)
 
