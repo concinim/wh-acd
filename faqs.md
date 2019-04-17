@@ -24,7 +24,7 @@ Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_de
 {: #faq-filter}
 {: faq}
 
-Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, can create a filter t remove unwanted concepts. The type of filter will vary based on the annotator you are using. See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
+Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, you can create a filter to remove unwanted concepts. The type of filter will vary based on the annotator you are using. See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
 
 ## What is a cartridge?
 {: #faq-cartridge}
@@ -36,4 +36,4 @@ A cartridge is a container for providing [customizations](wh-acd?topic=wh-acd-cu
 {: #faq-attribute}
 {: faq}
 
-Clinical Attributes are the defined set of clinical findings that are pertinent and customized to a particular disease domain or engagement that represents the user's view of the solution domain. Clinical Attributes can be linked to external classification codes such as ICD9 or CPT. A clinical attribute has a name that is unique for that domain. A clinical attribute also has an associated value.  The value can be discovered from the surrounding text, enumerated during definition of the attribute, derived from other attributes, or it can merely indicate that the attribute was mentioned in the text. Attributes can be defined using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> which also includes which medical concepts should be mapped to the attribute
+Clinical Attributes are the defined set of clinical findings that are pertinent and customized to a particular disease domain or engagement that represents the user's view of the solution domain. Clinical Attributes can be linked to external classification codes such as ICD9 or CPT. A clinical attribute has a name that is unique for that domain. Attributes are defined using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>. A clinical attribute also has an associated value. The values can be discovered from the surrounding text, enumerated during definition of the attribute, derived from other attributes, or it can merely indicate that the attribute was mentioned in the text. The definition of the attribute also includes which medical concepts should be mapped to the attribute. 
