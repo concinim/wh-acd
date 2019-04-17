@@ -26,10 +26,10 @@ subcollection: wh-acd
 {: #concept_detection}
 
 The concept detection service detects Unified Medical Language System (UMLS) concepts from unstructured data.
-As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is retuned with the concept detected.
+As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is returned with the concept detected.
 {:shortdesc}
 
-Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
+Note that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
 
 ### Expanded Concepts
 
