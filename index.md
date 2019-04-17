@@ -104,7 +104,7 @@ Determines the validity of UMLS concepts detected in a document.
 For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation).
 
 ### Spell Check (Experimental)
-{: #spell_check}
+{: #spell_check_summary}
 
 Medically aware spell checker that can be integrated into an ACD API call.
 
