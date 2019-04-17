@@ -28,11 +28,10 @@ subcollection: wh-acd
 This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of larger [flow](wh-acd?topic=wh-acd-flows#flows)  that includes the [concept detection annotator](wh-acd?topic=wh-acd-concept_detection#concept_detection).  If concept detection is in your flow with the _expanded_ option set to **true**, concept detection will create concepts over any spelling corrections of sufficiently high confidence that map to a surface form in any of the concept detection libraries in your flow.
 
 As of this writing, *spellingCorrections* annotations are only used by concept detection.  Additional support will be coming to allow them to be leveraged by all ACD annotators.
-{:shortdesc}
 
-<h4>Configurations</h4>
+#### Configurations
+
 <table>
-  <caption>Configurations</caption>
   <tr>
     <th>Configuration</th>
     <th>Values</th>
@@ -53,16 +52,13 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
   </tr>
 </table>
 
+#### Annotation Types
 
+* spellCorrectedText
+* spellingCorrections
+* suggestions<
 
-
-<h4>Annotation Types</h4>
-
-<li>spellCorrectedText</li>
-<li>spellingCorrections</li>
-<li>suggestions</li>
-
-###### spellCorrectedText
+#### spellCorrectedText
 
 <table>
   <tr>
@@ -79,7 +75,7 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
   </tr>
 </table>
 
-###### spellingCorrections
+#### spellingCorrections
 
 <table>
   <tr>
@@ -100,7 +96,7 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
   </tr>
 </table>
 
-###### suggestions
+#### suggestions
 
 <table>
   <tr>
