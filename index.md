@@ -20,7 +20,7 @@ lastupdated: "2019-04-12"
 # About
 {: #about}
 
-The IBM Watson Annotator for Clinical Data (ACD) is designed to find medical concepts, medical codes, and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
+The IBM Watson Annotator for Clinical Data (ACD) is designed to find medical concepts, [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes), and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
 
 To illustrate the basic function of ACD, let's look at a simple example.  Imagine that we have the following small snippet of text:
 
@@ -52,7 +52,7 @@ To learn about all of the ways you can customize ACD, see the [Customizing](wh-a
 
 ## Customizable concept annotators
 
-These annotators can be tailored to your needs using the Domain Expert Tool.
+These annotators can be tailored to your needs using the Domain Expert Tool.  See the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section for more information.
 ### Attributes
 {: #attribues}
 
@@ -62,21 +62,21 @@ Attributes are higher order concepts composed of multiple pieces of information 
 
 You can create custom [concept values](wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in ACD to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
-For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection)
+For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection).
 
 ### Concepts
 {: #concepts}
 
 The concept annotator finds UMLS or custom concepts in unstructured text.
 
-For more information, see [Concepts](wh-acd?topic=wh-acd-concept_detection#concept_detection)
+For more information, see [Concepts](wh-acd?topic=wh-acd-concept_detection#concept_detection).
 
 ### Concept Value
 {: #conceptValue}
 
 The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.  In our attribute example above, the combination of `height` with `6 feet` is an example of how concept values work.
 
-For more information, see [Concept Value](wh-acd?topic=wh-acd-concept_value#concept_value)
+For more information, see [Concept Value](wh-acd?topic=wh-acd-concept_value#concept_value).
 
 ## Contextual Annotators
 
@@ -87,24 +87,24 @@ Contextual annotators use the surrounding context of the document to provide a d
 
 Identifies spans of text with an implied negative meaning.  For example: _There are no signs of ulceration in the stomach lining._
 
-For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection)
+For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection).
 
 ### Hypothetical
 {: #hypothetical}
 
 Identifies spans of text are the object of a hypothetical statement.  For example: _We discussed the pros and cons of chemotherapy._
 
-For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detection#hypothetical_detection)
+For more information, see [Hypothetical](wh-acd?topic=wh-acd-hypothetical_detection#hypothetical_detection).
 
 ### Concept Disambiguation
 {: #disambiguation}
 
 Determines the validity of UMLS concepts detected in a document.
 
-For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation)
+For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation).
 
 
-### Turn Key Annotators
+## Turn Key Annotators
 {: #turnKeyAnnotators}
 
 ACD provides a set of prebuilt annotators targeted at specific medical domains.
@@ -126,4 +126,4 @@ ACD provides a set of prebuilt annotators targeted at specific medical domains.
 
 ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your ACD API call.
 
-For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator)
+For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator).
