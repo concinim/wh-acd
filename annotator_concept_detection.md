@@ -26,11 +26,56 @@ subcollection: wh-acd
 {: #concept_detection}
 
 The concept detection service detects Unified Medical Language System (UMLS) concepts from unstructured data.
-As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is retuned with the concept detected.
+As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is returned with the concept detected.
 {:shortdesc}
 
-Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
+Note that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
 
+### Expanded Concepts
+
+Concept detection provides an _expanded_ option that tries to find UMLS concepts over spans of text that are not strictly defined in the UMLS dictionary that ships with ACD.  For example, consider the following text:
+
+`The patient broke his leg and hip when he fell outside his home.`
+
+There are two different injuries expressed in this text that we want to capture - broken leg and broken hip.  Neither one will have a dictionary entry that covers the way the concept is expressed.  The _expanded_ option tells concept detection to try to find concepts that do not strictly match a known surface form but are present in the text.  In this example, concept detection would return the following concepts with _expanded_ set **true**.
+
+```
+{
+    "cui": "C0159852",
+    "preferredName": "Fracture of tibia and fibula",
+    "semanticType": "inpo",
+    "source": "umls-expanded",
+    "sourceVersion": "2018AA",
+    "type": "umls.InjuryOrPoisoning",
+    "begin": 12,
+    "end": 25,
+    "coveredText": "broke his leg",
+    "icd10Code": "S82.90X?",
+    "snomedConceptId": "414293001",
+    "vocabs": "MTH,CHV,CCS,ICD9CM,SNOMEDCT_US,ICPC"
+}
+
+...
+
+{
+    "cui": "C0019557",
+    "preferredName": "Hip Fractures",
+    "semanticType": "inpo",
+    "source": "umls-expanded",
+    "sourceVersion": "2018AA",
+    "type": "umls.InjuryOrPoisoning",
+    "begin": 12,
+    "end": 33,
+    "coveredText": "broke his leg and hip",
+    "loincId": "MTHU020794",
+    "icd10Code": "S72.009?",
+    "nciCode": "C26794,C35153",
+    "snomedConceptId": "5913000,263225007",
+    "meshId": "M0010366",
+    "vocabs": "MTH,CHV,LNC,CSP,MSH,NCI,AOD,NCI_CTCAE,NDFRT,COSTAR,SNOMEDCT_US,DXP"
+}```
+
+Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with ACD.  It does not work with custom dictionaries.
 
 <h4>Available UMLS Libraries</h4>
 
