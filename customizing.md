@@ -31,12 +31,13 @@ The customization artifacts are bundled into a knowledge cartridge that can be p
 
 See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information on customizing ACD.
 
+
 # Deploying a Cartridge
 {: #deploy_cartridge}
 
 Once your customizations are complete, you can use the DET to publish your cartridge and export the published cartridge to a zip file. The exported cartridge can be deployed to ACD using the POST /v1/deploy API.
 
-For example:
+For example (replace `{apikey}` and `{url}` with your actual API key and URL):
 
 ```Curl
   curl -X POST -u "apikey:{apikey}" \
@@ -47,6 +48,6 @@ For example:
 ```
 {: pre}
 
-To update an existing cartridge, specify _true_ for the **update** parameter on the deploy operation.
+To update an existing cartridge, specify the **update=true** parameter on the deploy API.
 
-For deploys of large cartridges, see [Cartridge Deployment Timeout](wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout).
+For deployment of large cartridges, see [Cartridge Deployment Timeout](wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for additional considerations.

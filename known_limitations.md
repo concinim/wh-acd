@@ -24,3 +24,7 @@ subcollection: wh-acd
 
 # Known Limitations
 {: #known_limitations}
+
+## Text Size Limits
+
+ACD imposes a 50K limit on text being analyzed per request. For json requests, the json metadata does not count towards the 50K threshold. The ACD /analyze APIs will return a 413 error if the input text exceeds the 50K threshold. 
