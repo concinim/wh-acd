@@ -32,3 +32,69 @@ The Concept Disambiguation annotator ranks the contextual validity of a UMLS [co
 If your use case requires you to handle a broad range of medical topics and concept level precision is important, adding disambiguation to your ACD flow can help.  Conversely, if you work with a relatively small set of concepts or you only use complex derived  [attributes](wh-acd?topic=wh-acd-attribute_detection#attribute_detection), disambiguation may not be necessary.
 
 The disambiguation annotator can be configured to remove annotations it determines are invalid or to tag them as invalid but leave them in the API response.
+
+<table>
+  <caption>Configurations</caption>
+  <tr>
+    <th>Configuration</th>
+    <th>Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>remove_invalid</td>
+    <td>true/false</td>
+    <td>When true, any concepts that disambiguation determines to be invalid will be removed from the API response.  When false <i>(default)</i>, concepts will contain a *validity* field with the value INVALID, VALID, or NO_DECISION but will be preserved in the API response.</td>
+  </tr>
+
+</table>
+
+### Sample Response
+
+In this example, TEC refers to *thymic epithelial cell* in the source document.  Notice the *disambiguationData* section contains a field with the judgement.  If *remove_invalid* is set to **true**, the invalid concepts will not be returned in the response.
+
+```
+{
+    "cui": "C0229951",
+    "preferredName": "Thymic epithelial cell",
+    "semanticType": "cell",
+    "source": "umls",
+    "sourceVersion": "2018AA",
+    "type": "umls.Cell",
+    "begin": 19,
+    "end": 22,
+    "coveredText": "TEC",
+    "nciCode": "C33771",
+    "disambiguationData": {
+        "validity": "VALID"
+    },
+    "snomedConceptId": "81596002",
+    "vocabs": "MTH,NCI,UWDA,SNOMEDCT_US,FMA"
+}
+...
+{
+    "cui": "C0238478",
+    "preferredName": "Transient erythroblastopenia of childhood",
+    "semanticType": "dsyn",
+    "source": "umls",
+    "sourceVersion": "2018AA",
+    "type": "umls.DiseaseOrSyndrome",
+    "begin": 19,
+    "end": 22,
+    "coveredText": "TEC",
+    "icd9Code": "284.89",
+    "icd10Code": "D60.1",
+    "nciCode": "C131683",
+    "disambiguationData": {
+      "validity": "INVALID"
+    },
+    "snomedConceptId": "234375006",
+    "meshId": "M0531441",
+      "vocabs": "MTH,NCI_NICHD,MSH,NCI,OMIM,SNOMEDCT_US,DXP"
+}
+```
+
+### Dependencies
+
+Disambiguation only operates on UMLS concepts.  These may come from [concept detection](wh-acd?topic=wh-acd-concept_detection#concept_detection) or a turn key annotator.  Disambiguation does not attempt to make judgements about custom concepts that you define.
+
+Disambiguation needs a certain amount of document context to operate.  It will not operate on documents less than 15 words long.  Your best results will generally occur when there is enough topical context to give the service a clear picture of which concepts belong in a document and which do not.
