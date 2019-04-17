@@ -20,13 +20,13 @@ lastupdated: "2019-04-12"
 # About
 {: #about}
 
-The IBM Watson Annotator for Clinical Data (ACD) is built to find medical concepts, medical codes, and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
+The IBM Watson Annotator for Clinical Data (ACD) is designed to find medical concepts, medical codes, and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
 
-To illustrate the basic function of ACD, let's look at this with a simple example.  Imagine that we have the following small snippet of text:
+To illustrate the basic function of ACD, let's look at a simple example.  Imagine that we have the following small snippet of text:
 
 ```There were no signs of ulceration```
 
-The resulting concept over ulceration will contain standard medical codes along with contextual information about the concept - in this example, the concept is negated.
+The resulting concept over ulceration will contain medical codes along with contextual information about the concept - in this example, the concept is negated.
 
 ```
 {
@@ -56,11 +56,11 @@ These annotators can be tailored to your needs using the Domain Expert Tool.
 ### Attributes
 {: #attribues}
 
-Attributes are higher order concepts generally composed of multiple pieces of information found in a document.  An example of this might be understanding if a patient is overweight or not.  Given some example text, we would like to know if the patient is overweight or not.
+Attributes are higher order concepts composed of multiple pieces of information found in a document.  An example of this might be understanding if a patient is overweight or not.  Given some example text, we would like to know if the patient is overweight or not.
 
 ```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
 
-Using configurable [concept values](wh-acd?topic=wh-acd-concept_value#concept_value), we know the patient's height and weight.  ACD can run inference rules to distill this text down to a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
+You can create custom [concept values](wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in ACD to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
 For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection)
 
