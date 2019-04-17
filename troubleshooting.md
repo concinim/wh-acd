@@ -48,3 +48,8 @@ Sample request to retrieve flows for verifying completion of initial cartridge d
 
 
 * For updates to a previously deployed cartridge and to verify successful deployment of a cartridge in general upon a deployment request timeout, run some sample text through the _POST /v1/analyze_ API and verify that the response adheres to the configurations defined within your cartridge.
+
+## Missing Medical Codes
+{: troubleshoot_medical_codes}
+
+Medical codes are supported as of the 2018AA version of the UMLS library. Ensure you are using the 2018AA or higher version of UMLS. For the [concept detection](wh-acd?topic=wh-acd-concept_detection#concept_detection) and [attribute detection](wh-acd?topic=wh-acd-attribute_detection#attribute_detection) annotators, ensure you have specified the optional configuration parameter to return the medical codes in your flow definition. 

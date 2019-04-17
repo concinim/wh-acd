@@ -14,23 +14,26 @@ lastupdated: "2019-02-20"
 # FAQs
 {: #wh-acd-faqs}
 
-## How should I set up my page?
-{: #faq-page-setup}
+## How can I add my own terms to match for a medical concept?
+{: #faq-custom-dictionary}
 {: faq}
 
+Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, can create a custom dictionary to add your unique terminology for detecting medical concepts. The type of dictionary will vary based on the annotator you are using. The DET also allows you to derived concepts by discovering one or more related concepts in the surrounding text.  See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
 
-* Use "FAQs" as your title.
-* Name the file `faqs.md` for SEO. If you require multiple FAQ files, use a unique name for each one.
-* Add each question as an H2.
-* Use paragraph text following the associated H2 question for each answer.
-* Enable your TOC so the list of questions shows in the right nav.
-* Set the `faq` content type attribute at the top of your file.
-* Set the `faq` content type attribute on a new line following each H2 question.
-
-## What should I include in my FAQs?
-{: #faq-content-include}
+## How can I remove an invalid term being matched for a medical concept?
+{: #faq-filter}
 {: faq}
 
-Each answer should be approximately one to five sentences. You want to make sure you are not re-documenting information that is already available in documentation because then you'd have to maintain it in two places. If a more detailed explanation for the question exists out in a documentation page, give a concise answer here, and then link out to the doc.
+Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, can create a filter t remove unwanted concepts. The type of filter will vary based on the annotator you are using. See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
 
-For detailed guidance on what to include on this page, see [FAQs guidance](/docs/developing/writing/faq.html#faqs). You can also check out some examples here: [IBM Cloud IAM FAQs](/docs/developing/Access-Management/iamfaq.html#faqs) and [Account FAQs](/docs/account/account_faq.html#accountfaqs).
+## What is a cartridge?
+{: #faq-cartridge}
+{: faq}
+
+A cartridge is a container for providing [customizations](wh-acd?topic=wh-acd-customizing#customizing) for ACD for a given solution domain. A cartridge is built using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> and is [deployed](wh-acd?topic=wh-acd-deploy_cartridge#deploy_cartridge) to ACD to be used when [analyzing text](wh-acd?topic=wh-acd-analyze_text#analyze_text).
+
+## What is an attribute?
+{: #faq-attribute}
+{: faq}
+
+Clinical Attributes are the defined set of clinical findings that are pertinent and customized to a particular disease domain or engagement that represents the user's view of the solution domain. Clinical Attributes can be linked to external classification codes such as ICD9 or CPT. A clinical attribute has a name that is unique for that domain. A clinical attribute also has an associated value.  The value can be discovered from the surrounding text, enumerated during definition of the attribute, derived from other attributes, or it can merely indicate that the attribute was mentioned in the text. Attributes can be defined using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> which also includes which medical concepts should be mapped to the attribute
