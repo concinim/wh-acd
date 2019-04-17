@@ -62,7 +62,7 @@ Attributes are higher order concepts composed of multiple pieces of information 
 
 You can create custom [concept values](wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in ACD to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
-For more information, see [Attributes](wh-acd?topic=whc-acd-attribute_detection#attribute_detection).
+For more information, see [Attributes](wh-acd?topic=wh-acd-attribute_detection#attribute_detection).
 
 ### Concepts
 {: #concepts}
