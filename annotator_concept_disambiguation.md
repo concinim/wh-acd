@@ -34,7 +34,6 @@ If your use case requires you to handle a broad range of medical topics and conc
 The disambiguation annotator can be configured to remove annotations it determines are invalid or to tag them as invalid but leave them in the API response.
 
 <table>
-  <caption>Configurations</caption>
   <tr>
     <th>Configuration</th>
     <th>Values</th>

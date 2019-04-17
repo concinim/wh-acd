@@ -28,11 +28,10 @@ subcollection: wh-acd
 This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of larger [flow](wh-acd?topic=wh-acd-flows#flows)  that includes the [concept detection annotator](wh-acd?topic=wh-acd-concept_detection#concept_detection).  If concept detection is in your flow with the _expanded_ option set to **true**, concept detection will create concepts over any spelling corrections of sufficiently high confidence that map to a surface form in any of the concept detection libraries in your flow.
 
 As of this writing, *spellingCorrections* annotations are only used by concept detection.  Additional support will be coming to allow them to be leveraged by all ACD annotators.
-{:shortdesc}
 
-<h4>Configurations</h4>
+#### Configurations
+
 <table>
-  <caption>Configurations</caption>
   <tr>
     <th>Configuration</th>
     <th>Values</th>
@@ -43,11 +42,87 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
     <td>true/false</td>
     <td>When true, the spell check annotator will provide an additional field with a human-readable rendering of the corrections that were applied to the source document.</td>
   </tr>
+  <tr>
+    <td>spell_check_profile</td>
+    <td>default/ocr</td>
+    <td>A spell check profile defines the basics about the behavior of the spell check service.
+      <li>default - The default profile which is suitable for common human typos</li>
+      <li>ocr - A more aggressive profile that tries to correct errors that are introduced by optical character recognition systems.</li>
+    </td>
+  </tr>
 </table>
 
-<h4>Sample Spelling Corrections Returned in Response</h4>
+#### Annotation Types
 
-```javascript
+* spellCorrectedText
+* spellingCorrections
+* suggestions<
+
+#### spellCorrectedText
+
+<table>
+  <tr>
+    <th>Fields</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>correctedText</td>
+    <td>The document text with spelling corrections applied.</td>
+  </tr>
+  <tr>
+    <td>debugText</td>
+    <td>A debug version of the spell corrected document text.</td>
+  </tr>
+</table>
+
+#### spellingCorrections
+
+<table>
+  <tr>
+    <th>Fields</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>begin</td>
+    <td>The start position of the misspelled word as a character offset into the text.  The smallest possible start position is 0.</td>
+  </tr>
+  <tr>
+    <td>end</td>
+    <td>The end position of the misspelled word as a character offset into the text.  The end position points to the first character after the spelling correction, such that end-begin equals the length of the coveredText.</td>
+  </tr>
+  <tr>
+    <td>coveredText</td>
+    <td>The text of the misspelled word.</td>
+  </tr>
+</table>
+
+#### suggestions
+
+<table>
+  <tr>
+    <th>Fields</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>applied</td>
+    <td>When true, this indicates that this correction was applied in the _correctedText_ version of the document.</td>
+  </tr>
+  <tr>
+    <td>confidence</td>
+    <td>A measure of how confident the annotator is that this suggestion is correct.</td>
+  </tr>
+  <tr>
+    <td>semtypes</td>
+    <td>A list of UMLS semantic types that apply to the given suggestion (if any exist).</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>The text of the spelling suggestion.</td>
+  </tr>
+</table>
+
+### Sample Response
+```
 {
   "spellCorrectedText": [
     {
@@ -75,77 +150,3 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
   ]
 }
 ```
-
-<h4>Annotation Types</h4>
-
-<li>spellCorrectedText</li>
-<li>spellingCorrections</li>
-<li>suggestions</li>
-
-###### spellCorrectedText
-
-<table>
-  <caption>spellCorrectedText</caption>
-  <tr>
-    <th>Fields</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>correctedText</td>
-    <td>The document text with spelling corrections applied.</td>
-  </tr>
-  <tr>
-    <td>debugText</td>
-    <td>A debug version of the spell corrected document text.</td>
-  </tr>
-</table>
-
-###### spellingCorrections
-
-<table>
-  <caption>spellingCorrections</caption>
-  <tr>
-    <th>Fields</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>begin</td>
-    <td>The start position of the misspelled word as a character offset into the text.  The smallest possible start position is 0.</td>
-  </tr>
-  <tr>
-    <td>end</td>
-    <td>The end position of the misspelled word as a character offset into the text.  The end position points to the first character after the spelling correction, such that end-begin equals the length of the coveredText.</td>
-  </tr>
-  <tr>
-    <td>coveredText</td>
-    <td>The text of the misspelled word.</td>
-  </tr>
-</table>
-
-###### suggestions
-
-<table>
-  <tr>
-    <caption>suggestions</caption>
-  </tr>
-  <tr>
-    <th>Fields</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>applied</td>
-    <td>When true, this indicates that this correction was applied in the _correctedText_ version of the document.</td>
-  </tr>
-  <tr>
-    <td>confidence</td>
-    <td>A measure of how confident the annotator is that this suggestion is correct.</td>
-  </tr>
-  <tr>
-    <td>semtypes</td>
-    <td>A list of UMLS semantic types that apply to the given suggestion (if any exist).</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>The text of the spelling suggestion.</td>
-  </tr>
-</table>
