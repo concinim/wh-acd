@@ -56,7 +56,7 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
 
 * spellCorrectedText
 * spellingCorrections
-* suggestions<
+* suggestions
 
 #### spellCorrectedText
 
@@ -71,7 +71,7 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
   </tr>
   <tr>
     <td>debugText</td>
-    <td>A debug version of the spell corrected document text.</td>
+    <td>A debug version of the spell corrected document text that shows a where the corrections were applied in the original text.</td>
   </tr>
 </table>
 
