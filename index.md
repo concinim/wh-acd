@@ -103,6 +103,12 @@ Determines the validity of UMLS concepts detected in a document.
 
 For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambiguation#concept_disambiguation).
 
+### Spell Check (Experimental)
+{: #spell_check}
+
+Medically aware spell checker that can be integrated into an ACD API call.
+
+For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_check).
 
 ## Turn Key Annotators
 {: #turnKeyAnnotators}
@@ -121,7 +127,7 @@ ACD provides a set of prebuilt annotators targeted at specific medical domains.
 * [Smoking](wh-acd?topic=wh-acd-smoking#smoking)
 * [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
-### Integration with Natural Language Understanding
+### Integration with Natural Language Understanding (Experimental)
 {: #nlu}
 
 ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your ACD API call.
