@@ -17,23 +17,34 @@ lastupdated: "2019-02-20"
 {:note:.deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# Troubleshooting for xxx
+# Troubleshooting
 {: #troubleshoot}
 
-General problems with using xxx might include xxx or xxx. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+## Cartridge Deployment Timeout
+{: troubleshoot_deploy_timeout}
 
-## Troubleshooting entry title (question format)
-{: #troubleshoot-entry}
-{: troubleshoot}
+Some large cartridge deployments can exceed the request timeout thresholds. In that event, you may receive the following error response:
 
-Short description that contains a brief description of the problem. Include in the title or short description keywords or phrases that you think a user might search for when encountering the problem.
+```javascript
+{
+  "httpCode":"500",
+  "httpMessage":"Internal Server Error",
+  "moreInformation":"Failed to establish a backside connection"
+}
+```
 
-Description of the troubleshooting entry symptom.
-{: tsSymptoms}
+This timeout occurs outside of ACD and does not prevent your cartridge from being successfully deployed. You just won't get the itemized response confirming successful deployment of each individual artifact within your cartridge. If your cartridge deployment request times out, here are steps you can take to verify successful deployment after giving the process about 15 minutes to complete.
 
-Description of the troubleshooting entry cause.
-{: tsCauses}
+* For initial deployment of a cartridge, you can look for the creation of the default annotator flow to determine whether deployment has completed. The default annotator flow is the last artifact created during the deployment process and its existence signals completion of deployment in the initial deployment of a cartridge.
 
-Description of the troubleshooting entry resolution.
-{: tsResolve}
+Sample request to retrieve flows for verifying completion of initial cartridge deployment:
+
+```Curl
+  curl -X GET -u "apikey:{apikey}" \
+  --header "Accept: application/json" \
+  "{url}/v1/flows?version=2017-10-13"
+```
+{: pre}
+
+
+* For updates to a previously deployed cartridge and to verify successful deployment of a cartridge in general upon a deployment request timeout, run some sample text through the _POST /v1/analyze_ API and verify that the response adheres to the configurations defined within your cartridge.

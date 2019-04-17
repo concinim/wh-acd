@@ -11,7 +11,6 @@ Annotator for Clinical Data
 
     {: .navgroup id="howto"}
     customizing.md
-    deploy_cartridge.md
     analyze_text.md
     {: .navgroup-end}
 

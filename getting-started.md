@@ -48,20 +48,21 @@ When you enter a command, replace `{apikey}` and `{url}` with your actual API ke
   . . .
   "{url}/v1/analyze?version=2017-09-21"
 ```
+{:pre}
 
 ## Step 1. Send plain text input to be analyzed using an existing flow and receive JSON output
 {: #anchor_value}
 
 The first example passes plain text data to the analyze API using a predefined flow that identifies concepts using the concept_detection annotator and clinical attributes using the attribute_detection annotator.
 
-  ```Curl
+```Curl
   curl -X POST -u "apikey:{apikey}" \
   --header "Content-Type: text/plain;charset=utf-8" \
   --header "Accept: application/json" \
   -d "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan." \
   "{url}/v1/analyze/general_cancer_v1.0_flow?version=2017-10-13"
-  ```
-  {: pre}
+```
+{: pre}
 
 The service returns a JSON object that includes annotations for medical concepts found using the [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/) and clinical attributes related to general cancer.
 
