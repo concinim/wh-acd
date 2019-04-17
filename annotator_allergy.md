@@ -28,10 +28,9 @@ subcollection: wh-acd
 Detects text that follows allergy keywords such as <q>allergies:</q> and <q>allergic to:</q>. Items following the keywords are annotated with the AllergyInd type. The annotation includes all types of allergies such as environmental, animal, medication, food, etc. If annotation includes a medication then information related to the medication is also returned.
 {:shortdesc}
 
-<h4>Configurations</h4>
+#### Configurations
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th><th>Values</th><th>Description</th>
 </tr>
@@ -55,15 +54,14 @@ Defines the version of the UMLS library that is used when annotating unstructure
 </tbody>
 </table>
 
-<h4>Annotation Types</h4>
+#### Annotation Types
 
 * aci.AllergyMedicationInd
 * aci.AllergyInd
 
-###### aci.AllergyInd
+#### aci.AllergyInd
 
 <table>
-<caption>aci.AllergyInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -73,7 +71,7 @@ Defines the version of the UMLS library that is used when annotating unstructure
 
 ---
 
-###### aci.AllergyMedicationInd
+#### aci.AllergyMedicationInd
 
 <table>
 <caption>aci.AllergyMedicationInd</caption>
@@ -132,3 +130,109 @@ Defines the version of the UMLS library that is used when annotating unstructure
   </tbody></table></td></tr>
 </tbody></table></td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the allergy annotator for the text: `The patient is allergic to Percocet and Tramadol.`
+
+```
+{
+  "unstructured": [
+    {
+      "text": "The patient is allergic to Percocet and Tramadol.",
+      "data": {
+        "AllergyMedicationInd": [
+          {
+            "begin": 27,
+            "end": 35,
+            "coveredText": "Percocet",
+            "type": "aci.AllergyMedicationInd",
+            "medication": [
+              {
+                "coveredText": "Percocet",
+                "cui": "C0086787",
+                "end": 35,
+                "type": "aci.MedicationInd",
+                "begin": 27,
+                "drug": [
+                  {
+                    "coveredText": "Percocet",
+                    "cui": "C0086787",
+                    "complex": "false",
+                    "end": 35,
+                    "type": "aci.Ind_Drug",
+                    "begin": 27,
+                    "name1": [
+                      {
+                        "rxNormID": "42844",
+                        "coveredText": "Percocet",
+                        "cui": "C0086787",
+                        "drugSurfaceForm": "Percocet",
+                        "end": 35,
+                        "drugNormalizedName": "percocet",
+                        "type": "aci.DrugName",
+                        "begin": 27
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "begin": 40,
+            "end": 48,
+            "coveredText": "Tramadol",
+            "type": "aci.AllergyMedicationInd",
+            "medication": [
+              {
+                "coveredText": "Tramadol",
+                "cui": "C0040610",
+                "end": 48,
+                "type": "aci.MedicationInd",
+                "begin": 40,
+                "drug": [
+                  {
+                    "coveredText": "Tramadol",
+                    "cui": "C0040610",
+                    "complex": "false",
+                    "end": 48,
+                    "type": "aci.Ind_Drug",
+                    "begin": 40,
+                    "name1": [
+                      {
+                        "rxNormID": "10689",
+                        "coveredText": "Tramadol",
+                        "cui": "C0040610",
+                        "drugSurfaceForm": "Tramadol",
+                        "end": 48,
+                        "drugNormalizedName": "tramadol",
+                        "type": "aci.DrugName",
+                        "begin": 40
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "AllergyInd": [
+          {
+            "begin": 27,
+            "end": 35,
+            "coveredText": "Percocet",
+            "type": "aci.AllergyInd"
+          },
+          {
+            "begin": 40,
+            "end": 48,
+            "coveredText": "Tramadol",
+            "type": "aci.AllergyInd"
+          }
+        ]
+      }
+    }
+  ]
+}
+```

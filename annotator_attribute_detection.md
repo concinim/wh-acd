@@ -46,7 +46,6 @@ ACD provides three predefined attribute sets for evaluation purposes. The attrib
 If the attribute detection annotator is included in a flow without explicitly designating any attribute_set parameters, then the general_medical_v1.0 and general_labs_v1.0 attribute sets are used by default.<br/>
 
 <table>
-<caption>Provided Attribute Sets</caption>
 <tr>
 <th>Attribute Set</th>
 <th>Description</th>
@@ -67,10 +66,9 @@ If the attribute detection annotator is included in a flow without explicitly de
 </tbody>
 </table>
 
-<h4>Configurations</h4>
+#### Configurations
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Description</th>
@@ -93,11 +91,7 @@ If the attribute detection annotator is included in a flow without explicitly de
 </tr>
 </table>
 
-
-
-
-
-<h4>Dependencies</h4>
+#### Dependencies
 
 The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to <q>promote</q> to attributes. The concept_value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute_detection annotator does not detect any explicit concepts from the unstructured data itself.
 
@@ -150,7 +144,7 @@ If negation, hypothetical, disambiguation, or section annotators are included wi
     <br/>**2.2 Hypothetical** - the hypothetical boolean field is propagated within the attribute annotation.
     <br/>**2.3 sectionSurfaceForm and sectionNormalizedName** - the section features are propagated within the attribute annotation.
 
-<h4> Sample Attribute with Qualifier Detection Annotation</h4>
+#### Sample Attribute with Qualifier Detection Annotation
 
 The _carcinoid lung tumor_ concept detected in the clinical text within the sample request above is rolled up into a higher-level _Disease_ attribute. In this example, _atypical_ is detected as an attribute qualifier.
 
@@ -184,10 +178,9 @@ The _carcinoid lung tumor_ concept detected in the clinical text within the samp
 ]
 ```
 
-<h4>Response Fields</h4>
+#### Response Fields
 
 <table>
-<caption>Response Fields</caption>
 <tr>
 <th>Fields</th>
 <th>Description</th>

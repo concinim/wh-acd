@@ -28,10 +28,9 @@ subcollection: wh-acd
 Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Extra features that can be found by the annotator include: the actual name of the cancer, measurement, cancer grade, site, date, and modality.
 {:shortdesc}
 
-<h4>Configurations</h4>
+#### Configurations
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Values</th>
@@ -51,14 +50,13 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
 </tr>
 </table>
 
-<h4>Annotation Types</h4>
+#### Annotation Types
 
 *  aci.IcaCancerDiagnosisInd
 
-###### aci.IcaCancerDiagnosisInd
+#### aci.IcaCancerDiagnosisInd
 
 <table>
-<caption>aci.IcaCancerDiagnosisInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -124,3 +122,57 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
   <tr><td>snomedConceptId</td><td>Numerical code provided by the SNOMED dictionaries that represents the site.</td></tr>
 </tbody></table></td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the allergy annotator for the text: `She was previously treated for adenocarcinoma of the colon.`
+
+```
+{
+  "unstructured": [
+    {
+      "text": "She was previously treated for adenocarcinoma of the colon.",
+      "data": {
+        "IcaCancerDiagnosisInd": [
+          {
+            "begin": 31,
+            "end": 58,
+            "coveredText": "adenocarcinoma of the colon",
+            "type": "aci.IcaCancerDiagnosisInd",
+            "site": [
+              {
+                "coveredText": "the colon",
+                "end": 58,
+                "siteNormalizedName": "colon structure",
+                "type": "aci.SiteInd",
+                "snomedConceptId": "71854001",
+                "begin": 49,
+                "compound": "false"
+              }
+            ],
+            "modality": "positive",
+            "cancer": [
+              {
+                "icd10Code": "C80.9,C80.1",
+                "cancerSurfaceForm": "adenocarcinoma",
+                "cancerNormalizedName": "malignant adenomatous neoplasm",
+                "type": "aci.Cancer",
+                "snomedConceptId": "443961001",
+                "ccsCode": "43",
+                "icd9Code": "199.1",
+                "coveredText": "adenocarcinoma",
+                "cui": "C0001418",
+                "behaviorSource": "icd-10",
+                "end": 45,
+                "behavior": "3",
+                "begin": 31,
+                "hccCode": "12"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
