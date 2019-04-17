@@ -85,7 +85,7 @@ Contextual annotators use the surrounding context of the document to provide a d
 ### Negation
 {: #negation}
 
-Identifies spans of text with an implied negative meaning.  For example: _There are no signs of ulceration in the stomach lining._
+Identifies spans of text with an implied negative meaning.  For example: _There were no signs of ulceration._
 
 For more information, see [Negation](wh-acd?topic=wh-acd-negation_detection#negation_detection).
 
