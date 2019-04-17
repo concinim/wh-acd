@@ -23,7 +23,7 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # Customizing
-{: #Customizing}
+{: #customizing}
 
 ## Cartridges
 {: #cartridges}
