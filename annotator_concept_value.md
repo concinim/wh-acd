@@ -28,18 +28,17 @@ subcollection: wh-acd
 The concept_value annotator is intended to be used in conjunction with the concept_detection annotator to identify values within unstructured data associated with concepts retrieved from the concept_detection annotator. Values can be either scalar, a range, boolean, or textual. Concept Values are detected via identifying lexical triggers in unstructured data indicating a mathematical relationship (e.g >, >=, <, <=, etc.) between a previously detected concept and value. For that reason they are particularly useful for criteria matching use cases since they can be used to build a set of constraints or rules that must be met in order for something to be eligible. The concept_value annotator however is intended to be used generically and not just in criteria matching solutions.
 {:shortdesc}
 
-<h4>Dependencies</h4>
+#### Dependencies
 
 The concept_value annotator detects values from unstructured clinical text and associates them with previously detected concepts from the concept_detection annotator. Thus concept_detection must run prior to concept_value within an annotator flow to function properly.
 
-<h4>Annotation Types</h4>
+#### Annotation Types
 
 * ConceptValue
 
-<h4>Response Fields</h4>
+#### Response Fields
 
 <table>
-<caption>Response Fields</caption>
 <tr>
 <th>Fields</th><th>Description</th>
 </tr>
@@ -117,25 +116,27 @@ In the example text above, a ConceptValue annotation will be constructed in refe
 
 The **trigger** field can be used to construct and evaluate the constraint described therein. i.e. the **platelet count** finding must be >= the value (100,000) in units (mm^3). Assuming a patient's platelet count is 90,000 mm^3, 90,000mm^3 <= 100,000mm^3 == true, so this criteria would be met.
 
-##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - _<q>twenty</q>_
+##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - _<q>at least</q>_
 
-> **Text:** _<q>The patient must have a **platelet count of at least twenty L.**</q>_
+> **Text:** _The patient must have a **platelet count of at least 100000/μl**._
 
-This example illustrates the capability within concept value to detect and normalize numeric values articulated in natural language from unstructured data. Concept value is able to normalize the value <q>20</q> from the text <q>twenty</q>.
+This example illustrates the capability within concept value to detect and normalize numeric values articulated in natural language from unstructured data.
 
 ```javascript
 "conceptValues": [
   {
-    "cui": "C1287267",
-    "dimension": "volume",
-    "preferredName": "Finding of platelet count",
+    "cui": "C0032181",
+    "dimension": "concentration",
+    "preferredName": "Platelet Count measurement",
     "trigger": "greater than or equal to",
-    "unit": "L.",
-    "value": "20",
+    "unit": "/μl",
+    "value": "100000",
     "type": "ConceptValue",
     "begin": 24,
-    "end": 57,
-    "coveredText": "platelet count of at least twenty L."
+    "end": 60,
+    "coveredText": "platelet count of at least 100000/μl",
+    "negated": false,
+    "hypothetical": false
   }
 ]
 ```
@@ -162,173 +163,29 @@ This example demonstrates a non-numeric value (**positive**) for a concept that 
 
 ##### Example 4: ConceptValue with a range value set
 
-> **Text:** _<q>The area of a typical **aortic valve is 3.0 to 4.0 cm2**.</q>_
+> **Text:** _The area of a typical **aortic valve is 3.0 to 4.0 cm2**._
 
 This example demonstrates a set of range values. The trigger **within** indicates that a ConceptValue annotation encompasses a set of range values.
 
 ```javascript
 "conceptValues": [
-  {
-    "cui": "C1269005",
-    "dimension": "area",
-    "preferredName": "Entire aortic valve",
-    "trigger": "within",
-    "unit": "cm2",
-    "rangeBegin": "3.0",
-    "rangeEnd": "4.0",
-    "type": "ConceptValue",
-    "begin": 22,
-    "end": 52,
-    "coveredText": "aortic valve is 3.0 to 4.0 cm2"
-  }
+    {
+      "cui": "C0003501",
+      "dimension": "area",
+      "preferredName": "Aortic valve structure",
+      "trigger": "within",
+      "unit": "cm2",
+      "rangeBegin": "3.0",
+      "rangeEnd": "4.0",
+      "type": "ConceptValue",
+      "begin": 22,
+      "end": 52,
+      "coveredText": "aortic valve is 3.0 to 4.0 cm2",
+      "negated": false,
+      "hypothetical": false
+    }
 ]
 ```
 
 Custom concept values can be passed into the concept value annotation service using a <q>whcs.CustomValue</q> type.
 Custom trigger can be passed into the concept value annotation service using a <q>whcs.CustomTrigger</q> type.
-
-##### Example 5: ConceptValue with a range value set
-
-This example demonstrates a custom concept values. The trigger **equal sign** indicates that a ConceptValue annotation encompasses a monetary value starting from the euro sign.
-
-```javascript
-{
-  "unstructured": [
-    {
-      "text": "The measurements showed creatinine = €226.15",
-      "data": {
-        "concepts": [
- 		{
-            "begin": 37,
-            "end": 44,
-            "type": "whcs.CustomValue",
-            "coveredText": "€226.15",
-            "units":"€",
-            "value":"226.15",
-            "dimension":"monetary"
-          },
-          {
-            "type": "com.ibm.watson.hutt.umls.OrganicChemical",
-            "begin": 24,
-            "end": 34,
-            "coveredText": "creatinine",
-            "componentId": "ConceptDetection/UMLS",
-            "confidence": 1,
-            "cui": "C0010294",
-            "preferredName": "Creatinine",
-            "semanticType": "orch",
-            "source": "umls"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-##### Example 6: ConceptValue with a custom date value
-
-This example demonstrates a custom concept values. The trigger **equal sign** indicates that a ConceptValue annotation encompasses a custom date string value .
-
-```javascript
-{
-  "unstructured": [
-    {
-      "text": "The measurements showed creatinine = 3/8/2013.",
-      "data": {
-        "concepts": [
- 		{
-            "begin": 37,
-            "end": 45,
-            "type": "whcs.CustomValue",
-            "coveredText": "3/8/2013",
-            "dimension": "time"
-          },
-          {
-            "type": "com.ibm.watson.hutt.umls.OrganicChemical",
-            "begin": 24,
-            "end": 34,
-            "coveredText": "creatinine",
-            "componentId": "ConceptDetection/UMLS",
-            "confidence": 1,
-            "cui": "C0010294",
-            "preferredName": "Creatinine",
-            "semanticType": "orch",
-            "source": "umls"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-#### Example 7: ConceptValue with a custom trigger and a custom value
-
-This example demonstrates the use of both custom concept values and custom trigger. The custom value is specified to be of type <q>whcs.CustomValue</q> and have a value of **20** . The custom trigger is specified to be of type <q>whcs.CustomComparison</q>. The converedText is not specified and is determined directly from the begin and end annotation. The comparison string is set to be **greater than**.
-
-> **Text:** _<q>History of smoking beyond 20 packs per year</q>_
-
-```javascript
-{
-  "unstructured": [
-    {
-      "text": "History of smoking beyond 20 packs per year",
- "data": {
-        "concepts": [
-          {
-            "begin": 26,
-            "end": 43,
-            "type":"whcs.CustomValue",
-            "coveredText": "20 packs per year",
-            "units":"packs",
-            "value":"20",
-            "dimension":"quantity"
-           },
-          {
-            "begin":19,
-            "end":25,
-            "type":"whcs.CustomComparison",
-            "comparison":<q>greater than</q>
-          }
-         ]
-      }
-    }
-  ]
-}
-```
-
-#### Example 8: ConceptValue with a custom trigger and a custom value
-
-This example demonstrates the use of both custom concept values and custom trigger. The custom value is specified to be of type <q>whcs.CustomValue</q> and have a value of **1x2x3** . The custom trigger is specified to be of type <q>whcs.CustomComparison</q>. The converedText is not specified and is determined directly from the begin and end annotation. The comparison string is set to be **smaller than**.
-
-> **Text:** _<q>Tumor size smaller than 1 x 2 x 3 cm3.</q>_
-
-```javascript
-{
-"unstructured": [
-{
- "text": "Tumor size smaller than 1 x 2 x 3 cm3.",
-      "data": {
-	    "concepts": [
-	         {
-            "begin": 19,
-            "end": 37,
-            "type": "whcs.CustomValue",
-            "coveredText": "1 x 2 x 3 cm3",
-            "units":"cm3",
-            "value": "1 x 2 x 3",
-            "dimension":"quantity"
-            },
-			     {
-            "begin": 11,
-            "end": 18,
-            "type": "whcs.CustomComparison",
-            "comparison": "smaller than"
-          }
-         ]
-      }
-    }
-  ]
-}
-```
