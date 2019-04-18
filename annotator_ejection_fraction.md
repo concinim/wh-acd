@@ -25,12 +25,7 @@ subcollection: wh-acd
 # Ejection Fraction
 {: #ejection_fraction}
 
-The purpose of the Ejection Fraction annotator is to annotate ejection fraction test results. Ejection fraction is a measurement of the percentage of blood leaving your heart each time it contracts. The Ejection Fraction annotation is generally used as input into calculations or models that predict various heart related scenarios.
-{:shortdesc}
-
-During each heartbeat pumping cycle, the heart contracts and relaxes. When your heart contracts, it ejects blood from the two pumping chambers (ventricles). When your heart relaxes, the ventricles refill with blood. No matter how forceful the contraction, it never is able to pump all of the blood out of a ventricle. The term <q>ejection fraction</q> refers to the percentage of blood that's pumped out of a filled ventricle with each heartbeat.
-
-The left ventricle is the heart's main pumping chamber that pumps oxygenated blood through the ascending (upward) aorta to the rest of the body, so ejection fraction is usually measured only in the left ventricle (LV). An LV ejection fraction of 55 percent or higher is considered normal. An LV ejection fraction of 50 percent or lower is considered reduced.
+The purpose of the Ejection Fraction annotator is to annotate ejection fraction test results. Ejection fraction is a measurement of the percentage of blood leaving your heart each time it contracts. The Ejection Fraction annotation is generally used as input into calculations or models in the cardiac domain.
 
 The span of the EjectionFractionInd annotation includes all the associated terms, numeric percent value(s) and the token words between them.
 
@@ -50,10 +45,9 @@ Examples:
 * ejection fraction of 10 - 25 percent by echocardiogram.
 * 25 percent to 30 percent ejection fraction.
 
-<h4>Configurations</h4>
+#### Configurations
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</t>
 <th>Values</th>
@@ -77,10 +71,9 @@ Examples:
 
 * aci.EjectionFractionInd
 
-###### aci.EjectionFractionInd
+#### aci.EjectionFractionInd
 
 <table>
-<caption>aci.EjectionFractionInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </thd><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -99,3 +92,29 @@ Examples:
 <tr><td>echocardiogramNormalizedName</td><td>The normalized name for the echocardiogram.</td></tr>
 <tr><td>echocardiogramSurfaceForm</td><td>Covered text that represents the echocardiogram.  Examples include:   <q>echo</q>, <q>echocardiogram</q>, and  "echocardiographic".</td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the allergy annotator for the text: `ejection fraction of 10 - 25 percent by echocardiogram`
+
+```
+"EjectionFractionInd": [
+          {
+            "type": "aci.EjectionFractionInd",
+            "begin": 0,
+            "end": 54,
+            "coveredText": "ejection fraction of 10 - 25 percent by echocardiogram",
+            "hypothetical": false,
+            "firstValue": "10",
+            "secondValue": "25",
+            "efTermSurfaceForm": "ejection fraction",
+            "efSuffixSurfaceForm": "percent",
+            "efSuffixNormalizedName": "percent",
+            "echocardiogramNormalizedName": "echocardiogram",
+            "efTermNormalizedName": "ejection fraction",
+            "echocardiogramSurfaceForm": "echocardiogram",
+            "measurementMethod": "echo",
+            "isRange": "true"
+          }
+        ]
+```

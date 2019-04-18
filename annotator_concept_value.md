@@ -99,7 +99,7 @@ Concept Detection must run prior to Concept Value in your ACD flow to function p
 </tr>
 </table>
 
-#### Concept Value Examples
+### Sample Response
 
 ##### Example 1: Greater than or equal to Concept Value with units
 
