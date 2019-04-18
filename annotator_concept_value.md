@@ -25,7 +25,17 @@ subcollection: wh-acd
 # Concept Value
 {: #concept_value}
 
-The concept_value annotator is intended to be used in conjunction with the concept_detection annotator to identify values within unstructured data associated with concepts retrieved from the concept_detection annotator. Values can be either scalar, a range, boolean, or textual. Concept Values are detected via identifying lexical triggers in unstructured data indicating a mathematical relationship (e.g >, >=, <, <=, etc.) between a previously detected concept and value. For that reason they are particularly useful for criteria matching use cases since they can be used to build a set of constraints or rules that must be met in order for something to be eligible. The concept_value annotator however is intended to be used generically and not just in criteria matching solutions.
+The Concept Value annotator is intended to be used in conjunction with the [Concept
+Detection annotator](wh-acd?topic=wh-acd-concept_detection#concept_detection) to identify values within unstructured data associated with concepts.  For example:
+
+`blood pressure is 120/70 mmHg`
+
+Associating a numeric value and units with a concept allows you to extract more useful insights about the medical concepts in your unstructured text.
+
+Values can be either scalar, a range, boolean, or textual. Concept Values are detected by identifying lexical triggers in text indicating a value relationship (>, >=, <, <=, is, etc.) between a previously detected concept and value. They are particularly useful for criteria matching use cases since they can be used to build a set of constraints or rules that must be met in order for something to be eligible.
+
+Concept Value provides out of the box handling for some lexical triggers.  If the default support does not cover what you need, the Concept Value annotator can be configured to detect values and language patterns unique to your data.  See the [customizing](wh-acd?topic=wh-acd-customizing#customizing) section to learn how you can use the Domain Expert Tool to customize Concept Value and other ACD annotators for your solution.
+
 {:shortdesc}
 
 #### Dependencies
@@ -56,7 +66,7 @@ The concept_value annotator detects values from unstructured clinical text and a
 </tr>
 <tr>
 <td>type</td>
-<td>The long-form UMLS semantic type.</td>
+<td>ConceptValue</td>
 </tr>
 <tr>
 <td>begin</td>
@@ -93,52 +103,54 @@ The concept_value annotator detects values from unstructured clinical text and a
 
 ##### Example 1: Greater than or equal to Concept Value with units
 
-> **Text:** _<q>The patient must have **platelet count at least 100,000/mm^3**.</q>_
+> **Text:** _The patient must have **platelet count greater than or equal to 100000/μl**._
 
-In the example text above, a ConceptValue annotation will be constructed in reference to the <q>platelet count</q> concept. The ConceptValue annotation in this case sufficiently captures the platelet count constraint articulated in natural language.
+In this, a ConceptValue annotation is created with the platelet count concept and the associated value.
 
-```javascript
+```
 "conceptValues": [
-  {
-    "cui": "C1287267",
-    "dimension": "concentration",
-    "preferredName": "Finding of platelet count",
-    "trigger": "greater than or equal to",
-    "unit": "/mm^3",
-    "value": "100,000",
-    "type": "ConceptValue",
-    "begin": 22,
-    "end": 58,
-    "coveredText": "platelet count at least 100,000/mm^3"
-  }
-]
+          {
+            "cui": "C1287267",
+            "dimension": "concentration",
+            "preferredName": "Finding of platelet count",
+            "trigger": "greater than or equal to",
+            "unit": "/μl.",
+            "value": "100000",
+            "type": "ConceptValue",
+            "begin": 22,
+            "end": 72,
+            "coveredText": "platelet count greater than or equal to 100000/μl.",
+            "negated": false,
+            "hypothetical": false
+          }
+      ]
 ```
 
-The **trigger** field can be used to construct and evaluate the constraint described therein. i.e. the **platelet count** finding must be >= the value (100,000) in units (mm^3). Assuming a patient's platelet count is 90,000 mm^3, 90,000mm^3 <= 100,000mm^3 == true, so this criteria would be met.
+The **trigger** field can be used to evaluate the constraint - i.e. the **platelet count** finding must be >= 100,000 parts per μl.
 
-##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - _<q>at least</q>_
+##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - "at least"
 
 > **Text:** _The patient must have a **platelet count of at least 100000/μl**._
 
-This example illustrates the capability within concept value to detect and normalize numeric values articulated in natural language from unstructured data.
+This is similar to the first example, but this time the language is "at least" instead of "greater than or equal to".  Notice how the *trigger* field is normalized to "greater than or equal to".
 
-```javascript
+```
 "conceptValues": [
-  {
-    "cui": "C0032181",
-    "dimension": "concentration",
-    "preferredName": "Platelet Count measurement",
-    "trigger": "greater than or equal to",
-    "unit": "/μl",
-    "value": "100000",
-    "type": "ConceptValue",
-    "begin": 24,
-    "end": 60,
-    "coveredText": "platelet count of at least 100000/μl",
-    "negated": false,
-    "hypothetical": false
-  }
-]
+          {
+            "cui": "C1287267",
+            "dimension": "concentration",
+            "preferredName": "Finding of platelet count",
+            "trigger": "greater than or equal to",
+            "unit": "/μl.",
+            "value": "100000",
+            "type": "ConceptValue",
+            "begin": 24,
+            "end": 61,
+            "coveredText": "platelet count of at least 100000/μl.",
+            "negated": false,
+            "hypothetical": false
+          }
+      ]
 ```
 
 ##### Example 3: ConceptValue with non-numeric value - _<q>positive</q>_
@@ -149,16 +161,19 @@ This example demonstrates a non-numeric value (**positive**) for a concept that 
 
 ```javascript
 "conceptValues": [
-  {
-    "cui": "C0019929",
-    "preferredName": "Hormone Receptor",
-    "value": "positive",
-    "type": "ConceptValue",
-    "begin": 1,
-    "end": 26,
-    "coveredText": "Hormone receptor positive"
-  }
-]
+          {
+            "cui": "C0019929",
+            "preferredName": "Hormone Receptor",
+            "value": "positive",
+            "type": "ConceptValue",
+            "begin": 0,
+            "end": 25,
+            "coveredText": "Hormone receptor positive",
+            "negated": false,
+            "hypothetical": true,
+            "hypotheticalType": "HypotheticalSpan"
+          }
+        ]
 ```
 
 ##### Example 4: ConceptValue with a range value set
@@ -186,6 +201,3 @@ This example demonstrates a set of range values. The trigger **within** indicate
     }
 ]
 ```
-
-Custom concept values can be passed into the concept value annotation service using a <q>whcs.CustomValue</q> type.
-Custom trigger can be passed into the concept value annotation service using a <q>whcs.CustomTrigger</q> type.
