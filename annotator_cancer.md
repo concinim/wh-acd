@@ -125,7 +125,7 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
 
 ### Sample Response
 
-Sample response from the allergy annotator for the text: `She was previously treated for adenocarcinoma of the colon.`
+Sample response from the cancer annotator for the text: `She was previously treated for adenocarcinoma of the colon.`
 
 ```
 {

@@ -38,10 +38,6 @@ Concept Value provides out of the box handling for some lexical triggers.  If th
 
 {:shortdesc}
 
-#### Dependencies
-
-Concept Detection must run prior to Concept Value in your ACD flow to function properly.
-
 #### Annotation Types
 
 * ConceptValue
@@ -105,7 +101,7 @@ Concept Detection must run prior to Concept Value in your ACD flow to function p
 
 > **Text:** _The patient must have **platelet count greater than or equal to 100000/μl**._
 
-In this, a ConceptValue annotation is created with the platelet count concept and the associated value.
+In this example, a Concept Value annotation is created with the platelet count concept and the associated value.
 
 ```
 "conceptValues": [
@@ -126,13 +122,13 @@ In this, a ConceptValue annotation is created with the platelet count concept an
       ]
 ```
 
-The **trigger** field can be used to evaluate the constraint - i.e. the **platelet count** finding must be >= 100,000 parts per μl.
+The **trigger** field can be used to evaluate the constraint - i.e. the platelet count finding must be >= 100,000 parts per μl.
 
 ##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - "at least"
 
 > **Text:** _The patient must have a **platelet count of at least 100000/μl**._
 
-This is similar to the first example, but this time the language is "at least" instead of "greater than or equal to".  Notice how the *trigger* field is normalized to "greater than or equal to".
+This is similar to the first example, but this time the language is "at least" instead of "greater than or equal to".  Notice how the **trigger** field is normalized to `greater than or equal to`.
 
 ```
 "conceptValues": [
@@ -157,7 +153,7 @@ This is similar to the first example, but this time the language is "at least" i
 
 > **Text:** _<q>**Hormone receptor positive** patients are candidates for anti-estrogen therapy.</q>_
 
-This example demonstrates a non-numeric value (**positive**) for a concept that does not use numeric values.
+This example demonstrates a non-numeric value (`positive`)for a concept that does not use numeric values.
 
 ```javascript
 "conceptValues": [
@@ -180,7 +176,7 @@ This example demonstrates a non-numeric value (**positive**) for a concept that 
 
 > **Text:** _The area of a typical **aortic valve is 3.0 to 4.0 cm2**._
 
-This example demonstrates a set of range values. The trigger **within** indicates that a ConceptValue annotation encompasses a set of range values.
+This example demonstrates a set of range values. The trigger **within** indicates that a Concept Value annotation encompasses a set of range values.
 
 ```javascript
 "conceptValues": [
@@ -201,3 +197,7 @@ This example demonstrates a set of range values. The trigger **within** indicate
     }
 ]
 ```
+
+### Dependencies
+
+Concept Detection must run prior to Concept Value in your ACD flow to function properly.

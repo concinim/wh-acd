@@ -95,7 +95,7 @@ Examples:
 
 ### Sample Response
 
-Sample response from the allergy annotator for the text: `ejection fraction of 10 - 25 percent by echocardiogram`
+Sample response from the ejection fraction annotator for the text: `ejection fraction of 10 - 25 percent by echocardiogram`
 
 ```
 "EjectionFractionInd": [

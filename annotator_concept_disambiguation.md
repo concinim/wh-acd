@@ -49,7 +49,7 @@ The disambiguation annotator can be configured to remove annotations it determin
 
 ### Sample Response
 
-In this example, TEC refers to *thymic epithelial cell* in the source document.  Notice the *disambiguationData* section contains a field with the judgement.  If *remove_invalid* is set to **true**, the invalid concepts will not be returned in the response.
+In this example, TEC refers to *thymic epithelial cell* in the source document.  Notice the **disambiguationData** section contains a field with the judgement.  If **remove_invalid** is set to `true`, the invalid concepts will not be returned in the response.
 
 ```
 {

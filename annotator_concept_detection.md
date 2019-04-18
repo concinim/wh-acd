@@ -37,7 +37,7 @@ Concept detection provides an _expanded_ option that tries to find UMLS concepts
 
 `The patient broke his leg and hip when he fell outside his home.`
 
-There are two different injuries expressed in this text that we want to capture - broken leg and broken hip.  Neither one will have a dictionary entry that covers the way the concept is expressed.  The _expanded_ option tells concept detection to try to find concepts that do not strictly match a known surface form but are present in the text.  In this example, concept detection would return the following concepts with _expanded_ set **true**.
+There are two different injuries expressed in this text that we want to capture - broken leg and broken hip.  Neither one will have a dictionary entry that covers the way the concept is expressed.  The **expanded** option tells concept detection to try to find concepts that do not strictly match a known surface form but are present in the text.  In this example, concept detection would return the following concepts with **expanded** set `true`.
 
 ```
 {
@@ -149,9 +149,7 @@ The following table lists parameters of the concept_detection service.
   </tr>
 </table>
 
-
-
-<h4>Sample Concepts Returned in Response</h4>
+#### Sample Concepts Returned in Response<
 
 ```javascript
 {

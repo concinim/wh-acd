@@ -25,10 +25,10 @@ subcollection: wh-acd
 # Attribute Detection
 {: #attribute_detection}
 
-The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identify pieces of information pertinent to the domain and are used to create the attribute values by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator,  can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level <q>concept</q> in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
+The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identify pieces of information pertinent to the domain and are used to create the attribute values by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator,  can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level concept in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
 {:shortdesc}
 
-Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">Concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT. Attribute detection can detect three additional medical codes, i.e., ccsCode, hccCode, cptCode, in addition to the medical codes available from the concept detection annotator. As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept.
+Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT. Attribute detection can detect three additional medical codes, i.e., ccsCode, hccCode, cptCode, in addition to the medical codes available from the concept detection annotator. As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept.
 
 
 The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective related to the attribute value. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
@@ -41,9 +41,9 @@ The consumer may also use the [Domain Expert Tool](https://watsonpow01.rch.stgla
 
 #### Predefined Attribute Sets
 
-ACD provides three predefined attribute sets for evaluation purposes. The attribute sets are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
+ACD provides three predefined attribute sets for evaluation purposes. The attribute sets are provided through two predefined profiles, the `general_medical_v1.0` profile and the `general_cancer_v1.0` profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
 
-If the attribute detection annotator is included in a flow without explicitly designating any attribute_set parameters, then the general_medical_v1.0 and general_labs_v1.0 attribute sets are used by default.<br/>
+If the attribute detection annotator is included in a flow without explicitly designating any attribute_set parameters, then the `general_medical_v1.0` and `general_labs_v1.0` attribute sets are used by default.<br/>
 
 <table>
 <tr>
@@ -93,7 +93,7 @@ If the attribute detection annotator is included in a flow without explicitly de
 
 #### Dependencies
 
-The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to <q>promote</q> to attributes. The concept_value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute_detection annotator does not detect any explicit concepts from the unstructured data itself.
+The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to <q>promote</q> to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute detection annotator does not detect any explicit concepts from the unstructured data itself.
 
 ###### Sample Annotator Flow for Attribute Detection
 
@@ -146,7 +146,7 @@ If negation, hypothetical, disambiguation, or section annotators are included wi
 
 #### Sample Attribute with Qualifier Detection Annotation
 
-The _carcinoid lung tumor_ concept detected in the clinical text within the sample request above is rolled up into a higher-level _Disease_ attribute. In this example, _atypical_ is detected as an attribute qualifier.
+The _carcinoid lung tumor_ concept detected in the clinical text within the sample request above is rolled up into a higher-level **Disease** attribute. In this example, `atypical` is detected as an attribute qualifier.
 
 ```javascript
 "attributeValues": [
