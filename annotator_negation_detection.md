@@ -28,10 +28,6 @@ subcollection: wh-acd
 The negation detection annotator identifies the spans of text that are the object of a negation and also identifies the text that triggered the negation. The annotator adds a **negated** field to annotations to indicate if the annotation is negated.
 {:shortdesc}
 
-<h4>Annotation Types</h4>
-
-* NegatedSpan
-
 <h4>Configurations</h4>
 
 <table>
@@ -51,6 +47,10 @@ The negation detection annotator identifies the spans of text that are the objec
 <td>When false <i>(default)</i>, an annotation will be kept although they are detected to be negated. If true, the negated annotation will be removed</td>
 </tr>
 </table>
+
+<h4>Annotation Types</h4>
+
+* NegatedSpan
 
 <h4>NegatedSpan</h4>
 
