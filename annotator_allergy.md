@@ -41,10 +41,10 @@ library
 </td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA</li>
+  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
 </ul>
 </td>
 <td>

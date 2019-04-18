@@ -77,16 +77,6 @@ There are two different injuries expressed in this text that we want to capture 
 
 Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with ACD.  It does not work with custom dictionaries.
 
-<h4>Available UMLS Libraries</h4>
-
-<table>
-<tr><th>__UMLS Version__</th><th>__Semantic Types__</th></tr>
-</tr><td>2016AB <i>(deprecated - will be removed in 2019)</i></td><td><a href="content/umls/UMLS_2016AB_2017AA_SemanticTypes.htm" target=>UMLS 2016AB Types</a></td></tr>
-<tr><td>2017AA</td><td><a href="content/umls/UMLS_2016AB_2017AA_SemanticTypes.htm" target=>UMLS 2017AA Types</a></td></tr>
-<tr><td>2018AA</td><td></td></tr>
-</table>
-
-
 
 <h4>Sample Request</h4>
 
@@ -144,7 +134,12 @@ The following table lists parameters of the concept_detection service.
   </tr>
   <tr>
     <td>libraries</td>
-    <td><ul><li>umls.2016AB <i>(deprecated - will be removed in 2019)</i></li> <li>umls.2017AA</li> <li>umls.2018AA</li> <li>umls.latest</li></ul></td>
+    <td><ul>
+      <li>umls.latest</li>
+      <li>umls.2018AA</li>
+      <li>umls.2017AA</li>
+      <li>umls.2016AB <i>(deprecated - will be removed in 2019)</i></li>
+    /ul></td>
     <td>Defines the version of the UMLS library that is used when detecting concepts from unstructured data.  The value <q>umls.latest</q> is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value if <b>libraries</b> is not specified in the configuration.</td>
   </tr>
   <tr>
