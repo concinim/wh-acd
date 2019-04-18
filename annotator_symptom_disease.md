@@ -59,7 +59,7 @@ This annotator identifies symptoms and diseases mentioned in the text. It also i
 
 <table>
 <caption>aci.SymptomDiseaseInd</caption>
-<tr><th>__Feature__</th><th>__Description__</th></tr>
+<tr><th>__Fields__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
 <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
