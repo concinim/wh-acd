@@ -70,7 +70,7 @@ The hypothetical annotator should run after all other annotators to ensure hypot
   <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
   <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
   <tr><td>coveredText</td><td>The text that initiated the hypothetical clause.</td></tr>
-  <tr><td>source</td><td>The name of the whitelist dictionary in which the trigger resides. The name will be <q>internal</q> if the trigger resides in the internally shipped dictionary.</td></tr>
+  <tr><td>source</td><td>The name of the whitelist dictionary in which the trigger resides. The name will be `internal` if the trigger resides in the internally shipped dictionary.</td></tr>
 </tbody></table></td></tr>
 </table>
 

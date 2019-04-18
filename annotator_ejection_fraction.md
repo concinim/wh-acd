@@ -63,7 +63,7 @@ Examples:
   <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
 </ul>
 </td>
-<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value <q>umls.latest</q> is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
+<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
 </tr>
 </table>
 
@@ -82,15 +82,15 @@ Examples:
 <tr><td>firstValue</td><td>The first value of percentage.  For example, in the text “echocardiogram demonstrated ejection fraction of 30 to 35%”, the firstValue is 30.</td></tr>
 <tr><td>secondValue</td><td>The second value of percentage.  For example, in the text “echocardiogram demonstrated ejection fraction of 30 to 35%”, the secondValue is 35.  If the value is not specified as a range then the value of this feature is not retuned.</td></tr>
 <tr><td>isRange</td><td>Determines if the ejection fraction phrase contains a range of values.  For example, in the text “echocardiogram demonstrated ejection fraction of 30 to 35%”, the isRange is true.</td></tr>
-<tr><td>measurementMethod</td><td>Method by which the Ejection/Fraction percentage or ratio is measured.  The measurementMethod will be <q>echo</q> if the method by which the ejection fraction was take was an echocardiogram, otherwise, the measurementMethod  feature will not be present.</td></tr>
+<tr><td>measurementMethod</td><td>Method by which the Ejection/Fraction percentage or ratio is measured.  The measurementMethod will be `echo` if the method by which the ejection fraction was take was an echocardiogram, otherwise, the measurementMethod  feature will not be present.</td></tr>
 <tr><td>efAlphabeticValueNormalizedName</td><td>Normalized name for the appliied value that is word form.</td></tr>
-<tr><td>efAlphabeticValueSurfaceForm</td><td>Covered text that represents applied value in word form.   For example, in the text <q>EF was severely depressed at 28%</q>, the efAlphabeticValueSurfaceForm is <q>severely depressed</q>.  Examples include:   <q>low</q>, <q>normal</q>, <q>reduced</q>, and <q>improvement</q>.</td></tr>
-<tr><td>efTermNormalizedName</td><td>Normalized name for ejection fraction.   For example, in the text <q>Echocardiogram at the outside hospital demonstrated EF of approximately 60%</q>, the efTermNormalizedName is <q>ejection fraction</q>.</td></tr>
-<tr><td>efTermSurfaceForm</td><td>Covered text that represents the ejection fraction.   For example, in the text <q>Echocardiogram at the outside hospital demonstrated EF of approximately 60%</q>, the efTermSurfaceForm is <q>EF</q>.  Examples include:  <q>EF</q>, <q>LVEF</q>, <q>left ventricular ejection fraction</q>, <q>RVEF</q>,  and <q>ejection fraction</q>.</td></tr>
-<tr><td>efSuffixSurfaceForm</td><td>Covered text that represents the suffix to the measurement.  For example, in the text <q>Echocardiogram demonstrated EF of approximately 60%</q>, the efSuffixSurfaceForm is <q>%</q>.  Examples include: <q>%</q>, <q>percent</q>,  and <q>percentile</q>,</td></tr>
+<tr><td>efAlphabeticValueSurfaceForm</td><td>Covered text that represents applied value in word form.   For example, in the text `EF was severely depressed at 28%`, the efAlphabeticValueSurfaceForm is `severely depressed`.  Examples include:   `low`, `normal`, `reduced`, and `improvement`.</td></tr>
+<tr><td>efTermNormalizedName</td><td>Normalized name for ejection fraction.   For example, in the text `Echocardiogram at the outside hospital demonstrated EF of approximately 60%`, the efTermNormalizedName is `ejection fraction`.</td></tr>
+<tr><td>efTermSurfaceForm</td><td>Covered text that represents the ejection fraction.   For example, in the text `Echocardiogram at the outside hospital demonstrated EF of approximately 60%`, the efTermSurfaceForm is `EF`.  Examples include:  `EF`, `LVEF`, `left ventricular ejection fraction`, `RVEF`,  and `ejection fraction`.</td></tr>
+<tr><td>efSuffixSurfaceForm</td><td>Covered text that represents the suffix to the measurement.  For example, in the text `Echocardiogram demonstrated EF of approximately 60%`, the efSuffixSurfaceForm is `%`.  Examples include: `%`, `percent`,  and `percentile`,</td></tr>
 <tr><td>efSuffixNormalizedName</td><td>Normalized name for suffix measurement fraction.</td></tr>
 <tr><td>echocardiogramNormalizedName</td><td>The normalized name for the echocardiogram.</td></tr>
-<tr><td>echocardiogramSurfaceForm</td><td>Covered text that represents the echocardiogram.  Examples include:   <q>echo</q>, <q>echocardiogram</q>, and  "echocardiographic".</td></tr>
+<tr><td>echocardiogramSurfaceForm</td><td>Covered text that represents the echocardiogram.  Examples include:   `echo`, `echocardiogram`, and  "echocardiographic".</td></tr>
 </table>
 
 ### Sample Response

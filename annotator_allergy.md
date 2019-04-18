@@ -25,7 +25,7 @@ subcollection: wh-acd
 # Allergies
 {: #allergies}
 
-Detects text that follows allergy keywords such as <q>allergies:</q> and <q>allergic to:</q>. Items following the keywords are annotated with the AllergyInd type. The annotation includes all types of allergies such as environmental, animal, medication, food, etc. If annotation includes a medication then information related to the medication is also returned.
+Detects text that follows allergy keywords such as `allergies:` and `allergic to:``. Items following the keywords are annotated with the AllergyInd type. The annotation includes all types of allergies such as environmental, animal, medication, food, etc. If annotation includes a medication then information related to the medication is also returned.
 {:shortdesc}
 
 #### Configurations
@@ -48,7 +48,7 @@ library
 </ul>
 </td>
 <td>
-Defines the version of the UMLS library that is used when annotating unstructured data.  The value <q>umls.latest</q> is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.
+Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the **library** configuration.
 </td>
 </tr>
 </tbody>

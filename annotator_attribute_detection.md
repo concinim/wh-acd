@@ -93,7 +93,7 @@ If the attribute detection annotator is included in a flow without explicitly de
 
 #### Dependencies
 
-The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to <q>promote</q> to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute detection annotator does not detect any explicit concepts from the unstructured data itself.
+The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to promote to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute detection annotator does not detect any explicit concepts from the unstructured data itself.
 
 ###### Sample Annotator Flow for Attribute Detection
 

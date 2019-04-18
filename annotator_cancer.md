@@ -46,7 +46,7 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
   <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
 </ul>
 </td>
-<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value <q>umls.latest</q> is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
+<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
 </tr>
 </table>
 
@@ -62,16 +62,16 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
 <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
 <tr><td>type</td><td>aci.IcaCancerDiagnosisInd</td></tr>
-<tr><td>modality</td><td>Potenial values are: <q>positive</q> and <q>negative</q>.  This based on whether the patient has or does not have the cancer identified.</td></tr>
-<tr><td>sectionSurfaceForm</td><td>Medical documents have many sections such as patient's information, previous medical history, family history, etc.  The covered text that identifies which section of the document that spans the annotation. The default value of this feature is <q>document</q>.</td></tr>
+<tr><td>modality</td><td>Potenial values are: `positive` and `negative`.  This based on whether the patient has or does not have the cancer identified.</td></tr>
+<tr><td>sectionSurfaceForm</td><td>Medical documents have many sections such as patient's information, previous medical history, family history, etc.  The covered text that identifies which section of the document that spans the annotation. The default value of this feature is `document`.</td></tr>
 <tr><td>sectionNormalizedName</td><td>The normalized term for the section.</td></tr>
 <tr><td>Cancer</td><td><table role="presentation"><tbody>
   <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
   <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
   <tr><td>type</td><td>aci.Cancer</td></tr>
   <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
-  <tr><td>cancerSurfaceForm</td><td>Covered text that represents the cancer.   For example, in the text <q>He has lung cancer</q>, the cancerSurfaceForm is <q>lung cancer</q>.</td></tr>
-  <tr><td>cancerNormalizedName</td><td>Normalized name for the cancer from the UMLS dictionary   For example, in the text <q>He has lung cancer</q>, the cancerSurfaceForm is <q>primary malignant neoplasm of lung</q>.</td></tr>
+  <tr><td>cancerSurfaceForm</td><td>Covered text that represents the cancer.   For example, in the text `He has lung cancer`, the cancerSurfaceForm is `lung cancer`.</td></tr>
+  <tr><td>cancerNormalizedName</td><td>Normalized name for the cancer from the UMLS dictionary   For example, in the text `He has lung cancer`, the cancerSurfaceForm is `primary malignant neoplasm of lung`.</td></tr>
   <tr><td>ccsCode</td><td>CCS stands for Clinical Classification System, used to categorize diagnosis and procedures such that it can be used for further analysis.</td></tr>
   <tr><td>hccCode</td><td>HCC stands for Hierarchical Condition Categories and primarily used by Medicare and Medicaid.</td></tr>
   <tr><td>icd9Code</td><td>ICD stands for International Classification of Diseases.  The number 9 is a revision number for this code set.</td></tr>
@@ -102,7 +102,7 @@ Detects potential cancer disease terms such as adenocarcinoma carcinomatosis. Ex
   <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
   <tr><td>type</td><td>aci.Measurement</td></tr>
   <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
-  <tr><td>dimension</td><td>Type of mesurement. For example, in the text <q>4.3mm tumor</q>, the dimension of measurement is <q>length</q>.</td></tr>
+  <tr><td>dimension</td><td>Type of mesurement. For example, in the text `4.3mm tumor`, the dimension of measurement is `length`.</td></tr>
 </tbody></table></td></tr>
 <tr><td>CancerGrade</td><td><table role="presentation"><tbody>
   <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>

@@ -58,7 +58,7 @@ Concept Value provides out of the box handling for some lexical triggers.  If th
 </tr>
 <tr>
 <td>trigger</td>
-<td>The lexical trigger that fired the Concept Value relationship, for example: <q>greater than</q>, <q>less than</q>, <q>at least</q>, or <q>more than</q>, etc.</td>
+<td>The lexical trigger that fired the Concept Value relationship, for example: `greater than`, `less than`, `at least`, or `more than`, etc.</td>
 </tr>
 <tr>
 <td>type</td>
@@ -83,7 +83,7 @@ Concept Value provides out of the box handling for some lexical triggers.  If th
 </tr>
 <tr>
 <td>dimension</td>
-<td>This feature contains the dimension of the units of this value, for example: <q>time</q>, <q>length</q>, <q>volume</q>, <q>pressure</q>, etc.</td>
+<td>This feature contains the dimension of the units of this value, for example: `time`, `length`, `volume`, `pressure`, etc.</td>
 </tr>
 <tr>
 <td>rangeBegin</td>
@@ -149,9 +149,9 @@ This is similar to the first example, but this time the language is "at least" i
       ]
 ```
 
-##### Example 3: ConceptValue with non-numeric value - _<q>positive</q>_
+##### Example 3: ConceptValue with non-numeric value - _`positive`_
 
-> **Text:** _<q>**Hormone receptor positive** patients are candidates for anti-estrogen therapy.</q>_
+> **Text:** _**Hormone receptor positive** patients are candidates for anti-estrogen therapy.`_
 
 This example demonstrates a non-numeric value (`positive`)for a concept that does not use numeric values.
 
