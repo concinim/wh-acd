@@ -33,7 +33,6 @@ The Domain Expert Tool (DET) provides support to customize the ontology used to 
 <h4>Configurations</h4>
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Description</th>
@@ -51,11 +50,10 @@ The Domain Expert Tool (DET) provides support to customize the ontology used to 
 ###### Relation
 
 <table>
-<caption>Relation</caption>
 <tr><th>__Fields__</th><th>__Description__</th></tr>
 </tr><td>type</td><td>The type of relationship that exists between the concepts.</td></tr>
 <tr><td>source</td><td>The name of the ontology that defines the relationship. </td></tr>
-<tr><td>nodes</td><td>The nodes identifies the related concepts. Nodes includes an entity for each concept that was related. An identifier is provided in the <b>uid</b> field that can be link back to the concept.
+<tr><td>nodes</td><td>The nodes identifies the related concepts. Nodes includes an entity for each concept that was related. An identifier is provided in the **uid** field that can be link back to the concept.
 </tr>
 </table>
 

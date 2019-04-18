@@ -25,10 +25,8 @@ subcollection: wh-acd
 # Negation
 {: #negation_detection}
 
-Identifies the spans of text that are the object of a negation and also identifies the text that triggered the negation. When this annotator is run it updates annotations that currently exist in the unstructured container with a negated flag either <q>negated=true</q> or <q>negated=false</q> based on span of the annotation in the container and the span of the identified NegatedSpans. You should run this annotator after all annotators that you would like to be processed for negation.
+The negation detection annotator identifies the spans of text that are the object of a negation and also identifies the text that triggered the negation. The annotator adds a **negated** field to annotations to indicate if the annotation is negated.
 {:shortdesc}
-
-Note: Due to the nature of how the Negation annotator works, see Hypothetical and Negation Annotator Filtering section below for information on how best to use filtering functionality with this annotator.
 
 <h4>Annotation Types</h4>
 
@@ -37,7 +35,6 @@ Note: Due to the nature of how the Negation annotator works, see Hypothetical an
 <h4>Configurations</h4>
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Values</th>
@@ -57,18 +54,84 @@ Note: Due to the nature of how the Negation annotator works, see Hypothetical an
 
 <h4>NegatedSpan</h4>
 
-
 <table>
-<caption>NegatedSpan</caption>
-<tr><th>__Feature__</th><th>__Description__</th></tr>
+<tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
 <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
 <tr><td>type</td><td>NegatedSpan</td></tr>
-<tr><td>trigger</td><td><table role="presentation"><tbody>
+<tr><td>trigger</td><td>The text that triggered the negation. For example, in the text "She denies pain", the trigger is "denies".
+<table role="presentation"><tbody>
   <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
   <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
   <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
   <tr><td>type</td><td>trigger</td></tr>
 </tbody></table></td></tr>
 </table>
+
+
+### Sample Response
+
+Sample response from the negation annotator for the text: `The patient denies pain.`
+
+In this example, the concepts for `pain` was annotated with the **negated** field value of `true` to indicate it is negated.
+
+```javascript
+{
+  "unstructured": [
+    {
+      "text": "The patient denies pain.",
+      "data": {
+        "concepts": [
+          {
+            "cui": "C0030705",
+            "preferredName": "Patients",
+            "semanticType": "podg",
+            "source": "umls",
+            "type": "umls.PatientOrDisabledGroup",
+            "begin": 4,
+            "end": 11,
+            "coveredText": "patient",
+            "negated": false
+          },
+          {
+            "cui": "C0332319",
+            "preferredName": "Denied (qualifier)",
+            "semanticType": "qlco",
+            "source": "umls",
+            "type": "umls.QualitativeConcept",
+            "begin": 12,
+            "end": 18,
+            "coveredText": "denies",
+            "negated": false
+          },
+          {
+            "cui": "C0030193",
+            "preferredName": "Pain",
+            "semanticType": "sosy",
+            "source": "umls",
+            "type": "umls.SignOrSymptom",
+            "begin": 19,
+            "end": 23,
+            "coveredText": "pain",
+            "negated": true
+          }
+        ],
+        "negatedSpans": [
+          {
+            "trigger": {
+              "begin": 12,
+              "end": 18,
+              "coveredText": "denies"
+            },
+            "type": "NegatedSpan",
+            "begin": 19,
+            "end": 23,
+            "coveredText": "pain"
+          }
+        ]
+      }
+    }
+  ]
+}
+```

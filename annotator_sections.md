@@ -25,15 +25,15 @@ subcollection: wh-acd
 # Sections
 {: #sections}
 
-The section annotator is used to identify the section of a document where unstructured text is found. For example, a patient's discharge summary may contain a "Family History" section identifying medical diagnoses of the patient's parents. In some instances, this information may not be relevant for a particular use case. Using the section annotator, annotations identified as belonging to the "Family History" section may be filtered out.
+The section annotator is used to identify the section of a document where concepts are found. For example, a patient's discharge summary may contain a "Family History" section identifying medical diagnoses of the patient's parents. In some instances, this information may not be relevant for a particular use case. Using the section annotator, annotations identified as belonging to the "Family History" section may be filtered out.
 
 The section annotator provides a set of predefined section titles based on the [Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) vocabulary. In addition to the predefined section titles, section headings are also identified based on a few simple formatting rules:
 
 1. If a heading is in all uppercase letters followed by a ":", such as "VACCINES:", the heading will be treated as a section header.
 2. If a section title is followed or preceded by all uppercase letters (with "/" in between), both the section title and the uppercase portion is considered the section header. If uppercase letters follow the dictionary entry, the uppercase portion may include parentheses. Examples include "RELEVANT/FamilyHistory:" and "Family History/(RELEVANT):".
-3. By default, a section will only be identified if the section title starts at the beginning of a line. To identify sections when the title appears later in the text, use the <b>sections_can_start_anywhere</b> configuration parameter.
+3. By default, a section will only be identified if the section title starts at the beginning of a line. To identify sections when the title appears later in the text, use the **sections_can_start_anywhere** configuration parameter.
 
-A section includes all the text between two section headings. Annotations that exist within the section will be annotated with  the section information in the <b>sectionNormalizedName</b> and <b>sectionSurfaceForm</b> fields.
+A section includes all the text between two section headings. Annotations that exist within the section will be annotated with  the section information in the **sectionNormalizedName** and **sectionSurfaceForm<** fields.
 
 The Domain Expert Tool (DET) provides support to customize the section annotator to add your own section titles or filter out unwanted terms from the predefined section titles.  It also allows you to filter annotations based on the section in which they appear. See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
 
@@ -44,7 +44,6 @@ The Domain Expert Tool (DET) provides support to customize the section annotator
 <h4>Configurations</h4>
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</t>
 <th>Values</th>
@@ -88,7 +87,7 @@ The Domain Expert Tool (DET) provides support to customize the section annotator
 
 Sample response from the section annotator for the text: `Family history:\nMaternal history of diabetes.`
 
-This example also show a concept that was annotated with the <b>sectionSurfaceForm</b> and <b>sectionNormalizedName</b> fields.
+This example also show a concept that was annotated with the **sectionSurfaceForm** and **sectionNormalizedName** fields.
 
 ```
 {

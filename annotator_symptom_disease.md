@@ -31,7 +31,6 @@ This annotator identifies symptoms and diseases mentioned in the text. It also i
 <h4>Configurations</h4>
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Values</th>
@@ -47,7 +46,7 @@ This annotator identifies symptoms and diseases mentioned in the text. It also i
   <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
 </ul>
 </td>
-<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value "umls.latest" is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
+<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value "umls.latest" is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the **library** configuration.</td>
 </tr>
 </table>
 
@@ -58,7 +57,6 @@ This annotator identifies symptoms and diseases mentioned in the text. It also i
 ###### aci.SymptomDiseaseInd
 
 <table>
-<caption>aci.SymptomDiseaseInd</caption>
 <tr><th>__Fields__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -79,7 +77,7 @@ This annotator identifies symptoms and diseases mentioned in the text. It also i
 <tr><td>sectionSurfaceForm</td><td>Medical documents have many sections such as patient's information, previous medical history, family history, etc.  The covered text that identifies which section of the document that spans the annotation. The default value of this feature is "document".</td></tr>
 <tr><td>sectionNormalizedName</td><td>The normalized term for the section.</td></tr>
 <tr><td>modifiers</td><td>
-  Modifiers represents text that describes the disease or symptom or identifies the related body site or location. 
+  Modifiers represents text that describes the disease or symptom or identifies the related body site or location.
   <table role="presentation"><tbody>
     <tr><td>type</td><td>aci.SiteInd</td></tr>
     <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
