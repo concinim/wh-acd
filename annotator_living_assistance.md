@@ -342,9 +342,6 @@ Sample response from the walking assistance annotator for the text: `He can't wa
     {
       "text": "He can't walk without a cane.",
       "data": {
-
-        ...
-
         "WalkingAssistanceInd": [
           {
             "type": "aci.WalkingAssistanceInd",
