@@ -40,7 +40,7 @@ Concept Value provides out of the box handling for some lexical triggers.  If th
 
 #### Dependencies
 
-The concept_value annotator detects values from unstructured clinical text and associates them with previously detected concepts from the concept_detection annotator. Thus concept_detection must run prior to concept_value within an annotator flow to function properly.
+Concept Detection must run prior to Concept Value in your ACD flow to function properly.
 
 #### Annotation Types
 
@@ -62,7 +62,7 @@ The concept_value annotator detects values from unstructured clinical text and a
 </tr>
 <tr>
 <td>trigger</td>
-<td>The lexical trigger that fired the ConceptValue relationship, for example: <q>greater than</q>, <q>less than</q>, <q>at least</q>, or <q>more than</q>, etc.</td>
+<td>The lexical trigger that fired the Concept Value relationship, for example: <q>greater than</q>, <q>less than</q>, <q>at least</q>, or <q>more than</q>, etc.</td>
 </tr>
 <tr>
 <td>type</td>
