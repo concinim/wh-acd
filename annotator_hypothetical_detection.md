@@ -25,23 +25,20 @@ subcollection: wh-acd
 # Hypothetical
 {: #hypothetical_detection}
 
-Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement <q>The doctor discussed the benefits of having an MRI performed.</q> It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement, therefore, the user of the hypothetical annotator could choose to process annotations within that span differently. Another example could be <q>the patient's father had diabetes.</q> This isn't stating the patient has diabetes, just that his father did have it. This is an example of a family history hypothetical span.
+Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement `The doctor discussed the benefits of having an MRI performed`. It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement, therefore, the user of the hypothetical annotator could choose to process annotations within that span differently. Another example could be `the patient's father had diabetes`. This isn't stating the patient has diabetes, just that his father did have it. This is an example of a family history hypothetical span.
 {:shortdesc}
 
-In simple terms, the hypothetical annotator makes use of words or word phrases called <q>triggers.</q> When a trigger is found in text being analyzed, the phrase is tagged as being a potential hypothetical span. In the two examples above, the trigger terms are <q>discussed</q> and <q>father,</q> respectively. Internal to the hypothetical annotator are two dictionaries of these trigger words: hypothetical triggers and family history triggers. Examples from the hypothetical triggers dictionary include <q>suspected,</q> <q>talked about,</q> and <q>scheduled for.</q> Likewise, the internal family history triggers dictionary contains familial terms such as <q>sister,</q> <q>mother,</q> <q>brother,</q> etc. Using custom dictionaries (whitelists), either of these dictionaries may be augmented to include alternate spellings, additional terms, and regional colloquialisms as necessary. See the section on Whitelists for more information.
+The hypothetical annotator makes use of words or word phrases called <q>triggers.</q> When a trigger is found in text being analyzed, the phrase is tagged as being a potential hypothetical span. In the two examples above, the trigger terms are `discussed` and `father`.  Internal to the hypothetical annotator are two dictionaries of these trigger words: hypothetical triggers and family history triggers. Examples from the hypothetical triggers dictionary include `suspected`, `talked about`, and `scheduled for`. Likewise, the internal family history triggers dictionary contains familial terms such as `sister`, `mother`, `brother`, etc.  Either of these dictionaries can be customized using the Domain Expert Tool.  See the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section for more information.
 
-When the hypothetical annotator is used, it updates annotations that currently exist in the unstructured container with a hypothetical flag either <q>hypothetical=true</q> or <q>hypothetical=false</q> based on span of the annotation in the container and the span of the identified HypotheticalSpans. When hypothetical=true, an additional feature, <q>hypotheticalType,</q> is added to indicate that the hypothetical span is a <q>HypotheticalSpan</q> or a <q>FamilyHistorySpan.</q> Run the hypothetical annotator after all other annotators to be processed in order to generate hypothetical spans.
+When the hypothetical annotator is used, it updates annotations that currently exist in the unstructured container with a hypothetical field either `hypothetical=true` or `hypothetical=false` based on span of the annotation in the container and the span of the identified HypotheticalSpans. When `hypothetical=true`, an additional feature, *hypotheticalType*, is added to indicate the type hypothetical span - `HypotheticalSpan` or `FamilyHistorySpan`. Run the hypothetical annotator after all other annotators to be processed in order to generate hypothetical spans.
 
-Note: Due to the nature of how the Hypothetical annotator works, see Hypothetical and Negation Annotator Filtering section below for information on how best to use filtering functionality with this annotator.
-
-<h4>Annotation Types</h4>
+#### Annotation Types
 
 * HypotheticalSpan
 
-<h4>Configurations</h4>
+#### Configurations
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</t>
 <th>Values</th>
@@ -59,10 +56,9 @@ Note: Due to the nature of how the Hypothetical annotator works, see Hypothetica
 </tr>
 </table>
 
-###### HypotheticalSpan
+#### HypotheticalSpan
 
 <table>
-<caption>HypotheticalSpan</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -75,3 +71,55 @@ Note: Due to the nature of how the Hypothetical annotator works, see Hypothetica
   <tr><td>source</td><td>The name of the whitelist dictionary in which the trigger resides. The name will be <q>internal</q> if the trigger resides in the internally shipped dictionary.</td></tr>
 </tbody></table></td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the hypothetical annotator for the text: `We discussed the pros and cons of chemotherapy.`
+
+```{
+  "unstructured": [
+    {
+      "text": "We discussed the pros and cons of chemotherapy.",
+      "data": {
+        "concepts": [
+
+          ...
+
+          {
+            "cui": "C3665472",
+            "preferredName": "Chemotherapy",
+            "semanticType": "topp",
+            "source": "umls",
+            "sourceVersion": "2018AA",
+            "type": "umls.TherapeuticOrPreventiveProcedure",
+            "begin": 34,
+            "end": 46,
+            "coveredText": "chemotherapy",
+            "hypothetical": true,
+            "hypotheticalType": "HypotheticalSpan",
+            "loincId": "LA6172-6,MTHU010425",
+            "nciCode": "C15632",
+            "snomedConceptId": "367336001,363688001",
+            "vocabs": "LNC,MTH,CSP,NCI_NCI-GLOSS,LCH,CHV,CCS,MEDLINEPLUS,LCH_NW,NCI,AOD,SNOMEDCT_US,PDQ"
+          }
+        ],
+        "hypotheticalSpans": [
+          {
+            "type": "HypotheticalSpan",
+            "begin": 0,
+            "end": 46,
+            "coveredText": "We discussed the pros and cons of chemotherapy",
+            "trigger": [
+              {
+                "begin": 3,
+                "end": 12,
+                "coveredText": "discussed",
+                "source": "internal"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}```
