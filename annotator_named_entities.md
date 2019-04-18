@@ -25,11 +25,11 @@ subcollection: wh-acd
 # Named entities
 {: #named_entities}
 
-Produces a set of types that represent categories of named entities in the unstructured text.
+Annotates spans of text that are named entities - person names, medical institutions, organizations, locations, emails, and phone numbers.
+
 {:shortdesc}
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th><th>Values</th><th>Description</th>
 </tr>
@@ -47,7 +47,7 @@ library
 </ul>
 </td>
 <td>
-Defines the version of the UMLS library that is used when annotating unstructured data.  The value <q>umls.latest</q> is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.
+Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.
 </td>
 </tr>
 </tbody>
@@ -65,7 +65,6 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.EmailAddressInd
 
 <table>
-<caption>aci.EmailAddressInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -76,7 +75,6 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.LocationInd
 
 <table>
-<caption>aci.LocationInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -87,7 +85,6 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.PersonInd
 
 <table>
-<caption>aci.PersonInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -98,7 +95,6 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.US_PhoneNumberInd
 
 <table>
-<caption>aci.US_PhoneNumberInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -109,7 +105,6 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.MedicalInstitutionInd
 
 <table>
-<caption>aci.MedicalInstituionInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
@@ -120,10 +115,40 @@ Defines the version of the UMLS library that is used when annotating unstructure
 ###### aci.OrganizationInd
 
 <table>
-<caption>aci.OrganizationInd</caption>
 <tr><th>__Feature__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
 <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
 <tr><td>type</td><td>aci.OrganizationInd</td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the Named Entities annotator for the text: `The patient was seen at Pine Springs Community Hospital last year for his condition.`
+
+```
+{
+  "unstructured": [
+    {
+      "text": "The patient was seen at Pine Springs Community Hospital last year for his condition.",
+      "data": {
+        "MedicalInstitutionInd": [
+          {
+            "type": "aci.MedicalInstitutionInd",
+            "begin": 24,
+            "end": 55,
+            "coveredText": "Pine Springs Community Hospital"
+          }
+        ],
+        "OrganizationInd": [
+          {
+            "type": "aci.OrganizationInd",
+            "begin": 24,
+            "end": 55,
+            "coveredText": "Pine Springs Community Hospital"
+          }
+        ]
+      }
+    }
+  ]
+}```
