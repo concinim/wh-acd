@@ -31,7 +31,6 @@ The smoking annotator identifies whether the patient is a current or former smok
 <h4>Configurations</h4>
 
 <table>
-<caption>Configurations</caption>
 <tr>
 <th>Configuration</th>
 <th>Values</th>
@@ -47,7 +46,7 @@ The smoking annotator identifies whether the patient is a current or former smok
   <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
 </ul>
 </td>
-<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value "umls.latest" is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
+<td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value "umls.latest" is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the **library** configuration.</td>
 </tr>
 </table>
 
@@ -58,7 +57,6 @@ The smoking annotator identifies whether the patient is a current or former smok
 ###### aci.SmokingInd
 
 <table>
-<caption>aci.SmokingInd</caption>
 <tr><th>__Fields__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
