@@ -76,7 +76,7 @@ The procedure annotator identifies different types of medical procedures such as
 
 ### Sample Response
 
-Sample response from the relation annotator for the text: `She started chemotherapy April 8th.`
+Sample response from the Procedures annotator for the text: `She started chemotherapy April 8th.`
 
 ```javascript
 {

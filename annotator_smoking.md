@@ -79,7 +79,7 @@ The smoking annotator identifies whether the patient is a current or former smok
 
 ### Sample Response
 
-Sample response from the symptom disease annotator for the text: `The patient smokes 2 packs of cigarettes per week.`
+Sample response from the Smoking annotator for the text: `The patient smokes 2 packs of cigarettes per week.`
 
 ```
 {

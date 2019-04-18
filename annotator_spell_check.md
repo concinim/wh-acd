@@ -122,6 +122,9 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
 </table>
 
 ### Sample Response
+
+Sample response from the spell check annotator for the text: `The patient has high blood presure`.
+
 ```
 {
   "unstructured": [
