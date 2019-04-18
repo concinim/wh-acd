@@ -25,12 +25,14 @@ subcollection: wh-acd
 # Hypothetical
 {: #hypothetical_detection}
 
-Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement `The doctor discussed the benefits of having an MRI performed`. It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement, therefore, the user of the hypothetical annotator could choose to process annotations within that span differently. Another example could be `the patient's father had diabetes`. This isn't stating the patient has diabetes, just that his father did have it. This is an example of a family history hypothetical span.
+Identifies the spans of text that are the object of a hypothetical statement. For example, a patient's record may include the statement `The doctor discussed the benefits of having an MRI performed`. It would be incorrect to say the patient has had an MRI since the sentence indicates the patient and doctor only talked about having an MRI. This statement would be identified as a hypothetical statement.  Another example could be `the patient's father had diabetes`. This isn't stating the patient has diabetes, just that his father did have it.  This is an example of a family history hypothetical span.
 {:shortdesc}
 
-The hypothetical annotator makes use of words or word phrases called <q>triggers.</q> When a trigger is found in text being analyzed, the phrase is tagged as being a potential hypothetical span. In the two examples above, the trigger terms are `discussed` and `father`.  Internal to the hypothetical annotator are two dictionaries of these trigger words: hypothetical triggers and family history triggers. Examples from the hypothetical triggers dictionary include `suspected`, `talked about`, and `scheduled for`. Likewise, the internal family history triggers dictionary contains familial terms such as `sister`, `mother`, `brother`, etc.  Either of these dictionaries can be customized using the Domain Expert Tool.  See the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section for more information.
+The hypothetical annotator makes use of words or phrases called triggers. When a trigger is found in text, the associated phrase is tagged as being a hypothetical span. In the two examples above, the trigger terms are `discussed` and `father`.  Internal to the hypothetical annotator are two dictionaries of these trigger words: hypothetical triggers and family history triggers. Examples from the hypothetical triggers dictionary include `suspected`, `talked about`, and `scheduled for`. Likewise, the internal family history triggers dictionary contains familial terms such as `sister`, `mother`, `brother`, etc.  Either of these dictionaries can be customized using the Domain Expert Tool.  See the Domain Expert Tool <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information about customizing the hypothetical annotator.
 
-When the hypothetical annotator is used, it updates annotations that currently exist in the unstructured container with a hypothetical field either `hypothetical=true` or `hypothetical=false` based on span of the annotation in the container and the span of the identified HypotheticalSpans. When `hypothetical=true`, an additional feature, *hypotheticalType*, is added to indicate the type hypothetical span - `HypotheticalSpan` or `FamilyHistorySpan`. Run the hypothetical annotator after all other annotators to be processed in order to generate hypothetical spans.
+The hypothetical annotator will add a *hypothetical* field (`true|false`) to annotations that are part of a hypothetical span.  When *hypothetical* is `true`, a *hypotheticalType* field will also be added to indicate the kind of hypothetical span.
+
+The hypothetical annotator should run after all other annotators to ensure hypothetical fields are created correctly for each annotation.
 
 #### Annotation Types
 
@@ -47,12 +49,12 @@ When the hypothetical annotator is used, it updates annotations that currently e
 <tr>
 <td>remove_hypothetical</td>
 <td>true/false</td>
-<td>When true, any medical concepts deemed hypothetical from the surrounding context will be truncated from the response. When false <i>(default)</i>, medical concepts deemed hypothetical will not be truncated from the response.</td>
+<td>When true, any medical concepts deemed hypothetical from the surrounding context will be removed from the API response. When false (_default_), medical concepts deemed hypothetical will be in the response.</td>
 </tr>
 <tr>
 <td>include_family_history</td>
 <td>true/false</td>
-<td>When true, the family history annotations will be included as part of hypothetical spans in the response. When false <i>(default)</i>, family history annotations will not be included in the response. For example, <q>his father has diabetes</q> will be annotated and included in the hypothetical span in the response when true.</td>
+<td>When true, the family history annotations will be included as part of hypothetical spans in the response. When false (_default_), family history annotations will not be included in the response. For example, `his father has diabetes` will be annotated and included in the hypothetical span in the response when true.</td>
 </tr>
 </table>
 
