@@ -25,88 +25,12 @@ subcollection: wh-acd
 # Lab Values
 {: #lab_values}
 
-The purpose of the Lab Value annotator is to annotate the value associated with lab measurements and tests. The annotator uses lab measurements and test defined in the Logical Observation Identifiers Names and Codes (LOINC) database. This database is a universal standard for identifying medical laboratory observations. The user can provide their surface forms for lab measurements and tests by using the labTypess whitelist described in the Customization section. Only the value of the measurement or test is covered by the annotation's span. To determine what test or measurement is associated with the value use the labTypeNormalizedName and labTypeSurfaceForm features in the annotation. The Lab Value annotator is written to only handle single values or fractional values composed of two single values.
+The purpose of the Lab Value annotator is to annotate the value associated with lab measurements and tests. The annotator uses lab measurements and test defined in the [Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) database. This database is a universal standard for identifying medical laboratory observations.  You can configure your own surface forms for lab measurements and tests using the Domain Expert Tool.  See the Domain Expert Tool <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
+
+Only the value of the measurement or test is covered by the annotation's span. To determine what test or measurement is associated with the value use the *labTypeNormalizedName* and *labTypeSurfaceForm* fields in the annotation. The Lab Value annotator is written to only handle single values or fractional values composed of two single values.
 {:shortdesc}
 
-Examples:
 
-B.P. 118/76 (sitting) 120/80 (standing).
-
-```javascript
-"LabValueInd": [
-   {
-       "type": "aci.LabValueInd",
-       "begin": 5,
-       "end": 11,
-       "coveredText": "118/76",
-       "loincId": "18684-1",
-       "lowValue": "76",
-       "dateInMilliseconds": " ",
-       "labTypeSurfaceForm": "B.P.",
-       "labTypeNormalizedName": "Blood pressure",
-       "labValue": "118",
-       "position": "sitting"
-   },
-   {
-       "type": "aci.LabValueInd",
-       "begin": 22,
-       "end": 28,
-       "coveredText": "120/80",
-       "loincId": "18684-1",
-       "lowValue": "80",
-       "dateInMilliseconds": " ",
-       "labTypeSurfaceForm": "B.P.",
-       "labTypeNormalizedName": "Blood pressure",
-       "labValue": "120",
-       "position": "standing"
-   }
-]
-```
-
-pulse: 84
-
-```javascript
-"LabValueInd": [
-     {
-         "type": "aci.LabValueInd",
-         "begin": 7,
-         "end": 9,
-         "coveredText": "84",
-         "dateInMilliseconds": " ",
-         "labTypeSurfaceForm": "pulse",
-         "labTypeNormalizedName": "pulse",
-         "labValue": "84"
-     }
- ]
-```
-
-temperature 20.1 degrees celsius
-
-```javascript
-"LabValueInd": [
-     {
-         "type": "aci.LabValueInd",
-         "begin": 12,
-         "end": 16,
-         "coveredText": "20.1",
-         "loincId": "8310-5",
-         "dateInMilliseconds": " ",
-         "labTypeSurfaceForm": "temperature",
-         "labTypeNormalizedName": "Body temperature",
-         "labValue": "20.1",
-         "measurementUnit": [
-             {
-                 "coveredText": "degrees celsius",
-                 "end": 32,
-                 "type": "aci.MeasurementUnit",
-                 "begin": 17,
-                 "dimension": "temperature",
-                 "compound": "false"
-             }
-         ]
-     }
- ]
-```
 
 <h4>Configurations</h4>
 
@@ -165,3 +89,83 @@ temperature 20.1 degrees celsius
 </tbody></table></td></tr>
 <tr><td>position</td><td>Position of the patient while a lab test was performed.  For example, in the text <q>Upright BP is 120/80 mmHg</q>, the position is Upright.</td></tr>
 </table>
+
+### Sample Response
+
+Text: `B.P. 118/76 (sitting) 120/80 (standing).`
+
+```
+"LabValueInd": [
+   {
+       "type": "aci.LabValueInd",
+       "begin": 5,
+       "end": 11,
+       "coveredText": "118/76",
+       "loincId": "18684-1",
+       "lowValue": "76",
+       "dateInMilliseconds": " ",
+       "labTypeSurfaceForm": "B.P.",
+       "labTypeNormalizedName": "Blood pressure",
+       "labValue": "118",
+       "position": "sitting"
+   },
+   {
+       "type": "aci.LabValueInd",
+       "begin": 22,
+       "end": 28,
+       "coveredText": "120/80",
+       "loincId": "18684-1",
+       "lowValue": "80",
+       "dateInMilliseconds": " ",
+       "labTypeSurfaceForm": "B.P.",
+       "labTypeNormalizedName": "Blood pressure",
+       "labValue": "120",
+       "position": "standing"
+   }
+]
+```
+
+Text: `pulse: 84`
+
+```
+"LabValueInd": [
+     {
+         "type": "aci.LabValueInd",
+         "begin": 7,
+         "end": 9,
+         "coveredText": "84",
+         "dateInMilliseconds": " ",
+         "labTypeSurfaceForm": "pulse",
+         "labTypeNormalizedName": "pulse",
+         "labValue": "84"
+     }
+ ]
+```
+
+Text: `temperature 20.1 degrees celsius`
+
+```
+"LabValueInd": [
+     {
+         "type": "aci.LabValueInd",
+         "begin": 12,
+         "end": 16,
+         "coveredText": "20.1",
+         "loincId": "8310-5",
+         "dateInMilliseconds": " ",
+         "labTypeSurfaceForm": "temperature",
+         "labTypeNormalizedName": "Body temperature",
+         "labValue": "20.1",
+         "measurementUnit": [
+             {
+                 "coveredText": "degrees celsius",
+                 "end": 32,
+                 "type": "aci.MeasurementUnit",
+                 "begin": 17,
+                 "dimension": "temperature",
+                 "compound": "false"
+             }
+         ]
+     }
+ ]
+```
