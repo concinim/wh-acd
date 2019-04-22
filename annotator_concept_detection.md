@@ -25,11 +25,10 @@ subcollection: wh-acd
 # Concept Detection
 {: #concept_detection}
 
-The concept detection service detects Unified Medical Language System (UMLS) concepts from unstructured data.
-As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Then, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations. If a CPT Codes file is referenced in the profile and there is a valid CUI-to-CPT code mapping, the CPT Code value is returned with the concept detected.
+The concept detection service detects medical concepts from unstructured data. The service provides concepts based on the Unified Medical Language System (UMLS). As of the 2018AA version of the UMLS library, the consumers can elect to have a set of [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes) associated with the UMLS concepts by specifying the optional configuration parameter to return the medical codes. When medical codes are requested, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations.
 {:shortdesc}
 
-Note that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept. A list of applicable medical codes are: NCI, NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT.
+The concept detection service also supports detection of medical concepts using custom dictionaries.  See the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> for more information on creating custom dictionaries.
 
 ### Expanded Concepts
 
@@ -78,40 +77,7 @@ There are two different injuries expressed in this text that we want to capture 
 Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with ACD.  It does not work with custom dictionaries.
 
 
-<h4>Sample Request</h4>
-
-
-````javascript
-{
-  "annotatorFlows": [
-    {
-      "flow": {
-        "elements": [
-          {
-            "annotator": {
-              "name": "concept_detection",
-              "parameters": {
-                "longest_span": [
-                  "false"
-                ],
-                "libraries": [
-                  "umls.2018AA"
-                ]
-              }
-            }
-          }
-        ],
-        "async": false
-      }
-    }
-  ],
-  "unstructured": [
-    {
-      "text": "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan."
-    }
-  ]
-}
-````
+<h4>Configurations</h4>
 
 The following table lists parameters of the concept_detection service.
 
@@ -121,16 +87,6 @@ The following table lists parameters of the concept_detection service.
     <th>Configuration</th>
     <th>Values</th>
     <th>Description</th>
-  </tr>
-  <tr>
-    <td>longest_span</td>
-    <td>true/false</td>
-    <td>When true <i>(default)</i>, only the concept with the longest text span will be returned if there are multiple concepts overlapping the same span of text.</td>
-  </tr>
-  <tr>
-    <td>expanded</td>
-    <td>true/false</td>
-    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if "broken collarbone" is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like "broke my collarbone".  This option is <i>false</i> by default.</td>
   </tr>
   <tr>
     <td>libraries</td>
@@ -143,43 +99,41 @@ The following table lists parameters of the concept_detection service.
     <td>Defines the version of the UMLS library that is used when detecting concepts from unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value if <b>libraries</b> is not specified in the configuration.</td>
   </tr>
   <tr>
+    <td>expanded</td>
+    <td>true/false</td>
+    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if "broken collarbone" is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like "broke my collarbone".  This option is <i>false</i> by default.</td>
+  </tr>
+  <tr>
     <td>include_optional_fields</td>
     <td>medical_codes </br> source_vocabularies </td>
     <td>Optional fields that should also be returned for each concept. If not specified, only the libary's default fields will be returned. </td>
   </tr>
+  <tr>
+    <td>longest_span</td>
+    <td>true/false</td>
+    <td>When true <i>(default)</i>, only the concept with the longest text span will be returned if there are multiple concepts overlapping the same span of text.</td>
+  </tr>
 </table>
 
-#### Sample Concepts Returned in Response<
+<h4>Annotation Types</h4>
 
-```javascript
-{
-  "cui": "C0242379",
-  "preferredName": "Malignant neoplasm of lung",
-  "semanticType": "neop",
-  "source": "umls",
-  "sourceVersion": "2016AB",
-  "type": "com.ibm.watson.hutt.umls.NeoplasticProcess",
-  "begin": 12,
-  "end": 23,
-  "coveredText": "lung cancer"
-}
-```
+* Concept
 
+###### Concept
 
 <table>
-<caption>Response Fields</caption>
 <tr>
 <th>Fields</th>
 <th>Description</th>
 </tr>
 <tr>
 <td>cui</td>
-<td>UMLS Concept Unique ID (CUI). CUIs are used to uniquely identify concepts across different UMLS sources.</td>
+<td>Concept Unique ID (CUI). CUIs are used to uniquely identify concepts.</td>
 </tr>
 </tr>
 <tr>
 <td>preferredName</td>
-<td>Normalized name for the UMLS concept.</td>
+<td>Normalized name for the concept.</td>
 </tr>
 </tr>
 <tr>
@@ -199,7 +153,7 @@ The following table lists parameters of the concept_detection service.
 </tr>
 <tr>
 <td>type</td>
-<td>The long-form UMLS semantic type.</td>
+<td>The semantic type associated with the concept.</td>
 </tr>
 <tr>
 <td>begin</td>
@@ -215,12 +169,16 @@ The following table lists parameters of the concept_detection service.
 </tr>
 <tr>
 <td>cptCode</td>
-<td>This code represents the type of procedure that is performed. CPT stands for Current Procedural Terminology. This code a standard terminology used by different members of medical society such as physicians, financial administrators, coders, and other organizations.</td>
+<td>This code represents the type of procedure that is performed. CPT stands for Current Procedural Terminology. This code a standard terminology used by different members of medical society such as physicians, financial administrators, coders, and other organizations. This value is only available when a CPT Codes file is referenced in the profile.</td>
+</tr>
+<tr>
+<td>sourceVocabularies</td>
+<td>This provides the list of UMLS source vocabularies that contained the concept. This is provided when the **include_optional_fields** parameter is specified with a value of `source_vocabularies`.</td>
 </tr>
 </table>
 
 
-The response of the concept detection annotator includes the following fields when the concept annotator is executed with the parameter  "include_optional_fields=medical_codes". Those optional response fields are listed in the following table.
+The following optional response fields are provided when the **include_optional_fields** parameter is specified with a value of `medical_codes`.
 
 <table>
 <tr>
@@ -235,3 +193,57 @@ The response of the concept detection annotator includes the following fields wh
 <tr><td>icd10Code</td><td>ICD stands for International Classification of Diseases.  The number 10 is a revision number for this code set.</td></tr>
 <tr><td>rxNormID</td><td>Also called the RXCUI which is a normalized id that is defined in the RxNorm standard and commonly used amongst different organizations.</td></tr>
 </table>
+
+### Sample Response
+
+Sample response from the concept detection annotator for the text: `She is taking Metformin for her type 2 diabetes.`
+
+This example provides the optional medical codes and source vocabularies.
+
+```javascript
+{
+  "unstructured": [
+    {
+      "text": "She is taking Metformin for her type 2 diabetes.",
+      "data": {
+        "concepts": [
+          {
+            "cui": "C0025598",
+            "preferredName": "Metformin",
+            "semanticType": "phsu",
+            "source": "umls",
+            "sourceVersion": "2018AA",
+            "type": "umls.PharmacologicSubstance",
+            "begin": 14,
+            "end": 23,
+            "coveredText": "Metformin",
+            "rxNormId": "6809",
+            "loincId": "LP33332-5,MTHU016062",
+            "nciCode": "C61612",
+            "snomedConceptId": "372567009,109081006",
+            "meshId": "M0013535",
+            "vocabs": "LNC,CSP,MSH,RXNORM,MTHSPL,NCI_NCI-GLOSS,CHV,ATC,NCI_FDA,NCI,LCH_NW,USPMG,NDFRT,SNOMEDCT_US,DRUGBANK,VANDF"
+          },
+          {
+            "cui": "C0011860",
+            "preferredName": "Diabetes Mellitus, Non-Insulin-Dependent",
+            "semanticType": "dsyn",
+            "source": "umls",
+            "sourceVersion": "2018AA",
+            "type": "umls.DiseaseOrSyndrome",
+            "begin": 32,
+            "end": 47,
+            "coveredText": "type 2 diabetes",
+            "loincId": "LA10552-0",
+            "icd10Code": "E11.9",
+            "nciCode": "C26747",
+            "snomedConceptId": "44054006",
+            "meshId": "M0006155",
+            "vocabs": "MTH,NCI_NICHD,LNC,CSP,MSH,HPO,OMIM,COSTAR,CHV,MEDLINEPLUS,NCI,LCH_NW,NDFRT,SNOMEDCT_US,DXP"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
