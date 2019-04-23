@@ -28,7 +28,7 @@ subcollection: wh-acd
 The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identifies pieces of information pertinent to the domain to create named attributes with associated values. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator, can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level concept in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
 {:shortdesc}
 
-Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, SNOMED CT, and CPT codes. Attribute detection can also provide two additional medical codes (CCS code and HCC Code) made available by the <a data-scroll="" href="wh-acd?topic=cancer#cancer">cancer</a> and <a data-scroll="" href="wh-acd?topic=wh-acd-symptom_disease#symptom_disease">symptom disease</a> annotators. The consumers can elect to have the set of medical codes associated with the attribute by specifying the optional configuration parameter to return the medical codes.
+Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts; e.g. NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, SNOMED CT, and CPT codes. Attribute detection can also provide two additional medical codes (CCS code and HCC Code) made available by the <a data-scroll="" href="wh-acd?topic=cancer#cancer">cancer</a> and <a data-scroll="" href="wh-acd?topic=wh-acd-symptom_disease#symptom_disease">symptom disease</a> annotators. The consumers can elect to have the set of medical codes associated with the attribute by specifying the optional configuration parameter to return the medical codes.
 
 The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective that describes the attribute. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
 
@@ -72,25 +72,25 @@ ACD provides three predefined attribute sets for evaluation purposes.
 </tr>
 <tr>
 <td>inference_rules</td>
-<td>The name of a derived attribute rule set that will be used for deriving additional attributes based on the attributes discovered by the <b>attribute_set</b> parameter. The derived attribute rules are developed using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>.</td>
+<td>The name of a derived attribute rule set that will be used for deriving additional attributes based on the attributes discovered by the **attribute_set** parameter. The derived attribute rules are developed using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>.</td>
 </tr>
 <tr>
 <td>qualifier_set</td>
-<td>The name of the desired attribute qualifier set to leverage when running the attribute_detection annotator. Multiple qualifier sets can be designated for a given request. The detect_qualifiers parameter must also be set to true.</td>
+<td>The name of the desired attribute qualifier set to leverage when running the attribute_detection annotator. Multiple qualifier sets can be designated for a given request. The **detect_qualifiers** parameter must also be set to `true`.</td>
 </tr>
 <tr>
 <td>detect_qualifiers</td>
-<td>When true, attribute annotations will include qualifiers as defined in the qualifier set identified on the qualifier_set parameter.</td>
+<td>When true, attribute annotations will include qualifiers as defined in the qualifier set identified on the **qualifier_set** parameter.</td>
 </tr>
 <tr>
 <td>include_optional_fields</td>
-<td>Specify additional fields from the underlying concepts in the attribute values. Use 'medical_codes' to return medical code fields in the attribute annotations. </td>
+<td>Specify additional fields from the underlying concepts in the attribute values. Use `medical_codes` to return medical code fields in the attribute annotations. </td>
 </tr>
 </table>
 
 #### Dependencies
 
-The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to promote to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute detection annotator does not detect any explicit concepts from the unstructured data itself.
+The attribute detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to promote to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The concept value annotator should be designated to run prior to attribute detection in the flow.
 
 The attribute_detection annotator will propagate contextual information from the underlying concepts and concept values to the discovered attribute, such as whether the concept is negated or what section the attribute appears in. The contextual annotators (negation, hypothetical, disambiguation, or section) should be designated to run prior to attribute detection in the flow.
 
@@ -168,7 +168,7 @@ The attribute_detection annotator will propagate contextual information from the
 
 Sample response from the attribute detection annotator for the text: `Study participants must not have an active or untreated brain metastases.`
 
-This example provides example of including optional medical codes and qualifiers.
+This example illustrates contextual information (negated and hypothetical) and includes optional medical codes and qualifiers.
 
 ```javascript
 {
