@@ -25,25 +25,18 @@ subcollection: wh-acd
 # Attribute Detection
 {: #attribute_detection}
 
-The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identify pieces of information pertinent to the domain and are used to create the attribute values by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator,  can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level concept in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
+The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identifies pieces of information pertinent to the domain to create named attributes with associated values. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator, can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level concept in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
 {:shortdesc}
 
-Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, and SNOMED CT. Attribute detection can detect three additional medical codes, i.e., ccsCode, hccCode, cptCode, in addition to the medical codes available from the concept detection annotator. As of the 2018AA version of the UMLS library, the consumers can elect to have a set of medical codes associated with the umls concepts by specifying the optional configuration parameter to return the medical codes. Notice that not all of these medical codes are applicable to every concept. Applicable codes for a given UMLS concept are based on the vocabulary sources of the surface forms for a given concept.
+Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts , e.g. , NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, SNOMED CT, and CPT codes. Attribute detection can also provide two additional medical codes (CCS code and HCC Code) made available by the <a data-scroll="" href="wh-acd?topic=cancer#cancer">cancer</a> and <a data-scroll="" href="wh-acd?topic=wh-acd-symptom_disease#symptom_disease">symptom disease</a> annotators. The consumers can elect to have the set of medical codes associated with the attribute by specifying the optional configuration parameter to return the medical codes.
 
+The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective that describes the attribute. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
 
-The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective related to the attribute value. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
-
-To detect attributes and attribute qualifiers , the consumer must first define the attribute and its metadata, include the attribute in an attribute set, and optionally define possible values and qualifiers for the attribute. After an attribute or qualifier set has been defined, it is specified as an API query parameter and then used during request processing to detect attribute values and qualifiers in pre-annotated unstructured text. To simplify the attribute definition process, ACD provides several predefined attributes set.
-
-
-
-The consumer may also use the [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) (DET) to easily construct other attributes, attribute sets, qualifiers, and qualifier sets for their specific domain. Once the attribute definition process is complete in DET, the artifacts and attribute detection annotator configuration (defined in the profile flow, see <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section) can be exported from DET via a cartridge and then deployed to ACD for use by this consumer.
+ACD provides several predefined attribute sets that can be used to identify general medical related attributes. The consumer may also use the [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) (DET) to easily construct other attributes and qualifiers for their specific domain. Once the attribute definition process is complete in DET, the attributes and qualifiers can be <a data-scroll="" href="wh-acd?topic=wh-acd-deployed#deployed">deployed</a> to ACD and used with the attribute detection annotator.
 
 #### Predefined Attribute Sets
 
-ACD provides three predefined attribute sets for evaluation purposes. The attribute sets are provided through two predefined profiles, the `general_medical_v1.0` profile and the `general_cancer_v1.0` profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
-
-If the attribute detection annotator is included in a flow without explicitly designating any attribute_set parameters, then the `general_medical_v1.0` and `general_labs_v1.0` attribute sets are used by default.<br/>
+ACD provides three predefined attribute sets for evaluation purposes.
 
 <table>
 <tr>
@@ -53,11 +46,11 @@ If the attribute detection annotator is included in a flow without explicitly de
 <tbody>
 <tr>
 <td>general_medical_v1.0</td>
-<td>Clinical attributes that represent the patient characteristics commonly used by physicians during a medical examination including demographics, symptoms, diseases, and procedures. Included in the general_medical_v1.0 profile.</td>
+<td>Clinical attributes that represent the patient characteristics commonly used by physicians during a medical examination including demographics, symptoms, diseases, and procedures. Included in the general_medical_v1.0 and default_profile_v1.0 profiles.</td>
 </tr>
 <tr>
 <td>general_labs_v1.0</td>
-<td>Clinical attributes that represent the laboratory measurements commonly used by physicians. Included in the general_medical_v1.0 profile.</td>
+<td>Clinical attributes that represent the laboratory measurements commonly used by physicians. Included in the general_medical_v1.0 and default_profile_v1.0 profiles.</td>
 </tr>
 <tr>
 <td>general_cancer_v1.0</td>
@@ -78,6 +71,10 @@ If the attribute detection annotator is included in a flow without explicitly de
 <td>The name of the desired attribute set to leverage when running the attribute_detection annotator. Multiple attribute sets can be designated for a given request. </td>
 </tr>
 <tr>
+<td>inference_rules</td>
+<td>The name of a derived attribute rule set that will be used for deriving additional attributes based on the attributes discovered by the <b>attribute_set</b> parameter. The derived attribute rules are developed using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>.</td>
+</tr>
+<tr>
 <td>qualifier_set</td>
 <td>The name of the desired attribute qualifier set to leverage when running the attribute_detection annotator. Multiple qualifier sets can be designated for a given request. The detect_qualifiers parameter must also be set to true.</td>
 </tr>
@@ -95,90 +92,13 @@ If the attribute detection annotator is included in a flow without explicitly de
 
 The attribute_detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to promote to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The attribute detection annotator does not detect any explicit concepts from the unstructured data itself.
 
-###### Sample Annotator Flow for Attribute Detection
+The attribute_detection annotator will propagate contextual information from the underlying concepts and concept values to the discovered attribute, such as whether the concept is negated or what section the attribute appears in. The contextual annotators (negation, hypothetical, disambiguation, or section) should be designated to run prior to attribute detection in the flow.
 
-Sample request for running the attribute detection annotator, leveraging the **General Medical V1.0 Profile**.
+<h4>Annotation Types</h4>
 
-```javascript
-{
-  "unstructured": [
-    {
-      "text": "Patient has an atypical carcinoid lung tumor."
-    }
-  ],
-  "annotatorFlows": [
-    {
-	"profile" : "general_medical_v1.0",
-      "flow": {
-        "elements": [
-          {
-            "annotator": {
-                "name":"concept_detection"
-             }
-          },
-          {
-            "annotator": {
-                "name":"concept_value"
-             }
-          },
-          {
-            "annotator": {
-                "name":"attribute_detection"
-             }
-          }
-        ],
-        "async":"false"
-       }
-    }
-  ]
-}
-```
+* Attribute Value
 
-##### Contextual Annotator Flow Sequence Recommendation
-
-If negation, hypothetical, disambiguation, or section annotators are included within the annotator flow alongside attribute_detection, it is recommended that those annotators be designated to run prior to attribute_detection. This flow is recommended for the following reasons:
-
-1.  If you choose to have negated, hypothetical, or contextually invalid concepts removed, we recommend these annotations be removed prior to running attribute_detection, to avoid detection of an attribute based on concepts that will end up being truncated from the response.
-2.  The attribute_detection annotator will propagate contextual information from the underlying concepts and concept values to the discovered attribute. For example :
-    <br/>**2.1 Negated** - if the attribute is detected as a boolean (where value would be set to _true_), the boolean value is flipped to _false_ if negated. Otherwise, the negated flags are propagated within the attribute annotation.
-    <br/>**2.2 Hypothetical** - the hypothetical boolean field is propagated within the attribute annotation.
-    <br/>**2.3 sectionSurfaceForm and sectionNormalizedName** - the section features are propagated within the attribute annotation.
-
-#### Sample Attribute with Qualifier Detection Annotation
-
-The _carcinoid lung tumor_ concept detected in the clinical text within the sample request above is rolled up into a higher-level **Disease** attribute. In this example, `atypical` is detected as an attribute qualifier.
-
-```javascript
-"attributeValues": [
-  {
-    "preferredName": "Carcinoid tumor of lung",
-    "values": [
-      {
-        "value": "true"
-      }
-    ],
-    “qualifiers”: [
-      {
-        “value”: “true”,
-        “qualifier”: “atypical”,
-        “begin”: 15,
-        “end”: 23
-      }
-    ],
-    "source": "General Medical",
-    "sourceVersion": "v1.0",
-    "concept": {
-      "uid": 2
-    },
-    "begin": 24,
-    "end": 44,
-    "coveredText": "carcinoid lung tumor",
-    "name": "Disease"
-  }
-]
-```
-
-#### Response Fields
+###### Attribute Value
 
 <table>
 <tr>
@@ -186,8 +106,12 @@ The _carcinoid lung tumor_ concept detected in the clinical text within the samp
 <th>Description</th>
 </tr>
 <tr>
+<td>name</td>
+<td>The configured name of the detected attribute.</td>
+</tr>
+<tr>
 <td>preferredName</td>
-<td>The preferredName of the underlying medical concept promoted to an attribute.</td>
+<td>The normalized or preferred name of the underlying medical concept promoted to the attribute.</td>
 </tr>
 <tr>
 <td>values</td>
@@ -220,11 +144,11 @@ The _carcinoid lung tumor_ concept detected in the clinical text within the samp
 </tr>
 <tr>
 <td>concept</td>
-<td>Reference to the medical concept promoted to an attribute.</td>
+<td>Reference to the medical concept related to this attribute.</td>
 </tr>
 <tr>
 <td>conceptValue</td>
-<td>Reference to the medical concept value promoted to an attribute.</td>
+<td>Reference to the medical concept value related to this attribute.</td>
 </tr>
 <tr>
 <td>begin </td>
@@ -238,8 +162,61 @@ The _carcinoid lung tumor_ concept detected in the clinical text within the samp
 <td>coveredText</td>
 <td>The text covered by an annotation as a string.</td>
 </tr>
-<tr>
-<td>name</td>
-<td>The configured name of the detected attribute.</td>
-</tr>
 </table>
+
+### Sample Response
+
+Sample response from the attribute detection annotator for the text: `Study participants must not have an active or untreated brain metastases.`
+
+This example provides example of including optional medical codes and qualifiers.
+
+```javascript
+{
+  "unstructured": [
+    {
+      "text": "Study participants must not have an active or untreated brain metastases.",
+      "data": {
+        "attributeValues": [
+          {
+            "name": "Disease",
+            "preferredName": "Metastatic malignant neoplasm to brain",
+            "values": [
+              {
+                "value": "Disease"
+              }
+            ],
+            "qualifiers": [
+              {
+                "value": "true",
+                "qualifier": "Active",
+                "begin": 36,
+                "end": 42
+              },
+              {
+                "value": "false",
+                "qualifier": "Treated",
+                "begin": 46,
+                "end": 55
+              }
+            ],
+            "source": "General Medical",
+            "sourceVersion": "v1.0",
+            "concept": {
+              "uid": 2
+            },
+            "begin": 56,
+            "end": 72,
+            "coveredText": "brain metastases",
+            "negated": true,
+            "hypothetical": false,
+            "icd10Code": "C79.31",
+            "nciCode": "C3813",
+            "snomedConceptId": "94225005"
+          }
+        ]
+      }
+    }
+  ]
+}
+]
+```
