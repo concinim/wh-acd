@@ -96,7 +96,17 @@ The following table lists parameters of the concept_detection service.
       <li>umls.2017AA</li>
       <li>umls.2016AB <i>(deprecated - will be removed in 2019)</i></li>
     </ul></td>
-    <td>Defines the version of the UMLS library that is used when detecting concepts from unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value if <b>libraries</b> is not specified in the configuration.</td>
+    <td>Defines the libraries that will be used when detecting concepts from unstructured data. The libraries can be a UMLS library or a custom dictionary built by the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>. The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value if <b>libraries</b> is not specified in the configuration.</td>
+  </tr>
+  <tr>
+    <td>inference_rules</td>
+    <td></td>
+    <td>The name of a derived concept rule set that will be used for deriving additional concepts based on the concepts discovered by the libraries specified. The derived concept rule is developed using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>.</td>
+  </tr>
+  <tr>
+    <td>filters</td>
+    <td></td>
+    <td>The name of a concept filter that is used to remove unwanted concepts. A filter can be developed using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>.</td>
   </tr>
   <tr>
     <td>expanded</td>
