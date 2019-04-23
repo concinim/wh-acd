@@ -25,7 +25,7 @@ subcollection: wh-acd
 # Attribute Detection
 {: #attribute_detection}
 
-The attribute detection annotator provides support for domain specific attribute values to be discovered in unstructured clinical text. The annotator identifies pieces of information pertinent to the domain to create named attributes with associated values. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations such as allergies, cancer, ejection fraction, hypothetical, lab values, living assistance, medications, named entities, negation, procedures, sections, smoking, and symptons & diseases. ACD consumers, through the attribute detection annotator, can build upon the output of the concept detection, concept value, and  clinical annotators to generate a higher-level concept in which consumers can define the display name, possible values, and value ranges to suit the needs of their solution.
+The attribute detection annotator provides support for domain specific attributes and associated values to be discovered in unstructured clinical text. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations (e.g. procedures) to generate a higher-level concept in which consumers can define the name, possible values, and value ranges to suit the needs of their solution. 
 {:shortdesc}
 
 Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts; e.g. NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, SNOMED CT, and CPT codes. Attribute detection can also provide two additional medical codes (CCS code and HCC Code) made available by the <a data-scroll="" href="wh-acd?topic=cancer#cancer">cancer</a> and <a data-scroll="" href="wh-acd?topic=wh-acd-symptom_disease#symptom_disease">symptom disease</a> annotators. The consumers can elect to have the set of medical codes associated with the attribute by specifying the optional configuration parameter to return the medical codes.
@@ -68,7 +68,7 @@ ACD provides three predefined attribute sets for evaluation purposes.
 </tr>
 <tr>
 <td>attribute_set</td>
-<td>The name of the desired attribute set to leverage when running the attribute_detection annotator. Multiple attribute sets can be designated for a given request. </td>
+<td>The name of the desired attribute set to leverage when running the attribute detection annotator. Multiple attribute sets can be designated for a given request. </td>
 </tr>
 <tr>
 <td>inference_rules</td>
@@ -76,7 +76,7 @@ ACD provides three predefined attribute sets for evaluation purposes.
 </tr>
 <tr>
 <td>qualifier_set</td>
-<td>The name of the desired attribute qualifier set to leverage when running the attribute_detection annotator. Multiple qualifier sets can be designated for a given request. The **detect_qualifiers** parameter must also be set to `true`.</td>
+<td>The name of the desired attribute qualifier set to leverage when running the attribute detection annotator. Multiple qualifier sets can be designated for a given request. The **detect_qualifiers** parameter must also be set to `true`.</td>
 </tr>
 <tr>
 <td>detect_qualifiers</td>
@@ -92,7 +92,7 @@ ACD provides three predefined attribute sets for evaluation purposes.
 
 The attribute detection annotator detects attributes from previously detected concepts and concept values. Configurations defined within the attribute sets determine which concepts and concept values to promote to attributes. The concept value annotator is needed as a dependency to associate values from the unstructured text with a detected attribute. The concept value annotator should be designated to run prior to attribute detection in the flow.
 
-The attribute_detection annotator will propagate contextual information from the underlying concepts and concept values to the discovered attribute, such as whether the concept is negated or what section the attribute appears in. The contextual annotators (negation, hypothetical, disambiguation, or section) should be designated to run prior to attribute detection in the flow.
+The attribute detection annotator will propagate contextual information from the underlying concepts and concept values to the discovered attribute, such as whether the concept is negated or what section the attribute appears in. The contextual annotators (negation, hypothetical, disambiguation, or section) should be designated to run prior to attribute detection in the flow.
 
 <h4>Annotation Types</h4>
 
