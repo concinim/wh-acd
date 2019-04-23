@@ -92,5 +92,5 @@ The service returns a JSON object that includes annotations for medical concepts
 ## Next steps
 {: #anchor_value}
 
-* Learn more about [customizing](wh-acd?topic=wh-acd-customizing#customizing) ACD
+* Learn more about [customizing](/docs/services/wh-acd?topic=wh-acd-customizing#customizing) ACD
 * Learn more about the API in the [API reference](https://cloud.ibm.com/apidocs/wh-acd).
