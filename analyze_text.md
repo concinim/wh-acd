@@ -25,13 +25,13 @@ subcollection: wh-acd
 # Analyzing Text
 {: #analyze_text}
 
-Annotator for Clinical Data (ACD) enables you to detect medical concepts within unstructured data. ACD provides a diverse set of medical-domain annotators and annotator artifacts that can be leveraged out-of-the-box or customized via the Domain Expert Tool (DET).
+{{site.data.keyword.wh-acd_short}} enables you to detect medical concepts within unstructured data. When you provide an annotator flow, typically defined within the Domain Expert Tool (DET), and plain text to be analyzed, the service will employ the annotators and configurations defined within the flow to detect medical concepts within the provided text.
 
 **How it works:**
 
-1. Configure your ACD Knowledge Cartridge via the Domain Expert Tool (DET): https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html
-2. Export your cartridge zip from DET.
-3. Deploy the cartridge zip to ACD via the ACD /deploy API as shown below:
+1. Define configurations for the service via the Domain Expert Tool (DET): https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html
+2. Export your configurations as a cartridge zip.
+3. Deploy the cartridge zip to the service via the deploy API as shown below:
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -42,12 +42,13 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-4. Once the cartridge is deployed to ACD, you can reference the desired annotator flow as a path parameter to the /analyze API as shown below:
+4. Once the cartridge is deployed to the service, you can reference the desired annotator flow as a path parameter to the analyze API as shown below:
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: text/plain" \
 --header "Accept: application/json" \
+-d "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan." \
 "{url}/v1/analyze/acd_cartridge_v1.0_default_flow?version=2019-04-20"
 ```
 {: pre}
