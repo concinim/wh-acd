@@ -44,7 +44,7 @@ This short tutorial introduces the IBM Watson Annotator for Clinical Data (ACD) 
 When you enter a command, replace `{apikey}` and `{url}` with your actual API key and URL. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
 
 ```Curl
-  $ curl -X POST -u "apikey:{apikey}"
+  curl -X POST -u "apikey:{apikey}"
   . . .
   "{url}/v1/analyze?version=2017-09-21"
 ```
