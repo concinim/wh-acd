@@ -42,6 +42,7 @@ Annotator for Clinical Data
     medical_codes.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/)
+    at_events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
