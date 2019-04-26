@@ -32,7 +32,6 @@ subcollection: wh-acd
 1. Define configurations for the service via the Domain Expert Tool (DET): https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html
 2. Export your configurations as a cartridge zip.
 3. Deploy the cartridge zip to the service via the deploy API as shown below:
-
 ```bash
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/octet-stream" \
@@ -41,7 +40,6 @@ curl -X POST -u "apikey:{apikey}" \
 "{url}/v1/deploy?version=2019-04-20"
 ```
 {: pre}
-
 4. Once the cartridge is deployed to the service, you can reference the desired annotator flow as a path parameter to the analyze API as shown below:
 
 ```bash
