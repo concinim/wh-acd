@@ -23,7 +23,7 @@ subcollection: writing
 # Getting started tutorial
 {: #getting-started}
 
-This short tutorial introduces the IBM Watson Annotator for Clinical Data (ACD) with example requests and links to additional resources.
+This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with example requests and links to additional resources.
 
 {: shortdesc}
 
@@ -31,11 +31,11 @@ This short tutorial introduces the IBM Watson Annotator for Clinical Data (ACD) 
 {: #prereqs}
 
 * Create an instance of the service:
-  1. Go to the [IBM Watson Annotator for Clinical Data](https://dev.console.test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
+  1. Go to the [{{site.data.keyword.wh-acd_short}}](https://dev.console.test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
   2. Sign up for a free IBM Cloud account or log in.
   3. Click **Create**.
 * Copy the credentials to authenticate to your service instance:
-  1. From the [IBM Cloud dashboard](https://dev.console.test.cloud.ibm.com/dashboard/apps), click on your IBM Watson Annotator for Clinical Data service instance to go to the Annotator for Clinical Data service dashboard page.
+  1. From the [IBM Cloud dashboard](https://dev.console.test.cloud.ibm.com/dashboard/apps), click on your service instance to go to the service dashboard page.
   2. On the **Manage** page, click **Show** to view your credentials.
   3. Copy the `API Key` and `URL` values.
 * Make sure that you have the `curl` command.
