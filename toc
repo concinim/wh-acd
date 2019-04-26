@@ -37,6 +37,7 @@ Annotator for Clinical Data
         annotator_smoking.md
         annotator_spell_check.md
         annotator_symptom_disease.md
+    at_events.md
 
     medical_codes.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
