@@ -39,3 +39,8 @@ When we change the API in a backwards-incompatible way, we release a new minor v
 {: #May2019}
 
 The {{site.data.keyword.wh-acd_short}} service is now GA.
+
+## April 2019
+{: #April2019}
+
+The {{site.data.keyword.wh-acd_short}} service is now pre-GA.
