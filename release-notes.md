@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2019
+lastupdated: "2019-05-01"
 
-subcollection: personality-insights
+subcollection: wh-acd
 
 ---
 
@@ -25,22 +25,17 @@ subcollection: personality-insights
 # Release notes
 {: #release-notes}
 
-The following sections document the new features and changes that were included for each release of the {{site.data.keyword.wh-acdshort}} service. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
+The following sections document the new features and changes that were included for each release of the {{site.data.keyword.wh-acd_short}} service.
 {: shortdesc}
 
-The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.  ???
-{: note}
 
-## 21 December 2018
-{: #December2018}
+# Service API versioning
 
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+API requests require a version parameter that takes the date in the format version=YYYY-MM-DD. Send the version parameter with every API request.
 
-Version 2 of the {{site.data.keyword.personalityinsightsshort}} API has been removed from service. Version 3 of the service was released on 19 October 2016. At that time, users were strongly encouraged to migrate from version 2 as soon as possible.
+When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
-## 18 November 2018
-{: #November2018b}
+## May 2019
+{: #May2019}
 
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
-
-The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+The {{site.data.keyword.wh-acd_short}} service is now GA.
