@@ -12,6 +12,7 @@ Annotator for Clinical Data
     {: .navgroup id="howto"}
     customizing.md
     analyze_text.md
+    access_management.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
