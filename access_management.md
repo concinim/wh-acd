@@ -65,46 +65,17 @@ You can use service access roles to enable users to complete tasks in {{site.dat
     <th> Role </th>
   </tr>
   <tr>
-    <td>List certificates</td>
+    <td>GET</td>
     <td> Manager, Writer, Reader </td>
   </tr>
   <tr>
-    <td>Download a certificate and private key </td>
+    <td>PUT / POST </td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
-     <td>Get certificate metadata </td>
+     <td>DELETE </td>
      <td> Manager, Writer, Reader </td>
   </tr>       
-  <tr>
-    <td>Update certificate's metadata</td>
-    <td> Manager, Writer </td>
-  </tr>
-  <tr>
-    <td>Import or reimport certificates, private keys, and intermediate certificates </td>
-    <td> Manager </td>
-  </tr>
-  <tr>
-    <td>Order a certificate </td>
-    <td> Manager </td>
-  </tr>  
-  <tr>
-    <td>Delete a certificate and private key </td>
-    <td> Manager </td>
-  </tr>
-      <tr>
-        <td>List all notification channels </td>
-        <td> Manager, Writer, Reader </td>
-      </tr>
-   <tr>
-     <td>Add, update, or delete a notification channel </td>
-     <td> Manager </td>
-   </tr>
-     <tr>
-       <td>Test a notification channel </td>
-       <td> Manager, Writer, Reader </td>
-     </tr>
-
 </table>
 
 For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).
