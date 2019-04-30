@@ -37,11 +37,11 @@ API requests require a version parameter that takes the date in the format versi
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
 ## May 2019
-{: #May2019}
+{: #may2019}
 
 The {{site.data.keyword.wh-acd_short}} service is now GA.
 
 ## April 2019
-{: #April2019}
+{: #april2019}
 
 The {{site.data.keyword.wh-acd_short}} service is now pre-GA.

@@ -40,7 +40,7 @@ You can use platform access roles to enable users to complete tasks on platform 
     <th> Role </th>
   </tr>
   <tr>
-    <td>View instances of {{site.data.keyword..wh-acd_short}}</td>
+    <td>View instances of {{site.data.keyword.wh-acd_short}}</td>
     <td> Administrator, Operator, Editor, Viewer </td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ You can use platform access roles to enable users to complete tasks on platform 
     <td> Administrator, Editor </td>
   </tr>
   <tr>
-    <td>Delete an instance of {{site.data.keyword..wh-acd_short}}</td>
+    <td>Delete an instance of {{site.data.keyword.wh-acd_short}}</td>
     <td> Administrator, Editor </td>
   </tr>
 </table>
