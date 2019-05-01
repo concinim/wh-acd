@@ -4,7 +4,7 @@ copyright:
   years: 2019
 lastupdated: "2019-05-01"
 
-subcollection: personality-insights
+subcollection: wh-acd
 
 ---
 
@@ -35,12 +35,8 @@ API requests require a version parameter that takes the date in the format versi
 
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
-## 1 June 2019
-{: #June2019}
-
-The {{site.data.keyword.wh-acd_short}} service is now available in the {{site.data.keyword.cloud}}.
 
 ## 1 May 2019
 {: #May2019}
 
-The {{site.data.keyword.wh-acd_short}} service is now available in the {{site.data.keyword.cloud}}.
+The {{site.data.keyword.wh-acd_short}} service is now general availability (GA) in the {{site.data.keyword.cloud}}.
