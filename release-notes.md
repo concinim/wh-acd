@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2019
+lastupdated: "2019-05-01"
 
 subcollection: personality-insights
 
@@ -25,15 +25,16 @@ subcollection: personality-insights
 # Release notes
 {: #release-notes}
 
-The following sections document the new features and changes that were included for each release of the {{site.data.keyword.wh-acd_short}} service. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
+The following sections document the new features and changes that were included for each release of the {{site.data.keyword.wh-acd_short}} service.
 {: shortdesc}
 
-## 21 December 2019
-{: #December2018}
+
+## 1 May 2019
+{: #May2019}
 
 Version 2 of the {{site.data.keyword.wh-acd_short}} API has been removed from service.
 
 ## 18 November 2019
-{: #November2018b}
+{: #November2019b}
 
 The {{site.data.keyword.wh-acd_short}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**).
