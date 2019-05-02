@@ -22,8 +22,8 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Managing service access roles
-{: #managing-service-access-roles}
+# Managing Access Roles
+{: #managing-access-roles}
 
 You can secure services within {{site.data.keyword.cloud_notm}} by allowing only users with specified access roles to complete certain actions.
 {: shortdesc}
@@ -31,7 +31,7 @@ You can secure services within {{site.data.keyword.cloud_notm}} by allowing only
 ## Platform access roles
 {: #platform-access-roles}
 
-You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.cloud_notm}} account.
+You can use platform access roles to enable users to complete tasks on platform resources, such as provisioning or de-provisioning instances in your {{site.data.keyword.cloud_notm}} account.
 
 <table>
 <caption> Table 1. Actions that are mapped to platform access roles</caption>
@@ -41,14 +41,14 @@ You can use platform access roles to enable users to complete tasks on platform 
   </tr>
   <tr>
     <td>View instances of {{site.data.keyword.wh-acd_short}}</td>
-    <td> Administrator, Operator, Editor, Viewer </td>
+    <td> Administrator, Operator, Editor </td>
   </tr>
   <tr>
-    <td>Create an instance of {{site.data.keyword.wh-acd_short}}</td>
+    <td>Provosion an instance of {{site.data.keyword.wh-acd_short}}</td>
     <td> Administrator, Editor </td>
   </tr>
   <tr>
-    <td>Delete an instance of {{site.data.keyword.wh-acd_short}}</td>
+    <td>De-provosion an instance of {{site.data.keyword.wh-acd_short}}</td>
     <td> Administrator, Editor </td>
   </tr>
 </table>
@@ -56,7 +56,7 @@ You can use platform access roles to enable users to complete tasks on platform 
 ## Service access roles
 {: #service-access-roles}
 
-You can use service access roles to enable users to complete tasks in {{site.data.keyword.wh-acd_short}} instances, such as importing, downloading, editing, or deleting certificates.
+You can use service access roles to enable users to perform service actions in the form of HTTP requests.
 
 <table>
 <caption> Table 2. Actions that are mapped to service access roles</caption>
@@ -65,16 +65,20 @@ You can use service access roles to enable users to complete tasks in {{site.dat
     <th> Role </th>
   </tr>
   <tr>
-    <td>GET</td>
+    <td>GET /wh-acd </td>
     <td> Manager, Writer, Reader </td>
   </tr>
   <tr>
-    <td>PUT / POST </td>
+    <td> PUT /wh-acd </td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
-     <td>DELETE </td>
-     <td> Manager, Writer, Reader </td>
+    <td> PUT /wh-acd </td>
+    <td> Manager, Writer </td>
+  </tr>
+  <tr>
+     <td> DELETE /wh-acd </td>
+     <td> Manager</td>
   </tr>       
 </table>
 
