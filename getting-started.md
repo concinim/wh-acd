@@ -6,7 +6,7 @@ lastupdated: "2019-04-10"
 
 keywords: getting started tutorial, IBM Cloud, ACD, annotator for clinical data
 
-subcollection: writing
+subcollection: wh-acd
 
 ---
 
