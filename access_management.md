@@ -6,7 +6,7 @@ lastupdated: "2019-04-18"
 
 keywords: certificates, SSL,
 
-subcollection: certificate-manager
+subcollection: wh-acd
 
 ---
 
