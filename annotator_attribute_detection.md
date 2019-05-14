@@ -32,11 +32,11 @@ Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#con
 
 The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective that describes the attribute. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
 
-ACD provides several predefined attribute sets that can be used to identify general medical related attributes. The consumer may also use the [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) (DET) to easily construct other attributes and qualifiers for their specific domain. Once the attribute definition process is complete in DET, the attributes and qualifiers can be <a data-scroll="" href="wh-acd?topic=wh-acd-deployed#deployed">deployed</a> to ACD and used with the attribute detection annotator.
+{{site.data.keyword.wh-acd_short}} provides several predefined attribute sets that can be used to identify general medical related attributes. The consumer may also use the [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) (DET) to easily construct other attributes and qualifiers for their specific domain. Once the attribute definition process is complete in DET, the attributes and qualifiers can be <a data-scroll="" href="wh-acd?topic=wh-acd-deployed#deployed">deployed</a> to {{site.data.keyword.wh-acd_short}} and used with the attribute detection annotator.
 
 #### Predefined Attribute Sets
 
-ACD provides three predefined attribute sets for evaluation purposes.
+{{site.data.keyword.wh-acd_short}} provides three predefined attribute sets for evaluation purposes.
 
 <table>
 <tr>

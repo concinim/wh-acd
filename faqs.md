@@ -32,7 +32,9 @@ Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_de
 {: #faq-cartridge}
 {: faq}
 
-A cartridge is a collection of artifacts that provide [customizations](wh-acd?topic=wh-acd-customizing#customizing) for ACD for a given solution domain. A cartridge is built using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> and is [deployed](wh-acd?topic=wh-acd-deploy_cartridge#deploy_cartridge) to ACD to be used when [analyzing text](wh-acd?topic=wh-acd-analyze_text#analyze_text).
+A cartridge is a collection of artifacts that provide [customizations](wh-acd?topic=wh-acd-customizing#customizing) for  {{site.data.keyword.wh-acd_short}}
+ for a given solution domain. A cartridge is built using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a> and is [deployed](wh-acd?topic=wh-acd-deploy_cartridge#deploy_cartridge) to  {{site.data.keyword.wh-acd_short}}
+ to be used when [analyzing text](wh-acd?topic=wh-acd-analyze_text#analyze_text).
 
 ## What is an attribute?
 {: #faq-attribute}

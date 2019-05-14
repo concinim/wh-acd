@@ -34,7 +34,7 @@ Associating a numeric value and units with a concept allows you to extract more 
 
 Values can be either scalar, a range, boolean, or textual. Concept Values are detected by identifying lexical triggers in text indicating a value relationship (>, >=, <, <=, is, etc.) between a previously detected concept and value. They are particularly useful for criteria matching use cases since they can be used to build a set of constraints or rules that must be met in order for something to be eligible.
 
-Concept Value provides out of the box handling for some lexical triggers.  If the default support does not cover what you need, the Concept Value annotator can be configured to detect values and language patterns unique to your data.  See the [customizing](wh-acd?topic=wh-acd-customizing#customizing) section to learn how you can use the Domain Expert Tool to customize Concept Value and other ACD annotators for your solution.
+Concept Value provides out of the box handling for some lexical triggers.  If the default support does not cover what you need, the Concept Value annotator can be configured to detect values and language patterns unique to your data.  See the [customizing](wh-acd?topic=wh-acd-customizing#customizing) section to learn how you can use the Domain Expert Tool to customize Concept Value and other  {{site.data.keyword.wh-acd_short}} annotators for your solution.
 
 {:shortdesc}
 
@@ -200,4 +200,4 @@ This example demonstrates a set of range values. The trigger **within** indicate
 
 ### Dependencies
 
-Concept Detection must run prior to Concept Value in your ACD flow to function properly.
+Concept Detection must run prior to Concept Value in your {{site.data.keyword.wh-acd_short}} flow to function properly.

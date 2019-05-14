@@ -25,15 +25,15 @@ subcollection: wh-acd
 # Profiles
 {: #profiles}
 
-Profiles within ACD house annotator configurations associated with one or more annotators. Profiles can then be referenced within an ACD request where ACD will look up the annotator configurations defined within the referenced profile and inject annotator configurations within the profile into the corresponding annotators defined within the ACD request flow.
+Profiles within  {{site.data.keyword.wh-acd_short}} house annotator configurations associated with one or more annotators. Profiles can then be referenced within an  {{site.data.keyword.wh-acd_short}} request where  {{site.data.keyword.wh-acd_short}} will look up the annotator configurations defined within the referenced profile and inject annotator configurations within the profile into the corresponding annotators defined within the  {{site.data.keyword.wh-acd_short}} request flow.
 {:shortdesc}
 
-##### 1. View list of available profiles within ACD (id & descriptions)
+##### 1. View list of available profiles  (id & descriptions)
 
-ACD deploys with some predefined profiles available to all ACD tenants - e.g. predefined profiles for evaluating predefined attribute sets. Use the _GET /v1/profiles_ API to view the list of available profiles for your tenant, including any descriptions of the profile that have been provided.
+ {{site.data.keyword.wh-acd_short}} deploys with some predefined profiles available to all tenants - e.g. predefined profiles for evaluating predefined attribute sets. Use the _GET /v1/profiles_ API to view the list of available profiles for your tenant, including any descriptions of the profile that have been provided.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" "https://host/services/clinical_data_annotator/api/v1/profiles?version=2019-02-06"
 ```
 
@@ -56,7 +56,7 @@ curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx
 ##### 2. View the contents of an individual profile
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" "https://host/services/clinical_data_annotator/api/v1/profiles/default_profile_v1.0?version=2019-02-06"
 ```
 
@@ -89,12 +89,12 @@ curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx
 }
 ```
 
-##### 3. Reference a profile from an ACD request
+##### 3. Reference a profile 
 
-In order to make use of the configurations defined within a profile, a profile may be referenced within a request as shown below. When ACD processes the request, configurations associated with the referenced profile are retrieved and injected into the request internally for processing. The configurations are only injected internally and are not returned as part of the annotator flow returned in the response.
+In order to make use of the configurations defined within a profile, a profile may be referenced within a request as shown below. When  {{site.data.keyword.wh-acd_short}} processes the request, configurations associated with the referenced profile are retrieved and injected into the request internally for processing. The configurations are only injected internally and are not returned as part of the annotator flow returned in the response.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" -d "{
   \"unstructured\": [
     {
@@ -130,7 +130,7 @@ curl -X POST --header "Content-Type: application/json" --header "Accept: applica
 ```
 ##### 4. Default profile and Empty Profile
 
-The default ACD profile will be used if there is no profile is specified in the flow. The default profile contains parameters for the concept detection and the attribute detection annotators. If absolutely no parameter is desired, then an empty profile can be created and be used in the annotator flow. In other words, Profile is a necessary for annotator flow starting from **2019-02-06**.
+The default {{site.data.keyword.wh-acd_short}} profile will be used if there is no profile is specified in the flow. The default profile contains parameters for the concept detection and the attribute detection annotators. If absolutely no parameter is desired, then an empty profile can be created and be used in the annotator flow. In other words, Profile is a necessary for annotator flow starting from **2019-02-06**.
 
 ```bash
 {
@@ -142,8 +142,7 @@ The default ACD profile will be used if there is no profile is specified in the 
 
 ##### 5. Adjudicating configurations passed in the request and those found within a referenced profile
 
-ACD consumers can simultaneously reference configurations housed within a profile and pass additional configurations within the request.
-Configurations found in a referenced profile will be merged with any configurations present within the request, with the exception of the following scenario, in which configurations present in the request will supersede those found in the referenced profile.
+{{site.data.keyword.wh-acd_short}} consumers can simultaneously reference configurations housed within a profile and pass additional configurations within the request.Configurations found in a referenced profile will be merged with any configurations present within the request, with the exception of the following scenario, in which configurations present in the request will supersede those found in the referenced profile.
 
 ###### Scenarios where configurations present in the request supersede those defined within a referenced profile
 

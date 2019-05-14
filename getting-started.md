@@ -4,7 +4,7 @@ copyright:
   years: 2011, 2019
 lastupdated: "2019-04-10"
 
-keywords: getting started tutorial, IBM Cloud, ACD, annotator for clinical data
+keywords: getting started tutorial, IBM Cloud, annotator for clinical data
 
 subcollection: wh-acd
 
@@ -92,5 +92,5 @@ The service returns a JSON object that includes annotations for medical concepts
 ## Next steps
 {: #anchor_value}
 
-* Learn more about [customizing](/docs/services/wh-acd?topic=wh-acd-customizing#customizing) ACD
+* Learn more about [customizing](/docs/services/wh-acd?topic=wh-acd-customizing#customizing)  {{site.data.keyword.wh-acd_short}}
 * Learn more about the API in the [API reference](https://cloud.ibm.com/apidocs/wh-acd).

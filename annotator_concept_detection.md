@@ -32,7 +32,7 @@ The concept detection service also supports detection of medical concepts using 
 
 ### Expanded Concepts
 
-Concept detection provides an _expanded_ option that tries to find UMLS concepts over spans of text that are not strictly defined in the UMLS dictionary that ships with ACD.  For example, consider the following text:
+Concept detection provides an _expanded_ option that tries to find UMLS concepts over spans of text that are not strictly defined in the UMLS dictionary that ships with {{site.data.keyword.wh-acd_short}}.  For example, consider the following text:
 
 `The patient broke his leg and hip when he fell outside his home.`
 
@@ -74,7 +74,7 @@ There are two different injuries expressed in this text that we want to capture 
     "vocabs": "MTH,CHV,LNC,CSP,MSH,NCI,AOD,NCI_CTCAE,NDFRT,COSTAR,SNOMEDCT_US,DXP"
 }```
 
-Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with ACD.  It does not work with custom dictionaries.
+Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with {{site.data.keyword.wh-acd_short}}.  It does not work with custom dictionaries.
 
 
 <h4>Configurations</h4>
