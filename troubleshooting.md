@@ -35,7 +35,7 @@ Some large cartridge deployments can exceed the request timeout thresholds. In t
 }
 ```
 
-This timeout occurs outside of ACD and does not prevent your cartridge from being successfully deployed. You just won't get the itemized response confirming successful deployment of each individual artifact within your cartridge. If your cartridge deployment request times out, here are steps you can take to verify successful deployment after giving the process about 15 minutes to complete.
+This timeout occurs outside of  {{site.data.keyword.wh-acd_short}} and does not prevent your cartridge from being successfully deployed. You just won't get the itemized response confirming successful deployment of each individual artifact within your cartridge. If your cartridge deployment request times out, here are steps you can take to verify successful deployment after giving the process about 15 minutes to complete.
 
 * For initial deployment of a cartridge, you can look for the creation of the default annotator flow to determine whether deployment has completed. The default annotator flow is the last artifact created during the deployment process and its existence signals completion of deployment in the initial deployment of a cartridge.
 

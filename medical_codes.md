@@ -25,7 +25,7 @@ subcollection: wh-acd
 # Medical Codes
 {: #medical_codes}
 
-ACD normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in ACD.
+{{site.data.keyword.wh-acd_short}} normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in  {{site.data.keyword.wh-acd_short}}.
 
 <table>
   <tr>

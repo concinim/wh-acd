@@ -25,17 +25,17 @@ subcollection: wh-acd
 # Customizing
 {: #customizing}
 
-Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, you can customize the annotations provided by ACD. The DET allows you to create several types of configuration artifacts that can be used to customize ACD's output. For example, you can create a custom dictionary to add your unique terminology for detecting concepts or you can define your own domain specific clinical attributes.
+Using the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">Domain Expert Tool (DET)</a>, you can customize the annotations provided by  {{site.data.keyword.wh-acd_short}}. The DET allows you to create several types of configuration artifacts that can be used to customize  {{site.data.keyword.wh-acd_short}}'s output. For example, you can create a custom dictionary to add your unique terminology for detecting concepts or you can define your own domain specific clinical attributes.
 
-The customization artifacts are bundled into a knowledge cartridge that can be published and deployed to ACD. The cartridge will include a profile that specifies the configurations for each annotator. The cartridge will also contain one or more flows that contain a series of annotators to invoke using the /v1/analyze/{flow_id} API.  
+The customization artifacts are bundled into a knowledge cartridge that can be published and deployed to  {{site.data.keyword.wh-acd_short}}. The cartridge will include a profile that specifies the configurations for each annotator. The cartridge will also contain one or more flows that contain a series of annotators to invoke using the /v1/analyze/{flow_id} API.  
 
-See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information on customizing ACD.
+See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information on customizing  {{site.data.keyword.wh-acd_short}}.
 
 
 # Deploying a Cartridge
 {: #deploy_cartridge}
 
-Once your customizations are complete, you can use the DET to publish your cartridge and export the published cartridge to a zip file. The exported cartridge can be deployed to ACD using the POST /v1/deploy API.
+Once your customizations are complete, you can use the DET to publish your cartridge and export the published cartridge to a zip file. The exported cartridge can be deployed to  {{site.data.keyword.wh-acd_short}} using the POST /v1/deploy API.
 
 For example (replace `{apikey}` and `{url}` with your actual API key and URL):
 

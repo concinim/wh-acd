@@ -25,18 +25,18 @@ subcollection: wh-acd
 # NLU Annotator (Experimental)
 {: #nlu_annotator}
 
-The Natural Language Understanding (NLU) annotator enables the ACD service to interact with the <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>. The NLU service extracts features from the unstructured text based on the NLU configuration. The ACD service will supply the unstructured text to the NLU service, capture the response, and extract the relevant response features so that they can be easily used by other annotators in the ACD flow.
+The Natural Language Understanding (NLU) annotator enables the  {{site.data.keyword.wh-acd_short}} service to interact with the <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>. The NLU service extracts features from the unstructured text based on the NLU configuration. The {{site.data.keyword.wh-acd_short}} service will supply the unstructured text to the NLU service, capture the response, and extract the relevant response features so that they can be easily used by other annotators in the  {{site.data.keyword.wh-acd_short}} flow.
 {:shortdesc}
 
 The NLU service uses advanced NLP to analyze text and extract features from content such as **concepts**, **entities**, **keywords**, **categories**, **sentiment**, **emotion**, **relations**, and **semantic roles**. Depending upon the model selected in the NLU configuration, pronouns related to the trained entities may also be resolved to the relevant entities.
 
-At this moment, the ACD service provides a custom drug model out of the box. You may also apply a custom entity-relationship model developed using <a href="https://console.bluemix.net/catalog/services/watson-knowledge-studio">Watson Knowledge Studio </a> to identify industry/domain specific entities and relations in unstructured text with Watson NLU. The full documentation of the NLU service is available at <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>.
+At this moment, the  {{site.data.keyword.wh-acd_short}} service provides a custom drug model out of the box. You may also apply a custom entity-relationship model developed using <a href="https://console.bluemix.net/catalog/services/watson-knowledge-studio">Watson Knowledge Studio </a> to identify industry/domain specific entities and relations in unstructured text with Watson NLU. The full documentation of the NLU service is available at <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">IBM Watson NLU service</a>.
 
 
 
 <h4>Sample Request</h4>
 
-The NLU annotator can be directly invoked as a stand-alone annotator in the ACD service as depicted in the following annotator flow.
+The NLU annotator can be directly invoked as a stand-alone annotator in the  {{site.data.keyword.wh-acd_short}} service as depicted in the following annotator flow.
 
 ```javascript
 
@@ -81,7 +81,7 @@ Valid parameter for the NLU annotator is listed in the following table.
 
 <table role="presentation"><tbody>
   <tr><td>default_nlu_configuration</td><td> Default NLU entities and relations.</td></tr>
-  <tr><td>ibm_drug</td><td> WH ACD Model for Drugs and Diseases entities and relations. </td>
+  <tr><td>ibm_drug</td><td> WH  {{site.data.keyword.wh-acd_short}} Model for Drugs and Diseases entities and relations. </td>
 </tbody>
 </tr>
 </table>

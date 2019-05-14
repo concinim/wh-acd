@@ -22,9 +22,9 @@ subcollection: wh-acd
 # About
 {: #about}
 
-The IBM Watson Annotator for Clinical Data (ACD) is designed to find medical concepts, [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes), and contextual information in unstructured text.  ACD provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for ACD concepts and medical codes.  ACD can also work with user provided ontologies beyond UMLS.  
+The {{site.data.keyword.wh-acd_short}} is designed to find medical concepts, [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes), and contextual information in unstructured text. It provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for concepts and medical codes. {{site.data.keyword.wh-acd_short}} can also work with user provided ontologies beyond UMLS.  
 
-To illustrate the basic function of ACD, let's look at a simple example.  Imagine that we have the following small snippet of text:
+To illustrate the basic function of  {{site.data.keyword.wh-acd_short}}, let's look at a simple example.  Imagine that we have the following small snippet of text:
 
 ```There were no signs of ulceration```
 
@@ -47,7 +47,7 @@ The resulting concept over ulceration will contain medical codes along with cont
     "vocabs": "MTH,NCI_CDISC,NCI_FDA,NCI,OMIM,SNOMEDCT_US,NCI_NCI-GLOSS"
 }```
 
-To learn about all of the ways you can customize ACD, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your application.
+To learn about all of the ways you can customize  {{site.data.keyword.wh-acd_short}}, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your application.
 
 
 {: shortdesc}
@@ -62,7 +62,7 @@ Attributes are higher order concepts composed of multiple pieces of information 
 
 ```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
 
-You can create custom [concept values](wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in ACD to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
+You can create custom [concept values](wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in {{site.data.keyword.wh-acd_short}} to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
 For more information, see [Attributes](wh-acd?topic=wh-acd-attribute_detection#attribute_detection).
 
@@ -108,14 +108,14 @@ For more information, see [Disambiguation](wh-acd?topic=wh-acd-concept_disambigu
 ### Spell Check (Experimental)
 {: #spell_check_summary}
 
-Medically aware spell checker that can be integrated into an ACD API call.
+Medically aware spell checker that can be integrated into an API call.
 
 For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_check).
 
 ## Turn Key Annotators
 {: #turnKeyAnnotators}
 
-ACD provides a set of prebuilt annotators targeted at specific medical domains.
+ {{site.data.keyword.wh-acd_short}} provides a set of prebuilt annotators targeted at specific medical domains.
 
 * [Allergy](wh-acd?topic=wh-acd-allergies#allergies)
 * [Cancer](wh-acd?topic=wh-acd-cancer#cancer)
@@ -132,6 +132,6 @@ ACD provides a set of prebuilt annotators targeted at specific medical domains.
 ### Integration with Natural Language Understanding (Experimental)
 {: #nlu}
 
-ACD provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your ACD API call.
+{{site.data.keyword.wh-acd_short}} provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your API call.
 
 For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator).

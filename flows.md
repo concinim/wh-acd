@@ -25,12 +25,12 @@ subcollection: wh-acd
 # Flows
 {: #flows}
 
-An annotator flow within ACD defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
+An annotator flow within  {{site.data.keyword.wh-acd_short}} defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
 {:shortdesc}
 
 #### Provided Annotator Flows
 
-ACD provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
+ {{site.data.keyword.wh-acd_short}} provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-profiles#profiles">Profiles</a> section for more details on the profiles.
 
 Predefined flows can not be updated or deleted.
 
@@ -50,12 +50,12 @@ general_cancer_v1.0_flow | Includes the concept detection annotator with the uml
 </tbody>
 </table>
 
-##### 1. View list of available flows within ACD (ID & descriptions)
+##### 1. View list of available flows  (ID & descriptions)
 
 Use the _GET /v1/flows_ API to view the list of available predefined or persisted flows for your tenant, including any provided descriptions of the flows.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" "https://host/services/clinical_data_annotator/api/v1/flows?version=2017-10-02"
 ```
 
@@ -84,7 +84,7 @@ To view the contents of a specific flow, invoke the REST API with the flow ID su
 The following curl command returns the contents of `flow_simple`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" "https://host/services/clinical_data_annotator/api/v1/flows/flow_simple?version=2017-10-02"
 ```
 
@@ -116,12 +116,12 @@ curl -X GET --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx
 }
 ```
 
-##### 3. Create a flow from an ACD request
+##### 3. Create a flow from a request
 
 Creating an annotator flow is carried out using a POST operation. A flow is identified by an ID. A flow definition contains a list one or more annotators, and optionally can include annotator configuration, a profile ID, and/or flow sequence. If a caller chooses to have the ID of the new flow generated on their behalf, then in the request body the <q>id</q> field of the flow definition should be an empty string (<q></q>). The auto-generated ID would be a normalized form of the <q>name</q> field from the flow definition. The following curl command creates `my_flow`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" -d "{
   \"id\": \"my_flow\",
   "\name\": \"my flow",
@@ -147,12 +147,12 @@ curl -X POST --header "Content-Type: application/json" --header "Accept: applica
 }" "http://host/services/clinical_data_annotator/api/v1/flows?version=2017-11-03"
 ```
 
-##### 4. Update a flow from an ACD request
+##### 4. Update a flow from a request
 
 A persisted flow definition can be changed or updated using the PUT operation. The existing flow will be updated in its entirety by the new flow definition. The following curl command updates the definition of `my_flow`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X PUT --header "Content-Type: application/json" --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" -d "{
   \"id\": \"my_flow\",
   \"description\": \"An advanced flow with two annotators\",
@@ -177,19 +177,19 @@ curl -X PUT --header "Content-Type: application/json" --header "Accept: applicat
 }" "http://host/services/clinical_data_annotator/api/v1/flows/my_flow?version=2017-11-03"
 ```
 
-##### 5. Delete a flow from an ACD request
+##### 5. Delete a flow from a request
 
 A tenant defined flow can be removed from the list of persisted flows by using the flow ID. The following curl command deletes `flow_sample2`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X DELETE --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" "http://host/services/clinical_data_annotator/api/v1/flows/flow_sample2?version=2017-11-03"
 ```
 
-##### 6. Reference a flow from an ACD request
+##### 6. Reference a flow from a request
 
 A persisted flow can be used in several ways as shown below.
-When ACD processes a user's request (see 6.a - 6.d),
+When  {{site.data.keyword.wh-acd_short}} processes a user's request (see 6.a - 6.d),
 the annotator sequence along with any annotator configuration defined in the persisted flow are retrieved and injected into the request internally for processing.
 Note: The flow definition is used internally and is not returned in the response.
 
@@ -198,7 +198,7 @@ Note: The flow definition is used internally and is not returned in the response
 Indicate the flow ID as a path parameter in the _POST /v1/analyze_ REST API request (also contained in the REST request is the unstructured plain text). The following curl command references `flow_id`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X POST --header "Content-Type: text/plain" --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" -d \"Patient will start on cisplatin 80mg on 1/1/2018.\"
 "https://host/services/clinical_data_annotator/api/v1/analyze/flow_id?version=2017-10-02"
 ```
@@ -209,7 +209,7 @@ Indicate the flow ID as a path parameter in the _POST /v1/analyze_ API.
 In this case, the unstructured text is inside a JSON structure which may contain additional concepts originated from other external annotators. The following curl command references `flow_id`.
 
 ```console
-# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for ACD requests within the Watson Platform for Health
+# X-IBM-Client-Id and X-IBM-Client-Secret headers are employed for requests within the Watson Platform for Health
 curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "X-IBM-Client-Id: xxxxx" --header "X-IBM-Client-Secret: xxxxx" -d "{
   \"unstructured\": [
     {
