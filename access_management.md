@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2019
 lastupdated: "2019-04-18"
 
-keywords: certificates, SSL,
+keywords: annotator clinical data, clinical data, annotation, certificates, SSL
 
 subcollection: wh-acd
 
