@@ -4,6 +4,8 @@ copyright:
   years: 2016, 2019
 lastupdated: "2019-04-23"
 
+keywords: annotator clinical data, clinical data, annotation
+
 subcollection: wh-acd
 ---
 

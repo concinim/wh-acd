@@ -4,7 +4,7 @@ copyright:
   years: 2011, 2019
 lastupdated: "2019-04-10"
 
-keywords: getting started tutorial, IBM Cloud, annotator for clinical data
+keywords: annotator clinical data, clinical data, annotation, getting started tutorial, IBM Cloud, annotator for clinical data
 
 subcollection: wh-acd
 
