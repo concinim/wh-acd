@@ -49,7 +49,7 @@ The resulting concept over ulceration will contain medical codes along with cont
     "vocabs": "MTH,NCI_CDISC,NCI_FDA,NCI,OMIM,SNOMEDCT_US,NCI_NCI-GLOSS"
 }```
 
-To learn about all of the ways you can customize  {{site.data.keyword.wh-acd_short}}, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn ahow you can use the Domain Expert Tool to build custom medical NLP for your application.
+To learn about all of the ways you can customize  {{site.data.keyword.wh-acd_short}}, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn how you can use the Domain Expert Tool to build custom medical NLP for your application.
 
 
 {: shortdesc}
