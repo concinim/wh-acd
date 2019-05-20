@@ -73,7 +73,7 @@ You can use service access roles to enable users to perform service actions in t
     <td> Manager, Writer </td>
   </tr>
   <tr>
-    <td> PUT /wh-acd </td>
+    <td> POST /wh-acd </td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
