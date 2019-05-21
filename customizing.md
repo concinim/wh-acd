@@ -33,25 +33,6 @@ The customization artifacts are bundled into a knowledge cartridge that can be p
 
 See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information on customizing  {{site.data.keyword.wh-acd_short}} and for more information on standard profile operations such as profile listing, creation, updating and deletion.
 
-## Profiles
-{: #profiles}
-
-Profiles within  {{site.data.keyword.wh-acd_short}} house annotator configurations associated with one or more annotators. Profiles can then be referenced within an  analyze request where  {{site.data.keyword.wh-acd_short}} will look up the annotator configurations defined within the referenced profile and inject annotator configurations within the profile into the corresponding annotators defined within the  {{site.data.keyword.wh-acd_short}} request flow. Some predefined profiles available to all tenants - e.g. predefined profiles for evaluating predefined attribute sets are listed below.
-{:shortdesc}
-
-```javascript
-{
-    "default_profile_v1.0": {
-      "description":"Default parameters for the concept detection and the attribute detection annotators when no profile id is specified in the flow. "
-    },
-    "general_cancer_v1.0": {
-        "description": "This profile features a collection of Clinical Attributes that focus on cancer patient disease characteristics including the cancer type, disease progression, staging, tumor markers, and treatments."
-    },
-    "general_medical_v1.0": {
-        "description": "This profile feature a collection of Clinical Attributes that represent the patient characteristics commonly used by physicians during a medical examination including laboratory, demographics, symptoms, diseases, and procedures."
-    }
-}
-```
 
 ## Flows
 {: #flows}
@@ -59,7 +40,7 @@ Profiles within  {{site.data.keyword.wh-acd_short}} house annotator configuratio
 An annotator flow within  {{site.data.keyword.wh-acd_short}} defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
 {:shortdesc}
 
-The [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html) should be used for standard flow operations such as flow listing, creation, updating and deletion. {{site.data.keyword.wh-acd_short}} provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-customizing#profiles">Profiles</a> section for more details on the profiles.
+The [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html) should be used for standard flow operations such as flow listing, creation, updating and deletion. {{site.data.keyword.wh-acd_short}} provides two predefined flows for evaluation purposes.
 
 <table>
 <tr>
@@ -68,5 +49,4 @@ The [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/
 <tr><td>general_medical_v1.0_flow</td><td> Includes the concept detection annotator with the umls.2017AA library and attribute detection annotator with the general_medical_v1.0 and general_labs_v1.0 attribute sets. This flow might be used for detecting clinical attributes in a general medical domain.</td></tr>
 <tr><td>general_cancer_v1.0_flow</td><td> Includes the concept detection annotator with the umls.2017AA library and attribute detection annotator with the attribute sets: general_medical_v1.0, general_labs_v1.0 and general_cancer_v1.0. This flow might be used for detecting clinical attributes in a medical oncology and disease domain.</td>
 </tr>
-
 </table>

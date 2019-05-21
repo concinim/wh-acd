@@ -43,7 +43,7 @@ curl -X POST -u "apikey:{apikey}" \
 "{url}/v1/deploy?version=2019-04-20"
 ```
 
-4. Once the cartridge is deployed to the service, you can reference the desired annotator flow as a path parameter to the analyze API as shown below:
+Once the cartridge is deployed to the service, you can reference the desired annotator flow as a path parameter to the analyze API as shown below:
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -52,5 +52,3 @@ curl -X POST -u "apikey:{apikey}" \
 -d "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan." \
 "{url}/v1/analyze/acd_cartridge_v1.0_default_flow?version=2019-04-20"
 ```
-{: pre}
-
