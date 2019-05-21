@@ -10,9 +10,9 @@ Annotator for Clinical Data
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    analyze_text.md
     customizing.md
     deploying_cartridge.md
-    analyze_text.md
     access_management.md
     {: .navgroup-end}
 
