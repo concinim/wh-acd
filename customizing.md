@@ -52,3 +52,21 @@ Profiles within  {{site.data.keyword.wh-acd_short}} house annotator configuratio
     }
 }
 ```
+
+## Flows
+{: #flows}
+
+An annotator flow within  {{site.data.keyword.wh-acd_short}} defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
+{:shortdesc}
+
+The [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html) should be used for standard flow operations such as flow listing, creation, updating and deletion. {{site.data.keyword.wh-acd_short}} provides two predefined flows for evaluation purposes. Each flow contains the same annotators and configurations that are provided through two predefined profiles, the general_medical_v1.0 profile and the general_cancer_v1.0 profile. See the <a data-scroll="" href="wh-acd?topic=wh-acd-customizing#profiles">Profiles</a> section for more details on the profiles.
+
+<table>
+<tr>
+<th>Annotator Flow</th><th>Description</th>
+</tr>
+<tr><td>general_medical_v1.0_flow</td><td> Includes the concept detection annotator with the umls.2017AA library and attribute detection annotator with the general_medical_v1.0 and general_labs_v1.0 attribute sets. This flow might be used for detecting clinical attributes in a general medical domain.</td></tr>
+<tr><td>general_cancer_v1.0_flow</td><td> Includes the concept detection annotator with the umls.2017AA library and attribute detection annotator with the attribute sets: general_medical_v1.0, general_labs_v1.0 and general_cancer_v1.0. This flow might be used for detecting clinical attributes in a medical oncology and disease domain.</td>
+</tr>
+
+</table>
