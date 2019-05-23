@@ -57,7 +57,7 @@ subcollection: wh-acd
   <tr><td scope="row" >Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
   <tr><td scope="row" >Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
 
-  <tr><th></th></tr>
+  <tr><th scope="row" ></th></tr>
   <tr>
     <th scope="row" colspan="11"><b>Configurable Concept Annotators</b></th>
   </tr>
@@ -66,7 +66,7 @@ subcollection: wh-acd
   <tr><td scope="row" >Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
   <tr><td scope="row" >Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
 
-  <tr><th></th></tr>
+  <tr><th scope="row" ></th></tr>
   <tr>
     <th scope="row" colspan="11"><b>Cotextual Annotators</b></th>
   </tr>

@@ -51,7 +51,7 @@ When you enter a command, replace `{apikey}` and `{url}` with your actual API ke
 {:pre}
 
 ## Step 1. Send plain text input to be analyzed using an existing flow and receive JSON output
-{: #anchor_value}
+{: #getting_started_step1}
 
 The first example passes plain text data to the analyze API using a predefined flow that identifies concepts using the concept_detection annotator and clinical attributes using the attribute_detection annotator.
 
@@ -67,7 +67,7 @@ The first example passes plain text data to the analyze API using a predefined f
 The service returns a JSON object that includes annotations for medical concepts found using the [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/) and clinical attributes related to general cancer.
 
 ## Step 2. Send JSON input to be analyzed using an existing flow and receive JSON output.
-{: #anchor_value}
+{: #getting_started_step2}
 
 The second example passes unstructured text as JSON input to the analyze API using a predefined flow that identifies concepts using the concept_detection annotator and clinical attributes using the attribute_detection annotator.
 
@@ -90,7 +90,7 @@ The service returns a JSON object that includes annotations for medical concepts
 
 
 ## Next steps
-{: #anchor_value}
+{: #getting_started_step3}
 
 * Learn more about [customizing](/docs/services/wh-acd?topic=wh-acd-customizing#customizing)  {{site.data.keyword.wh-acd_short}}
 * Learn more about the API in the [API reference](https://cloud.ibm.com/apidocs/wh-acd).
