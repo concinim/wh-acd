@@ -25,7 +25,7 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # Sections
-{: #sections}
+{: #annotator-sections}
 
 The section annotator is used to identify the section of a document where concepts are found. For example, a patient's discharge summary may contain a "Family History" section identifying medical diagnoses of the patient's parents. In some instances, this information may not be relevant for a particular use case. Using the section annotator, annotations identified as belonging to the "Family History" section may be filtered out.
 
