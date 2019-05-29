@@ -113,7 +113,7 @@ The following table lists parameters of the concept_detection service.
   <tr>
     <td>expanded</td>
     <td>true/false</td>
-    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if "broken collarbone" is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like "broke my collarbone".  This option is <i>false</i> by default.</td>
+    <td>When true, the concept detection annotator will attempt to expand concept coverage beyond the surface forms explicitly listed in the specified library.  For example - if <q>broken collarbone</q> is a surface from for C0159658 (Fracture of clavicle), the expanded option would match textual representations of that concept like <q>broke my collarbone</q>.  This option is <i>false</i> by default.</td>
   </tr>
   <tr>
     <td>include_optional_fields</td>
