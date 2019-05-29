@@ -62,7 +62,7 @@ The negation detection annotator identifies the spans of text that are the objec
 <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
 <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
 <tr><td>type</td><td>NegatedSpan</td></tr>
-<tr><td>trigger</td><td>The text that triggered the negation. For example, in the text "She denies pain", the trigger is "denies".
+<tr><td>trigger</td><td>The text that triggered the negation. For example, in the text <q>She denies pain</q>, the trigger is <q>denies</q>.
 <table role="presentation"><tbody>
   <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
   <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
