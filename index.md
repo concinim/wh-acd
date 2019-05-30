@@ -78,7 +78,11 @@ For more information, see [Concepts](wh-acd?topic=wh-acd-concept_detection#conce
 ### Concept Value
 {: #conceptValue}
 
-The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.  In our attribute example above, the combination of `height` with `6 feet` is an example of how concept values work.
+The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.  
+
+```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
+
+In this example, the combination of `height` with `6 feet` is an example of how concept values work.
 
 For more information, see [Concept Value](wh-acd?topic=wh-acd-concept_value#concept_value).
 

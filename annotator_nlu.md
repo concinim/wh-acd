@@ -293,9 +293,9 @@ The **nluResults** group contains an original response to the NLUService.
 
 <h4> IBM Drug Model  Response </h4>
 
-The recommended entity and relation types of the IBM drug model are listed in the following tables. The IBM drug model is trained with and is intended to be used for the drug labels and medical literatures such as medline or pubmed publications. The IBM drug model works best with properly formed sentences rather than phrase fragment. **Entity types** are listed in the following table.
+The recommended entity and relation types of the IBM drug model are listed in the following tables. The IBM drug model is trained with and is intended to be used for the drug labels and medical literatures such as medline or pubmed publications. The IBM drug model works best with properly formed sentences rather than phrase fragment. **Entity types** are listed in the following list.
 
-```javascript
+
 - druggroup
 - drug
 - indication
@@ -312,7 +312,7 @@ The recommended entity and relation types of the IBM drug model are listed in th
 - combinationmed
 - vitals
 - treatment
-```
+
 
 
 <table>
