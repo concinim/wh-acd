@@ -101,9 +101,7 @@ Concept Value provides out of the box handling for some lexical triggers.  If th
 
 ##### Example 1: Greater than or equal to Concept Value with units
 
-<blockquote>
-  <b>Text</b>: The patient must have <b>platelet count greater than or equal to 100000/μl</b>.
-</blockquote>
+**Text:** _The patient must have **platelet count greater than or equal to 100000/μl**._
 
 In this example, a Concept Value annotation is created with the platelet count concept and the associated value.
 
@@ -130,9 +128,8 @@ The **trigger** field can be used to evaluate the constraint - i.e. the platelet
 
 ##### Example 2: Greater than or equal to Concept Value with units and natural language expression of value - "at least"
 
-<blockquote>
- <b>Text</b>: _The patient must have a <b>platelet count of at least 100000/μl</b>.
-</blockquote>
+***Text***: _The patient must have a ***platelet count of at least 100000/μl***._
+
 
 This is similar to the first example, but this time the language is <q>at least</q> instead of <q>greater than or equal to</q>.  Notice how the **trigger** field is normalized to `greater than or equal to`.
 
@@ -157,9 +154,8 @@ This is similar to the first example, but this time the language is <q>at least<
 
 ##### Example 3: ConceptValue with non-numeric value - _`positive`_
 
-<blockquote>
- <b>Text</b>: <b>Hormone receptor positive</b> patients are candidates for anti-estrogen therapy.
-<blockquote>
+Text: _***Hormone receptor positive** patients are candidates for anti-estrogen therapy._
+
 
 This example demonstrates a non-numeric value (`positive`)for a concept that does not use numeric values.
 
@@ -182,9 +178,7 @@ This example demonstrates a non-numeric value (`positive`)for a concept that doe
 
 ##### Example 4: ConceptValue with a range value set
 
-<blockquote>
- <b>Text</b>: _The area of a typical <b>aortic valve is 3.0 to 4.0 cm2</b>.
-</blockquote>
+**Text:** _The area of a typical **aortic valve is 3.0 to 4.0 cm2**._
 
 This example demonstrates a set of range values. The trigger **within** indicates that a Concept Value annotation encompasses a set of range values.
 
