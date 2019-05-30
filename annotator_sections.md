@@ -25,9 +25,10 @@ subcollection: wh-acd
 {:swift: .ph data-hd-programlang='swift'}
 
 # Sections
+{: #_sections}
 
-The section annotator is used to identify the section of a document where concepts are found. For example, a patient's discharge summary may contain a "Family History" section identifying medical diagnoses of the patient's parents. In some instances, this information may not be relevant for a particular use case. Using the section annotator, annotations identified as belonging to the "Family History" section may be filtered out.
-
+The section annotator is used to identify the section of a document where concepts are found. For example, a patient's discharge summary may contain a <q>Family History</q> section identifying medical diagnoses of the patient's parents. In some instances, this information may not be relevant for a particular use case. Using the section annotator, annotations identified as belonging to the <q>Family History</q> section may be filtered out.
+{:shortdesc}
 
 The section annotator provides a set of predefined section titles based on the [Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) vocabulary. In addition to the predefined section titles, section headings are also identified based on a few simple formatting rules:
 
