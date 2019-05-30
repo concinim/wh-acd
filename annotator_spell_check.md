@@ -48,8 +48,10 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
     <td>spell_check_profile</td>
     <td>default/ocr</td>
     <td>A spell check profile defines the basics about the behavior of the spell check service.
-      <li>default : The default profile which is suitable for common human typos</li>
-      <li>ocr : A more aggressive profile that tries to correct errors that are introduced by optical character recognition systems.</li>
+      <ul>
+      <li>default - The default profile which is suitable for common human typos</li>
+      <li>ocr - A more aggressive profile that tries to correct errors that are introduced by optical character recognition systems.</li>
+      </ul>
     </td>
   </tr>
 </table>
