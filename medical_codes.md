@@ -29,7 +29,7 @@ subcollection: wh-acd
 
 {{site.data.keyword.wh-acd_short}} normalizes medical concepts into many common medical codes.  The following table shows the medical code support for each annotator available in  {{site.data.keyword.wh-acd_short}}.
 
-<table>
+<table summary="common medical codes">
   <tr>
     <th scope="col" style="width:100%; min-width:0 !important">Medical Codes</th>
     <th scope="col" style="width:1%; min-width:0 !important">NCI</th>
