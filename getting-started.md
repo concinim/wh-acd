@@ -24,31 +24,20 @@ subcollection: wh-acd
 {: #getting-started}
 
 This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with example requests and links to additional resources.
-
-{: shortdesc}
+{:shortdesc}
 
 ## Before you begin
-{: #prereqs}
+{: #before-you-begin}
 
-* Create an instance of the service:
-  1. Go to the [{{site.data.keyword.wh-acd_short}}](https://test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
-  2. Sign up for a free IBM Cloud account or log in.
-  3. Click **Create**.
-* Copy the credentials to authenticate to your service instance:
-  1. From the [IBM Cloud dashboard](https://test.cloud.ibm.com/dashboard/apps), click on your service instance to go to the service dashboard page.
-  2. On the **Manage** page, click **Show** to view your credentials.
-  3. Copy the `API Key` and `URL` values.
-* Make sure that you have the `curl` command.
-  * The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se](https://curl.haxx.se). Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.  
-
-When you enter a command, replace `{apikey}` and `{url}` with your actual API key and URL. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
-
-```Curl
-  curl -X POST -u "apikey:{apikey}"
-  . . .
-  "{url}/v1/analyze?version=2017-09-21"
-```
-{:pre}
+- {: hide-dashboard} Create an instance of the service:
+    1.  Go to the [{{site.data.keyword.wh-acd_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://test.cloud.ibm.com/catalog/services/wh-acd){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    2.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    3.  Click **Create**.
+- Copy the credentials to authenticate to your service instance:
+    1.  On the **Manage** page, click **Show** to view your credentials.
+    2.  Copy the `API Key` and `URL` values.
+- Make sure that you have the `curl` command:
+    - The examples use `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
 ## Step 1. Send plain text input to be analyzed using an existing flow and receive JSON output
 {: #getting_started_step1}
