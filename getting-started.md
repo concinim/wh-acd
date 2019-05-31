@@ -31,11 +31,11 @@ This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with e
 {: #prereqs}
 
 * Create an instance of the service:
-  1. Go to the [{{site.data.keyword.wh-acd_short}}](https://dev.console.test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
+  1. Go to the [{{site.data.keyword.wh-acd_short}}](https://test.cloud.ibm.com/catalog/services/wh-acd) page in the IBM Cloud Catalog.
   2. Sign up for a free IBM Cloud account or log in.
   3. Click **Create**.
 * Copy the credentials to authenticate to your service instance:
-  1. From the [IBM Cloud dashboard](https://dev.console.test.cloud.ibm.com/dashboard/apps), click on your service instance to go to the service dashboard page.
+  1. From the [IBM Cloud dashboard](https://test.cloud.ibm.com/dashboard/apps), click on your service instance to go to the service dashboard page.
   2. On the **Manage** page, click **Show** to view your credentials.
   3. Copy the `API Key` and `URL` values.
 * Make sure that you have the `curl` command.
