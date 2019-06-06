@@ -30,7 +30,7 @@ This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with e
 {: #before-you-begin}
 
 - {: hide-dashboard} Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.wh-acd_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://test.cloud.ibm.com/catalog/services/wh-acd){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Go to the [{{site.data.keyword.wh-acd_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/wh-acd){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     2.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     3.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
