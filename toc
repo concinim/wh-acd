@@ -45,6 +45,7 @@ Annotator for Clinical Data
     [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/)
     at_events.md
     information_security.md
+    legal.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
