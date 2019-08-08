@@ -1,0 +1,57 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="wh-acd" audience="service" href="/docs/services/wh-acd/getting-started.html" path="services/wh-acd"}
+Annotator for Clinical Data
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    analyze_text.md
+    customizing.md
+    deploying_cartridge.md
+    access_management.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: topicgroup}
+    Annotators
+        annotator_allergy.md
+        annotator_attribute_detection.md
+        annotator_cancer.md
+        annotator_concept_detection.md
+        annotator_concept_disambiguation.md
+        annotator_concept_value.md
+        annotator_ejection_fraction.md
+        annotator_hypothetical_detection.md
+        annotator_lab_values.md
+        annotator_living_assistance.md
+        annotator_medication.md
+        annotator_named_entities.md
+        annotator_negation_detection.md
+        annotator_nlu.md
+        annotator_procedure.md
+        annotator_relation.md
+        annotator_sections.md
+        annotator_smoking.md
+        annotator_spell_check.md
+        annotator_symptom_disease.md
+
+    medical_codes.md
+    [API reference](https://cloud.ibm.com/apidocs/wh-acd)
+    [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/)
+    at_events.md
+    information_security.md
+    dr.md
+    legal.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    troubleshooting.md
+    faqs.md
+    known_limitations.md
+    {: .navgroup-end}
