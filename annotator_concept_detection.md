@@ -94,9 +94,9 @@ The following table lists parameters of the concept_detection service.
     <td>libraries</td>
     <td><ul>
       <li>umls.latest</li>
+      <li>umls.2019AA</li>
       <li>umls.2018AA</li>
-      <li>umls.2017AA</li>
-      <li>umls.2016AB <i>(deprecated - will be removed in 2019)</i></li>
+      <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
     </ul></td>
     <td>Defines the libraries that will be used when detecting concepts from unstructured data. The libraries can be a UMLS library or a custom dictionary built by the <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html" target="_blank">DET</a>. The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value if <b>libraries</b> is not specified in the configuration.</td>
   </tr>

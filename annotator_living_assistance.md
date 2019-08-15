@@ -46,9 +46,9 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>
 <ul>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
   <li>umls.2018AA</li>
-  <li>umls.2017AA</li>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
@@ -96,10 +96,10 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>library</td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.
@@ -148,10 +148,10 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>library</td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
@@ -199,10 +199,10 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>library</td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
@@ -250,10 +250,10 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>library</td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
@@ -301,10 +301,10 @@ This daily living activities annotator identifies text that indicates whether a 
 <td>library</td>
 <td>
 <ul>
-  <li>umls.2016AA <i>(deprecated - will be removed in 2019)</i></li>
-  <li>umls.2017AA</li>
-  <li>umls.2018AA</li>
   <li>umls.latest</li>
+  <li>umls.2019AA</li>
+  <li>umls.2018AA</li>
+  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
 </ul>
 </td>
 <td>Defines the version of the UMLS library that is used when annotating unstructured data.  The value `umls.latest` is used to indicate the latest version of the available UMLS libraries (2018AA).  It is also the default value for the <b>library</b> configuration.</td>
