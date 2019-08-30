@@ -35,8 +35,9 @@ Replace `{apikey}` and `{url}` with the actual API key and URL in the following 
 
 ```Curl
   curl -X POST -u "apikey:{apikey}" \
+  --header “Content-Type: application/octet-stream” \
   --header "Accept: application/json" \
-  -F "archive_file=@./my_cartridges/name_of_cartridge_file.zip" \
+  --data-binary @./my_cartridges/name_of_cartridge_file.zip \
   "{url}/v1/deploy?update=false&version=2018-01-17"
 
 ```
