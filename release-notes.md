@@ -37,8 +37,19 @@ API requests require a version parameter that takes the date in the format versi
 
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
+### September 2019
+{: #september-2019}
 
-## 24 June 2019
-{: #June2019}
+- Ability to apply spelling corrections from the spell check annotator for use by all service annotators.
 
-The {{site.data.keyword.wh-acd_full}} is now available in the {{site.data.keyword.cloud}} US South location for approved internal IBM solution providers.
+### August 2019
+{: #august-2019}
+
+- Added support for UMLS 2019AA. UMLS 2016AB has been truncated and UMLS 2017AA is now deprecated _(will be removed in 2020 when we add support for UMLS 2020AA)._
+
+### June 2019
+{: #june-2019}
+
+- When spelling corrections from the spell check annotator are present, the concept detection annotator will leverage those spelling corrections for entity detection.
+- The {{site.data.keyword.wh-acd_full}} is now available in the {{site.data.keyword.cloud}} US South location for approved internal IBM solution providers.
+- Support for attribute detection over derived concepts with longest span.
