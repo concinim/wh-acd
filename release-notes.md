@@ -37,6 +37,11 @@ API requests require a version parameter that takes the date in the format versi
 
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
+### October 2019
+{: #october-2019}
+
+- Asynchronous (non-blocking) cartridge deployment APIs with persisted deployment status.
+
 ### September 2019
 {: #september-2019}
 
