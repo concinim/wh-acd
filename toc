@@ -41,8 +41,8 @@ Annotator for Clinical Data
         annotator_symptom_disease.md
 
     medical_codes.md
+    filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
-    [Domain Expert Tool](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/)
     at_events.md
     information_security.md
     dr.md
