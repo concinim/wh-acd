@@ -2,7 +2,7 @@
 
 copyright:
   years: 2011, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-10-17"
 
 keywords: annotator clinical data, clinical data, annotation
 
@@ -37,9 +37,9 @@ subcollection: wh-acd
  --data-binary @/path/to/name_of_cartridge_file.zip \
  "{url}/v1/cartridges?vesion=2019-09-01"
     ```
-    Multiple deployments of the same cartridge should use the _POST /v1/cartridges_ operation for the creation and, subsequently, use the _PUT /v1/cartridges_ operation for the update. Deployment of the same cartridge using the POST operation multiple times will result in HTTP <q>409 CONFLICT</q> response code .
+Use the _POST /v1/cartridges_ operation for the initial deployment of a cartridge version and _PUT /v1/cartridges_ to redploy cartridge updates. Different pusblished versions of a cartridge (e.g. cartridge_v1.0, cartridge_v2.0) will need to be initially deployed via the POST operation and subsequently redeployed via the PUT operation.
     
-3. The consumer updates the cartridge snapshot using the _PUT /v1/cartridges_ API. The cartridges id is not required in the path parameter and is extracted directly from the zip file. A successful request for updating the cartridge deployment will result in HTTP <q>202 ACCEPTED</q> response code and will include the path to the resource, e.g., /v1/cartridges/cartridge_id in the response body and the response header.  
+3. The consumer redeploys a previously deployed cartridge version using the _PUT /v1/cartridges_ API. The cartridges id is extracted directly from the cartridge zip file. A successful request for updating the cartridge (re)deployment will result in a HTTP <q>202 ACCEPTED</q> response code and will include the path to the resource, e.g., /v1/cartridges/cartridge_id in the response body and the response header.  
 
     ```Curl
 curl -X PUT -u "apikey":"{apikey}" \
@@ -48,10 +48,8 @@ curl -X PUT -u "apikey":"{apikey}" \
 --data-binary @/path/to/name_of_cartridge_file.zip \
 "{url}/v1/cartridges?vesion=2019-09-01"
     ```
-    
-    Updating a cartridge deployment assumes that the cartridge has been previously deployed. The consumer creates an initial deployment with the POST operation and subsequent deployment uses the PUT operation. Updating a cartridge deployment with missing or empty deployment status will return with HTTP <q>404 Not Found</q> response code.
 
-4.  The consumer retrieves all deployment status using _GET /v1/cartridges_ API, which include all cartridge deployed for a specific tenant. An empty list is returned if no catridge has been deployed.  
+4.  The consumer retrieves a list of deployed cartridges for a given tenant using the _GET /v1/cartridges_ API. An empty list is returned if no catridges have been deployed.  
 
     ```Curl
 curl -X GET -u "apikey":"{apikey}" \
@@ -59,7 +57,7 @@ curl -X GET -u "apikey":"{apikey}" \
 "{url}/v1/cartridges?version=2019-09-01"
     ```
 
-5.  The consumer can view the contents of a specific deployment by invoking the _GET /v1/cartridges_ API with the cartridge ID supplied as the path parameter . If the supplied ID does not exists, then a HTTP  <q> 404 Not Found </q> response code is returned. The following curl command returns the deployment status of the <q>cartridge_id</qt>.
+5.  The consumer can view the status of a specific cartridge deployment by invoking the _GET /v1/cartridges/{id}_ API with the cartridge ID supplied as a path parameter . If the supplied ID does not exists, then a HTTP  <q> 404 Not Found </q> response code is returned. The following curl command returns the deployment status of the <q>cartridge_id</qt>.
 
     ```Curl
 curl -X GET -u "apikey":"{apikey}" \
@@ -69,13 +67,14 @@ curl -X GET -u "apikey":"{apikey}" \
 
 Replace `{apikey}` and `{url}` with the actual API key and URL in all sample codes above.
 
-> The _/v1/catridges_ API is the recommended way for a cartridge deployment and is compatible with the legacy _/v1/deploy_ API. In many situations, the consumer has already deployed a cartridge using the _/v1/deploy_ API and the consumer can immediately update the same cartridge using the above POST and PUT operations on the _/v1/catridges_ API to initially create and to subsequently update the cartridge deployment. 
+
+> The _/v1/catridges_ API is the recommended way for a cartridge deployment and is compatible with the legacy _/v1/deploy_ API. In many situations, the consumer has already deployed a cartridge using the _/v1/deploy_ API and the consumer can immediately update the same cartridge using the above POST and PUT operations on the _/v1/catridges_ API to initially create and to subsequently update the cartridge deployment.
 > 
-> A typical _POST /v1/catridges_ operation creates and initializes a deployment for cartridge that has never been deployed to the system. For cartridges that have been previously deployed with the _/v1/deploy_ API, the _POST /v1/cartridges_ API will create, initialize, and update an existing cartridge deployment. Subsequent update to the cartridge can use the _PUT /v1/cartridges_ API. 
+> 
+> A typical _POST /v1/catridges_ operation creates and initializes a deployment for cartridge that has never been deployed to the system. For cartridges that have been previously deployed with the _/v1/deploy_ API, the _POST /v1/cartridges_ API will create, initialize, and update an existing cartridge deployment. Subsequent redeployments of a cartridge must use the _PUT /v1/cartridges_ API. 
 
 
-
-# Legacy Cartridge Deployment
+## Legacy Cartridge Deployment
 
 
 1.  The consumer uses the {{site.data.keyword.wh-acd_short}} Configuration Editor to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain. After that, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge.
