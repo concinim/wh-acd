@@ -97,7 +97,6 @@ Defines the version of the UMLS library that is used when analyzing unstructured
     <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
     <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
     <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
-    <tr><td>type</td><td>aci.ModifierGroupInd</td></tr>
     </tbody></table>
     </td></tr>
 </table>
