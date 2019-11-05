@@ -27,8 +27,8 @@ subcollection: wh-acd
 # Deploying a Cartridge
 {: #deploy_cartridge}
 
-1.  The consumer uses the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
-2.  Next, using the DET, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge.
+1.  The consumer uses the {{site.data.keyword.wh-acd_short}} Configuration Editor to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
+2.  Next, using the configuration editor, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge.
 3.  Lastly, the consumer deploys the cartridge snapshot (a zip file) to  {{site.data.keyword.wh-acd_short}} using _POST /v1/deploy_ API. In the following curl example, the consumer's cartridge file is `./my_cartridges/name_of_cartridge_file.zip`, and `update=false` means do not update the resource if it already exists. Specifying the **update=true** parameter on the deploy API to update an existing cartridge.
 
 Replace `{apikey}` and `{url}` with the actual API key and URL in the following example. A successful cartridge deploy will result in <q>201 Created</q> if it is a new resource, or <q>200 OK</q> if `update=true` was specified and the existing resource was updated.

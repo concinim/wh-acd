@@ -38,7 +38,7 @@ The section annotator provides a set of predefined section titles based on the [
 
 A section includes all the text between two section headings. Annotations that exist within the section will be annotated with  the section information in the **sectionNormalizedName** and **sectionSurfaceForm<** fields.
 
-The Domain Expert Tool (DET) provides support to customize the section annotator to add your own section titles or filter out unwanted terms from the predefined section titles.  It also allows you to filter annotations based on the section in which they appear. See the DET <a href="https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/help/DET_GettingStartedGuide.pdf">Getting Started Guide</a> for more information.
+The  {{site.data.keyword.wh-acd_short}} Configuration Editor provides support to customize the section annotator to add your own section titles or filter out unwanted terms from the predefined section titles.  It also allows you to filter annotations based on the section in which they appear.
 
 <h4>Annotation Types</h4>
 
