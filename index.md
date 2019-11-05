@@ -24,6 +24,8 @@ subcollection: wh-acd
 # About
 {: #about}
 
+**Notice:** {{site.data.keyword.wh-acd_short}} is currently in Limited Availability. Please contact your IBM sales representative for details.
+
 The {{site.data.keyword.wh-acd_short}} is designed to find medical concepts, [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes), and contextual information in unstructured text. It provides turn key annotators as well as highly customizable annotators that you can tune specifically for your application needs.  The Unified Medical Language System ([UMLS](https://www.nlm.nih.gov/research/umls/)) is the primary source for concepts and medical codes. {{site.data.keyword.wh-acd_short}} can also work with user provided ontologies beyond UMLS.  
 
 To illustrate the basic function of  {{site.data.keyword.wh-acd_short}}, let's look at a simple example.  Imagine that we have the following small snippet of text:
