@@ -27,10 +27,10 @@ subcollection: wh-acd
 # Analyzing Text
 {: #analyze_text}
 
-{{site.data.keyword.wh-acd_short}} enables you to detect medical concepts within unstructured data. When you provide an annotator flow, typically defined within the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/cartridge-main.html), and plain text to be analyzed, the service will employ the annotators and configurations defined within the flow to detect medical concepts within the provided text.
+{{site.data.keyword.wh-acd_short}} enables you to detect medical concepts within unstructured data. When you provide an annotator flow, typically defined within the {{site.data.keyword.wh-acd_short}} Configuration Editor, and plain text to be analyzed, the service will employ the annotators and configurations defined within the flow to detect medical concepts within the provided text.
 
 How it works:
-1. Define configurations for the service via the DET.
+1. Define configurations for the service via the configuration editor.
 2. Export your configurations as a cartridge zip.
 3. Deploy the cartridge zip to the service via the deploy API as shown:
 

@@ -29,8 +29,8 @@ subcollection: wh-acd
 
 ## Cartridge deployment scenario:
 
-1.  The consumer uses the [Domain Expert Tool (DET)](https://watsonpow01.rch.stglabs.ibm.com/services/cartridge_det/) to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
-2.  Next, using DET, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge to their computer.
+1.  The consumer uses the {{site.data.keyword.wh-acd_short}} Configuration Editor to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain.
+2.  Next, using the configuration editor, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge to their computer.
 3.  Lastly, the consumer deploys the cartridge snapshot (a zip file) to  {{site.data.keyword.wh-acd_short}} using _POST /v1/deploy_ API. In the following curl example, the consumer's cartridge file is `./my_cartridges/name_of_cartridge_file.zip`, and `update=false` means do not update the resource if it already exists with the {{site.data.keyword.wh-acd_short}} service.
 
 ```console
