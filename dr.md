@@ -15,6 +15,7 @@ subcollection: wh-acd
 
 # High availability and disaster recovery
 (: ha-dr}
+
 The {{site.data.keyword.wh-acd_full}} service is highly available within an IBM Cloud region. Disruption in the network connectivity may happen when a clould region is down. Recovering from potential disasters that affect an entire region requires planning and preparation. Thus, instance owners need to have recovery plans based on their use cases. 
 
 The instance owners are responsible for understanding the configuration, customization, and usage of the service. See [What are the responsibilities of the instance owner and the service provider?](/docs/overview?topic=overview-shared-responsibilities){: external} for more information.
@@ -22,7 +23,7 @@ The instance owners are responsible for understanding the configuration, customi
 Instance owners are responsible for provisioning a service instance in a new IBM Cloud location when necessary and restoring their data to the same location.  See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} for more information.
 
 
-## High_availability
+## High availability
 {: high availability}
 {{site.data.keyword.wh-acd_short}} is hosted in the Dallas and Washington locations.  Traffic to any instance is load-balanced across multiple data centers.
 
