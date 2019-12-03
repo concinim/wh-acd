@@ -14,7 +14,7 @@ subcollection: wh-acd
 {:new_window: target="_blank"}
 
 # High availability and disaster recovery
-(: ha-dr}
+
 
 The {{site.data.keyword.wh-acd_full}} service is highly available within an IBM Cloud region. Disruption in the network connectivity may happen when a clould region is down. Recovering from potential disasters that affect an entire region requires planning and preparation. Thus, instance owners need to have recovery plans based on their use cases. 
 
