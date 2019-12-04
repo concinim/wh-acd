@@ -18,14 +18,13 @@ subcollection: wh-acd
 
 The {{site.data.keyword.wh-acd_full}} service is highly available within an IBM Cloud region. Disruption in the network connectivity may happen when a clould region is down. Recovering from potential disasters that affect an entire region requires planning and preparation. Thus, instance owners need to have recovery plans based on their use cases. 
 
-The instance owners are responsible for understanding the configuration, customization, and usage of the service. See [What are the responsibilities of the instance owner and the service provider?](/docs/overview?topic=overview-shared-responsibilities){: external} for more information.
-
-Instance owners are responsible for provisioning a service instance in a new IBM Cloud location when necessary and restoring their data to the same location.  See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} for more information.
+The instance owner is [responsible](/docs/overview?topic=overview-shared-responsibilities) for understanding the configuration, customization, and usage of the service.  Instance owners are responsible for provisioning a service instance in a new IBM Cloud location when necessary and restoring their data to the same location.
 
 
 ## High availability
 {: high availability}
-{{site.data.keyword.wh-acd_short}} is hosted in the Dallas and Washington locations.  Traffic to any instance is load-balanced across multiple data centers.
+
+{{site.data.keyword.wh-acd_short}} is hosted in the [Dallas and Washington regions](/docs/resources?topic=resources-services_region#services_region).  Traffic to any instance is load-balanced across multiple [data centers](/docs/overview?topic=overview-zero-downtime#zero-downtime).
 
 
 ## Disaster recovery
@@ -39,8 +38,8 @@ Instance owners are responsible for maintaining up-to-date cartridge files outsi
 
 ### Detecting a location outage
 {: outage_detection}
-The {{site.data.keyword.wh-acd_full}} service provides a health check API that can be called repeatedly to ensure the service is available.  Successive internal service error responses from the API could be used as an indicator that the service is no longer available in a specific location.
 
+The {{site.data.keyword.wh-acd_full}} service provides a [health check API](/apidocs/wh-acd#health-check) that can be called repeatedly to ensure the service is available.  Successive internal service error responses from the API could be used as indicator that the service is no longer available in a specific location.
 
 #### Recovery
 {: recovery}
