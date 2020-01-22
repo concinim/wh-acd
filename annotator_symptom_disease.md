@@ -81,19 +81,19 @@ Defines the version of the UMLS library that is used when analyzing unstructured
 <tr><td>sectionSurfaceForm</td><td>Medical documents have many sections such as patient's information, previous medical history, family history, etc.  The covered text that identifies which section of the document that spans the annotation. The default value of this feature is <q>document</q>.</td></tr>
 <tr><td>sectionNormalizedName</td><td>The normalized term for the section.</td></tr>
 <tr><td>modifiers</td><td>
-  Modifiers represents text that describes the disease or symptom or identifies the related body site or location.
+  Modifiers represents text that describes the disease or symptom in more detail or provides additional context.
   <table role="presentation"><tbody>
-    <tr><td>type</td><td>aci.SiteInd</td></tr>
+    <tr><td>type</td><td>aci.SiteInd - Identifies the related body site or location.</td></tr>
     <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
     <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
     <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
-    <tr><td>type</td><td>aci.Measurement</td></tr>
+    <tr><td>type</td><td>aci.Measurement - Identifies the cancer grade which can help determine the rate of tumor growth.</td></tr>
     <tr><td>gradeValue</td><td>The value of the grade.</td></tr>
     <tr><td>siteNormalizedName</td><td>The normalized name for the site from UMLS.</td></tr>
     <tr><td>compound</td><td>Whether this a multi-site term.</td></tr>
     </tbody></table>
   <table role="presentation"><tbody>
-    <tr><td>type</td><td>aci.ModifierGroupInd</td></tr>
+    <tr><td>type</td><td>aci.ModifierGroupInd - General modifiers that further describe the symptom or disease such as severe, low, high, or mild.</td></tr>
     <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
     <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
     <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
