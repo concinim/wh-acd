@@ -93,7 +93,7 @@ Defines the version of the UMLS library that is used when analyzing unstructured
     <tr><td>compound</td><td>Whether this a multi-site term.</td></tr>
     </tbody></table>
   <table role="presentation"><tbody>
-    <tr><td>type</td><td>aci.ModifierGroupInd - General modifiers that further describes the symptom or disease such as severe, low, high, or mild.</td></tr>
+    <tr><td>type</td><td>aci.ModifierGroupInd - General modifiers that further describe the symptom or disease such as severe, low, high, or mild.</td></tr>
     <tr><td>begin</td><td>The start position of the annotation as a character offset into the text. The smallest possible start position is 0.</td></tr>
     <tr><td>end</td><td>The end position of the annotation as character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
     <tr><td>coveredText</td><td>The text covered by an annotation as a string.</td></tr>
