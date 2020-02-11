@@ -43,11 +43,11 @@ Annotator for Clinical Data
     medical_codes.md
     {: topicgroup}
     Clinical Insights
-      clinical_insights_overview.md
-      clinical_insights_medication.md
-      clinical_insights_procedure.md
-      clinical_insights_diagnosis.md
-      clinical_insights_cartridge.md
+        clinical_insights_overview.md
+        clinical_insights_medication.md
+        clinical_insights_procedure.md
+        clinical_insights_diagnosis.md
+        clinical_insights_cartridge.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     at_events.md
