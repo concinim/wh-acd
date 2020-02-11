@@ -138,11 +138,11 @@ For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_ch
 * [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
 ### Clinical Insights (Experimental)
-{: #clinicalInsights}
+{: #clinicalInsightsSummary}
 
 Clinical insights are a collection of models and cartridge configuration that provide contextual information about key clinical attributes (medication, diagnosis, and procedure) for patient centric clinical notes.
 
-For more information, see [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights#clinical_insights). 
+For more information, see [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights#clinical_insights).
 
 ### Integration with Natural Language Understanding (Experimental)
 {: #nlu}
