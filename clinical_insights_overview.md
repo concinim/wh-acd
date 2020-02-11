@@ -24,8 +24,8 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Clinical Insights
-{: #clinical_insights}
+# Clinical Insights Overview
+{: #clinical_insights_overview}
 
 The {{site.data.keyword.wh-acd_short}} provides an out of the box capability to extract contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:
 
@@ -122,7 +122,7 @@ The procedure model provides information about how the procedure applies to the 
 
 <h4>task</h4>
 
-<table> 
+<table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>therapeuticScore</td><td>Is this a therapeutic procedure</td></tr>
 <tr><td>diagnosticScore</td><td>Is this a diagnostic procedure</td></tr>
