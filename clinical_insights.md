@@ -39,7 +39,7 @@ Each of the models provides specific contextual information that is important to
 1. Medication
 2. Diagnosis
 3. Procedure
-<br>
+
 <h4>Medication</h4>
 
 The medication model provides information about medication usage and lifecycle events.
@@ -73,10 +73,10 @@ Each event has the following scores:
 
 Note that the lifecycle events only look at local clues and do not try to reason across extremely large spans or multiple documents.  
 
-startedEvent - Is there language that indicates a medication was started.
-stoppedEvent - Is there language that a medication was stopped.
-doseChangedEvent - Is there language that indicates the dosage of a medication was changed.
-adverseEvent - Does the medication mention have a causal relationship with any sort of bad outcome for the patient.  In addition to a *score* and *usage* section, adverseEvent also has an *allergyScore* that indicates if the given AE is just a simple allergy mention.
+* startedEvent - Is there language that indicates a medication was started.
+* stoppedEvent - Is there language that a medication was stopped.
+* doseChangedEvent - Is there language that indicates the dosage of a medication was changed.
+* adverseEvent - Does the medication mention have a causal relationship with any sort of bad outcome for the patient.  In addition to a *score* and *usage* section, adverseEvent also has an *allergyScore* that indicates if the given AE is just a simple allergy mention.
 
 You can use the usage scores to carve very specific boundaries around the kinds of medication mentions that you surface in your application.  For example, depending on your use case, you may want to know about when a dose change occurred, but not when it was considered.
 
@@ -100,4 +100,39 @@ The diagnosis model provides usage information and other features that let you d
 </tr><td>traumaScore</td><td>Does the diagnosis mention look like physical trauma</td></tr>
 </tr><td>familyHistoryScore</td><td>Is the diagnosis mention a family history event that does not apply to the patient.</td></tr>
 
+</table>
+
+<h4>Procedure</h4>
+
+The procedure model provides usage, task, and type information.
+
+<h4>usage</h4>
+
+<table>
+<tr><th>__Field__</th><th>__Description__</th></tr>
+</tr><td>explicitScore</td><td>There is evidence that the a procedure has been done or there is a firm plan to do it.</td></tr>
+<tr><td>pendingScore</td><td>Language around the procedure indicates that is has been scheduled or is highly recommended by a physician.</td></tr>
+<tr><td>discussedScore</td><td>Other mentions of the procedure that don't directly apply to the patient</td></tr>
+</table>
+
+
+<h4>task</h4>
+
+<table>
+<tr><th>__Field__</th><th>__Description__</th></tr>
+</tr><td>therapeuticScore</td><td>Is this a therapeutic procedure</td></tr>
+<tr><td>diagnosticScore</td><td>Is this a diagnostic procedure</td></tr>
+<tr><td>surgicalTaskScore</td><td>Is this a subtask as part of a larger surgical process</td></tr>
+<tr><td>clinicalAssessmentScore</td><td>Is this a physical evaluation of a patient</td></tr>
+</table>
+
+<h4>type</h4>
+
+<table>
+<tr><th>__Field__</th><th>__Description__</th></tr>
+</tr><td>deviceScore</td><td>Does the procedure involve an implanted device</td></tr>
+<tr><td>materialScore</td><td>Does the procedure involve grafts or other material implants</td></tr>
+<tr><td>medicationScore</td><td>Does the procedure primarily involve administration of a medication </td></tr>
+<tr><td>conditionManagementScore</td><td>Is this an ongoing procedure to manage a long term condition</td></tr>
+<tr><td>procedureScore</td><td>Catchall score for everything else</td></tr>
 </table>
