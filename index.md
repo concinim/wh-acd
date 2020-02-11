@@ -142,11 +142,7 @@ For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_ch
 
 Clinical insights are a collection of models and cartridge configuration that provide contextual information about key clinical attributes (medication, diagnosis, and procedure) for patient centric clinical notes.
 
-For more information, see [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights#clinical_insights)
-
-<br>
-IS PUBLISH WORKING???
-[Clinical Insights_bogus](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator)
+For more information, see [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights#clinical_insights).
 
 ### Integration with Natural Language Understanding (Experimental)
 {: #nlu}
