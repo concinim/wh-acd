@@ -47,6 +47,7 @@ Annotator for Clinical Data
       clinical_insights_medication.md
       clinical_insights_procedure.md
       clinical_insights_diagnosis.md
+      clinical_insights_cartridge.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     at_events.md
