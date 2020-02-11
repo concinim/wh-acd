@@ -41,6 +41,7 @@ Annotator for Clinical Data
         annotator_symptom_disease.md
 
     medical_codes.md
+    clinical_insights.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     at_events.md
