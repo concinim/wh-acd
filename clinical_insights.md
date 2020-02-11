@@ -128,7 +128,7 @@ The procedure model provides usage, task, and type information.
 
 <h4>type</h4>
 
-<table>
+<table> 
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>deviceScore</td><td>Does the procedure involve an implanted device</td></tr>
 <tr><td>materialScore</td><td>Does the procedure involve grafts or other material implants</td></tr>
