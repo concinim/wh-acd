@@ -122,7 +122,7 @@ The procedure model provides information about how the procedure applies to the 
 
 <h4>task</h4>
 
-<table>
+<table> 
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>therapeuticScore</td><td>Is this a therapeutic procedure</td></tr>
 <tr><td>diagnosticScore</td><td>Is this a diagnostic procedure</td></tr>
