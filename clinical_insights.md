@@ -24,7 +24,7 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-#Clinical Insights
+# Clinical Insights
 {: #clinical_insights}
 
 The {{site.data.keyword.wh-acd_short}} provides an out of the box capability to extract contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:

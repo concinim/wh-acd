@@ -120,7 +120,7 @@ Medically aware spell checker that can be integrated into an API call.
 
 For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_check).
 
-## Turn Key Annotators
+### Turn Key Annotators
 {: #turnKeyAnnotators}
 
  {{site.data.keyword.wh-acd_short}} provides a set of prebuilt annotators targeted at specific medical domains.
