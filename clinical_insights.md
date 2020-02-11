@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2020
 lastupdated: "2020-02-11"
 
 keywords: annotator clinical data, clinical data, annotation
@@ -24,23 +24,23 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Clinical Insights
+#Clinical Insights
 {: #clinical_insights}
 
 The {{site.data.keyword.wh-acd_short}} provides an out of the box capability to extract contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:
 
-1) A set of models that provide contextual features for key clinical types (medication, diagnosis, and procedure).
-2) An out of the box cartridge uses those features to answer a simple question - does this entity apply to the patient?
+1. A set of models that provide contextual features for key clinical types (medication, diagnosis, and procedure).
+2. An out of the box cartridge uses those features to answer a simple question - does this entity apply to the patient?
 
-# Models
+<h4>Models</h4>
 
 Each of the models provides specific contextual information that is important to the given annotation type.  The models can operate on existing annotations and add additional type specific contextual features.  The annotations the models operate on can either come from annotators that ship with {{site.data.keyword.wh-acd_short}} or with custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  There are currently models for the following:
 
 1. Medication
 2. Diagnosis
 3. Procedure
-
-#Medication
+<br>
+<h4>Medication</h4>
 
 The medication model provides information about medication usage and lifecycle events.
 
@@ -80,7 +80,7 @@ adverseEvent - Does the medication mention have a causal relationship with any s
 
 You can use the usage scores to carve very specific boundaries around the kinds of medication mentions that you surface in your application.  For example, depending on your use case, you may want to know about when a dose change occurred, but not when it was considered.
 
-#Diagnosis
+<h4>Diagnosis</h4>
 
 The diagnosis model provides usage information and other features that let you decide which diagnosis mentions matter the most.
 
