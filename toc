@@ -39,8 +39,8 @@ Annotator for Clinical Data
         annotator_smoking.md
         annotator_spell_check.md
         annotator_symptom_disease.md
+  
 
-    medical_codes.md
     {: topicgroup}
     Clinical Insights
         clinical_insights_overview.md
@@ -48,6 +48,8 @@ Annotator for Clinical Data
         clinical_insights_procedure.md
         clinical_insights_diagnosis.md
         clinical_insights_cartridge.md
+
+    medical_codes.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     at_events.md
