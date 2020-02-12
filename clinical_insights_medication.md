@@ -28,7 +28,7 @@ subcollection: wh-acd
 {: #clinical_insights_medication}
 
 
-The medication model provides information about how a medication annotation applies to the patient and lifecycle events related to that medication.
+The medication model provides information about how a medication annotation applies to the patient and about lifecycle events related to that medication.
 
 The usage section of the JSON response indicates how a medication applies to a patient.
 
@@ -36,9 +36,9 @@ The usage section of the JSON response indicates how a medication applies to a p
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
-</tr><td>takenScore</td><td>Is there evidence that the given medication is currently being taken by the patient, has ever been taken by the patient, or there is a firm plan to put the patient on that medication.</td></tr>
-<tr><td>consideringScore</td><td>Is the medication being considered as an option for the patient.</td></tr>
-<tr><td>discussedScore</td><td>Other mentions of the medication that don't directly apply to the patient.</td></tr>
+</tr><td>takenScore</td><td>Evidence that the given medication is currently being taken by the patient, has ever been taken by the patient, or there is a firm plan to put the patient on that medication.</td></tr>
+<tr><td>consideringScore</td><td>Medication is being considered as an option for the patient.</td></tr>
+<tr><td>discussedScore</td><td>Other mentions of the medication that do not directly apply to the patient (For example:  _She is not currently taking Warfarin_ or _We considered Warfarin but opted not to use it because of the risk of bleeding._).</td></tr>
 <tr><td>labMeasurementScore</td><td>The medication mention is a lab measurement and does not directly indicate a medication the patient is taking.</td></tr>
 </table>
 
@@ -48,23 +48,23 @@ Each event has the following scores:
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
-</tr><td>score</td><td>How strongly does the language around the candidate annotation look like it matches the given lifecycle event.</td></tr>
+</tr><td>score</td><td>How strongly does the language around the candidate annotation look like it indicates the given lifecycle event.</td></tr>
 <tr><td>usage</td><td>The text that triggered the negation. For example, in the text <q>She denies pain</q>, the trigger is <q>denies</q>.
 <table role="presentation"><tbody>
-  <tr><td>explicitScore</td><td>Does the event directly apply to the patient</td></tr>
-  <tr><td>consideringScore</td><td>Is the event something that may happen to the patient</td></tr>
-  <tr><td>discussedScore</td><td>Does the event not apply to the patient</td></tr>
+  <tr><td>explicitScore</td><td>The event directly applies to the patient.</td></tr>
+  <tr><td>consideringScore</td><td>The event is something that may apply to the patient.</td></tr>
+  <tr><td>discussedScore</td><td>The event does not apply to the patient.</td></tr>
 </tbody></table></td></tr>
 </table>
 
-Note that the lifecycle events only look at local clues and do not try to reason across extremely large spans or multiple documents.  
+Note that the lifecycle events only look at local context clues and do not try to reason across large distances in the text or multiple documents.  
 
-* startedEvent - Is there language that indicates a medication was started.
-* stoppedEvent - Is there language that a medication was stopped.
-* doseChangedEvent - Is there language that indicates the dosage of a medication was changed.
-* adverseEvent - Does the medication mention have a causal relationship with any sort of bad outcome for the patient.  In addition to a *score* and *usage* section, adverseEvent also has an *allergyScore* that indicates if the given AE is just an allergy mention.
+* startedEvent - There is language that indicates a medication was started.
+* stoppedEvent - There is language that a medication was stopped.
+* doseChangedEvent - There is language that indicates the dosage of a medication was changed.
+* adverseEvent - The medication mention is associated with any sort of bad outcome for the patient.  In addition to a *score* and *usage* section, adverseEvent also has an *allergyScore* that indicates if the given AE is just an allergy mention.
 
-You can use the usage scores to carve very specific boundaries around the kinds of medication mentions that you surface in your application.  For example, depending on your use case, you may want to know about when a dose change occurred, but not when it was considered.
+You can use the usage scores to carve very specific boundaries around the kinds of medication mentions that you surface in your application.  For example, depending on your use case, you may want to know about when a dose change occurred, but not when it was just mentioned as a consideration.
 
 ### Sample Response
 
