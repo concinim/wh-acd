@@ -27,7 +27,7 @@ subcollection: wh-acd
 # Clinical Insights Procedure Model
 {: #clinical_insights_procedure}
 
-The procedure model provides information about how the procedure applies to the the patient and other features that let you focus on the procedure annotations that matter most to your application.
+The procedure model provides information about how the procedure applies to the the patient and other features that allow you to understand the type of the procedure.
 
 <h4>usage</h4>
 

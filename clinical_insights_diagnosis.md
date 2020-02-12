@@ -55,30 +55,21 @@ The usage section of the JSON response indicates how a diagnosis applies to the 
 
 Consider the following sample text.
 
-_I believe the patient will require a hysterectomy in view of her cysts._
+_Pathologic evidence suggests that the patient has stage II breast cancer_
 
 The clinical insights features for hysterectomy might look as follows:
 
 ```
 "insightModelData": {
-	"procedure": {
+	"diagnosis": {
 		"usage": {
-			"explicitScore": 0.003,
-			"pendingScore": 0.919,
-			"discussedScore": 0.078
+			"explicitScore": 0.912,
+			"implicitScore": 0,
+			"discussedScore": 0.087
 		},
-		"task": {
-			"therapeuticScore": 0.987,
-			"diagnosticScore": 0.013,
-			"surgicalTaskScore": 0,
-			"clinicalAssessmentScore": 0
-		},
-		"type": {
-			"deviceScore": 0,
-			"materialScore": 0,
-			"medicationScore": 0,
-			"procedureScore": 0.999,
-			"conditionManagementScore": 0
-		}
+		"suspectedScore": 0.592,
+		"symptomScore": 0,
+		"traumaScore": 0,
+		"familyHistoryScore": 0.003
 	}
 }```

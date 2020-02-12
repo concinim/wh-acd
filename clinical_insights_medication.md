@@ -28,7 +28,7 @@ subcollection: wh-acd
 {: #clinical_insights_medication}
 
 
-The medication model provides information about how the medication applies to the patient and lifecycle events.
+The medication model provides information about how a medication annotation applies to the patient and lifecycle events related to that medication.
 
 The usage section of the JSON response indicates how a medication applies to a patient.
 
