@@ -36,6 +36,6 @@ The {{site.data.keyword.wh-acd_short}} provides an out of the box capability to 
 
 Each of the models provides specific contextual information that is relevant to the given annotation type.  The models can operate on existing annotations and add additional type specific contextual features.  The annotations the models operate on can either come from annotators that ship with {{site.data.keyword.wh-acd_short}} or with custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  There are currently models for the following:
 
-1. [Medication] (wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
-2. [Diagnosis] (wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
-3. [Procedure] (wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
+1. [Medication](wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
+2. [Diagnosis](wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
+3. [Procedure](wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
