@@ -32,12 +32,12 @@ The Clinical Insights Cartridge is a default configuration set that ships with {
 1. PrescribedMedication
 2. Diagnosis
 3. TherapeuticProcedure
-4. DiagnosticProceudre
+4. DiagnosticProcedure
 
-These attributes can be thought of as a the result of a distillation step where all candidate annotations are considered, but only those that apply to the patient get promoted to attributes.
+These attributes can be thought of as the result of a distillation step where all candidate annotations are considered, but only those that apply to the patient get promoted to attributes.
 
-If you need different behavior that what the default cartridge provides, you can extend the default clinical insights cartridge using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  Options for extending the cartridge include:
+If you need different behavior than what the default cartridge provides, you can extend the default Clinical Insights Cartridge using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  Options for extending the cartridge include:
 
-1. Adding your own candidate annotations from custom dictionaries.  For example, if there is a medication that ACD does not annotate by default, you could add that to a custom dictionary and then ensure entries from your custom dictionary are vetted by the insights medication model.
+1. Adding your own candidate annotations from custom dictionaries.  For example, if there is a medication that the {{site.data.keyword.wh-acd_short}} does not annotate by default, you could add that to a custom dictionary and then ensure entries from your custom dictionary are scored by the insights medication model.
 
-2. Changing the scoring thresholds used to promote candidate annotations to one of the attributes noted above.  Your application needs may necessitate different scoring thresholds than what the default cartridge provides.  You can extend the default cartridge and change the scoring thresholds and low level features used for each attribute noted above.
+2. Changing the scoring thresholds used to promote candidate annotations to one of the attributes noted above.  Your application needs may necessitate different scoring thresholds than what the default cartridge provides.  You can extend the default cartridge and change the scoring thresholds used for each attribute noted above.
