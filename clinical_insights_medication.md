@@ -27,6 +27,7 @@ subcollection: wh-acd
 # Clinical Insights Medication Model
 {: #clinical_insights_medication}
 
+
 The medication model provides information about how the medication applies to the patient and lifecycle events.
 
 The usage section of the JSON response indicates how a medication applies to a patient.
@@ -75,46 +76,46 @@ The clinical insight features for Metformin might look as follows:
 
 ```
 "insightModelData": {
-              "medication": {
-                "usage": {
-                  "takenScore": 0.005,
-                  "consideringScore": 0.994,
-                  "discussedScore": 0,
-                  "labMeasurementScore": 0
-                },
-                "startedEvent": {
-                  "score": 0.998,
-                  "usage": {
-                    "explicitScore": 0.002,
-                    "consideringScore": 0.997,
-                    "discussedScore": 0
-                  }
-                },
-                "stoppedEvent": {
-                  "score": 0,
-                  "usage": {
-                    "explicitScore": 0,
-                    "consideringScore": 0,
-                    "discussedScore": 0
-                  }
-                },
-                "doseChangedEvent": {
-                  "score": 0,
-                  "usage": {
-                    "explicitScore": 0,
-                    "consideringScore": 0,
-                    "discussedScore": 0
-                  }
-                },
-                "adverseEvent": {
-                  "score": 0,
-                  "allergyScore": 0,
-                  "usage": {
-                    "explicitScore": 0,
-                    "consideringScore": 0,
-                    "discussedScore": 0
-                  }
-                }
-              }
-            }
+	"medication": {
+		"usage": {
+			"takenScore": 0.005,
+			"consideringScore": 0.994,
+			"discussedScore": 0,
+			"labMeasurementScore": 0
+		},
+		"startedEvent": {
+			"score": 0.998,
+			"usage": {
+				"explicitScore": 0.002,
+				"consideringScore": 0.997,
+				"discussedScore": 0
+			}
+		},
+		"stoppedEvent": {
+			"score": 0,
+			"usage": {
+				"explicitScore": 0,
+				"consideringScore": 0,
+				"discussedScore": 0
+			}
+		},
+		"doseChangedEvent": {
+			"score": 0,
+			"usage": {
+				"explicitScore": 0,
+				"consideringScore": 0,
+				"discussedScore": 0
+			}
+		},
+		"adverseEvent": {
+			"score": 0,
+			"allergyScore": 0,
+			"usage": {
+				"explicitScore": 0,
+				"consideringScore": 0,
+				"discussedScore": 0
+			}
+		}
+	}
+}
 ```

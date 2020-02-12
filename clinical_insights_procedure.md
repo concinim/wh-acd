@@ -68,24 +68,25 @@ _Chemotherapy with Cisplatin was not an option for his type of cancer._
 
 ```
 "insightModelData": {
-              "procedure": {
-                "usage": {
-                  "explicitScore": 0.097,
-                  "pendingScore": 0.043,
-                  "discussedScore": 0.859
-                },
-                "task": {
-                  "therapeuticScore": 0.999,
-                  "diagnosticScore": 0,
-                  "surgicalTaskScore": 0.001,
-                  "clinicalAssessmentScore": 0
-                },
-                "type": {
-                  "deviceScore": 0,
-                  "materialScore": 0,
-                  "medicationScore": 0.994,
-                  "procedureScore": 0.005,
-                  "conditionManagementScore": 0
-                }
-              }
+	"procedure": {
+		"usage": {
+			"explicitScore": 0.097,
+			"pendingScore": 0.043,
+			"discussedScore": 0.859
+		},
+		"task": {
+			"therapeuticScore": 0.999,
+			"diagnosticScore": 0,
+			"surgicalTaskScore": 0.001,
+			"clinicalAssessmentScore": 0
+		},
+		"type": {
+			"deviceScore": 0,
+			"materialScore": 0,
+			"medicationScore": 0.994,
+			"procedureScore": 0.005,
+			"conditionManagementScore": 0
+		}
+	}
+}
 ```

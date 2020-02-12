@@ -50,3 +50,35 @@ The usage section of the JSON response indicates how a diagnosis applies to the 
 </tr><td>traumaScore</td><td>Does the diagnosis mention look like physical trauma</td></tr>
 </tr><td>familyHistoryScore</td><td>Is the diagnosis mention a family history event that does not apply to the patient.</td></tr>
 </table>
+
+### Sample Response
+
+Consider the following sample text.
+
+_I believe the patient will require a hysterectomy in view of her cysts._
+
+The clinical insights features for hysterectomy might look as follows:
+
+```
+"insightModelData": {
+	"procedure": {
+		"usage": {
+			"explicitScore": 0.003,
+			"pendingScore": 0.919,
+			"discussedScore": 0.078
+		},
+		"task": {
+			"therapeuticScore": 0.987,
+			"diagnosticScore": 0.013,
+			"surgicalTaskScore": 0,
+			"clinicalAssessmentScore": 0
+		},
+		"type": {
+			"deviceScore": 0,
+			"materialScore": 0,
+			"medicationScore": 0,
+			"procedureScore": 0.999,
+			"conditionManagementScore": 0
+		}
+	}
+}```
