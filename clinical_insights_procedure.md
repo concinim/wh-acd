@@ -29,6 +29,8 @@ subcollection: wh-acd
 
 The procedure model provides information about how the procedure applies to the the patient and other classification information about the procedure.
 
+***NOTE*** The features shown below are currently ***EXPERIMENTAL***.
+
 <h4>usage</h4>
 
 <table>

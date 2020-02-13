@@ -27,14 +27,14 @@ subcollection: wh-acd
 # Clinical Insights Overview
 {: #clinical_insights_overview}
 
-The {{site.data.keyword.wh-acd_short}} provides an out-of-the-box capability to extract contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:
+The {{site.data.keyword.wh-acd_short}} provides a ready-to-use capability to extract deep contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:
 
-1. A set of models that provide contextual features for key clinical types (medication, diagnosis, and procedure).
-2. An out of the box cartridge that uses those features to answer a simple question - does this entity apply to the patient?
+1. Models that provide domain-specific context for various types of clinical information (medication, diagnosis, and procedure).
+2. Ready-to-use cartridge that answers a simple question - is the given information relevant to the patient?
 
 <h4>Models</h4>
 
-Each of the models provides contextual features relevant to the annotation types that the model processes.  The models add features to annotations that either come from out-of-the-box {{site.data.keyword.wh-acd_short}} annotators or from custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  There are currently models for the following:
+Each model contributes contextual features to annotations that are either produced by standard {{site.data.keyword.wh-acd_short}} annotators or from custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  The Clinical Insights Models include:
 
 1. [Medication](wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
 2. [Diagnosis](wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)

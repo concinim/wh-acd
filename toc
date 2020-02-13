@@ -39,10 +39,10 @@ Annotator for Clinical Data
         annotator_smoking.md
         annotator_spell_check.md
         annotator_symptom_disease.md
-  
+
 
     {: topicgroup}
-    Clinical Insights
+    Clinical Insights (Experimental)
         clinical_insights_overview.md
         clinical_insights_medication.md
         clinical_insights_procedure.md

@@ -32,6 +32,8 @@ The diagnosis model provides usage information and other features about the diag
 
 The usage section of the JSON response indicates how a diagnosis applies to the patient.
 
+***NOTE*** The features shown below are currently ***EXPERIMENTAL***.
+
 <h4>usage</h4>
 
 <table>
