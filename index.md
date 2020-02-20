@@ -136,10 +136,3 @@ For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_ch
 * [Sections](wh-acd?topic=wh-acd-sections#sections)
 * [Smoking](wh-acd?topic=wh-acd-smoking#smoking)
 * [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
-
-### Integration with Natural Language Understanding (Experimental)
-{: #nlu}
-
-{{site.data.keyword.wh-acd_short}} provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your API call.
-
-For more information, see [NLU](wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator).

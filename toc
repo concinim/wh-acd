@@ -32,7 +32,6 @@ Annotator for Clinical Data
         annotator_medication.md
         annotator_named_entities.md
         annotator_negation_detection.md
-        annotator_nlu.md
         annotator_procedure.md
         annotator_relation.md
         annotator_sections.md
