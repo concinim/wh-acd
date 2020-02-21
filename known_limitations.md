@@ -38,3 +38,7 @@ Cartridge deployments via the /deploy API can sometimes exceed the one minute ti
 ## Multiple Unstructured Array Elements
 
 While multiple unstructured array elements with text values may be submitted in a single request, 40 unstructured array elements is the recommended limit to avoid performance degradation due to processing overhead.
+
+## Cartridge Use While Deployment in Progress
+
+When a cartridge is in the midst of being deployed or re-deployed, use of the flows therein for text analysis should be avoided until cartridge deployment has successfully completed. Use of cartridge flows while the cartridge is actively being deployed may yield unexpected results.
