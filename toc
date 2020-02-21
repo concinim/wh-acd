@@ -39,6 +39,15 @@ Annotator for Clinical Data
         annotator_spell_check.md
         annotator_symptom_disease.md
 
+
+    {: topicgroup}
+    Clinical Insights (Experimental)
+        clinical_insights_overview.md
+        clinical_insights_medication.md
+        clinical_insights_procedure.md
+        clinical_insights_diagnosis.md
+        clinical_insights_cartridge.md
+
     medical_codes.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
