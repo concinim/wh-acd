@@ -27,7 +27,9 @@ subcollection: wh-acd
 # Customizing
 {: #customizing}
 
-Using the  {{site.data.keyword.wh-acd_short}} Configuration Editor, you can customize the annotations provided by  {{site.data.keyword.wh-acd_short}}. The configuration editor allows you to create several types of configuration artifacts that can be used to customize  {{site.data.keyword.wh-acd_short}}'s output. For example, you can create a custom dictionary to add your unique terminology for detecting concepts or you can define your own domain specific clinical attributes.
+Using the  {{site.data.keyword.wh-acd_short}} Configuration Editor, you can customize the annotations provided by  {{site.data.keyword.wh-acd_short}}.  The configuration editor is currently not exposed externally.  If you wish to customize your {{site.data.keyword.wh-acd_short}} deployment, contact IBM services.  
+
+The configuration editor allows you to create several types of configuration artifacts that can be used to customize  {{site.data.keyword.wh-acd_short}}'s output. For example, you can create a custom dictionary to add your unique terminology for detecting concepts or you can define your own domain specific clinical attributes.
 
 The customization artifacts are bundled into a knowledge cartridge that can be published and deployed to  {{site.data.keyword.wh-acd_short}}. The cartridge will include a profile that specifies the configurations for each annotator. The cartridge will also contain one or more flows that contain a series of annotators to invoke using the /v1/analyze/{flow_id} API.  
 
