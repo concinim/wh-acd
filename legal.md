@@ -177,6 +177,7 @@ The program described in this document also includes the vocabulary sources list
 |VANDF_2019_02_01 (updated)|Veterans Health Administration National Drug File, February 01, 2019 Washington, DC U.S. Department of Veterans Affairs|
 
 
+
 Deidentified clinical records used in the development of this offering were provided by the i2b2 National Center for Biomedical Computing funded by U54LM008748 and were originally prepared for the Shared Tasks for Challenges in NLP for Clinical Data organized by Dr. Ozlem Uzuner, i2b2 and SUNY
 
 
