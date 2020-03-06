@@ -49,12 +49,26 @@ The resulting concept over ulceration will contain medical codes along with cont
     "nciCode": "C25757",
     "snomedConceptId": "263913002",
     "vocabs": "MTH,NCI_CDISC,NCI_FDA,NCI,OMIM,SNOMEDCT_US,NCI_NCI-GLOSS"
-}```
+}
+```
 
 To learn about all of the ways you can customize  {{site.data.keyword.wh-acd_short}}, see the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section and learn how you can use the {{site.data.keyword.wh-acd_short}} Configuration Editor to build custom medical NLP for your application.
 
-
 {: shortdesc}
+
+## Data Isolation
+
+### Public Multi-tenant Instances
+
+**User Configuration Data:** User configuration data is stored in Cloud Object Storage. This data is isolated by tenant at the service layer.
+
+**User Unstructured Text:** Requested analysis of unstructured text is processed in-memory. The input text is not persisted. Requests are isolated at the service layer.
+
+### Dedicated Instances
+
+**User Configuration Data:** User configuration data is stored in Cloud Object Storage. This data is isolated at the service layer.
+
+**User Unstructured Text:** Requested analysis of unstructured text is processed in-memory. The input text is not persisted. Requests are isolated at the Kubernetes pod layer.
 
 ## Customizable concept annotators
 
