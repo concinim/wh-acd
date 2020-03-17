@@ -30,8 +30,6 @@ subcollection: wh-acd
 The concept detection service detects medical concepts from unstructured data. The service provides concepts based on the Unified Medical Language System (UMLS). As of the 2018AA version of the UMLS library, the consumers can elect to have a set of [medical codes](wh-acd?topic=wh-acd-medical_codes#medical_codes) associated with the UMLS concepts by specifying the optional configuration parameter to return the medical codes. When medical codes are requested, the UMLS concept annotations from concept detection will include the applicable medical codes as metadata within the annotations.
 {:shortdesc}
 
-The concept detection service also supports detection of medical concepts using custom dictionaries.  See the  {{site.data.keyword.wh-acd_short}} Configuration Editor for more information on creating custom dictionaries.
-
 ### Expanded Concepts
 
 Concept detection provides an _expanded_ option that tries to find UMLS concepts over spans of text that are not strictly defined in the UMLS dictionary that ships with {{site.data.keyword.wh-acd_short}}.  For example, consider the following text:
@@ -99,18 +97,18 @@ The following table lists parameters of the concept_detection service.
       <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
     </ul></td>
     <td>
-    Defines the version of the UMLS library that is used when analyzing unstructured data. The libraries can be a UMLS library or a custom dictionary built by the configuration editor. The value `umls.latest` will reference the latest available version of UMLS within the service. As newer versions of UMLS are made available in the service, `umls.latest` library configurations will automatically leverage the latest available version of UMLS in the service once available. Declaration of a specific version of UMLS is recommended to avoid undesirable changes in output as newer versions of UMLS are made available within the service. Through declaration of a specific version of UMLS, newer versions of UMLS may be evaluated prior to use in production.
+    Defines the version of the UMLS library that is used when analyzing unstructured data. The value `umls.latest` will reference the latest available version of UMLS within the service. As newer versions of UMLS are made available in the service, `umls.latest` library configurations will automatically leverage the latest available version of UMLS in the service once available. Declaration of a specific version of UMLS is recommended to avoid undesirable changes in output as newer versions of UMLS are made available within the service. Through declaration of a specific version of UMLS, newer versions of UMLS may be evaluated prior to use in production.
     </td>
   </tr>
   <tr>
     <td>inference_rules</td>
     <td></td>
-    <td>The name of a derived concept rule set that will be used for deriving additional concepts based on the concepts discovered by the libraries specified. The derived concept rule is developed using the configuration editor.</td>
+    <td>The name of a derived concept rule set that will be used for deriving additional concepts based on the concepts discovered by the libraries specified.</td>
   </tr>
   <tr>
     <td>filters</td>
     <td></td>
-    <td>The name of a concept filter that is used to remove unwanted concepts. A filter can be developed using the configuration editor.</td>
+    <td>The name of a concept filter that is used to remove unwanted concepts.</td>
   </tr>
   <tr>
     <td>expanded</td>

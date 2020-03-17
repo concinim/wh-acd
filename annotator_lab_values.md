@@ -27,7 +27,7 @@ subcollection: wh-acd
 # Lab Values
 {: #lab_values}
 
-The purpose of the Lab Value annotator is to annotate the value associated with lab measurements and tests. The annotator uses lab measurements and test defined in the [Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) database. This database is a universal standard for identifying medical laboratory observations.  You can configure your own surface forms for lab measurements and tests using the  {{site.data.keyword.wh-acd_short}} Configuration Editor.  
+The purpose of the Lab Value annotator is to annotate the value associated with lab measurements and tests. The annotator uses lab measurements and test defined in the [Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) database. This database is a universal standard for identifying medical laboratory observations.  
 
 Only the value of the measurement or test is covered by the annotation's span. To determine what test or measurement is associated with the value use the **labTypeNormalizedName** and **labTypeSurfaceForm** fields in the annotation. The Lab Value annotator is written to only handle single values or fractional values composed of two single values.
 {:shortdesc}

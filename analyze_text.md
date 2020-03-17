@@ -84,7 +84,7 @@ curl -X POST -u "apikey:{apikey}" \
 An annotator flow within  {{site.data.keyword.wh-acd_short}} defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
 {:shortdesc}
 
-The  {{site.data.keyword.wh-acd_short}} Configuration Editor should be used for standard flow operations such as flow listing, creation, updating and deletion. {{site.data.keyword.wh-acd_short}} provides these predefined flows for evaluation purposes.
+{{site.data.keyword.wh-acd_short}} provides these predefined flows for evaluation purposes.
 
 <table>
 <tr>
