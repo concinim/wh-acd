@@ -48,7 +48,7 @@ The usage section of the JSON response indicates how a diagnosis applies to the 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
 <tr><td>suspectedScore</td><td>The diagnosis is probable, but not necessarily confirmed.</td></tr>
-<tr><td>symtpomScore</td><td>The diagnosis is a symptom versus a primary condition.</td></tr>
+<tr><td>symptomScore</td><td>The diagnosis is a symptom versus a primary condition.</td></tr>
 <tr><td>traumaScore</td><td>The diagnosis is a physical trauma.</td></tr>
 <tr><td>familyHistoryScore</td><td>The diagnosis applies to a family member and not the patient.</td></tr>
 </table>
