@@ -34,16 +34,21 @@ The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiat
 {: #events}
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf. -->
-Whan profiles or flows are modified, cartridges are created, or tennant data is deleted, an event is generated. The following table is a list of actions that generate events.
+An event is generated when profiles, flows, or cartridges are created, read, update or deleted. In addition, an event is also generated when all tenant data is deleted. The following table is a list of actions that generate events.
 
 | Action | Description |
 |:-----------------|:-----------------|
 | wh-acd.profile.create | Create a profile. |
+| wh-acd.profile.read   | Read   a profile. |
 | wh-acd.profile.update | Update a profile. |
 | wh-acd.profile.delete | Delete a profile. |
 | wh-acd.flow.create | Create a flow. |
+| wh-acd.flow.read   | Read   a flow. | 
 | wh-acd.flow.update | Update a flow. |
 | wh-acd.flow.delete | Delete a flow. |
+| wh-acd.cartridges.create | Create a cartridge. | 
+| wh-acd.cartridges.read   | Read   a cartridge. | 
+| wh-acd.cartridges.update | Update a cartridge. |
 | wh-acd.cartridge.deploy | Deploy a cartridge. |
 | wh-acd.alluserdata.delete | Delete a tenant's data. |
 {: caption="Table 1. Actions that generate events" caption-side="top"}
