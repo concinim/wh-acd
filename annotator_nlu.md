@@ -69,7 +69,6 @@ The NLU annotator can be directly invoked as a stand-alone annotator in the  {{s
 
 ```
 
-Similar to the other annotators, the  {{site.data.keyword.wh-acd_short}} Configuration Editor is provided as a means to select a specific configuration for the NLU annotator.
 Valid parameter for the NLU annotator is listed in the following table.
 
 <table>

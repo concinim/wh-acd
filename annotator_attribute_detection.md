@@ -27,14 +27,14 @@ subcollection: wh-acd
 # Attribute Detection
 {: #attribute_detection}
 
-The attribute detection annotator provides support for domain specific attributes and associated values to be discovered in unstructured clinical text. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations (e.g. procedures) to generate a higher-level concept in which consumers can define the name, possible values, and value ranges to suit the needs of their solution. 
+The attribute detection annotator provides support for domain specific attributes and associated values to be discovered in unstructured clinical text. Attribute values are identified by promoting relevant concept, concept values, and clinical annotations (e.g. procedures) to generate a higher-level concept in which consumers can define the name, possible values, and value ranges to suit the needs of their solution.
 {:shortdesc}
 
 Similar to the <a data-scroll="" href="wh-acd?topic=wh-acd-concept_detection#concept_detection">concept detection</a> annotator, the attribute detection annotator may attach the medical codes for applicable concepts; e.g. NCI, ICD-9, ICD-10, LOINC, MeSH, RxNorm, SNOMED CT, and CPT codes. Attribute detection can also provide two additional medical codes (CCS code and HCC Code) made available by the <a data-scroll="" href="wh-acd?topic=cancer#cancer">cancer</a> and <a data-scroll="" href="wh-acd?topic=wh-acd-symptom_disease#symptom_disease">symptom disease</a> annotators. The consumers can elect to have the set of medical codes associated with the attribute by specifying the optional configuration parameter to return the medical codes.
 
 The attribute detection annotator also supports identification of qualifiers on the discovered attribute values. A qualifier is typically an adjective that describes the attribute. For example, an attribute that identifies a medical condition may have qualifiers related to whether the condition is active or whether it is part of the patient's prior history.
 
-{{site.data.keyword.wh-acd_short}} provides several predefined attribute sets that can be used to identify general medical related attributes. The consumer may also use the {{site.data.keyword.wh-acd_short}} Configuration Editor to easily construct other attributes and qualifiers for their specific domain. Once the attribute definition process is complete in the configuration editor, the attributes and qualifiers can be <a data-scroll="" href="wh-acd?topic=wh-acd-deployed#deployed">deployed</a> to {{site.data.keyword.wh-acd_short}} and used with the attribute detection annotator.
+{{site.data.keyword.wh-acd_short}} provides several predefined attribute sets that can be used to identify general medical related attributes.
 
 #### Predefined Attribute Sets
 
@@ -74,7 +74,7 @@ The attribute detection annotator also supports identification of qualifiers on 
 </tr>
 <tr>
 <td>inference_rules</td>
-<td>The name of a derived attribute rule set that will be used for deriving additional attributes based on the attributes discovered by the **attribute_set** parameter. The derived attribute rules are developed using the configuration editor.</td>
+<td>The name of a derived attribute rule set that will be used for deriving additional attributes based on the attributes discovered by the **attribute_set** parameter.</td>
 </tr>
 <tr>
 <td>qualifier_set</td>
