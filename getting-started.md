@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2011, 2019
-lastupdated: "2019-04-10"
+  years: 2011, 2020
+lastupdated: "2020-03-31"
 
 keywords: annotator clinical data, clinical data, annotation, getting started tutorial, IBM Cloud, annotator for clinical data
 
@@ -36,50 +36,73 @@ This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with e
 - Copy the credentials to authenticate to your service instance:
     1.  On the **Manage** page, click **Show** to view your credentials.
     2.  Copy the `API Key` and `URL` values.
-- Make sure that you have the `curl` command:
-    - The examples use `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+- Make sure that you have the `curl` command.
+    - Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
 
-## Step 1. Send plain text input to be analyzed using an existing flow and receive JSON output
+        ```sh
+        curl -V
+        ```
+        {: pre}
+
+    - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command-line location.
+
+## Step 1. Analyze plain text with predefined annotator flow
 {: #getting_started_step1}
 
-The first example passes plain text data to the analyze API using a predefined flow that identifies concepts using the concept_detection annotator and clinical attributes using the attribute_detection annotator.
+Run the following command to analyze plain text with a predefined [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview) annotator flow.
+<span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
-```Curl
-  curl -X POST -u "apikey:{apikey}" \
-  --header "Content-Type: text/plain;charset=utf-8" \
-  --header "Accept: application/json" \
-  -d "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan." \
-  "{url}/v1/analyze/general_cancer_v1.0_flow?version=2017-10-13"
+```sh
+curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: text/plain" \
+--header "Accept: application/json" \
+-d "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan." \
+"{url}/v1/analyze/wh_acd.ibm_clinical_insights_v1.0_standard_flow?version=2020-03-31"
 ```
 {: pre}
 
-The service returns a JSON object that includes annotations for medical concepts found using the [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/) and clinical attributes related to general cancer.
+The next step demonstrates how to dynamically pass in an annotator flow alongside the unstructured text to be analyzed.
 
-## Step 2. Send JSON input to be analyzed using an existing flow and receive JSON output.
+## Step 2. Analyze text with dynamic annotator flow passed in on the request
 {: #getting_started_step2}
 
 The second example passes unstructured text as JSON input to the analyze API using a predefined flow that identifies concepts using the concept_detection annotator and clinical attributes using the attribute_detection annotator.
 
-```Curl
-  curl -X POST -u "apikey:{apikey}" \
-  --header "Content-Type: application/json;charset=utf-8" \
-  --header "Accept: application/json" \
-  -d "{
+```sh
+curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--header "Accept: application/json" \
+-d "{
+  \"annotatorFlows\": [
+  {
+    \"flow\": {
+      \"elements\": [
+        {
+          \"annotator\": {
+            \"name\": \"cancer\"
+          }
+        },
+        {
+          \"annotator\": {
+            \"name\": \"negation\"
+           }
+        }
+      ],
+      \"async\": false
+    }
+  }
+  ],
    \"unstructured\": [
     {
       \"text\": \"Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan.\"     
     }
    ]
   }" \
-  "{url}/v1/analyze/general_cancer_v1.0_flow?version=2019-04-02&return_analyzed_text=false"
+  "{url}/v1/analyze?version=2020-03-31"
 ```
 {: pre}
-
-The service returns a JSON object that includes annotations for medical concepts found using the [UMLS](https://www.nlm.nih.gov/research/umls/) and clinical attributes related to general medical.
-
 
 ## Next steps
 {: #getting_started_step3}
 
-* Learn more about [customizing](/docs/services/wh-acd?topic=wh-acd-customizing#customizing)  {{site.data.keyword.wh-acd_short}}
 * Learn more about the API in the [API reference](https://cloud.ibm.com/apidocs/wh-acd).
