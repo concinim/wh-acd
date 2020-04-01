@@ -7,6 +7,7 @@ Annotator for Clinical Data
     {: .navgroup id="learn"}
     getting-started.md
     index.md
+        dependencies.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
