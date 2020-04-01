@@ -68,9 +68,10 @@ The resulting concept over ulceration will contain medical codes along with cont
 
 **User Unstructured Text:** Requested analysis of unstructured text is processed in-memory. The input text is not persisted. Requests are isolated at the Kubernetes pod layer.
 
-## Customizable concept annotators
+## Available Annotators
 
-These annotators can be tailored to your needs using the configuration editor.  See the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section for more information.
+The following annotators are available for detecting and coding medical concepts within unstructured data.
+
 ### Attributes
 {: #attribues}
 
