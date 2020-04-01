@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-04-12"
+  years: 2020
+lastupdated: "2020-04-01"
 
 keywords: annotator clinical data, clinical data, annotation
 
@@ -21,8 +21,8 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# About
-{: #about}
+# Overview
+{: #overview}
 
 **Notice:** {{site.data.keyword.wh-acd_short}} is currently in Limited Availability. Please contact your IBM sales representative for details.
 
