@@ -53,7 +53,7 @@ Annotator for Clinical Data
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
     at_events.md
     information_security.md
-    dr.md
+    disaster_recovery.md
     legal.md
     {: .navgroup-end}
 
