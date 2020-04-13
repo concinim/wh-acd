@@ -68,7 +68,7 @@ Disaster recovery can be accomplished by either provisioning an instance of the 
         </ul>
       </td>
       <td>
-        </ul>
+        <ul>
           <li>
             Back up service configuration artifacts: annotator flows, profiles, cartridges
           </li>
