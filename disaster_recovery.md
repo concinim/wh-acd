@@ -10,8 +10,19 @@ subcollection: wh-acd
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
+{:preview: .preview}
 
 # High availability and disaster recovery
 
