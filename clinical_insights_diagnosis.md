@@ -40,7 +40,7 @@ The usage section of the JSON response indicates how a diagnosis applies to the 
 <tr><th>__Field__</th><th>__Description__</th></tr>
 
 <tr><td>explicitScore</td><td>The diagnosis applies to the patient.</td></tr>
-<tr><td>implicitScore</td><td>The diagnosis is reported by the patient.</td></tr>
+<tr><td>patientReportedScore</td><td>The diagnosis is reported by the patient.</td></tr>
 <tr><td>discussedScore</td><td>The diagnosis does not apply to the patient.</td></tr>
 </table>
 
@@ -66,7 +66,7 @@ The clinical insights features for hysterectomy might look as follows:
 	"diagnosis": {
 		"usage": {
 			"explicitScore": 0.912,
-			"implicitScore": 0,
+			"patientReportedScore": 0,
 			"discussedScore": 0.087
 		},
 		"suspectedScore": 0.592,

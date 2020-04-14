@@ -27,12 +27,17 @@ subcollection: wh-acd
 # Clinical Insights Cartridge
 {: #clinical_insights_cartridge}
 
-The Clinical Insights Cartridge is a default configuration set that ships with {{site.data.keyword.wh-acd_short}} that uses the low level insight model scores to promote annotations that apply to the patient to one of four known [attribute](wh-acd?topic=wh-acd-attribute_detection#attribute_detection) types.
+The Clinical Insights Cartridge is a default configuration set that ships with {{site.data.keyword.wh-acd_short}} that uses the low level insight model scores to promote annotations that apply to the patient to one of the following known [attribute](wh-acd?topic=wh-acd-attribute_detection#attribute_detection) types.
 
-1. PrescribedMedication
-2. Diagnosis
-3. TherapeuticProcedure
-4. DiagnosticProcedure
+1. Diagnosis
+2. PotentialDiagnosis
+3. PatientReportedCondition
+4. TherapeuticProcedure
+5. DiagnosticProcedure
+6. PendingTherapeuticProcedure
+7. PendingDiagnosticProcedure
+8. PrescribedMedication
+9. MedicationAdverseEvent
 
 These attributes can be thought of as the result of a distillation step where all candidate annotations are considered, but only those that apply to the patient get promoted to attributes.
 
