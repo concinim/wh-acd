@@ -45,6 +45,8 @@ Disaster recovery can be accomplished by either provisioning an instance of the 
 {{site.data.keyword.IBM_notm}} is responsible for maintaining backups and high availability of the {{site.data.keyword.wh-acd_short}} service in each supported region. User-defined configuration artifacts such as annotator flows, profiles, and cartridges are isolated by region. You can implement manual failover to another region by creating and maintaining copies of your configuration artifacts in another {{site.data.keyword.cloud_notm}} region.
 {:important}
 
+Review [Responsibilities for {{site.data.keyword.wh-acd_short}}](wh-acd?topic=wh-acd-responsibilities) for details on {{site.data.keyword.IBM_notm}} and user responsiblities regarding disaster recovery and failover.
+
 ### Detecting a location outage
 {: outage_detection}
 
