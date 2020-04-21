@@ -45,49 +45,6 @@ Disaster recovery can be accomplished by either provisioning an instance of the 
 {{site.data.keyword.IBM_notm}} is responsible for maintaining backups and high availability of the {{site.data.keyword.wh-acd_short}} service in each supported region. User-defined configuration artifacts such as annotator flows, profiles, and cartridges are isolated by region. You can implement manual failover to another region by creating and maintaining copies of your configuration artifacts in another {{site.data.keyword.cloud_notm}} region.
 {:important}
 
-<table>
-  <thead>
-    <th>Task</th>
-    <th>{{site.data.keyword.IBM_notm}} Responsibilities</th>
-    <th>Your Responsibilities</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>High availability, backup, and disaster recovery</td>
-      <td>
-        <ul>
-          <li>
-            Host service in multiple regions
-          </li>
-          <li>
-            Load-balance requests across multiple data centers per region
-          </li>
-          <li>
-            Back up user configuration data daily
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>
-            Back up service configuration artifacts: annotator flows, profiles, cartridges
-          </li>
-          <li>
-            Provision service instances in multiple regions
-          </li>
-          <li>
-            In the event one region becomes unavailable, restore configuration artifacts from backup or keep configuration artifacts in sync across regions
-          </li>
-          <li>
-            Update the service endpoint and api key in your solution to begin leveraging the service in an alternate region
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-{: caption="Table 1. Responsibilites for disaster recovery" caption-side="top"}
-
 ### Detecting a location outage
 {: outage_detection}
 
