@@ -68,6 +68,16 @@ The resulting concept over ulceration will contain medical codes along with cont
 
 **User Unstructured Text:** Requested analysis of unstructured text is processed in-memory. The input text is not persisted. Requests are isolated at the Kubernetes pod layer.
 
+## Compute Isolation
+
+### Public Multi-tenant Instances
+
+The service is accessed via public endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is shared across tenants.
+
+### Dedicated Instances
+
+The service is accessed via private endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is isolated in separate pods for each tenant.
+
 ## Available Annotators
 
 The following annotators are available for detecting and coding medical concepts within unstructured data.
