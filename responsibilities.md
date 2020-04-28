@@ -20,7 +20,9 @@ subcollection: wh-acd
 # Responsibilities for {{site.data.keyword.wh-acd_short}}
 {: #responsibilities}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.wh-acd_short}}.
+Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.wh-acd_full}}. For a high-level view of the service types in {{site.data.keyword.Bluemix}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings. {:shortdesc}
+
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.wh-acd_full_notm}}. For the overall terms of use, see {{site.data.keyword.Bluemix}} Terms and Notices.
 
 ## Disaster recovery
 {: #disaster-recovery-responsibilities}
@@ -50,7 +52,15 @@ Review the following sections for the specific responsibilities for you and for 
       <td>
         <ul>
           <li>
-            Back up service configuration artifacts: annotator flows, profiles, cartridges
+            Back up service configuration artifacts: annotator flows, profiles, cartridges.
+            <ul>
+              <li>
+                For annotator flows and profiles, use the GET /flows/{id} and GET /profiles/{id} API calls to retrieve and backup these configurations.
+              </li>
+              <li>
+                For cartridge artifacts, export the cartridge source from the {{site.data.keyword.wh-acd_short}} Configuration Editor and backup the files.
+              </li>
+            </ul>
           </li>
           <li>
             Provision service instances in multiple regions
