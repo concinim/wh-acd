@@ -87,3 +87,29 @@ Review the following sections for the specific responsibilities for you and for 
 |----------|-----------------------|--------|
 | • High availability, backup, and disaster recovery<br/>• Load-balance requests across multiple data centers per region<br/>• Back up user configuration data daily| {{site.data.keyword.IBM_notm}} responsibility description  | • Back up service configuration artifacts: annotator flows, profiles, cartridges.<br/>- For annotator flows and profiles, use the GET /flows/{id} and GET /profiles/{id} API calls to retrieve and backup these configurations.<br/>- For cartridge artifacts, export the cartridge source from the {{site.data.keyword.wh-acd_short}} Configuration Editor and backup the files.<br/>• Provision service instances in multiple regions<br/>• In the event one region becomes unavailable, restore configuration artifacts from backup or keep configuration artifacts in sync across regions<br/>• Update the service endpoint and api key in your solution to begin leveraging the service in an alternate region |
 {: caption="Table 2. Responsibilites for disaster recovery" caption-side="top"}
+
+| Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
+|----------|-----------------------|--------|
+| <ul><li>Host service in multiple regions</li><li>Load-balance requests across multiple data centers per region</li><li>Back up user configuration data daily</li></ul>  | <ul>
+  <li>
+    Back up service configuration artifacts: annotator flows, profiles, cartridges.
+    <ul>
+      <li>
+        For annotator flows and profiles, use the GET /flows/{id} and GET /profiles/{id} API calls to retrieve and backup these configurations.
+      </li>
+      <li>
+        For cartridge artifacts, export the cartridge source from the {{site.data.keyword.wh-acd_short}} Configuration Editor and backup the files.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Provision service instances in multiple regions
+  </li>
+  <li>
+    In the event one region becomes unavailable, restore configuration artifacts from backup or keep configuration artifacts in sync across regions
+  </li>
+  <li>
+    Update the service endpoint and api key in your solution to begin leveraging the service in an alternate region
+  </li>
+</ul> |
+{: caption="Table 3. Responsibilites for disaster recovery" caption-side="top"}
