@@ -16,6 +16,11 @@ subcollection: wh-acd
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
+{:preview: .preview}
 
 # Responsibilities for {{site.data.keyword.wh-acd_short}}
 {: #responsibilities}
@@ -76,5 +81,4 @@ Review the following sections for the specific responsibilities for you and for 
       </td>
     </tr>
   </tbody>
-</table>
-{: caption="Table 1. Responsibilities for disaster recovery" caption-side="top"}
+</table>{: caption="Table 1. Responsibilities for disaster recovery" caption-side="top"}
