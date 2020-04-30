@@ -103,6 +103,6 @@ curl -X POST -u "apikey:{apikey}" \
 {: pre}
 
 ## Next steps
-{: #getting_started_step3}
+{: #getting_started_next}
 
 * Learn more about the API in the [API reference](https://cloud.ibm.com/apidocs/wh-acd).
