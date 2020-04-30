@@ -6,7 +6,11 @@ Annotator for Clinical Data
 
     {: .navgroup id="learn"}
     getting-started.md
-    index.md
+
+    {: .topicgroup}
+    About
+        overview.md
+        dependencies.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -14,6 +18,7 @@ Annotator for Clinical Data
     customizing.md
     deploying_cartridges.md
     access_management.md
+    /watson/watson-public-private-endpoints
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-04-12"
+  years: 2020
+lastupdated: "2020-04-01"
 
 keywords: annotator clinical data, clinical data, annotation
 
@@ -21,8 +21,8 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# About
-{: #about}
+# Overview
+{: #overview}
 
 **Notice:** {{site.data.keyword.wh-acd_short}} is currently in Limited Availability. Please contact your IBM sales representative for details.
 
@@ -68,9 +68,20 @@ The resulting concept over ulceration will contain medical codes along with cont
 
 **User Unstructured Text:** Requested analysis of unstructured text is processed in-memory. The input text is not persisted. Requests are isolated at the Kubernetes pod layer.
 
-## Customizable concept annotators
+## Compute Isolation
 
-These annotators can be tailored to your needs using the configuration editor.  See the [Customizing](wh-acd?topic=wh-acd-customizing#customizing) section for more information.
+### Public Multi-tenant Instances
+
+The service is accessed via public endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is shared across tenants.
+
+### Dedicated Instances
+
+The service is accessed via private endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is isolated in separate pods for each tenant.
+
+## Available Annotators
+
+The following annotators are available for detecting and coding medical concepts within unstructured data.
+
 ### Attributes
 {: #attribues}
 
