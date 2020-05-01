@@ -70,13 +70,9 @@ The resulting concept over ulceration will contain medical codes along with cont
 
 ## Compute Isolation
 
-### Public Multi-tenant Instances
+**Public Multi-tenant Instances:** the service is accessed via public endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is shared across tenants.
 
-The service is accessed via public endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is shared across tenants.
-
-### Dedicated Instances
-
-The service is accessed via private endpoints. The service will access all dependencies via private endpoints. In these instances the control plane of the service is isolated in separate pods for each tenant.
+**Dedicated Instances:** the service can be accessed via public and/or private endpoints. Review [Public and private network endpoints](wh-acd?topic=watson-public-private-endpoints) for details. The service will access all dependencies via private endpoints. In these instances the control plane of the service is isolated in separate pods for each tenant.
 
 ## Available Annotators
 
