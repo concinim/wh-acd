@@ -59,6 +59,7 @@ Annotator for Clinical Data
     at_events.md
     information_security.md
     disaster_recovery.md
+    responsibilities.md
     legal.md
     {: .navgroup-end}
 
