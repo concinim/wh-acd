@@ -13,6 +13,7 @@ subcollection: wh-acd
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:caption: .caption}
 {:important: .important}
 {:note: .note}
 {:deprecated: .deprecated}
@@ -27,10 +28,20 @@ subcollection: wh-acd
 # Customizing
 {: #customizing}
 
-Using the  {{site.data.keyword.wh-acd_short}} Configuration Editor, you can customize the annotations provided by  {{site.data.keyword.wh-acd_short}}.  The configuration editor is currently not exposed externally.  If you wish to customize your {{site.data.keyword.wh-acd_short}} deployment, contact IBM services.  
+The {{site.data.keyword.wh-acd_short}} Configuration Editor supports extensive customization of the annotators as well as the ability to preview the customizations and export them in the form of a cartridge (zip file) that can be deployed directly to the service via the `/cartridges` APIs.
 
-The configuration editor allows you to create several types of configuration artifacts that can be used to customize  {{site.data.keyword.wh-acd_short}}'s output. For example, you can create a custom dictionary to add your unique terminology for detecting concepts or you can define your own domain specific clinical attributes.
+The configuration editor facilitates the following customizations:
 
-The customization artifacts are bundled into a knowledge cartridge that can be published and deployed to  {{site.data.keyword.wh-acd_short}}. The cartridge will include a profile that specifies the configurations for each annotator. The cartridge will also contain one or more flows that contain a series of annotators to invoke using the /v1/analyze/{flow_id} API.  
+| Customization | Description |
+|----|----|
+| Dictionaries | A set of terms describing a unique concept that is matched against the provided text to be analyzed. |
+| Derived Concepts | Rules for deriving concepts when one or more other concepts or tokens appears in the surrounding context. |
+| Filters | Conditional rules for omitting undesired annotations from the service response. |
+| Clinical Attributes | Configurable annotations built upon one or more other annotations. Optionally, semantically linked values in the surrounding context can be captured and associated with the attribute. |
+| Derived Clincal Attributes | Conditional logic and expressions for deriving new attributes based on values associated with other attributes. |
+| Attribute Qualifiers | Configurations for detecting qualifying terms in the immediate context of an attribute and capturing the qualifiers as a field within the output attribute annotation. |
+| Ontological Relations | Ontology configurations for extracting ontological relations between concepts cooccurring within the same sentence. |
+| CPT Code Mapping | Mapping configurations for outputting CPT codes from the concept and procedure annotators. |
+{: caption="Table 1. Customizations facilitated by the configuration editor" caption-side="top"}
 
-See the configuration editor for more information on customizing  {{site.data.keyword.wh-acd_short}} and for more information on standard profile operations such as profile listing, creation, updating and deletion.
+[Contact your IBM representative](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watsonhealthna) to learn more about leveraging the configuration editor to customize the behavior of the service.

@@ -32,9 +32,7 @@ The diagnosis model provides usage information and other features about the diag
 
 The usage section of the JSON response indicates how a diagnosis applies to the patient.
 
-***NOTE*** The features shown below are currently ***EXPERIMENTAL***.
-
-<h4>usage</h4>
+#### usage
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
@@ -44,7 +42,7 @@ The usage section of the JSON response indicates how a diagnosis applies to the 
 <tr><td>discussedScore</td><td>The diagnosis does not apply to the patient.</td></tr>
 </table>
 
-<h4>Other diagnosis features</h4>
+#### Other diagnosis features
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
 <tr><td>suspectedScore</td><td>The diagnosis is probable, but not necessarily confirmed.</td></tr>

@@ -32,9 +32,7 @@ The medication model provides information about how a medication annotation appl
 
 The usage section of the JSON response indicates how a medication applies to a patient.
 
-***NOTE*** The features shown below are currently ***EXPERIMENTAL***.
-
-<h4>usage</h4>
+#### usage
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>

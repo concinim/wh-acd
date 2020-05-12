@@ -29,9 +29,7 @@ subcollection: wh-acd
 
 The procedure model provides information about how the procedure applies to the the patient and other classification information about the procedure.
 
-***NOTE*** The features shown below are currently ***EXPERIMENTAL***.
-
-<h4>usage</h4>
+#### usage
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
@@ -41,7 +39,7 @@ The procedure model provides information about how the procedure applies to the 
 </table>
 
 
-<h4>task</h4>
+#### task
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
@@ -51,7 +49,7 @@ The procedure model provides information about how the procedure applies to the 
 <tr><td>clinicalAssessmentScore</td><td>This procedure is a physician's evaluation of a patient.</td></tr>
 </table>
 
-<h4>type</h4>
+#### type
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
