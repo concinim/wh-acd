@@ -10,37 +10,55 @@ subcollection: wh-acd
 
 ---
 
-
 {:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
-
 
 # FAQs
 {: #wh-acd-faqs}
 
-## How can I add my own terms to match for a medical concept?
-{: #faq-custom-dictionary}
-{: faq}
+## Can I process PHI _(Protected Health Information)_ data?
 
-Using the {{site.data.keyword.wh-acd_short}} Configuration Editor, you can create a custom dictionary to detect your unique medical concepts. The type of dictionary will vary based on the annotator you are using. The configuration editor also allows you to derived concepts by discovering one or more related concepts in the surrounding text.  
+The service is HIPAA enabled and capable of processing PHI data. Review [Enabling the HIPAA Supported setting](wh-acd?topic=wh-acd-information-security#hipaa) prior to processing PHI data.
 
-## How can I remove concept matches that are not useful for my application?
-{: #faq-filter}
-{: faq}
+## Can I post multiple documents for processing within a single request?
 
-Using the {{site.data.keyword.wh-acd_short}} Configuration Editor, you can create a filter to remove unwanted concepts. The type of filter will vary based on the annotator you are using.
+Yes, you can define multiple text blocks within a json request submitted to the service.
 
+*Example*
 
-## What is a cartridge?
-{: #faq-cartridge}
-{: faq}
+```javascript
+{
+  "unstructured": [
+    {
+      "text": "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan."
+    },
+    {
+      "text": "Optional additional text blocks - Patient was diagnosed with diabetes mellitus."
+    }
+  ]
+}
+```
 
-A cartridge is a collection of artifacts that provide [customizations](wh-acd?topic=wh-acd-customizing#customizing) for  {{site.data.keyword.wh-acd_short}}
- for a given solution domain. A cartridge is built using the {{site.data.keyword.wh-acd_short}} Configuration Editor and is [deployed](wh-acd?topic=wh-acd-deploy_cartridge#deploy_cartridge) to  {{site.data.keyword.wh-acd_short}}
- to be used when [analyzing text](wh-acd?topic=wh-acd-analyze_text#analyze_text).
+## How can I remove undesired mention annotation matches?
 
-## What is an attribute?
-{: #faq-attribute}
-{: faq}
+You can define filter conditions both at the annotator level and globally to omit undesired mention annotations from the service response. In the case of global filters, annotations are filtered at the end of an annotator flow, before the response is returned. In the case of annotator level filters, annotations are filtered prior to the request proceeding to the next annotator in the flow. Review [annotation filtering](wh-acd?topic=wh-acd-filtering) for more details.
 
-Clinical Attributes are a customized set of clinical findings that are pertinent to a particular disease domain or engagement that represents the user's view of the solution domain. Clinical Attributes can be linked to external classification codes such as ICD9 or CPT. A clinical attribute has a name that is unique for that domain. Attributes are defined using the {{site.data.keyword.wh-acd_short}} Configuration Editor. A clinical attribute also has an associated value. The values can be discovered from the surrounding text, enumerated during definition of the attribute, derived from other attributes, or it can merely indicate that the attribute was mentioned in the text. The definition of the attribute also includes which medical concepts should be mapped to the attribute.
+## If I pass in json instead of plain text in my request, does the json metadata count towards my 50K text limit per request?
+
+No, only the text field values are counted towards the 50K text limit per request.
+
+## How can I have my input text returned back in the response?
+
+The input text is not returned in the response by default. However, if you wish to have the input text returned back in the response, you may do so by passing in the `return_analyzed_text=true` query parameter on /analyze API calls.
+
+## Are the other annotators able to leverages corrected text from the spell checker annotator?
+
+Yes, define the following parameter to the spell checker annotator to have spelling corrections applied to the text being processed by the ACD annotators, `apply_spell_corrections=true`.
+
+## Which languages are supported for processing?
+
+At this time, the nlp annotators provided by the service support English text.
+
+## Which annotator flows are provided and maintained by the service?
+
+The [wh_acd.ibm_clinical_insights_v1.0_standard_flow](wh-acd?topic=wh-acd-analyze_text#flows) annotator flow that's part of the [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights_overview) capability is provided and maintained by the service.

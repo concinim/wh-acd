@@ -11,6 +11,7 @@ Annotator for Clinical Data
     About
         overview.md
         dependencies.md
+    [Demo](https://acd-try-it-out.mybluemix.net/)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
