@@ -17,7 +17,6 @@ Annotator for Clinical Data
     {: .navgroup id="howto"}
     analyze_text.md
     customizing.md
-    deploying_cartridges.md
     access_management.md
     /watson/watson-public-private-endpoints
     {: .navgroup-end}
