@@ -46,7 +46,7 @@ The configuration editor facilitates the following customizations:
 
 [Contact your IBM representative](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watsonhealthna) to learn more about leveraging the configuration editor to customize the behavior of the service.
 
-# Cartridge Deployment
+## Cartridge Deployment
 {: #deploy_cartridges}
 
 1. The consumer uses the {{site.data.keyword.wh-acd_short}} Configuration Editor to create a new cartridge (or modify an existing one) and customizes the contents (artifacts) of the cartridge to their domain. After that, the consumer will **Export** the cartridge in order to save a snapshot of the cartridge.
