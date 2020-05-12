@@ -47,7 +47,7 @@ Annotator for Clinical Data
 
 
     {: topicgroup}
-    Clinical Insights (Experimental)
+    Clinical Insights
         clinical_insights_overview.md
         clinical_insights_medication.md
         clinical_insights_procedure.md

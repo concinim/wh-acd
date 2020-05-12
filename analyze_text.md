@@ -13,6 +13,7 @@ subcollection: wh-acd
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:caption: .caption}
 {:important: .important}
 {:note: .note}
 {:deprecated: .deprecated}
@@ -78,38 +79,41 @@ curl -X POST -u "apikey:{apikey}" \
 }" "{url}/v1/analyze?version=2020-03-13"
 ```
 
-## Flows
+## Annotator flows
 {: #flows}
 
-An annotator flow within  {{site.data.keyword.wh-acd_short}} defines a set of one or more annotators, and optionally, includes annotator configurations and flow sequence. Annotator flows can be dynamically defined as part of a request, or predefined and persisted for a specific tenant. When persisted, a flow definition also contains a name, ID, and description of the flow, in addition to the annotators and their configurations. When a flow is specified as part of an analyze request, the sequence of annotators and any configurations defined in the flow are internally applied to the request when processing and analyzing the input text.
-{:shortdesc}
+Annotator flows define which annotators to employ on a given request and the order in which request data flows through the annotators. An annotator flow along with the unstructured data to be analyzed are the two required inputs for the service. Flows can either be defined dynamically as part of the request or persisted via the `/flows` APIs and referenced as a path parameter on an analyze request - e.g. `/analyze/{flow_id}`.
 
-{{site.data.keyword.wh-acd_short}} provides these predefined flows for evaluation purposes.
+The `/analyze/{flow_id}` API supports text/plain requests wheres the `/analyze` API where the flow is defined within the request requires you define both the flow and unstructured data to be analyzed in json format.
+{: tip}
 
-<table>
-<tr>
-<th>Annotator Flow</th><th>Description</th>
-</tr>
-<tr><td>wh_acd.ibm_clinical_insights_v1.0_standard_flow</td><td> Annotator for Clinical Data provides a ready-to-use Clinical Insights flow that extracts clinically relevant information by performing deep contextual analysis of clinical notes. The Clinical Insights flow is a default configuration provided with Annotator for Clinical Data that produces clinical attributes for Prescribed Medications, Diagnoses, Therapeutic Procedures, and Diagnostic Procedures by contextually evaluating each type of clinical information to determine that it is both relevant and pertinent to the patient. See the [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview) documentation for a detailed explanation.
-<br><br>
-As new versions of the Clinical Insights flow are released, older versions will be deprecated and eventually retired. This is known as the version lifecycle. Annotator for Clinical Data will support two versions of the Clinical Insights flows, the current latest version and the previous version. This is known as an “n-1” version support scheme. Once an older version is marked as “deprecated”, a 90 day period will begin before the deprecated version is officially “retired” and no longer functional. The deprecated version will remain operational for a 90 day period before it is considered retired. Once a version has been retired, it will no longer be available and any attempts to use a retired version will fail.</td></tr>
+The following predefined flows are provided with the service:
 
-</table>
+| Annotator Flow | Description |
+|----|----|
+|wh_acd.ibm_clinical_insights_v1.0_standard_flow | {{site.data.keyword.wh-acd_short}} provides a ready-to-use Clinical Insights flow that extracts clinically relevant information by performing deep contextual analysis of clinical notes. The Clinical Insights flow is a default configuration provided with Annotator for Clinical Data that produces clinical attributes for Prescribed Medications, Diagnoses, Therapeutic Procedures, and Diagnostic Procedures by contextually evaluating each type of clinical information to determine that it is both relevant and pertinent to the patient. See the [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview) documentation for a detailed explanation.<br/><br/>As new versions of the Clinical Insights flow are released, older versions will be deprecated and eventually retired. This is known as the version lifecycle. Annotator for Clinical Data will support two versions of the Clinical Insights flows, the current latest version and the previous version. This is known as an “n-1” version support scheme. Once an older version is marked as “deprecated”, a 90 day period will begin before the deprecated version is officially “retired” and no longer functional. The deprecated version will remain operational for a 90 day period before it is considered retired. Once a version has been retired, it will no longer be available and any attempts to use a retired version will fail.|
+{: caption="Table 1. Predefined annotator flows" caption-side="top"}
+
+### Creating flows
+
+The `/flows` APIs are used to create and manage user-defined flows. Flows define both which annotators are to be employed in analyzed unstructured data as well as the order in which request data is routed through the annotator set. Request data is routed through the designated annotators serially. Many of the annotators are designed to act upon the output of other annotators - e.g. the concept detection annotator will pull in the section name of encompassing section annotations output by the section annotator. In order to take full advantage of this type of annotator cooperation, please follow the annotator ordering guidelines defined in the table below for the applicable annotators in your flow.
+
+| Order | Annotators |
+|----|----|
+| 1 | section |
+| 2 | <ul><li>concept_detection</li><li>allergy</li><li>bathing_assistance</li><li>cancer</li><li>dressing_assistance</li><li>eating_assistance</li><li>ejection_fraction</li><li>lab_value</li><li>medication</li><li>named_entities</li><li>procedure</li><li>seeing_assistance</li><li>smoking</li><li>symptom_disease</li><li>toileting_assistance</li><li>walking_assistance</li></ul> |
+| 3 | disambiguation |
+| 4 | concept_value |
+| 5 | <ul><li>hypothetical</li><li>negation</li></ul> |
+| 6 | relation |
+| 7 | model_broker |
+| 8 | attribute_detection |
+{: caption="Table 2. Recommended annotator flow ordering" caption-side="top"}
 
 ## Unstructured Data Input
 {: #unstructured_data_input}
 
 By default, the unstructured data input sent to the service is not returned in the response and the following characters are encoded in the response to protect against cross-site scripting attacks in the event the output is rendered within a browser. If you want the unstructured data input sent back in the response and you do not want the following characters encoded, include the following query parameter on the analyze request `return_analyzed_text=true`.
-
-```bash
-# Default character encodings in response
- & --> &amp;
- < --> &lt;
- > --> &gt;
- " --> &quot;
- ' --> &#x27;     
- / --> &#x2F;  
-```
 
 ## Response
 {: #response}
