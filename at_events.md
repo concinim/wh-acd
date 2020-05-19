@@ -38,6 +38,7 @@ An event is generated when profiles, flows, or cartridges are created, read, upd
 
 | Action | Description |
 |:-----------------|:-----------------|
+| wh-acd.analyze.evaluate | Detect medical entities in unstructured text. | 
 | wh-acd.profile.create | Create a profile. |
 | wh-acd.profile.read   | Read   a profile. |
 | wh-acd.profile.update | Update a profile. |
