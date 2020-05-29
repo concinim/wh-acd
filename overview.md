@@ -144,19 +144,19 @@ For more information, see [Spell Check](wh-acd?topic=wh-acd-spell_check#spell_ch
 
  {{site.data.keyword.wh-acd_short}} provides a set of prebuilt annotators targeted at specific medical domains.
 
-* [Allergy](wh-acd?topic=wh-acd-allergies#allergies)
+* [Allergy](wh-acd?topic=wh-acd-allergies#allergies) _(experimental)_
 * [Cancer](wh-acd?topic=wh-acd-cancer#cancer)
-* [Ejection Fraction](wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction)
+* [Ejection Fraction](wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction) _(experimental)_
 * [Lab Values](wh-acd?topic=wh-acd-lab_values#lab_values)
-* [Living Assistance](wh-acd?topic=wh-acd-living_assistance#living_assistance)
+* [Living Assistance](wh-acd?topic=wh-acd-living_assistance#living_assistance) _(experimental)_
 * [Medications](wh-acd?topic=wh-acd-medications#medications)
 * [Named Entities](wh-acd?topic=wh-acd-named_entities#named_entities)
 * [Procedures](wh-acd?topic=wh-acd-procedure#procedure)
 * [Sections](wh-acd?topic=wh-acd-sections#sections)
-* [Smoking](wh-acd?topic=wh-acd-smoking#smoking)
+* [Smoking](wh-acd?topic=wh-acd-smoking#smoking) _(experimental)_
 * [Symptoms & Diseases](wh-acd?topic=wh-acd-symptom_disease#symptom_disease)
 
-### Clinical Insights (Experimental)
+### Clinical Insights
 {: #clinicalInsightsSummary}
 
 Clinical insights are a collection of models and cartridge configuration that provide contextual information about key clinical attributes (medication, diagnosis, and procedure) for patient centric clinical notes.
