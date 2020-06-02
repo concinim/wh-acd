@@ -23,7 +23,7 @@ subcollection: wh-acd
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.wh-acd_short}} service in {{site.data.keyword.Bluemix}}.
+Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.wh-acd_short}} service.
 {: shortdesc}
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.Bluemix_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](https://cloud.ibm.com/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
@@ -34,7 +34,18 @@ The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiat
 {: #events}
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf. -->
-An event is generated when profiles, flows, or cartridges are created, read, update or deleted. In addition, an event is also generated when all tenant data is deleted. The following table is a list of actions that generate events.
+The {{site.data.keyword.wh-acd_short}} detects medical entities and relationships in unstructured text. The detection event can be executed with either a pre-defined flow id or a dynamic flow without the flow id. The detection event is called **wh-acd.analyze.evaluate** in the following table. 
+
+{{site.data.keyword.IBM_notm}} is responseible for backups and high availability of the activity events for the {{site.data.keyword.wh-acd_short}} service in each supported region. The retention period for both successful or failed detection events is **two-weeks**. The consumers may open a service now ticket to retrieve additional information regarding a specific call as long as the call is made within a **two week** period. The **service now** ticket includes the request id for the dynamic flow scenario, and includes the pre-defined flow id and the request id for the pre-defined flow scenario.
+{:important}
+
+
+An management event is generated when profiles, flows, or cartridges are created, read, update or deleted. In addition, an event is also generated when all tenant data is deleted. The following table is a list of actions that generate events.
+
+
+
+
+
 
 | Action | Description |
 |:-----------------|:-----------------|
