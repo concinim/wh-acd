@@ -27,7 +27,7 @@ subcollection: wh-acd
 # Clinical Insights Overview
 {: #clinical_insights_overview}
 
-The {{site.data.keyword.wh-acd_short}} provides a ready-to-use capability to extract deep contextual information about key concept types in clinical notes about a patient.  The clinical insights function is composed of two core capabilities:
+The clinical insights feature is a ready-to-use annotation capability within {{site.data.keyword.wh-acd_short}} that provides critical contextual information for problems, procedures, and medications identified in unstructured text.
 
 1. Models that provide domain-specific context for various types of clinical information (medication, diagnosis, and procedure).
 2. Ready-to-use cartridge that answers a simple question - is the given information relevant to the patient?
