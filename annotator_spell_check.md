@@ -27,7 +27,7 @@ subcollection: wh-acd
 # Spell Check
 {: #spell_check}
 
-This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of a larger annotator flow that includes the [concept detection annotator](wh-acd?topic=wh-acd-concept_detection#concept_detection).  When the spell check annotator precedes the concept detection annotator within an annotator flow, concept detection will create concepts over any spelling corrections of sufficiently high confidence that map to a surface form in any of the concept detection libraries in your flow.
+This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of a larger annotator flow that includes the [concept detection annotator](/docs/wh-acd?topic=wh-acd-concept_detection#concept_detection).  When the spell check annotator precedes the concept detection annotator within an annotator flow, concept detection will create concepts over any spelling corrections of sufficiently high confidence that map to a surface form in any of the concept detection libraries in your flow.
 
 As of this writing, *spellingCorrections* annotations are only used by concept detection.
 
