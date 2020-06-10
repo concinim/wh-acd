@@ -111,4 +111,4 @@ Replace `{apikey}` and `{url}` with the actual API key and URL in all sample cod
   "{url}/v1/deploy?update=false&version=2018-01-17"
 ```
 
-> Some large cartridge deployments can exceed the request timeout thresholds defined in the DataPower gateways (usually after 2 mins). In that event, you may receive the following error response. See [Cartridge Deployment Timeout](wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for additional considerations during the deployment of large cartridges.
+> Some large cartridge deployments can exceed the request timeout thresholds defined in the DataPower gateways (usually after 2 mins). In that event, you may receive the following error response. See [Cartridge Deployment Timeout](/docs/wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for additional considerations during the deployment of large cartridges.

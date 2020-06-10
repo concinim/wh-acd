@@ -28,7 +28,7 @@ subcollection: wh-acd
 
 The {{site.data.keyword.wh-acd_full}} service is highly available within an {{site.data.keyword.cloud_notm}} region. Disruption in the network connectivity may happen when a cloud region is down. Recovering from potential disasters that affect an entire region requires planning and preparation. Thus, instance owners need to have recovery plans based on their use cases.
 
-The instance owner is [responsible](/docs/overview?topic=overview-shared-responsibilities) for understanding the configuration, customization, and usage of the service. See [Disaster recovery](wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for further details.
+The instance owner is [responsible](/docs/overview?topic=overview-shared-responsibilities) for understanding the configuration, customization, and usage of the service. See [Disaster recovery](/docs/wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for further details.
 
 ## High availability
 {: high availability}
@@ -45,7 +45,7 @@ Disaster recovery can be accomplished by either provisioning an instance of the 
 {{site.data.keyword.IBM_notm}} is responsible for maintaining backups and high availability of the {{site.data.keyword.wh-acd_short}} service in each supported region. User-defined configuration artifacts such as annotator flows, profiles, and cartridges are isolated by region. You can implement manual failover to another region by creating and maintaining copies of your configuration artifacts in another {{site.data.keyword.cloud_notm}} region.
 {:important}
 
-Review [Responsibilities for {{site.data.keyword.wh-acd_short}}](wh-acd?topic=wh-acd-responsibilities) for details on {{site.data.keyword.IBM_notm}} and user responsiblities regarding disaster recovery and failover.
+Review [Responsibilities for {{site.data.keyword.wh-acd_short}}](/docs/wh-acd?topic=wh-acd-responsibilities) for details on {{site.data.keyword.IBM_notm}} and user responsiblities regarding disaster recovery and failover.
 
 ### Detecting a location outage
 {: outage_detection}

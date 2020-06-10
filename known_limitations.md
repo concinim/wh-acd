@@ -33,7 +33,7 @@ subcollection: wh-acd
 
 ## Cartridge Deployment Timeouts
 
-Cartridge deployments via the /deploy API can sometimes exceed the one minute timeout threshold for services to provide a response. When the timeout is exceeded, a 504 response is returned in html format. Despite the 504 response, the deploy operation will continue to completion. In the event of a deployment timeout, you can verify successful deployment of the cartridge through the deploy [Activity Tracker](wh-acd?topic=wh-acd-at_events) event.
+Cartridge deployments via the /deploy API can sometimes exceed the one minute timeout threshold for services to provide a response. When the timeout is exceeded, a 504 response is returned in html format. Despite the 504 response, the deploy operation will continue to completion. In the event of a deployment timeout, you can verify successful deployment of the cartridge through the deploy [Activity Tracker](/docs/wh-acd?topic=wh-acd-at_events) event.
 
 ## Multiple Unstructured Array Elements
 
