@@ -49,7 +49,7 @@ This short tutorial introduces the {{site.data.keyword.wh-acd_full_notm}} with e
 ## Step 1. Analyze plain text with predefined annotator flow
 {: #getting_started_step1}
 
-Run the following command to analyze plain text with a predefined [Clinical Insights](wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview) annotator flow.
+Run the following command to analyze plain text with a predefined [Clinical Insights](/docs/wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview) annotator flow.
 <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```sh

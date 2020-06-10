@@ -36,6 +36,6 @@ The clinical insights feature is a ready-to-use annotation capability within {{s
 
 Each model contributes contextual features to annotations that are either produced by standard {{site.data.keyword.wh-acd_short}} annotators or from custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  The Clinical Insights Models include:
 
-1. [Medication](wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
-2. [Diagnosis](wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
-3. [Procedure](wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
+1. [Medication](/docs/wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
+2. [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
+3. [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
