@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="wh-acd" audience="service" href="/docs/services/wh-acd/getting-started.html" path="services/wh-acd"}
+{: .toc subcollection="wh-acd" category="ai" audience="service" href="/docs/wh-acd?topic=wh-acd-getting-started" path="wh-acd"}
 Annotator for Clinical Data
 
     {: .navgroup id="learn"}
