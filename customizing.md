@@ -80,7 +80,7 @@ curl -X GET -u "apikey":"{apikey}" \
 "{url}/v1/cartridges?version=2019-09-01"
     ```
 
-5.  The consumer can view the status of a specific cartridge deployment by invoking the _GET /v1/cartridges/{id}_ API with the cartridge ID supplied as a path parameter . If the supplied ID does not exists, then a HTTP  <q> 404 Not Found </q> response code is returned. The following curl command returns the deployment status of the <q>cartridge_id</qt>.
+5.  The consumer can view the status of a specific cartridge deployment by invoking the _GET /v1/cartridges/{id}_ API with the cartridge ID supplied as a path parameter . If the supplied ID does not exists, then a HTTP  <q> 404 Not Found </q> response code is returned. The following curl command returns the deployment status of the <q>cartridge_id</q>.
 
     ```Curl
 curl -X GET -u "apikey":"{apikey}" \
