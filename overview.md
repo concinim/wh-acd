@@ -30,7 +30,9 @@ The {{site.data.keyword.wh-acd_short}} is designed to find medical concepts, [me
 
 To illustrate the basic function of  {{site.data.keyword.wh-acd_short}}, let's look at a simple example.  Imagine that we have the following small snippet of text:
 
-```There were no signs of ulceration```
+```
+There were no signs of ulceration
+```
 
 The resulting concept over ulceration will contain medical codes along with contextual information about the concept - in this example, the concept is negated.
 
@@ -83,7 +85,9 @@ The following annotators are available for detecting and coding medical concepts
 
 Attributes are higher order concepts composed of multiple pieces of information found in a document.  An example of this might be understanding if a patient is overweight or not.  Given some example text, we would like to know if the patient is overweight or not.
 
-```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
+```
+The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.
+```
 
 You can create custom [concept values](/docs/wh-acd?topic=wh-acd-concept_value#concept_value) to extract and normalize the patient's height and weight.  With that information, you can create inference rules in {{site.data.keyword.wh-acd_short}} to combine that information into a single attribute that we'll call `NORMAL_WEIGHT`.  Custom attributes like this are a powerful way to distill unstructured text into actionable insights.
 
@@ -101,7 +105,9 @@ For more information, see [Concepts](/docs/wh-acd?topic=wh-acd-concept_detection
 
 The concept value annotator creates composite attributes resulting from a medical concept and an associated value.  It supports scalar values as well as value ranges.  
 
-```The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.```
+```
+The patient is a 37 year old male who is 6 feet tall and weighs 170 lbs.
+```
 
 In this example, the combination of `height` with `6 feet` is an example of how concept values work.
 

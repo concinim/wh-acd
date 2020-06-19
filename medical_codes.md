@@ -47,23 +47,23 @@ subcollection: wh-acd
   <tr>
     <th scope="row" colspan="11" width="1%"><b>Turn Key Annotators</b></th>
   </tr>
-  <tr><td scope="row" >Allergy</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td scope="row" >Cancer</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
+  <tr><td scope="row" >Allergy</td> <td></td> <td></td> <td></td> <td></td> <td>✔</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td scope="row" >Cancer</td> <td></td> <td>✔</td> <td></td> <td></td> <td></td> <td>✔</td> <td></td> <td>✔</td> <td>✔</td> <td>✔</td>   </tr>
   <tr><td scope="row" >Ejection Fraction</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td scope="row" >Lab Value</td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td scope="row" >Lab Value</td> <td></td> <td></td> <td>✔</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td scope="row" >Living Assistance</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td scope="row" >Medication</td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
+  <tr><td scope="row" >Medication</td> <td></td> <td></td> <td></td> <td></td> <td>✔</td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
   <tr><td scope="row" >Named Entities</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>   </tr>
-  <tr><td scope="row" >Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
-  <tr><td scope="row" >Symptom Disease</td> <td></td> <td>&#10004;</td> <td></td> <td></td> <td></td> <td>&#10004;</td> <td></td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
+  <tr><td scope="row" >Procedure</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>✔</td> <td></td> <td></td> <td>✔</td>   </tr>
+  <tr><td scope="row" >Symptom Disease</td> <td></td> <td>✔</td> <td></td> <td></td> <td></td> <td>✔</td> <td></td> <td>✔</td> <td>✔</td> <td>✔</td>   </tr>
 
   <tr><th scope="row" ></th></tr>
   <tr>
     <th scope="row" colspan="11"><b>Configurable Concept Annotators</b></th>
   </tr>
-  <tr><td scope="row" >Attribute</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td>   </tr>
-  <tr><td scope="row" >Concept (UMLS 2018AA+)</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td>&#10004;</td> <td></td> <td></td> <td>&#10004;</td>   </tr>
-  <tr><td scope="row" >Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>&#10004;</td></tr>
+  <tr><td scope="row" >Attribute</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td>   </tr>
+  <tr><td scope="row" >Concept (UMLS 2018AA+)</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td>✔</td> <td></td> <td></td> <td>✔</td>   </tr>
+  <tr><td scope="row" >Concept Value</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td>✔</td></tr>
   <tr><td scope="row" >Relation</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td></td></tr>
 
   <tr><th scope="row" ></th></tr>

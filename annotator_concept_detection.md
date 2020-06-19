@@ -72,7 +72,8 @@ There are two different injuries expressed in this text that we want to capture 
     "snomedConceptId": "5913000,263225007",
     "meshId": "M0010366",
     "vocabs": "MTH,CHV,LNC,CSP,MSH,NCI,AOD,NCI_CTCAE,NDFRT,COSTAR,SNOMEDCT_US,DXP"
-}```
+}
+```
 
 Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with {{site.data.keyword.wh-acd_short}}.  It does not work with custom dictionaries.
 
