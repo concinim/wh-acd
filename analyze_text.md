@@ -58,12 +58,12 @@ curl -X POST -u "apikey:{apikey}" \
         \"elements\": [
           {
             \"annotator\": {
-              \"name\": \"cancer\"
+              \"name\": \"concept_detection\"
             }
           },
           {
             \"annotator\": {
-              \"name\": \"medication\"
+              \"name\": \"negation\"
              }
           }
         ],
