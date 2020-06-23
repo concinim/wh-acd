@@ -24,7 +24,7 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Smoking
+# Smoking (experimental)
 {: #smoking}
 
 The smoking annotator identifies whether the patient is a current or former smoker. Furthermore, it identifies the amount and substance(s) being smoked as well as the rate and duration of the smoking habit.

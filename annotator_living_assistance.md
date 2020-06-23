@@ -24,7 +24,7 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Living Assistance
+# Living Assistance (experimental)
 {: #living_assistance}
 
 The living assistance annotators identifies text that indicates if a patient needs assistance with daily activities.  There are six living assistance annotators that cover different types of assistance needs:  Bathing, dressing, eating, seeing, toileting, and walking.
