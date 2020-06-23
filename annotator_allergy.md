@@ -24,7 +24,7 @@ subcollection: wh-acd
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Allergies
+# Allergies (experimental)
 {: #allergies}
 
 Detects text that follows allergy keywords such as `allergies:` and `allergic to:``. Items following the keywords are annotated with the AllergyInd type. The annotation includes all types of allergies such as environmental, animal, medication, food, etc. If annotation includes a medication then information related to the medication is also returned.
