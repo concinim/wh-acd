@@ -151,7 +151,7 @@ For more information, see [Spell Check](/docs/wh-acd?topic=wh-acd-spell_check#sp
  {{site.data.keyword.wh-acd_short}} provides a set of prebuilt annotators targeted at specific medical domains.
 
 * [Allergy](/docs/wh-acd?topic=wh-acd-allergies#allergies) _(experimental)_
-* [Cancer](/docs/wh-acd?topic=wh-acd-cancer#cancer)
+* [Cancer](/docs/wh-acd?topic=wh-acd-cancer#cancer) _(experimental)_
 * [Ejection Fraction](/docs/wh-acd?topic=wh-acd-ejection_fraction#ejection_fraction) _(experimental)_
 * [Lab Values](/docs/wh-acd?topic=wh-acd-lab_values#lab_values)
 * [Living Assistance](/docs/wh-acd?topic=wh-acd-living_assistance#living_assistance) _(experimental)_
