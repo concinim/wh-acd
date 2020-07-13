@@ -43,9 +43,9 @@ The smoking annotator identifies whether the patient is a current or former smok
 <td>
 <ul>
   <li>umls.latest</li>
+  <li>umls.2020AA</li>
   <li>umls.2019AA</li>
-  <li>umls.2018AA</li>
-  <li>umls.2017AA <i>(deprecated - will be removed in 2020)</i></li>
+  <li>umls.2018AA <i>(deprecated - will be removed in 2021)</i></li>
 </ul>
 </td>
 <td>
