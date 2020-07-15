@@ -35,7 +35,7 @@ The normality model looks for language around certain target words (body parts, 
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>normalScore</td><td>The language around a target indicates there are no problems.</td></tr>
 <tr><td>abnormalScore</td><td>The language around a target indicates that there may be a problem.</td></tr>
-<tr><td>unknownScore</td><td>There is a judgement or measurement associated with a target, but there is no language that allows the model to make a value judgement.  The most common type of unknowns are quantitative unknowns where a numeric value is associated with a measurement.  Lab values are a typical example of quantitative unknowns.  If you want to use lab values as part of your application, you can use LabValue attribute that is part of the clinical insights cartridge.</td></tr>
+<tr><td>unknownScore</td><td>There is a judgement or measurement associated with a target, but there is no language that allows the model to make a value judgement.  The most common type of unknowns are quantitative unknowns where a numeric value is associated with a measurement.  Lab values are a typical example of quantitative unknowns.  If you want to use lab values as part of your application, you can use the LabValue attribute that is part of the clinical insights cartridge.</td></tr>
 </tr><td>nonFindingScore</td><td>The language around a target does not indicate a finding of any sort.  For example, if a clinic note says "We will schedule a CT scan for next week", there's no obvious finding that is associated with that instance of CT scan.</td></tr>
 </table>
 
@@ -51,12 +51,11 @@ The normality model looks for language around certain target words (body parts, 
 
 #### modifiers
 
-When the normality model runs, its evidence spans will be used to create linkages between procedures, diagnosis, and sites.  Those linkages are added to the relevant [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure) or [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis) as _modifiers_.  Those links are created as _associatedProcedures_ or _associatedDiagnosis_ as appropriate.  An example is shown below.
+When the normality model runs, its evidence spans will be used to create linkages between procedures, diagnosis, and sites.  Those linkages are added to the relevant [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure) or [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis) as _modifiers_.  Those links are created as _associatedProcedures_ or _associatedDiagnosis_.  An example is shown below.
 
 
 ### Sample Response
-
-Consider the following sample text.  This example demonstrates both an abnormal and normal finding.
+This example demonstrates both an abnormal and normal finding.  Consider the following sample text:
 
 _CT scan showed an area of increased contrast in the left lung.  A followup biopsy did not reveal any signs of metastases._
 
