@@ -29,8 +29,10 @@ subcollection: wh-acd
 
 The clinical insights feature is a ready-to-use annotation capability within {{site.data.keyword.wh-acd_short}} that provides critical contextual information for problems, procedures, and medications identified in unstructured text.
 
-1. Models that provide domain-specific context for various types of clinical information (medication, diagnosis, and procedure).
+1. Models that provide domain-specific context for various types of clinical information (medication, diagnosis, procedure, and normality).
 2. Ready-to-use cartridge that answers a simple question - is the given information relevant to the patient?
+
+There is an online [demo application](https://acd-try-it-out.mybluemix.net/preview) for the clinical insights cartridge.
 
 <h4>Models</h4>
 
@@ -39,3 +41,4 @@ Each model contributes contextual features to annotations that are either produc
 1. [Medication](/docs/wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
 2. [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
 3. [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
+4. [Normality - Experimental](/docs/wh-acd?topic=wh-acd-clinical_insights_normality#clinical_insights_normality)

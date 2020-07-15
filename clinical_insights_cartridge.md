@@ -38,6 +38,10 @@ The Clinical Insights Cartridge is a default configuration set that ships with {
 7. PendingDiagnosticProcedure
 8. PrescribedMedication
 9. MedicationAdverseEvent
+10. MedicationAllergy
+11. AbnormalFinding
+12. AbnormalFinding
+13. LabValue
 
 These attributes can be thought of as the result of a distillation step where all candidate annotations are considered, but only those that apply to the patient get promoted to attributes.
 

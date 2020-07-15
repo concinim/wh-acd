@@ -51,6 +51,7 @@ Annotator for Clinical Data
         clinical_insights_medication.md
         clinical_insights_procedure.md
         clinical_insights_diagnosis.md
+        clinical_insights_normality.md
         clinical_insights_cartridge.md
 
     medical_codes.md
