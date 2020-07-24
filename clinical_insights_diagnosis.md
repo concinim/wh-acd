@@ -30,6 +30,10 @@ subcollection: wh-acd
 
 The diagnosis model provides usage information and other features about the diagnosis.
 
+![](images/diagnosis.png)
+
+The demo application above shows an example of how to use the scores from the diagnosis model to create attributes.  In this example, stage II breast cancer has a high _explicit_ score and is promoted to an attribute.
+
 The usage section of the JSON response indicates how a diagnosis applies to the patient.
 
 #### usage
@@ -57,20 +61,20 @@ Consider the following sample text.
 
 _Pathologic evidence suggests that the patient has stage II breast cancer_
 
-The clinical insights features for hysterectomy might look as follows:
+The clinical insights features for stage II breast cancer might look as follows:
 
 ```
 "insightModelData": {
 	"diagnosis": {
 		"usage": {
-			"explicitScore": 0.912,
+			"explicitScore": 1,
 			"patientReportedScore": 0,
-			"discussedScore": 0.087
+			"discussedScore": 0
 		},
-		"suspectedScore": 0.592,
+		"suspectedScore": 0.517,
 		"symptomScore": 0,
 		"traumaScore": 0,
-		"familyHistoryScore": 0.003
+		"familyHistoryScore": 0
 	}
 }
 ```

@@ -30,8 +30,12 @@ subcollection: wh-acd
 
 The medication model provides information about how a medication annotation applies to the patient and about lifecycle events related to that medication.
 
-The usage section of the JSON response indicates how a medication applies to a patient.
+![](images/medications.png)
 
+The demo application above shows an example of how to use the scores from the medication model to create attributes.  In this example, Metformin has a high _taken_ score and is promoted to a PrescribedMedication attribute by the cartridge scoring rules. 
+
+
+The usage section of the JSON response indicates how a medication applies to a patient.  
 #### usage
 
 <table>
@@ -70,7 +74,7 @@ You can use the usage scores to carve very specific boundaries around the kinds 
 
 Consider the following sample text.
 
-_We will think about putting her on Metformin if her A1C remains high._
+_If she is able to get her fasting blood glucose down, we may be able to take her off of Metformin._
 
 The clinical insight features for Metformin might look as follows:
 
@@ -78,24 +82,24 @@ The clinical insight features for Metformin might look as follows:
 "insightModelData": {
 	"medication": {
 		"usage": {
-			"takenScore": 0.005,
-			"consideringScore": 0.994,
+			"takenScore": 1,
+			"consideringScore": 0,
 			"discussedScore": 0,
 			"labMeasurementScore": 0
 		},
 		"startedEvent": {
-			"score": 0.998,
-			"usage": {
-				"explicitScore": 0.002,
-				"consideringScore": 0.997,
-				"discussedScore": 0
-			}
-		},
-		"stoppedEvent": {
 			"score": 0,
 			"usage": {
 				"explicitScore": 0,
 				"consideringScore": 0,
+				"discussedScore": 0
+			}
+		},
+		"stoppedEvent": {
+			"score": 1,
+			"usage": {
+				"explicitScore": 0.126,
+				"consideringScore": 0.874,
 				"discussedScore": 0
 			}
 		},
