@@ -53,6 +53,7 @@ The usage section of the JSON response indicates how a procedure applies to a pa
 <tr><td>diagnosticScore</td><td>This procedure is meant to diagnose a condition.</td></tr>
 <tr><td>surgicalTaskScore</td><td>This procedure is a subtask of a larger surgical process.</td></tr>
 <tr><td>clinicalAssessmentScore</td><td>This procedure is a physician's evaluation of a patient.</td></tr>
+<tr><td>labTestScore</td><td>This procedure is a lab test.</td></tr>
 </table>
 
 #### type

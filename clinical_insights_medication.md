@@ -32,7 +32,7 @@ The medication model provides information about how a medication annotation appl
 
 ![](images/medications.png)
 
-The demo application above shows an example of how to use the scores from the medication model to create attributes.  In this example, Metformin has a high _taken_ score and is promoted to a PrescribedMedication attribute by the cartridge scoring rules. 
+The demo application above shows an example of how to use the scores from the medication model to create attributes.  In this example, Metformin has a high _taken_ score and is promoted to a PrescribedMedication attribute by the cartridge scoring rules.
 
 
 The usage section of the JSON response indicates how a medication applies to a patient.  
@@ -53,7 +53,7 @@ Each event has the following scores:
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>score</td><td>How strongly does the language around the candidate annotation look like it indicates the given lifecycle event.</td></tr>
-<tr><td>usage</td><td>The text that triggered the negation. For example, in the text <q>She denies pain</q>, the trigger is <q>denies</q>.
+<tr><td>usage</td><td>Describes the sense of the medication event.</td></tr>
 <table role="presentation"><tbody>
   <tr><td>explicitScore</td><td>The event directly applies to the patient.</td></tr>
   <tr><td>consideringScore</td><td>The event is something that may apply to the patient.</td></tr>
