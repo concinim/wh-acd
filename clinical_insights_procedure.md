@@ -29,6 +29,12 @@ subcollection: wh-acd
 
 The procedure model provides information about how the procedure applies to the the patient and other classification information about the procedure.
 
+![](images/procedure.png)
+
+The demo application above shows an example of how to use the scores from the procedure model to create attributes.  In this example, Chemotherapy has a high _discussed_ score and is not promoted to an attribute.  Radiotherapy does apply to the patient in this example and is promoted to an attribute.
+
+The usage section of the JSON response indicates how a procedure applies to a patient.
+
 #### usage
 
 <table>
@@ -66,13 +72,15 @@ Consider the following sample text.
 
 _Chemotherapy with Cisplatin was not an option for his type of cancer._
 
+The clinical insight features for Chemotherapy might look as follows:
+
 ```
 "insightModelData": {
 	"procedure": {
 		"usage": {
-			"explicitScore": 0.097,
-			"pendingScore": 0.043,
-			"discussedScore": 0.859
+			"explicitScore": 0.035,
+			"pendingScore": 0.002,
+			"discussedScore": 0.963
 		},
 		"task": {
 			"therapeuticScore": 0.999,
