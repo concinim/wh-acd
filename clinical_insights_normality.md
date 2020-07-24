@@ -27,7 +27,7 @@ subcollection: wh-acd
 # Clinical Insights Normality Model (Experimental)
 {: #clinical_insights_normality}
 
-The normality model looks for language around certain target words (body parts, body substances, diagnostic tests, and organism functions) that indicate a normal or abnormal finding about a patient.  
+The normality model looks for language around certain target concepts (body parts, body substances, diagnostic tests, and organism functions) that indicate a normal or abnormal finding about a patient.  
 
 ![](images/normality.png)
 

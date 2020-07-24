@@ -36,7 +36,7 @@ There is an online [demo application](https://acd-try-it-out.mybluemix.net/previ
 
 ![](images/demoApp.png)
 
-The default attributes that are defined in the clinical insights cartridge can be customized
+The default attributes that are defined in the clinical insights cartridge can be customized.
 
 You can use the {{site.data.keyword.wh-acd_short}} Configuration Editor to [customize attributes](/docs/wh-acd?topic=wh-acd-customizing#customizing) using the clinical insight model scores and other contextual information provided by {{site.data.keyword.wh-acd_short}}.
 
@@ -45,6 +45,6 @@ You can use the {{site.data.keyword.wh-acd_short}} Configuration Editor to [cust
 Each model contributes contextual features to annotations that are either produced by standard {{site.data.keyword.wh-acd_short}} annotators or from custom annotations you create using the {{site.data.keyword.wh-acd_short}} Configuration Editor.  The Clinical Insights Models include:
 
 1. [Medication](/docs/wh-acd?topic=wh-acd-clinical_insights_medication#clinical_insights_medication)
-2. [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
-3. [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
+2. [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
+3. [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
 4. [Normality - Experimental](/docs/wh-acd?topic=wh-acd-clinical_insights_normality#clinical_insights_normality)
