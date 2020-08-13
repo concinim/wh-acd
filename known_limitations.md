@@ -35,6 +35,8 @@ subcollection: wh-acd
 
 Cartridge deployments via the /deploy API can sometimes exceed the one minute timeout threshold for services to provide a response. When the timeout is exceeded, a 504 response is returned in html format. Despite the 504 response, the deploy operation will continue to completion. In the event of a deployment timeout, you can verify successful deployment of the cartridge through the deploy [Activity Tracker](/docs/wh-acd?topic=wh-acd-at_events) event.
 
+Use of the asynchronous /cartridges APIs is recommended to avoid cartridge deployment timeouts. See [Cartridge Deployment](/docs/wh-acd?topic=wh-acd-customizing#deploy_cartridges) for details.
+
 ## Multiple Unstructured Array Elements
 
 While multiple unstructured array elements with text values may be submitted in a single request, 40 unstructured array elements is the recommended limit to avoid performance degradation due to processing overhead.
