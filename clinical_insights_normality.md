@@ -45,6 +45,13 @@ The usage section of the JSON response indicates how a nature of the normality j
 </tr><td>nonFindingScore</td><td>The language around a target does not indicate a finding of any sort.  For example, if a clinic note says "We will schedule a CT scan for next week", there's no obvious finding that is associated with that instance of CT scan.</td></tr>
 </table>
 
+#### directlyAffectedScore
+This score indicates if the normality target (the object being judged by the model) is the direct target of the normality judgement or something that is mentioned indirectly in context.  For example, consider the following two examples:
+
+_There was a lesion located on the left lung._ - This example would have a high _directlyAffectedScore_ because the lesion is located on the body part in question.
+
+_There was a lesion located 5 cm below the left lung._ - In this example, the lung is being used as a relative landmark.  This instance of _left lung_ would have a low _directlyAffectedScore_.
+
 
 #### evidence
 
@@ -97,6 +104,7 @@ Context scores for _CT scan_ in the first example:
       "unknownScore": 0,
       "nonFindingScore": 0
     },
+    "directlyAffectedScore": 1,
     "evidence": [
       {
         "begin": 8,
@@ -124,6 +132,7 @@ Context scores for _biopsy_ in the first example:
       "unknownScore": 0,
       "nonFindingScore": 0
     },
+    "directlyAffectedScore": 1,
     "evidence": [
       {
         "begin": 82,
@@ -146,6 +155,7 @@ Body sites will also receive normality judgements.  Here is the context informat
       "unknownScore": 0,
       "nonFindingScore": 0
     },
+    "directlyAffectedScore": 1,
     "evidence": [
       {
         "begin": 0,
@@ -155,4 +165,42 @@ Body sites will also receive normality judgements.  Here is the context informat
     ]
   }
 }
+```
+
+Examples of _associatedDiagnosis_ and _associatedProcedures_: if normality is enabled, it will create linkages between diagnosis and procedures as appropriate.  An example JSON response is shown below for the following text:  _CT scan appeared to indicate the presence of a tumor in the left lung._
+
+
+```     
+"coveredText": "CT scan",
+"negated": false,
+"insightModelData": {
+	"procedure": {
+		"usage": {
+			"explicitScore": 0.999,
+			...
+		"modifiers": {
+			"associatedDiagnoses": [{
+				"begin": 47,
+				"end": 69,
+				"coveredText": "tumor in the left lung"
+			}]
+		}
+```
+
+```
+"coveredText": "tumor in the left lung",
+"negated": false,
+"insightModelData": {
+ "diagnosis": {
+   "usage": {
+     "explicitScore": 0.991,
+     ...
+   "modifiers": {
+     "associatedProcedures": [{
+       "begin": 0,
+       "end": 7,
+       "coveredText": "CT scan"
+     }]
+   }
+ }
 ```

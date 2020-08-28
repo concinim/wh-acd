@@ -37,10 +37,18 @@ API requests require a version parameter that takes the date in the format versi
 
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
-### July 2020AA
+### August 2020
+{: #august-2020}
+- Initial release of normality models for clinical insights.
+
+### July 2020
 {: #july-2020}
 
 - Added support for UMLS 2020AA. UMLS 2017AA has been removed and 2018AA is now deprecated _(will be removed in 2021 when we add support for UMLS 2021AA)._
+
+### April 2020
+{: #april-2020}
+- Initial release of clinical insight models for Diagnosis, Medication, and Procedure
 
 ### October 2019
 {: #october-2019}
