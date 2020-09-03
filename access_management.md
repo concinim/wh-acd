@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-18"
+lastupdated: "2020-0903"
 
 keywords: annotator clinical data, clinical data, annotation, certificates, SSL
 
@@ -69,15 +69,19 @@ You can use service access roles to enable users to perform service actions in t
     <td> Manager, Writer, Reader </td>
   </tr>
   <tr>
-    <td> PUT /wh-acd </td>
+    <td> POST /analyze </td>
+    <td> Manager, Writer, Reader </td>
+  </tr>
+  <tr>
+    <td> Post/PUT/Delete /flow and /profiles</td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
-    <td> POST /wh-acd </td>
+    <td> POST/PUT /deploy and /cartridges </td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
-     <td> DELETE /wh-acd </td>
+     <td> DELETE /user_data </td>
      <td> Manager</td>
   </tr>       
 </table>
