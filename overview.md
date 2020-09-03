@@ -168,10 +168,3 @@ For more information, see [Spell Check](/docs/wh-acd?topic=wh-acd-spell_check#sp
 Clinical insights are a collection of models and cartridge configuration that provide contextual information about key clinical attributes (medication, diagnosis, and procedure) for patient centric clinical notes.
 
 For more information, see [Clinical Insights](/docs/wh-acd?topic=wh-acd-clinical_insights#clinical_insights_overview).
-
-### Integration with Natural Language Understanding (Experimental)
-{: #nlu}
-
-{{site.data.keyword.wh-acd_short}} provides integration with the IBM Watson Natural Language Understanding (NLU) service.  You can use the out of the box models provided by NLU or you can call a custom NLU model and integrate it into your API call.
-
-For more information, see [NLU](/docs/wh-acd?topic=wh-acd-nlu_annotator#nlu_annotator).
