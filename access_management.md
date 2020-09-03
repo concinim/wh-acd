@@ -73,7 +73,7 @@ You can use service access roles to enable users to perform service actions in t
     <td> Manager, Writer, Reader </td>
   </tr>
   <tr>
-    <td> Post/PUT/Delete /flow and /profiles</td>
+    <td> Post/PUT/DELETE /flow and /profiles</td>
     <td> Manager, Writer </td>
   </tr>
   <tr>
