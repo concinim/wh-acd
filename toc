@@ -55,7 +55,7 @@ Annotator for Clinical Data
         clinical_insights_cartridge.md
 
     {: topicgroup}
-    Temporal
+    Temporal (Experimental)
         temporal_overview.md
 
     medical_codes.md

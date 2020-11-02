@@ -39,7 +39,7 @@ When we change the API in a backwards-incompatible way, we release a new minor v
 
 ### November 2020
 {: #november-2020}
-- Initial release of temporal models for clinical insights.
+- Initial release of temporal models.
 
 
 ### August 2020

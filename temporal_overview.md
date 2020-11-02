@@ -33,7 +33,7 @@ The {{site.data.keyword.wh-acd_short}} [demo application](https://acd-try-it-out
 
 ![](images/demoAppTemporal.png)
 
-At present, dates are linked to concepts surfaced by clinical insights by adding contextual features to the JSON for each linked concept.  Support for non-date temporal entities like durations and relative dates will be added later.
+Dates are linked to concepts through contextual features added to the JSON for each linked concept.  Support for non-date temporal entities like durations and relative dates will be added later.
 
 
 #### temporal
@@ -90,7 +90,7 @@ At present, dates are linked to concepts surfaced by clinical insights by adding
  ]
 ```
 
-Note that multiple temporal links can be created for a concept.  For example, given the following text:
+It is possible for multiple temporal links to be added to a concept.  For example, given the following text:
 
 _PMH: Patient had bariatric revision surgery in April 1999 and again in July 2003, knee replacement in 2011, and underwent arthroscopic surgery on her shoulder in 2016._
 
