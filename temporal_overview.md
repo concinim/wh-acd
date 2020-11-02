@@ -42,7 +42,7 @@ Dates are linked to concepts through contextual features added to the JSON for e
 <tr><th>__Field__</th><th>__Description__</th></tr>
 </tr><td>begin</td><td>The begin offset of the temporal trigger.</td></tr>
 <tr><td>end</td><td>The end offset of the temporal trigger.</td></tr>
-<tr><td>temporalType</td><td>Provides information about how temporal type the model things the temporal mention is.  Currently, _dateScore_ is the only score provided in this section.  Anything that scores sufficiently low as a date will not be surfaced.  For example, in the image above _2/10_ in the context of the patient's current pain level scores low as a date and is not surfaced. </td></tr>
+<tr><td>temporalType</td><td>Provides information about the type of a temporal mention.  Currently, _dateScore_ is the only score provided in this section.  Anything that scores sufficiently low as a date will not be surfaced.  For example, in the image above _2/10_ in the context of the patient's current pain level scores low as a date and is not surfaced. </td></tr>
 </tr><td>relationType</td><td>Provides information about how the temporal mention relates to an entity.  Currently, _overlapsScore_ is the only relation type defined and it indicates how strongly the temporal mention is linked to the concept.</td></tr>
 </table>
 
