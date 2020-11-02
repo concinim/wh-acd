@@ -54,6 +54,10 @@ Annotator for Clinical Data
         clinical_insights_normality.md
         clinical_insights_cartridge.md
 
+    {: topicgroup}
+    Temporal
+        temporal_overview.md
+
     medical_codes.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
