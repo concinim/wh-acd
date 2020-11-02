@@ -27,23 +27,23 @@ subcollection: wh-acd
 # Temporal Overview (Experimental)
 {: #temporal_overview}
 
-{{site.data.keyword.wh-acd_short}} ships with an out-of-the-box capability for linking temporal mentions to concepts.  The temporal function is currently only exposed through [Clinical Insights](/docs/wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview).  It will be made generally available for custom cartridges at a future date.
+{{site.data.keyword.wh-acd_short}} ships with an out-of-the-box capability for linking temporal entities to concepts.  The temporal function is currently only exposed through [Clinical Insights](/docs/wh-acd?topic=wh-acd-clinical_insights_overview#clinical_insights_overview).  It will be made generally available for custom cartridges at a future date.
 
-The {{site.data.keyword.wh-acd_short}} [demo application](https://acd-try-it-out.mybluemix.net/preview) allows you to see how temporal linking works.
+The {{site.data.keyword.wh-acd_short}} [demo application](https://acd-try-it-out.mybluemix.net/preview) allows you to see how temporal linking works.  In the screenshot below, hovering over _hip surgery_ shows that is linked to the date _5/17_.
 
 ![](images/demoAppTemporal.png)
 
-Dates are linked to concepts through contextual features added to the JSON for each linked concept.  Support for non-date temporal entities like durations and relative dates will be added later.
+Concepts are linked to dates by JSON structures described below.  Support for some non-date temporal entities like durations and relative dates will be added later.
 
 
 #### temporal
 
 <table>
 <tr><th>__Field__</th><th>__Description__</th></tr>
-</tr><td>begin</td><td>The begin offset of the temporal trigger.</td></tr>
-<tr><td>end</td><td>The end offset of the temporal trigger.</td></tr>
-<tr><td>temporalType</td><td>Provides information about the type of a temporal mention.  Currently, _dateScore_ is the only score provided in this section.  Anything that scores sufficiently low as a date will not be surfaced.  For example, in the image above _2/10_ in the context of the patient's current pain level scores low as a date and is not surfaced. </td></tr>
-</tr><td>relationType</td><td>Provides information about how the temporal mention relates to an entity.  Currently, _overlapsScore_ is the only relation type defined and it indicates how strongly the temporal mention is linked to the concept.</td></tr>
+</tr><td>begin</td><td>The start position of the temporal entity as a character offset into the text.  The smallest possible start position is 0.</td></tr>
+<tr><td>end</td><td>The end position of the temporal entity as a character offset into the text. The end position points at the first character after the annotation, such that end-begin equals the length of the coveredText.</td></tr>
+<tr><td>temporalType</td><td>Provides information about the type of a temporal entity.  Currently, _dateScore_ is the only score provided in this section.  Anything that scores sufficiently low as a date will not be surfaced.  For example, in the image above _2/10_ in the context of the patient's current pain level scores low as a date and is not surfaced. </td></tr>
+</tr><td>relationType</td><td>Provides information about how the temporal entity relates to an entity.  Currently, _overlapsScore_ is the only relation type defined and it indicates how strongly the temporal entity is linked to the concept.</td></tr>
 </table>
 
 
