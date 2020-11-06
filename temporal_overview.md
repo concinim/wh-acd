@@ -33,7 +33,7 @@ The {{site.data.keyword.wh-acd_short}} [demo application](https://acd-try-it-out
 
 ![](images/demoAppTemporal.png)
 
-Concepts are linked to dates by JSON structures described below.  Support for some non-date temporal entities like durations and relative dates will be added later.
+Concepts are linked to dates by JSON structures described below.
 
 
 #### temporal
