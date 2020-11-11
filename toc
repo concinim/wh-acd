@@ -18,6 +18,7 @@ Annotator for Clinical Data
     analyze_text.md
     customizing.md
     access_management.md
+    data-security.md
     service_endpoints.md
     {: .navgroup-end}
 
