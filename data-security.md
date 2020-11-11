@@ -44,9 +44,9 @@ The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest
 ### About customer-managed keys
 {: #about-encryption}
 
-{{site.data.keyword.cos_short}} uses [envelope encryption](#x9860393){: term} to implement customer-managed keys. Envelope encryption describes encrypting one encryption key with another encryption key. The key used to encrypt the actual data is known as a [data encryption key (DEK)](#x4791827){: term}. The DEK itself is never stored but is wrapped by a second key that is known as the key encryption key (KEK) to create a wrapped DEK. To decrypt data, the wrapped DEK is unwrapped to get the DEK. This process is possible only by accessing the KEK, which in this case is your root key that is stored in {{site.data.keyword.keymanagementserviceshort}}.
+{{site.data.keyword.cos_short}} uses envelope encryption to implement customer-managed keys. Envelope encryption describes encrypting one encryption key with another encryption key. The key used to encrypt the actual data is known as a data encryption key (DEK). The DEK itself is never stored but is wrapped by a second key that is known as the key encryption key (KEK) to create a wrapped DEK. To decrypt data, the wrapped DEK is unwrapped to get the DEK. This process is possible only by accessing the KEK, which in this case is your root key that is stored in {{site.data.keyword.keymanagementserviceshort}}.
 
-{{site.data.keyword.keymanagementserviceshort}} keys are secured by FIPS 140-2 Level 3 certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}.
+{{site.data.keyword.keymanagementserviceshort}} keys are secured by FIPS 140-2 Level 3 certified cloud-based hardware security modules (HSMs).
 
 
 ### Enabling customer-managed keys for {{site.data.keyword.wh-acd_short}}
@@ -76,30 +76,26 @@ Customer-managed keys for {{site.data.keyword.wh-acd_short}} depends on the foll
 
 Setting the {{site.data.keyword.wh-acd_short}} instance to use customer-managed bucket and keys.
 ```
-curl -X PATCH \
-  "https://resource-controller.cloud.ibm.com/v2/resource_instances/<ACD Instance Id>" \
-  --header "Authorization: Bearer <Bearer Token>" \
-  --header 'Content-Type: application/json' \
-  -d '{"parameters": {
-         "bucket_endpoint_url": "<COS Bucket URL>",
-         "bucket_location": "<COS Bucket Location>",
-         "bucket_name": "<COS Bucket Name>"
-       }
-      }'
+curl -X PATCH https://resource-controller.cloud.ibm.com/v2/resource_instances/{id} \
+    -H 'Authorization: Bearer {token}' \
+    -H 'Content-Type: application/json' \
+    -d '{"parameters": {
+           "bucket_endpoint_url": "<COS Bucket URL>",
+           "bucket_location": "<COS Bucket Location>",
+           "bucket_name": "<COS Bucket Name>"}
+        }'
 ```
 
 Resetting the {{site.data.keyword.wh-acd_short}} instance to use provided IBM Cloud environment's bucket.
 ```
-curl -X PATCH \
-  "https://resource-controller.cloud.ibm.com/v2/resource_instances/<ACD Instance Id>" \
-  --header "Authorization: Bearer <Bearer Token>" \
-  --header 'Content-Type: application/json' \
-  -d '{"parameters": {
-         "bucket_endpoint_url": "",
-         "bucket_location": "",
-         "bucket_name": ""
-       }
-      }'
+curl -X PATCH https://resource-controller.cloud.ibm.com/v2/resource_instances/{id} \
+    -H 'Authorization: Bearer {token}' \
+    -H 'Content-Type: application/json' \
+    -d '{"parameters": {
+           "bucket_endpoint_url": "",
+           "bucket_location": "",
+           "bucket_name": ""}
+        }'
 ```
 
 
