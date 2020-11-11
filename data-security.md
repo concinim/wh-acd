@@ -29,16 +29,16 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is stored and encrypted in {{site.data.keyword.wh-acd_short}}
 {: #data-storage}
 
-User configuration data is encrypted and stored in {{site.data.keyword.cos_short}} using {{site.data.keyword.keymanagementservicelong_notm}}. For more information on {{site.data.keyword.cos_short}}'s integration with {{site.data.keyword.keymanagementservicelong_notm}} visit [{{site.data.keyword.cos_short}}'s encryption documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-encryption).
+User configuration data is encrypted and stored in {{site.data.keyword.cos_short}} using {{site.data.keyword.keymanagementserviceshort}}. For more information on {{site.data.keyword.cos_short}}'s integration with {{site.data.keyword.keymanagementserviceshort}} visit [{{site.data.keyword.cos_short}}'s encryption documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-encryption).
 
 {{site.data.keyword.wh-acd_short}} does not store the unstructured data submitted to the /analyze APIs for analysis. The only user data stored is the optional configuration data submitted in the form of a cartridge to the /deploy API as well as an any profiles or flows a user may optionally define outside of a cartridge deployment.
 
 ## Protecting your sensitive data in {{site.data.keyword.wh-acd_short}}
 {: #data-encryption}
 
-You can add a higher level of encryption protection and control to your data at rest (when it is stored) and data in motion (when it is transported) by enabling integration with {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementservicelong_notm}}.
+You can add a higher level of encryption protection and control to your data at rest (when it is stored) and data in motion (when it is transported) by enabling integration with {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}}.
 
-The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementservicelong_notm}}. This process is commonly referred to as Bring your own keys (BYOK). With {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementservicelong_notm}} you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service.
+The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}}. This process is commonly referred to as Bring your own keys (BYOK). With {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service.
 
 
 ### About customer-managed keys
@@ -56,23 +56,23 @@ Customer-managed keys for {{site.data.keyword.wh-acd_short}} depends on the foll
 
 1. {{site.data.keyword.keymanagementserviceshort}} setup
 
-   1. Create or reuse a {{site.data.keyword.keymanagementserviceshort}} instance. You must be the account owner or administrator.
+   1.1. Create or reuse a {{site.data.keyword.keymanagementserviceshort}} instance. You must be the account owner or administrator.
 
-   2. Create or reuse a root key.
+   1.2. Create or reuse a root key.
 
 2. {{site.data.keyword.cos_short}} setup
 
-   1. Create or reuse a {{site.data.keyword.cos_short}} instance. This must exist in the same account as the {{site.data.keyword.keymanagementserviceshort}} instance. You must have at least the viewer role.
+   2.1. Create or reuse a {{site.data.keyword.cos_short}} instance. This must exist in the same account as the {{site.data.keyword.keymanagementserviceshort}} instance. You must have at least the viewer role.
 
-   2. Use Identity and Access Management (IAM) to authorize access between the {{site.data.keyword.cos_short}} instance and {{site.data.keyword.keymanagementserviceshort}} instance.
+   2.2. Use Identity and Access Management (IAM) to authorize access between the {{site.data.keyword.cos_short}} instance and {{site.data.keyword.keymanagementserviceshort}} instance.
 
 3. {{site.data.keyword.wh-acd_short}} setup
 
-   1. Create or reuse a {{site.data.keyword.cos_short}} instance. This must exist in the same account as the {{site.data.keyword.wh-acd_short}} instance. You must have at least the viewer role.
+   3.1. Create or reuse a {{site.data.keyword.cos_short}} instance. This must exist in the same account as the {{site.data.keyword.wh-acd_short}} instance. You must have at least the viewer role.
 
-   2. Use IAM to grant the {{site.data.keyword.wh-acd_short}} instance access to {{site.data.keyword.cos_short}} instance.
+   3.2. Use IAM to grant the {{site.data.keyword.wh-acd_short}} instance access to {{site.data.keyword.cos_short}} instance.
 
-   3. Call the [Resource Controller update resource instance API](https://cloud.ibm.com/apidocs/resource-controller/resource-controller#update-resource-instance) to switch the {{site.data.keyword.wh-acd_short}} instance to using the {{site.data.keyword.cos_short}} instance.
+   3.3. Call the [Resource Controller update resource instance API](https://cloud.ibm.com/apidocs/resource-controller/resource-controller#update-resource-instance) to switch the {{site.data.keyword.wh-acd_short}} instance to using the {{site.data.keyword.cos_short}} instance.
 
 Setting the {{site.data.keyword.wh-acd_short}} instance to use customer-managed bucket and keys.
 ```
