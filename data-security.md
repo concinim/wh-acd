@@ -62,7 +62,7 @@ Customer-managed keys for {{site.data.keyword.wh-acd_short}} depends on the foll
 
 2. {{site.data.keyword.cos_short}} setup
 
-   2.1. Create or reuse a {{site.data.keyword.cos_short}} instance. This must exist in the same account as the {{site.data.keyword.keymanagementserviceshort}} instance. You must have at least the viewer role.
+   2.1. Create or reuse a {{site.data.keyword.cos_short}} instance with a dedicated bucket. This must exist in the same account as the {{site.data.keyword.keymanagementserviceshort}} instance. You must have at least the viewer role. For performance, the bucket must reside in the same region as the {{site.data.keyword.wh-acd_short}} instance.
 
    2.2. Use Identity and Access Management (IAM) to authorize access between the {{site.data.keyword.cos_short}} instance and {{site.data.keyword.keymanagementserviceshort}} instance.
 
@@ -80,8 +80,6 @@ curl -X PATCH https://resource-controller.cloud.ibm.com/v2/resource_instances/{i
     -H 'Authorization: Bearer {token}' \
     -H 'Content-Type: application/json' \
     -d '{"parameters": {
-           "bucket_endpoint_url": "<COS Bucket URL>",
-           "bucket_location": "<COS Bucket Location>",
            "bucket_name": "<COS Bucket Name>"}
         }'
 ```
@@ -92,8 +90,6 @@ curl -X PATCH https://resource-controller.cloud.ibm.com/v2/resource_instances/{i
     -H 'Authorization: Bearer {token}' \
     -H 'Content-Type: application/json' \
     -d '{"parameters": {
-           "bucket_endpoint_url": "",
-           "bucket_location": "",
            "bucket_name": ""}
         }'
 ```
