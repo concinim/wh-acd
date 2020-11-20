@@ -62,7 +62,12 @@ Annotator for Clinical Data
     medical_codes.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
-    at_events.md
+
+    {: .topicgroup}
+    Observability
+      at_events.md
+      platform-metrics.md
+
     information_security.md
     disaster_recovery.md
     responsibilities.md
