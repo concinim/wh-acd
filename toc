@@ -20,6 +20,12 @@ Annotator for Clinical Data
     access_management.md
     data-security.md
     service_endpoints.md
+
+    {: .topicgroup}
+    Observability
+      at_events.md
+      platform-metrics.md
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -62,11 +68,6 @@ Annotator for Clinical Data
     medical_codes.md
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
-
-    {: .topicgroup}
-    Observability
-      at_events.md
-      platform-metrics.md
 
     information_security.md
     disaster_recovery.md
