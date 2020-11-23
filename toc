@@ -23,9 +23,8 @@ Annotator for Clinical Data
 
     {: .topicgroup}
     Observability
-      at_events.md
-      platform-metrics.md
-
+        at_events.md
+        platform-metrics.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
