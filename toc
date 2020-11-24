@@ -68,6 +68,10 @@ Annotator for Clinical Data
     filtering.md
     [API reference](https://cloud.ibm.com/apidocs/wh-acd)
 
+    {: topicgroup}
+    CLI reference
+        /whcs-cli-plugin/whcs-cli-plugin-whcs-annotator-for-clinical-data-cli
+
     information_security.md
     disaster_recovery.md
     responsibilities.md
