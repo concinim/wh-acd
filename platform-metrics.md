@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-18"
+lastupdated: "2020-11-30"
 
 keywords: Sysdig, monitoring, platform metrics, observability page
 
@@ -116,11 +116,9 @@ Consider the following tasks when you monitor your account in the {{site.data.ke
 
 | Task                                      | Predefined alert | What to look for  |
 |-------------------------------------------|------------------|-------------------|
-| Monitor the occurrence of 4xx errors. | Frequent 4xx Responses | When 4xx errors occur, there's an issue on the client side in sending data to {{site.data.keyword.wh-acd_short}} for analysis. Check your application settings to ensure you're using the proper endpoint, credentials, http headers, etc.|
-| Monitor the occurrence of 5xx errors. | Frequent 5xx Responses | When 5xx errors occur, there's an issue with the service whereby it cannot successfully process input. These errors are usually temporary, but may require switching over to another region in the event of a severe regional outage. See [Disaster recovery](/docs/wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for further details.
+| Monitor the occurrence of 4xx errors. | Frequent 4xx Responses | When 4xx errors occur, there's an issue on the client side in sending data to {{site.data.keyword.wh-acd_short}} for analysis. Check your application settings to ensure you're using the proper endpoint, credentials, http headers, etc. |
+| Monitor the occurrence of 5xx errors. | Frequent 5xx Responses | When 5xx errors occur, there's an issue with the service whereby it cannot successfully process input. These errors are usually temporary, but may require switching over to another region in the event of a severe regional outage. See [Disaster recovery](/docs/wh-acd?topic=wh-acd-troubleshoot#troubleshoot_deploy_timeout) for further details. |
 | Monitor the occurrence of slow response time averages. | Slow Response Time Averages | An increase in average response times could result from additional annotators being deployed for analysis, an increase in the amount of data being analyzed, or increased service traffic at the time of analysis. |
-
-When your pull traffic quota is reached, you can't pull images from namespaces that are owned by your account for the remainder of the current billing period. Wait for the next billing period to start, upgrade to the standard plan, or increase your traffic quota. [Learn more](#registry_task2). |
 {: caption="Table 1. Pre-defined alerts" caption-side="top"}
 
 ## {{site.data.keyword.wh-acd_short}} Predefined Dashboards
@@ -212,9 +210,6 @@ The following attributes are available for segmenting all of the metrics listed 
 |-----------|----------------|-----------------------|
 | `Cloud Type` | `ibm_ctype` | The cloud type is a value of public, dedicated or local |
 | `Location` | `ibm_location` | The location of the monitored resource - this may be a region, data center or global |
-| `Resource` | `ibm_resource` | The resource being measured by the service - typically an indentifying name or GUID |
-| `Resource Type` | `ibm_resource_type` | The type of the resource being measured by the service |
-| `Resource group` | `ibm_resource_group_name` | The resource group where the service instance was created |
 | `Scope` | `ibm_scope` | The scope is the account, organization or space GUID associated with this metric |
 | `Service name` | `ibm_service_name` | Name of the service generating this metric |
 
