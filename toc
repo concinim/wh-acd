@@ -19,6 +19,11 @@ Annotator for Clinical Data
     customizing.md
     access_management.md
     service_endpoints.md
+
+    {: .topicgroup}
+    Logging and monitoring
+        at_events.md
+        platform-metrics.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
