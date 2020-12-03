@@ -137,18 +137,6 @@ The *Default* dashboard can't be changed. You can copy the dashboard so that you
 When you start your dashboard, some metrics might display a `Data Load Error` warning icon. This warning is because not enough time has elapsed to create the data. When data is available, the warning sign goes away and the metric is populated.
 {: note}
 
-## Predefined alerts
-{: #acd_default_alerts}
-
-The following table outlines the pre-defined alerts that are available in Sysdig.
-
-| Alert Name                                 | Description |
-|--------------------------------------------|-------------|
-| Frequent 4xx Responses | This alert notifies you when more than fifty 4xx errors occur within a ten-minute window. |
-| Frequent 5xx Responses | This alert notifies you when more than fifty 5xx errors occur within a ten-minute window. |
-| Slow Response Time Averages | This alert notified you when average response times are greater than 50 seconds within a ten-minute window. |
-{: caption="Table 3. Pre-defined alerts" caption-side="top"}
-
 ## Metrics available by Service Plan
 {: metrics-by-plan}
 
