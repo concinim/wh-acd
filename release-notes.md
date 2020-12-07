@@ -37,6 +37,11 @@ API requests require a version parameter that takes the date in the format versi
 
 When we change the API in a backwards-incompatible way, we release a new minor version. To take advantage of the changes in a new version, change the value of the version parameter to the new date. If you're not ready to update to that version, don't change your version date.
 
+### November 2020
+{: #november-2020}
+- Initial release of temporal models.
+
+
 ### August 2020
 {: #august-2020}
 - Initial release of normality models for clinical insights.

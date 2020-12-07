@@ -18,6 +18,7 @@ Annotator for Clinical Data
     analyze_text.md
     customizing.md
     access_management.md
+    data-security.md
     service_endpoints.md
 
     {: .topicgroup}
@@ -58,6 +59,10 @@ Annotator for Clinical Data
         clinical_insights_diagnosis.md
         clinical_insights_normality.md
         clinical_insights_cartridge.md
+
+    {: topicgroup}
+    Temporal (Experimental)
+        temporal_overview.md
 
     medical_codes.md
     filtering.md

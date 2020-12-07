@@ -48,3 +48,4 @@ Each model contributes contextual features to annotations that are either produc
 2. [Procedure](/docs/wh-acd?topic=wh-acd-clinical_insights_procedure#clinical_insights_procedure)
 3. [Diagnosis](/docs/wh-acd?topic=wh-acd-clinical_insights_diagnosis#clinical_insights_diagnosis)
 4. [Normality - Experimental](/docs/wh-acd?topic=wh-acd-clinical_insights_normality#clinical_insights_normality)
+5. [Temporal - Experimental](/docs/wh-acd?topic=wh-acd-temporal_overview#temporal_overview)
