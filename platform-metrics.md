@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-11-30"
 
-keywords: Sysdig, monitoring, platform metrics, observability page
+keywords: monitoring, platform metrics, observability page
 
 subcollection: wh-acd
 
@@ -20,26 +20,26 @@ subcollection: wh-acd
 {:important: .important}
 {:deprecated: .deprecated}
 
-# Sysdig Monitoring integration
-{: #monitor-sysdig-pm}
+# IBM Cloud Monitoring integration
+{: #monitor-pm}
 
-{{site.data.keyword.mon_full}} is a third-party, cloud-native, and container-intelligent management system that you can include as part of your {{site.data.keyword.cloud}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM}}.
+{{site.data.keyword.mon_full}} is a third-party, cloud-native, and container-intelligent management system that you can include as part of your {{site.data.keyword.cloud}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. 
 {:shortdesc}
 
 Currently, {{site.data.keyword.mon_full}} integration is available for {{site.data.keyword.wh-acd_short}} deployments according to the following table:
 
-Deployment Region | Sysdig Region
+Deployment Region | {{site.data.keyword.mon_full}} Region
 ----------|-----------
 `Dallas` | `Dallas`
 `Washington DC` | `Washington DC`
-{: caption="Table 1. Sysdig regions" caption-side="top"}
+{: caption="Table 1. Monitoring regions" caption-side="top"}
 
 ## Platform metrics overview
 {: #platform_metrics-pm}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
-* To configure the Sysdig instance, you must turn on the *platform metrics* configuration setting.
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/cloud/services).
+* To configure the Monitoring instance, you must turn on the *platform metrics* configuration setting.
+* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring instances, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/cloud/services).
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
 {: important}
@@ -66,21 +66,21 @@ Complete the following steps to configure platform metrics:
 
 6. Provision an instance of the {{site.data.keyword.mon_full_notm}} service.
 
-   After you provision the Sysdig instance, the *Observabvility* page opens. To continue working with {{site.data.keyword.cloud_notm}}, go back to the {{site.data.keyword.cloud_notm}} UI.
+   After you provision the Monitoring instance, the *Observabvility* page opens. To continue working with {{site.data.keyword.cloud_notm}}, go back to the {{site.data.keyword.cloud_notm}} UI.
    {: note}
 
 ## Viewing metrics
 {: #view_metrics}
 
-To monitor {{site.data.keyword.wh-acd_short}} metrics, you must launch the Sysdig web UI instance that is enabled for platform metrics in the region where your {{site.data.keyword.cloud_notm}} instance is available.
+To monitor {{site.data.keyword.wh-acd_short}} metrics, you must launch the Monitoring web UI instance that is enabled for platform metrics in the region where your {{site.data.keyword.cloud_notm}} instance is available.
 {: important}
 
-There are different options to launch the Sysdig web UI and monitor metrics that are described in the following section.
+There are different options to launch the Monitoring web UI and monitor metrics that are described in the following section.
 
-### Launching Sysdig web UI from the {{site.data.keyword.wh-acd_short}} dashboard
+### Launching Monitoring web UI from the {{site.data.keyword.wh-acd_short}} dashboard
 {: #view_metrics_opt1}
 
-Complete the following steps to launch the Sysdig web UI from the {{site.data.keyword.cloud_notm}} dashboard:
+Complete the following steps to launch the Monitoring web UI from the {{site.data.keyword.cloud_notm}} dashboard:
 
 1. Log in to {{site.data.keyword.cloud_notm}}.
 
@@ -96,17 +96,17 @@ Complete the following steps to launch the Sysdig web UI from the {{site.data.ke
 
    A new tab in your browser opens and displays the *Default* dashboard named ** {{site.data.keyword.wh-acd_short}} ** within the context of your {{site.data.keyword.wh-acd_short}} instance.
 
-### Launching Sysdig web UI from the Observability page
+### Launching Monitoring web UI from the Observability page
 {: #view_metrics_opt2}
 
-Complete the following steps to launch the Sysdig web UI from the *Observability* page:
+Complete the following steps to launch the Monitoring web UI from the *Observability* page:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the Monitoring web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Click **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **{{site.data.keyword.IBM_notm}}**.
 4. Choose the {{site.data.keyword.wh-acd_short}} dashboard from the list.
 
-   To access your deployment's Sysdig dashboard from Sysdig, it's in the sidebar, under {{site.data.keyword.IBM_notm}}.
+   To access your deployment's Monitoring dashboard, it's in the sidebar, under {{site.data.keyword.IBM_notm}}.
 
    Next, change the scope or make a copy of the *Default* dashboard to monitor an {{site.data.keyword.wh-acd_short}} instance.
 
@@ -124,7 +124,7 @@ Consider the following tasks when you monitor your account in the {{site.data.ke
 ## {{site.data.keyword.wh-acd_short}} Predefined Dashboards
 {: #acd_dashboards_dictionary}
 
-The following table outlines the pre-defined Sysdig dashboards that you can use to monitor {{site.data.keyword.wh-acd_short}} metrics:
+The following table outlines the pre-defined dashboards that you can use to monitor {{site.data.keyword.wh-acd_short}} metrics:
 
 | Dashboard name        | Description    |
 |-----------------------|----------------|
