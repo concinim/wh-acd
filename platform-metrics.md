@@ -23,7 +23,7 @@ subcollection: wh-acd
 # IBM Cloud Monitoring integration
 {: #monitor-pm}
 
-{{site.data.keyword.mon_full}} is a third-party, cloud-native, and container-intelligent management system that you can include as part of your {{site.data.keyword.cloud}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. 
+{{site.data.keyword.mon_full}} is a cloud-native and container-intelligent management system that you can include as part of your {{site.data.keyword.cloud}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. 
 {:shortdesc}
 
 Currently, {{site.data.keyword.mon_full}} integration is available for {{site.data.keyword.wh-acd_short}} deployments according to the following table:
@@ -39,7 +39,7 @@ Deployment Region | {{site.data.keyword.mon_full}} Region
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
 * To configure the Monitoring instance, you must turn on the *platform metrics* configuration setting.
-* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring instances, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/cloud/services).
+* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled services are collected automatically and available for monitoring through this instance. For more information about enabled instances, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/cloud/services).
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
 {: important}
