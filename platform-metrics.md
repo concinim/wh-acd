@@ -101,7 +101,7 @@ Complete the following steps to launch the Monitoring web UI from the {{site.dat
 
 Complete the following steps to launch the Monitoring web UI from the *Observability* page:
 
-1. [Launch the Monitoring web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the Monitoring web UI](/docs/monitoring?topic=monitoring-launch).
 2. Click **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **{{site.data.keyword.IBM_notm}}**.
 4. Choose the {{site.data.keyword.wh-acd_short}} dashboard from the list.
