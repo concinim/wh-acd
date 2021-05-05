@@ -27,9 +27,10 @@ subcollection: wh-acd
 # Spell Check
 {: #spell_check}
 
-This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of a larger annotator flow that includes the [concept detection annotator](/docs/wh-acd?topic=wh-acd-concept_detection#concept_detection).  When the spell check annotator precedes the concept detection annotator within an annotator flow, concept detection will create concepts over any spelling corrections of sufficiently high confidence that map to a surface form in any of the concept detection libraries in your flow.
+This annotator identifies misspelled words and phrases in a document and suggests corrections.  You can use the spell check annotator as a standalone preprocessing step for your data or it can be used as part of a larger annotator flow.
 
-As of this writing, *spellingCorrections* annotations are only used by concept detection.
+Spell check can also be configured to recognize and correct to surface forms in custom dictionaries if the dictionaries are enabled for spell check in the cartridge configuration.
+
 
 #### Configurations
 
@@ -48,6 +49,11 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
     <td>spell_check_profile</td>
     <td>default/ocr</td>
     <td>A spell check profile defines the basics about the behavior of the spell check service. The default profile which is suitable for common human typos. The ocr profile is a more aggressive profile that tries to correct errors that are introduced by optical character recognition systems. </td>
+  </tr>
+  <tr>
+    <td>apply_spell_corrections</td>
+    <td>true/false</td>
+    <td>When true, spell check applies high confidence corrections to the container text.</td>
   </tr>
 </table>
 
