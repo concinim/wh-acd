@@ -32,11 +32,11 @@ The concept detection service detects medical concepts from unstructured data. T
 
 ### Expanded Concepts
 
-Concept detection provides an _expanded_ option that tries to find UMLS concepts over spans of text that are not strictly defined in the UMLS dictionary that ships with {{site.data.keyword.wh-acd_short}}.  For example, consider the following text:
+Concept detection provides an _expanded_ option that allows you to go beyond exact matching of surface forms in a dictionary. With **expanded** set to `true`, concept detection will learn from the dictionary entries you have specified and generalize to other ways that concepts can be expressed in text. This allows you to define a core set of surface forms without exhaustively listing every surface form for every concept. This becomes particularly important with compound ideas. Consider the following text:
 
 `The patient broke his leg and hip when he fell outside his home.`
 
-There are two different injuries expressed in this text that we want to capture - broken leg and broken hip.  Neither one will have a dictionary entry that covers the way the concept is expressed.  The **expanded** option tells concept detection to try to find concepts that do not strictly match a known surface form but are present in the text.  In this example, concept detection would return the following concepts with **expanded** set `true`.
+There are two different injuries expressed in this text that we want to capture - broken leg and broken hip.  Neither one will have a dictionary entry that covers the way the concept is expressed. In this example, concept detection would return the following concepts with **expanded** set `true`.
 
 ```
 {
@@ -75,7 +75,9 @@ There are two different injuries expressed in this text that we want to capture 
 }
 ```
 
-Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures. Expanded detection only works with the UMLS dictionaries that ship with {{site.data.keyword.wh-acd_short}}.  It does not work with custom dictionaries.
+Expanded detection will look for diseases, conditions, abnormalities, injuries, and procedures defined in the UMLS dictionary that ships with {{site.data.keyword.wh-acd_short}}.
+In addition, expanded detection will look for all of the concepts defined in custom dictionaries that are enabled for expanded detection in the cartridge configuration.
+
 
 
 <h4>Configurations</h4>
