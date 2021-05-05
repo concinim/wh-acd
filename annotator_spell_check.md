@@ -111,10 +111,6 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
     <td>A measure of how confident the annotator is that this suggestion is correct.</td>
   </tr>
   <tr>
-    <td>semtypes</td>
-    <td>A list of UMLS semantic types that apply to the given suggestion (if any exist).</td>
-  </tr>
-  <tr>
     <td>text</td>
     <td>The text of the spelling suggestion.</td>
   </tr>
@@ -122,33 +118,34 @@ As of this writing, *spellingCorrections* annotations are only used by concept d
 
 ### Sample Response
 
-Sample response from the spell check annotator for the text: `The patient has high blood presure`.
+Sample response from the spell check annotator for the text: `The patient had an ovariactomy`.
 
 ```
 {
   "unstructured": [
     {
-      "text": "The patient has high blood presure",
+      "text": "The patient had an ovariactomy",
       "data": {
         "spellCorrectedText": [
           {
-            "correctedText": "The patient has high blood pressure"
+            "correctedText": "The patient had an ovariectomy"
           }
         ],
         "spellingCorrections": [
           {
-            "begin": 16,
-            "end": 34,
-            "coveredText": "high blood presure",
+            "begin": 19,
+            "end": 30,
+            "coveredText": "ovariactomy",
             "suggestions": [
               {
                 "applied": true,
-                "confidence": 0.98,
-                "semtypes": [
-                  "umls.DiseaseOrSyndrome",
-                  "umls.ClinicalAttribute"
-                ],
-                "text": "high blood pressure"
+                "confidence": 0.97,
+                "text": "ovariectomy"
+              },
+              {
+                "applied": false,
+                "confidence": 0.818,
+                "text": "ovariotomy"
               }
             ]
           }
