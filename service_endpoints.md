@@ -33,7 +33,7 @@ Public network endpoints provide connectivity to your {{site.data.keyword.wh-acd
 ## Private network endpoints
 {: #private_endpoints}
 
-Private network endpoints provide connectivity to your {{site.data.keyword.wh-acd_short}} instance over the {{site.data.keyword.cloud_notm}} private network.  After you have configured your  {{site.data.keyword.wh-acd_short}} instance to use private endpoints it is no longer accessible from the public internet.
+Private network endpoints provide connectivity to your {{site.data.keyword.wh-acd_short}} instance over the {{site.data.keyword.cloud_notm}} IBM Cloud private network.  Your {{site.data.keyword.wh-acd_short}} instance can be configured to use only a private endpoint, only a public endpoint or it configured to support both. 
 
 ## Adding a private network endpoint
 
@@ -43,6 +43,15 @@ You add a private endpoint to a paid service instance from the service details p
 1.  Click the name of a service instance that is on a premium plan. Lite plans do not support private network endpoints.
 1.  In the service details page, click the **Manage** tab.
 1.  Click **Add private network endpoint**.
+
+## Disabling a public or private endpoint
+
+You can disable the public or private endpoint from the service details page if you have a Manager or Writer service access role and both types of endpoints are currently enabled for the instance. 
+
+1.  Go to your [Resource list](https://{DomainName}/resources){: external}.
+1.  Click the name of a service instance that is on a premium plan. Lite plans do not support private network endpoints.
+1.  In the service details page, click the **Manage** tab.
+1.  In the Endpoints panel, select the endpoint you wish to disable, and click the button to **disable** the endpoint.
 
 ## Viewing your endpoint URL
 
